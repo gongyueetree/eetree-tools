@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid bcda0b05-a316-47ce-a6fb-b45e279b0654)
+  (uuid ce7c1967-207f-49a6-be6b-f7b2e5ffb46c)
   (paper "A4")
   (title_block
     (title "RTL Inverter")
@@ -205,185 +205,181 @@
           (name "E" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 53.34 43.18)
+    (at 106.68 86.36)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid f9ce41d6-95ec-4e7f-a0c4-7d0a3ebb2763))
+    (uuid 937d6bb9-8c10-4b41-a245-b31c84b02d0c))
   (wire
-    (pts (xy 53.34 48.26) (xy 53.34 55.88))
+    (pts (xy 106.68 96.52) (xy 106.68 111.76))
     (stroke (width 0) (type default))
-    (uuid 72291530-c3f3-4065-bc02-00b2d005e87c))
+    (uuid a087dc55-dddc-4d85-80e1-e45f611a8093))
   (wire
-    (pts (xy 33.02 45.72) (xy 25.4 45.72))
+    (pts (xy 66.04 91.44) (xy 50.8 91.44))
     (stroke (width 0) (type default))
-    (uuid 8182b82f-aa0a-4ea0-bb3b-460e9b2aba3d))
+    (uuid 6542f217-ce89-4658-94bb-4f45984458b1))
   (wire
-    (pts (xy 53.34 27.94) (xy 45.72 27.94))
+    (pts (xy 106.68 55.88) (xy 91.44 55.88))
     (stroke (width 0) (type default))
-    (uuid 134b067c-9399-477a-ae62-c6e6ac00196b))
+    (uuid df5518a6-2f15-4c3a-9f4e-8fd9d427472b))
   (wire
-    (pts (xy 53.34 43.18) (xy 63.5 43.18))
+    (pts (xy 106.68 86.36) (xy 127.0 86.36))
     (stroke (width 0) (type default))
-    (uuid 0ca3a214-c6d6-4f5d-b31f-1579568086ac))
+    (uuid 3c2a4c48-6f4b-48e3-aa7b-241e43ce6478))
   (wire
-    (pts (xy 35.56 45.72) (xy 33.02 45.72))
+    (pts (xy 74.93 91.44) (xy 66.04 91.44))
     (stroke (width 0) (type default))
-    (uuid afea8839-3b44-439c-8844-4923b33c2a34))
+    (uuid df4ef8f8-bf84-4560-ba83-3bfef378e7f5))
   (wire
-    (pts (xy 43.18 45.72) (xy 45.72 45.72))
+    (pts (xy 82.55 91.44) (xy 91.44 91.44))
     (stroke (width 0) (type default))
-    (uuid 659be353-e632-4855-b4e8-9ca6b3623392))
+    (uuid 5edd884e-8c29-46d5-9fb9-8539a5f8a702))
   (wire
-    (pts (xy 53.34 39.37) (xy 53.34 43.18))
+    (pts (xy 106.68 74.93) (xy 106.68 86.36))
     (stroke (width 0) (type default))
-    (uuid 92f2b7bf-876f-4212-9104-6084731d0432))
+    (uuid fa9178a7-56c7-4e55-a5da-56d113999f7e))
   (wire
-    (pts (xy 53.34 31.75) (xy 53.34 27.94))
+    (pts (xy 106.68 67.31) (xy 106.68 55.88))
     (stroke (width 0) (type default))
-    (uuid 9531dca1-7297-41cc-ac83-33396b1f700f))
+    (uuid 68d6b175-5b1d-4e17-b533-8629b02b3c55))
   (wire
-    (pts (xy 53.34 40.64) (xy 53.34 43.18))
+    (pts (xy 99.06 91.44) (xy 91.44 91.44))
     (stroke (width 0) (type default))
-    (uuid a72d7fc3-fc1c-42b6-9622-f18cbecf6cd6))
-  (wire
-    (pts (xy 53.34 50.8) (xy 53.34 48.26))
-    (stroke (width 0) (type default))
-    (uuid dafd6aff-fa19-4b07-8279-1b24e028821b))
+    (uuid 0336ded6-5ab9-4fe3-946d-c4f564fd6c9f))
   (global_label "IN"
     (shape input)
-    (at 25.4 45.72 180)
+    (at 50.8 91.44 180)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid a329fcb8-ca4e-4c64-a444-959d92ca9d32)
+    (effects (font (size 2.0 2.0)) (justify right))
+    (uuid 53c0fdab-e76a-4f82-9e01-27c161730374)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 25.4 45.72 0)
+      (at 50.8 91.44 0)
       (effects (font (size 1.27 1.27)) hide)))
   (global_label "OUT"
     (shape output)
-    (at 63.5 43.18 0)
+    (at 127.0 86.36 0)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 6aeffe49-854f-49b4-9ede-128bd7198449)
+    (effects (font (size 2.0 2.0)) (justify left))
+    (uuid 3adffc8f-1fd3-4f1c-a2e7-5b3584f61ac0)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 63.5 43.18 0)
+      (at 127.0 86.36 0)
       (effects (font (size 1.27 1.27)) hide)))
   (symbol
     (lib_id "CircuitJS:PWR_6bb37c")
-    (at 45.72 27.94 90)
+    (at 91.44 55.88 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 1e1e3c61-cb6c-4637-818a-029d02288785)
+    (uuid 754140b9-7c3e-4ae8-a900-188e21f3a0c4)
     (property "Reference" "#PWR001"
-      (at 45.72 27.94 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 91.44 55.88 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "+3.6V"
-      (at 39.84625 27.94 90)
-      (effects (font (size 1.27 1.27))))
+      (at 83.185 55.88 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 45.72 27.94 0)
+      (at 91.44 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid cb8a31fd-cc4e-4db8-b71e-2ffee47fb5dc))
+    (pin "1" (uuid 27510ab7-1c32-4f67-8c34-9f38a4e7d559))
     (instances
       (project "rtlinverter"
-        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+        (path "/a42092b1-2796-464c-8c00-354b2c67ab3e"
           (reference "#PWR001")
           (unit 1)))))
   (symbol
     (lib_id "power:GND")
-    (at 53.34 55.88 0)
+    (at 106.68 111.76 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid a1a09275-2118-44bd-aa2d-2594af52ba5c)
+    (uuid 953b0e12-eee3-4c1f-bfa1-e1fa90e68774)
     (property "Reference" "#PWR002"
-      (at 53.34 55.88 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 106.68 111.76 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 53.34 55.88 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 106.68 111.76 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 53.34 55.88 0)
+      (at 106.68 111.76 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid fbc7c0eb-f0b2-4128-bc66-09ee4c15d37c))
+    (pin "1" (uuid 85c368ad-9f72-4ecb-a52d-662ab8446a03))
     (instances
       (project "rtlinverter"
-        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+        (path "/a42092b1-2796-464c-8c00-354b2c67ab3e"
           (reference "#PWR002")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 39.37 45.72 90)
+    (at 78.74 91.44 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 7f64d13f-d8f5-440a-8c21-7d08e66f08c3)
+    (uuid a7e80853-2a2a-45bb-a5f9-3037ada99864)
     (property "Reference" "R1"
-      (at 39.37 41.5925 90)
-      (effects (font (size 1.27 1.27))))
+      (at 78.74 85.09 90)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "470Ω"
-      (at 39.37 43.18 90)
-      (effects (font (size 1.27 1.27))))
+      (at 78.74 87.63 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 39.37 45.72 0)
+      (at 78.74 91.44 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid d7f22d8b-c51c-421a-a34f-66f0772ac38a))
-    (pin "2" (uuid 80fce88d-7836-4ec6-8d22-2bbd0a657276))
+    (pin "1" (uuid dc1dda20-a7e9-46ac-a877-ccd54a8cb77c))
+    (pin "2" (uuid f73529d7-7861-4b3b-91ff-a1e6834b0d0c))
     (instances
       (project "rtlinverter"
-        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+        (path "/a42092b1-2796-464c-8c00-354b2c67ab3e"
           (reference "R1")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 53.34 35.56 180)
+    (at 106.68 71.12 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid fe42410c-eab3-4ad8-8605-513e2938397f)
+    (uuid 8570cb90-0ce9-4a1e-9fcb-3a2129172da1)
     (property "Reference" "R2"
-      (at 57.62625 34.76625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 113.3475 69.85 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "640Ω"
-      (at 57.62625 36.35375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 113.3475 72.39 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 53.34 35.56 0)
+      (at 106.68 71.12 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 222e55b2-bee7-477d-9b13-4820fc93c2a9))
-    (pin "2" (uuid c3e6c4c4-2206-4b05-b969-936343164ecd))
+    (pin "1" (uuid 4fd97057-354b-4d66-b86e-db7405ee3492))
+    (pin "2" (uuid 6e095c58-ff90-48b7-8fe1-b8f6e8f8b923))
     (instances
       (project "rtlinverter"
-        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+        (path "/a42092b1-2796-464c-8c00-354b2c67ab3e"
           (reference "R2")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NPN_BCE")
-    (at 50.8 45.72 0)
+    (at 104.14 91.44 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 719dbb39-65fd-49fb-a954-98b0e198105a)
+    (uuid 090a3162-e635-40d3-86dd-5fc203b1aef5)
     (property "Reference" "Q1"
-      (at 57.15 45.72 0)
-      (effects (font (size 1.27 1.27))))
+      (at 112.0775 91.44 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 50.8 45.72 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 104.14 91.44 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 50.8 45.72 0)
+      (at 104.14 91.44 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 02463418-c205-4d78-9121-abc4afbcc998))
-    (pin "2" (uuid bccf9e91-6a15-49af-b06f-bfdabfd056a5))
-    (pin "3" (uuid de43ac2f-3871-4a5a-9c30-67c8ca8bae6e))
+    (pin "1" (uuid 2050042e-d17d-4490-9f13-490f02d38d6d))
+    (pin "2" (uuid cdfb1611-87dd-4ede-9c32-140b7dd5f141))
+    (pin "3" (uuid 6f76822e-3835-4300-ac51-02b816e76c6e))
     (instances
       (project "rtlinverter"
-        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+        (path "/a42092b1-2796-464c-8c00-354b2c67ab3e"
           (reference "Q1")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))
