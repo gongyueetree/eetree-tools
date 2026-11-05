@@ -1,6 +1,7 @@
 // Tool page runtime: renders inputs from a declarative tool definition, live-computes results.
 import { parseNum, fmtSI, fmt } from './num.js';
 import { lineChart } from './chart.js';
+import { syncSim } from './sim.js';
 
 const PFX = { f: 1e-15, p: 1e-12, n: 1e-9, 'µ': 1e-6, m: 1e-3, '': 1, k: 1e3, M: 1e6, G: 1e9 };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -19,6 +20,15 @@ function isVisible(inp, v, mode) {
 }
 
 export function mountTool(tool, root) {
+  if (tool.mount) {
+    // fully custom interactive tool (plots, calculators...)
+    root.querySelector('#share')?.addEventListener('click', (e) => {
+      if (navigator.share) navigator.share({ title: document.title, url: location.href }).catch(() => {});
+      else navigator.clipboard?.writeText(location.href).then(() => { e.target.textContent = '链接已复制'; setTimeout(() => (e.target.textContent = '分享'), 1200); });
+    });
+    tool.mount(root.querySelector('#custom'), { extra: root.querySelector('#extra') });
+    return;
+  }
   const q = new URLSearchParams(location.search);
   let mode = tool.modes ? (q.get('mode') && tool.modes.find((m) => m.id === q.get('mode')) ? q.get('mode') : tool.modes[0].id) : null;
   const state = {}; // raw strings
@@ -138,6 +148,7 @@ export function mountTool(tool, root) {
     // schematic variant
     const sch = out.sch || (typeof tool.schematic === 'object' && tool.schematic ? tool.schematic[mode] : null);
     if (sch) setSchematic(sch);
+    syncSim(root, tool, out, mode);   // CircuitJS tab (tools with `sim` + calc simParams only)
     // persist to URL
     const p = new URLSearchParams();
     if (mode) p.set('mode', mode);

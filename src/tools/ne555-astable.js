@@ -4,6 +4,7 @@ const LN2 = Math.LN2;
 
 export default {
   schematic: 'ne555-astable',
+  sim: 'ne555-astable',
   lead: '555 无稳态（多谐）振荡器：由 R1、R2、C 计算频率与占空比，或由目标频率/占空比反算 R1、R2。',
   modes: [{ id: 'fwd', label: '由 R、C 求频率' }, { id: 'inv', label: '由频率求 R1、R2' }],
   inputs: [
@@ -59,6 +60,7 @@ export default {
     }
     return {
       results: res, warn,
+      simParams: { R1, R2, C1: c, VCC: vcc },
       chart: { title: '电容电压与输出波形', x: { label: '时间', unit: 's' }, y: { label: '电压', unit: 'V', min: 0 }, series: [{ name: '输出 OUT', pts: out, color: '#2563eb' }, { name: '电容电压 V<sub>C</sub>', pts, color: '#0b7a55' }] },
     };
   },

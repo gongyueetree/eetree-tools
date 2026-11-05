@@ -9,6 +9,9 @@ const DIST = path.resolve(ROOT, process.env.DIST_DIR || 'dist');
 const BASE = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const SITE = process.env.SITE_URL || 'https://tools.eetree.cn';
 const VER = Date.now().toString(36);
+// CircuitJS for live simulation tabs: same-origin copy when deployed under www.eetree.cn/tools/
+const CJS = process.env.CIRCUITJS_URL || (BASE.startsWith('/tools') ? '/circuitjs/circuitjs.html' : 'https://www.eetree.cn/circuitjs/circuitjs.html');
+const CJS_EMBED = process.env.CIRCUITJS_EMBED === '1';   // force iframe on non-eetree hosts (local testing with a same-origin CircuitJS)
 
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(DIST, { recursive: true });
@@ -49,16 +52,19 @@ for (const t of TOOLS.filter((t) => !t.ext)) {
   let sch = mod.schematic;
   if (sch && typeof sch === 'object') sch = sch[mod.modes?.[0]?.id] || Object.values(sch)[0];
   if (sch && !fs.existsSync(path.join(ROOT, 'public/sch', sch + '.svg'))) console.warn('MISSING schematic', sch, 'for', t.id);
+  const sims = mod.sim ? (typeof mod.sim === 'object' ? Object.values(mod.sim) : [mod.sim]) : [];
+  for (const n of sims) if (!fs.existsSync(path.join(ROOT, 'public/sim', n + '.txt'))) console.warn('MISSING sim template', n, 'for', t.id, '(python3 schematics/gen.py --sim)');
+  const simAttr = sims.length ? ` data-sim-base="${BASE}sim/" data-cjs="${esc(CJS)}"${CJS_EMBED ? ' data-cjs-embed="1"' : ''}` : '';
   const schHtml = sch ? `<section class="card"><h2>电路原理图</h2>
-<figure class="sch" id="schfig" data-base="${BASE}sch/" data-cur="${sch}"><div class="img"><img src="${BASE}sch/${sch}.svg" alt="${esc(t.title)} 原理图" loading="eager"></div>
+<figure class="sch" id="schfig" data-base="${BASE}sch/" data-cur="${sch}"${simAttr}><div class="img"><img src="${BASE}sch/${sch}.svg" alt="${esc(t.title)} 原理图" loading="eager"></div>
 <figcaption><span class="kicad">KiCad</span><span>标准 KiCad 符号库绘制</span><a class="dl" href="${BASE}sch/${sch}.kicad_sch" download>下载 .kicad_sch</a><a class="zoom" href="${BASE}sch/${sch}.svg" target="_blank" rel="noopener">查看大图 ↗</a></figcaption></figure></section>` : '';
   const related = (mod.related || TOOLS.filter((x) => x.cat === t.cat && x.id !== t.id && !x.ext).slice(0, 6).map((x) => x.id))
     .map((id) => TOOLS.find((x) => x.id === id)).filter(Boolean);
   const body = `<main class="wrap">
 <div class="crumb"><a href="${BASE}">工具箱</a> / <a href="${BASE}#${t.cat}">${cat.name}</a></div>
 <h1>${esc(t.title)}</h1><p class="lead">${mod.lead || esc(t.desc)}</p>
-<div class="tool-actions"><button class="btn" id="share">分享</button><button class="btn" id="reset">恢复默认</button></div>
-<div class="grid">
+<div class="tool-actions"><button class="btn" id="share">分享</button>${mod.mount ? '' : '<button class="btn" id="reset">恢复默认</button>'}</div>
+${mod.mount ? `${schHtml}<section class="card custom" id="custom"><noscript>此工具需要启用 JavaScript</noscript></section>` : `<div class="grid">
  <div class="col">
   ${schHtml}
   <section class="card"><h2>输入参数</h2><div id="modes"></div><div id="inputs" class="rows"><noscript>此工具需要启用 JavaScript</noscript></div></section>
@@ -66,12 +72,13 @@ for (const t of TOOLS.filter((t) => !t.ext)) {
  <div class="col sticky">
   <section class="card"><h2>计算结果</h2><div id="results"></div><p class="msg info" style="margin-top:10px">点按结果可复制数值；支持输入 4.7k、100n、2u2 等工程写法</p></section>
  </div>
-</div>
+</div>`}
 <div id="extra" class="col" style="margin-top:16px"></div>
 ${mod.formula ? `<section class="card" style="margin-top:16px"><h2>计算公式</h2><div class="formula">${mod.formula}</div></section>` : ''}
 ${mod.about ? `<section class="card prose" style="margin-top:16px"><h2>原理与说明</h2>${mod.about}</section>` : ''}
 ${related.length ? `<section class="card" style="margin-top:16px"><h2>相关工具</h2><div class="related">${related.map((r) => `<a href="${r.ext || BASE + r.id + '/'}">${esc(r.title)}</a>`).join('')}</div></section>` : ''}
 </main>
+${(mod.scripts || []).map((src) => `<script src="${BASE}${src}"></script>`).join('')}
 <script type="module">import{mountTool}from'${BASE}assets/core/engine.js?v=${VER}';import t from'${BASE}assets/tools/${t.id}.js?v=${VER}';mountTool(t,document.querySelector('main'));</script>`;
   fs.mkdirSync(path.join(DIST, t.id), { recursive: true });
   fs.writeFileSync(path.join(DIST, t.id, 'index.html'), shell({ title: `${t.title} - 在线计算器 | 电子森林`, desc: `${t.title}：${t.desc}`, body, canonical: `/${t.id}/` }));

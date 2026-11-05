@@ -74,6 +74,34 @@ def sch_my_circuit():            # 函数名 sch_xxx_yyy -> 文件名 xxx-yyy
 - 校验连通性：`python3 netcheck.py my-circuit` 打印网表，逐条确认每个网络连接正确（power 符号不出现在网表里，用网络名 GND/VCC 体现）。
 - 元件位号要与工具输入/结果中的名称一致（R1、R2、C1…）。
 
+## 2b. CircuitJS 实时仿真（可选）
+
+在原理图定义旁加 `sim_<name>()`（与 `sch_<name>()` 同名），`gen.py` 会用 `schematics/circuitjs.py` 把**同一个** `Sch` 导出为 CircuitJS 电路模板 `public/sim/<name>.txt`，并把它的网表与 KiCad 网表逐网比对（不一致直接报错）。只更新仿真模板：`python3 schematics/gen.py --sim [name]`。
+
+```python
+def sim_ne555_astable():
+    return {
+        "params": {"R1": 1e3, "R2": 10e3, "C1": 100e-9, "VCC": 5},   # 默认值（SI 单位）；键 = 位号或任意参数名
+        "let": {"T": "0.693147*(R1+2*R2)*C1", "dt": "T/1024", "sp": "6.4"},  # 派生量（表达式：+ - * / ** min max round log sqrt si…）
+        "power": {"VCC": "VCC"},                  # 电源符号电压（+5V/+12V/-12V/+3V3 等可省略）
+        "timestep": "dt", "speed": "sp",          # 仿真步长；速度：每秒约 160·sp 步
+        "vrange": "VCC",
+        "scopes": [{"plots": [("label", "OUT", "V"), ("part", "C1", "V")], "speed": 8, "freq": True}],  # V 或 I；fft: True 显示频谱
+        # 可选：
+        # "values": {"C2": 10e-9, "Q1.beta": 150, "U1.rails": (12, -12)},   # 固定值（否则用 params[位号] 或 KiCad Value）
+        # "sources": {"VIN": {"type": "square|ac|dc|triangle|pulse", "freq": "f", "amp": 1, "bias": 0}},   # 把标签 VIN 变成信号源
+        # "sources": {"IOUT": {"type": "sweep", "fmin": "fc/20", "fmax": "3*fc", "amp": 1, "time": "1e-3", "log": True, "series_r": 50}},
+        # "replace": {"BT1": {"type": "square", "freq": "1/T", "amp": "VS/2", "bias": "VS/2"}},   # 两端源（+ = 引脚 1）换成波形源
+        # "switch": {"SW1": "A"},                   # SPDT 初始位置
+        # "notes": ["电路下方的说明文字，可含 ${si(fc)}Hz"],
+    }
+```
+- 映射：R/C/C_Polarized/L/D/D_Schottky/LED/D_Zener/Battery/VDC/VSIN/Speaker(按电阻)/SW_SPDT/Q_NPN/Q_PNP/Q_NMOS/LM358·TL081 等运放单元/NE555P；GND→接地，其余电源符号→直流轨；标签→同名「标注节点」（同名自动相连，`getNodeVoltage('OUT')` 可读）。MC34063、LM317、LM393、晶振、变压器、DDS 芯片等无对应模型，导出时报错 —— 这类原理图不要写 sim spec。
+- 多引脚器件：晶体管/运放直接落在 KiCad 引脚上（必要时补短桥线）；555 引脚排列与 KiCad 不同，放在电路右侧，用同名标注节点与原引脚相连。
+- 工具模块里加 `sim: '<name>'`（或按 mode 映射），`calc()` 返回 `simParams: { R1, R2, C1: c, VCC: vcc }`（SI 单位，键与 `params` 对应，也可覆盖 `let`）。只有当前显示的原理图就是该仿真时才出现「KiCad 原理图 | 实时仿真」标签页；元件值随计算结果实时更新。
+- 部署在 www.eetree.cn/tools 时 iframe 嵌入同源的 `/circuitjs/circuitjs.html`（X-Frame-Options: SAMEORIGIN），其他域名显示「在电子森林 CircuitJS 中打开仿真」按钮。构建变量：`CIRCUITJS_URL`（默认：`BASE_PATH` 以 /tools 开头时 `/circuitjs/circuitjs.html`，否则 `https://www.eetree.cn/circuitjs/circuitjs.html`），`CIRCUITJS_EMBED=1` 强制嵌入（本地用同源 CircuitJS 测试）。URL 形如 `…/circuitjs.html?cct=<encodeURIComponent(电路文本)>`。
+- 验证：`CJS_DIR=<本地 CircuitJS 构建目录> node tests/sim_check.mjs [--pages]` 逐个加载模板、对照计算器测量（555 频率/占空比、RC τ、滤波器幅频），`--pages` 再检查嵌入页面。不在 `npm test` 中；不要把 CircuitJS 构建提交进仓库或 dist。新增仿真时在该脚本里加对应的行为检查。
+
 ## 3. 本地预览
 `DIST_DIR=/tmp/预览目录 node scripts/build.mjs` 然后 `python3 -m http.server <端口> -d /tmp/预览目录`；
 截图：`node /home/claude/scratch/shot.mjs http://localhost:<端口>/<id>/ out.png [mobile]`（会打印页面 JS 错误）。不要写入 `dist/`。

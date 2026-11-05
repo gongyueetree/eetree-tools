@@ -2,6 +2,7 @@ import { fmtSI, nearestE } from '../core/num.js';
 
 export default {
   schematic: 'rc-charge',
+  sim: 'rc-charge',
   lead: 'RC 电路充电/放电：计算时间常数 τ、任意时刻电容电压与电流、储能；或由目标电压反算所需时间、电阻或电容。支持非零初始电压。',
   modes: [{ id: 'vc', label: '求 Vc(t)' }, { id: 't', label: '求时间 t' }, { id: 'r', label: '求 R' }, { id: 'c', label: '求 C' }],
   inputs: [
@@ -72,6 +73,7 @@ export default {
     const vmin = Math.min(0, V0, Vf);
     return {
       results: res, warn, info,
+      simParams: { R1: R, C1: C, VS: dis ? V0 : Vf },
       chart: { title: dis ? '放电曲线 Vc(t)' : '充电曲线 Vc(t)', x: { label: '时间', unit: 's' }, y: { label: '电容电压', unit: 'V', min: vmin }, series: [{ name: 'V<sub>C</sub>', pts }], marks: [{ x: T, y: Vc, label: `${fmtSI(T, 's', 3)}, ${fmtSI(Vc, 'V', 3)}` }] },
       table: { title: '时间常数对照表', head: ['时间', '数值', dis ? '已放电' : '已充电', 'V<sub>C</sub>', '电流'], rows },
     };

@@ -83,3 +83,14 @@ def sch_ne555_astable():
     s.wire(p3, (p3[0] + 3 * G, p3[1]))
     s.label("OUT", (p3[0] + 3 * G, p3[1]))
     return s
+
+
+def sim_ne555_astable():
+    """CircuitJS 实时仿真：R1/R2/C1/VCC 由计算器给出（simParams）；示波器：OUT 与电容电压"""
+    return {
+        "params": {"R1": 1e3, "R2": 10e3, "C1": 100e-9, "VCC": 5},
+        "let": {"T": "0.693147*(R1+2*R2)*C1", "dt": "T/1024", "sp": "6.4"},
+        "power": {"VCC": "VCC"},
+        "timestep": "dt", "speed": "sp", "vrange": "VCC",      # ≈1 个周期/秒（与频率无关）
+        "scopes": [{"plots": [("label", "OUT", "V"), ("part", "C1", "V")], "speed": 8, "freq": True, "vscale": "VCC"}],
+    }

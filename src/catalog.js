@@ -46,6 +46,7 @@ export const TOOLS = [
   { id: 'adc-metrics', cat: 'signal', title: 'ADC/DAC 指标换算', desc: 'SNR、SINAD、ENOB、THD 互算', old: ['/dianlu/shumozhuanqi.html'] },
   { id: 'clock-jitter', cat: 'signal', title: '采样时钟抖动', desc: '抖动限制的 SNR / 允许最大抖动', old: ['/dianlu/shujuzhuanhuandoudong.html'] },
   { id: 'coherent-sampling', cat: 'signal', title: '相干采样', desc: '素数周期数、相干输入频率', old: ['/dianlu/xianggancaiyang.html'] },
+  { id: 'dds', cat: 'signal', title: 'DDS 直接数字频率合成', desc: '频率控制字、分辨率、DAC 量化波形与镜像频谱、芯片选型', old: ['/dds'], tag: 'new' },
   { id: 'pll-loop-filter', cat: 'signal', title: 'PLL 三阶环路滤波器', desc: '电荷泵 PLL 无源三阶滤波器元件值', old: ['/dianlu/suoxianghuan.html'] },
   { id: 'crossover', cat: 'signal', title: '音箱分频器', desc: '两分频 1/2/3 阶（巴特沃斯、L-R）', old: ['/dianlu/fenpinqi.html'] },
   // ---- rf ----
@@ -65,12 +66,12 @@ export const TOOLS = [
   { id: 'tinkercad', cat: 'sim', title: 'Tinkercad Circuits', desc: '免费在线电路设计平台', ext: 'https://www.tinkercad.com/' },
   { id: 'circuitlab', cat: 'sim', title: 'CircuitLab', desc: '专业电路仿真工具', ext: 'https://www.circuitlab.com/' },
   { id: 'wokwi', cat: 'sim', title: 'Wokwi 模拟器', desc: 'ESP32/Arduino 在线模拟器', ext: 'https://wokwi.com/' },
-  // ---- math (GeoGebra hosted on eetree) ----
-  { id: 'gg-scientific', cat: 'math', title: '科学计算器', desc: '三角函数、对数、指数等', ext: 'https://www.eetree.cn/geogebra/index.html' },
-  { id: 'gg-geometry', cat: 'math', title: '几何计算器', desc: '几何图形相关计算', ext: 'https://www.eetree.cn/geogebra/index.html' },
-  { id: 'gg-graphing', cat: 'math', title: '函数计算器', desc: '数学函数计算与绘图', ext: 'https://www.eetree.cn/geogebra/index.html' },
-  { id: 'gg-3d', cat: 'math', title: '3D 计算器', desc: '三维数学计算', ext: 'https://www.eetree.cn/geogebra/index.html' },
-  { id: 'gg-cas', cat: 'math', title: 'CAS 计算器', desc: '计算机代数系统', ext: 'https://www.eetree.cn/geogebra/index.html' },
+  // ---- math ----
+  { id: 'sci-calc', cat: 'math', title: '科学计算器', desc: '表达式、工程单位、复数、进制、历史记录', tag: 'new' },
+  { id: 'function-plot', cat: 'math', title: '函数绘图', desc: '多函数绘图、缩放拖动、零点/极值/交点', tag: 'new' },
+  { id: 'geometry', cat: 'math', title: '几何计算器', desc: '三角形求解、圆与扇形、正多边形、坐标几何', tag: 'new' },
+  { id: 'plot3d', cat: 'math', title: '3D 曲面绘图', desc: 'z = f(x, y) 曲面，触摸旋转缩放', tag: 'new' },
+  { id: 'cas', cat: 'math', title: '符号计算 CAS', desc: '化简、求导、多项式求根、方程求解、矩阵', tag: 'new' },
   // ---- units ----
   { id: 'unit-converter', cat: 'unit', title: '电子工程单位换算', desc: '长度、温度、电阻、电容、功率/dBm、频率等', old: ['/yuanqijian/dianzuzuzhi.html'], tag: 'new' },
   { id: 'base-converter', cat: 'unit', title: '进制转换', desc: '二/八/十/十六进制、补码、位视图', tag: 'new' },

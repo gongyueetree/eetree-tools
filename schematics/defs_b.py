@@ -78,6 +78,20 @@ def sch_rc_charge():
     return s
 
 
+def sim_rc_charge():
+    """CircuitJS：BT1 换成 0/VS 方波（周期 10τ），SW1 默认拨向电源，可点击切换；示波器：VC 与 R1 电流"""
+    return {
+        "params": {"R1": 10e3, "C1": 100e-6, "VS": 5},
+        "let": {"tau": "R1*C1", "T": "10*tau", "dt": "T/512", "sp": "0.8"},
+        "replace": {"BT1": {"type": "square", "freq": "1/T", "amp": "VS/2", "bias": "VS/2"}},
+        "switch": {"SW1": "A"},
+        "timestep": "dt", "speed": "sp", "vrange": "VS",       # 一个方波周期 ≈ 4 s
+        "scopes": [{"plots": [("label", "VC", "V"), ("part", "BT1", "V")], "speed": 2, "vscale": "VS"},
+                   {"plots": [("part", "R1", "I")], "speed": 2, "iscale": "VS/R1"}],
+        "notes": ["BT1 以 0/VS 方波源代替（周期 10τ = ${si(T)}s），点击开关 SW1 可切换充电/放电"],
+    }
+
+
 # ---------------- MC34063 ----------------
 def _mc_common(s, rsc_cx, gnd_y, ct_to=None):
     """输入侧：VIN 轨、Cin、6 脚、Rsc、Ct、U1。返回 (u, rsc)"""
