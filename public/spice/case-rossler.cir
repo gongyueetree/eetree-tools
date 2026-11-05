@@ -1,0 +1,49 @@
+* rossler
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N006)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N002 0 V=min(max(V(OA1), -15), 15)
+R1 N001 N002 5meg
+C1 N001 N002 1n IC=3.063562198
+C2 N003 N004 1n IC=-2.856543536m
+R2 N003 N004 100k
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA2 0 OA2 0 N003 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N004 0 V=min(max(V(OA2), -15), 15)
+* op-amp 3: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA3 0 OA3 0 N005 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 N006 0 V=min(max(V(OA3), -15), 15)
+R3 N005 N006 2meg
+C3 N005 N006 1n IC=688.0284746m
+R4 N005 N004 100k
+* op-amp 4: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA4 0 OA4 0 N007 1
+R_OA4 OA4 0 100k
+C_OA4 OA4 0 159.1549431n
+B_OA4 N008 0 V=min(max(V(OA4), -15), 15)
+* op-amp 5: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA5 0 OA5 0 N009 1
+R_OA5 OA5 0 100k
+C_OA5 OA5 0 159.1549431n
+B_OA5 N010 0 V=min(max(V(OA5), -15), 15)
+R5 N010 N003 100k
+R6 N008 N001 100k
+R7 N007 N008 10k
+R8 N007 N006 10k
+D1 N011 N009 D_VF0p8059
+R9 N011 N006 10k
+R10 N011 N012 68k
+R11 N002 N005 200k
+R12 N002 N007 75k
+R13 N009 N010 150k
+V1 N012 0 -15
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 5u 768m 0 5u uic
+.end

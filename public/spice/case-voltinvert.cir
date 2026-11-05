@@ -1,0 +1,24 @@
+* voltinvert
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* analog switch (on when CTL > 2.5 V)
+S1 N001 N002 N003 0 SW_20_10g
+* analog switch (on when CTL > 2.5 V)
+S2 N002 0 N004 0 SW_20_10g
+C1 N002 N005 10u IC=0
+* analog switch (on when CTL > 2.5 V)
+S3 0 N005 N003 0 SW_20_10g
+* analog switch (on when CTL > 2.5 V)
+S4 N005 N006 N004 0 SW_20_10g
+C2 N006 0 10u IC=0
+V1 N001 0 5
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N003)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N004 0 V=V(B1y)
+V2 N003 0 PULSE(0 5 0 250n 250n 1.25m 2.5m)
+R1 N006 0 30k
+.model SW_20_10g SW(Ron=20 Roff=10g Vt=2.5 Vh=0)
+.model SW_20_10gn SW(Ron=20 Roff=10g Vt=-2.5 Vh=0)
+.tran 5u 768m 0 5u uic
+.end

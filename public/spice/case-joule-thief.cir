@@ -1,0 +1,19 @@
+* joule-thief
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N006)
+L1 N001 N003 400n
+L2 N004 N002 14.4u
+K1 L1 L2 999m
+Q1 N004 N005 0 QNPN_100
+R1 N001 N002 1k
+V1 N002 0 1.5
+C1 0 N001 100n IC=-494.0116812m
+R2 N003 N005 10
+C2 N006 0 10u IC=1.881795334
+D1 N004 N006 D_VF0p8059
+D2 N006 0 D_VF2p102
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model D_VF2p102 D(Is=2.23499e-18 N=2 Rs=0.001 Cjo=1p)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5n 96u 0 5n uic
+.end

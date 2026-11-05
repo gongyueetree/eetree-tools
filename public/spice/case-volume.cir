@@ -1,0 +1,12 @@
+* volume
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N003) V(N002)
+J1 N002 N001 0 JF_J1
+R1 N001 N002 100k
+R2 N001 N003 100k
+R3 N002 N004 6k
+V1 N004 0 SIN(0 5 200 0 0 0)
+V2 N003 0 PULSE(-11 -5 0 50m 50m 0 100m)
+.model JF_J1 NJF(VTO=-4 BETA=625u)
+.tran 5u 768m 0 5u uic
+.end

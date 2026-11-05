@@ -1,0 +1,47 @@
+* chaos2
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N004) V(N002) V(N006)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N002 0 V=min(max(V(OA1), -15), 15)
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA2 0 OA2 0 N003 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N004 0 V=min(max(V(OA2), -15), 15)
+* op-amp 3: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA3 0 OA3 0 N005 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 N006 0 V=min(max(V(OA3), -15), 15)
+R1 N002 N003 47k
+R2 N004 N005 47k
+C1 N001 N002 100n IC=2.301300886
+C2 N003 N004 100n IC=3.260194145
+C3 N005 N006 100n IC=-4.822137798
+R3 N006 N007 1k
+R4 N007 N008 6k
+* op-amp 4: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA4 0 OA4 0 N007 1
+R_OA4 OA4 0 100k
+C_OA4 OA4 0 159.1549431n
+B_OA4 N009 0 V=min(max(V(OA4), -15), 15)
+D1 N007 N009 D_VF0p8059
+D2 N009 N008 D_VF0p8059
+V1 N010 0 250m
+R5 N010 N001 157k
+* op-amp 5: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA5 0 OA5 0 N011 1
+R_OA5 OA5 0 100k
+C_OA5 OA5 0 159.1549431n
+B_OA5 N012 0 V=min(max(V(OA5), -15), 15)
+R6 N001 N012 47k
+R7 N012 N011 47k
+R8 N004 N011 47k
+R9 N011 N009 47k
+R10 N001 N002 100k
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 15u 2.304 0 15u uic
+.end

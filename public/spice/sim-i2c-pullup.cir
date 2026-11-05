@@ -1,0 +1,20 @@
+# eetree-sim 1
+# name i2c-pullup
+# param Rp 4700
+# param Cb 2e-10
+# param VDD 3.3
+# param fs 100000
+# let dt = 1/(fs*1000)
+# let sp = 2
+* i2c-pullup
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(SDA)
+.param Cb=${Cb} Rp=${Rp} VDD=${VDD}
+VDD vdd 0 {VDD}
+Rp vdd SDA {Rp}
+Cb SDA 0 {Cb} IC=0
+V1 N001 0 PULSE(${(VDD/2)-(VDD/2)} ${(VDD/2)+(VDD/2)} 0 ${1/(fs)*1e-4} ${1/(fs)*1e-4} ${(0.5)/(fs)} ${1/(fs)})
+M1 SDA N001 0 0 MN_1p5_20m
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran ${max((dt),(dt)*4800/200000)} ${(dt)*4800} 0 ${max((dt),(dt)*4800/200000)} uic
+.end

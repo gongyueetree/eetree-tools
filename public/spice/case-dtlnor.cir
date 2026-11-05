@@ -1,0 +1,21 @@
+* dtlnor
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+Q1 N002 N001 0 QNPN_100
+R1 N003 N004 4.7k
+V1 N004 0 5
+Q2 N002 N005 0 QNPN_100
+R2 N004 N006 4.7k
+R3 N004 N002 1k
+R4 N004 N002 1k
+D1 N003 N001 D_VF0p8059
+D2 N003 N007 D_VF0p8059
+D3 N006 N005 D_VF0p8059
+D4 N006 N008 D_VF0p8059
+* logic input H
+V2 N008 0 5
+* logic input H
+V3 N007 0 5
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

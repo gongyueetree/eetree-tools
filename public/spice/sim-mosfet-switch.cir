@@ -1,0 +1,24 @@
+# eetree-sim 1
+# name mosfet-switch
+# param VCC 12
+# param RL 2.4
+# param RG 10
+# param F 20000
+# param DUTY 0.5
+# param VDRV 10
+# param VT 2
+# param KB 5
+# let dt = 1/F/200
+# let sp = 4
+* mosfet-switch
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(vcc,VD)
+.param RG=${RG} RL=${RL} VCC=${VCC}
+RL vcc VD {RL}
+VCC vcc 0 {VCC}
+RG N001 N002 {RG}
+V1 N001 0 PULSE(${(VDRV/2)-(VDRV/2)} ${(VDRV/2)+(VDRV/2)} 0 ${1/(F)*1e-4} ${1/(F)*1e-4} ${(DUTY)/(F)} ${1/(F)})
+M1 VD N002 0 0 MN_0
+.model MN_0 NMOS(Level=1 VTO=${1*(VT)} KP=${KB})
+.tran ${max((dt),(dt)*2400/200000)} ${(dt)*2400} 0 ${max((dt),(dt)*2400/200000)} uic
+.end

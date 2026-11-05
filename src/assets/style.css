@@ -314,3 +314,11 @@ footer{color:var(--mute);font-size:12.5px;padding:28px 0 40px;text-align:center}
   .case-nav{grid-template-columns:1fr 1fr}.case-nav .up{display:none}
 }
 /* ===== end case gallery ===== */
+
+/* LTspice netlist tab / download */
+.spice-box{display:flex;flex-direction:column;gap:10px}
+.spice-hint{margin:0;font-size:13.5px;color:var(--mute);line-height:1.7}
+.spice-acts{display:flex;gap:8px;flex-wrap:wrap}
+.spice-net{margin:0;max-height:420px;overflow:auto;background:#0f1419;color:#d6e2ee;border-radius:8px;padding:12px 14px;font:12.5px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+.spice-dl{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:12px}
+.spice-dl small{color:var(--mute);font-size:12.5px}

@@ -1,0 +1,22 @@
+# eetree-sim 1
+# name rc-charge
+# param R1 10000
+# param C1 0.0001
+# param VS 5
+# let tau = R1*C1
+# let T = 10*tau
+# let dt = T/512
+# let sp = 0.8
+* rc-charge
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(VC) V(N002,VC)
+.param C1=${C1} R1=${R1}
+V1 N001 0 PULSE(${(VS/2)-(VS/2)} ${(VS/2)+(VS/2)} 0 ${1/(1/T)*1e-4} ${1/(1/T)*1e-4} ${(0.5)/(1/T)} ${1/(1/T)})
+R1 N002 VC {R1}
+C1 VC 0 {C1} IC=0
+* SPDT switch throw 0 off
+R2 N002 0 1e12
+* SPDT switch throw 1 on
+R3 N002 N001 1m
+.tran ${max((dt),(dt)*4800/200000)} ${(dt)*4800} 0 ${max((dt),(dt)*4800/200000)} uic
+.end

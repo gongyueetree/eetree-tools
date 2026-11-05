@@ -1,0 +1,28 @@
+* tlterm
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+T1 N002 N001 N003 0 Z0=75 Td=10n
+R1 N002 N004 75
+R2 N003 0 75
+V1 N004 N001 PULSE(0 5 0 10p 10p 3n 100n)
+T2 N006 N005 N007 0 Z0=75 Td=10n
+R3 N006 N008 75
+R4 N007 0 10k
+V2 N008 N005 PULSE(0 5 0 10p 10p 3n 100n)
+T3 N010 N009 N011 0 Z0=75 Td=10n
+R5 N010 N012 75
+R6 N011 0 10
+V3 N012 N009 PULSE(0 5 0 10p 10p 3n 100n)
+T4 N014 N013 N015 0 Z0=75 Td=10n
+R7 N014 N016 10
+R8 N015 0 10k
+V4 N016 N013 PULSE(0 5 0 10p 10p 3n 100n)
+* floating sub-circuit: reference to ground as in CircuitJS
+R9 N002 0 100meg
+* floating sub-circuit: reference to ground as in CircuitJS
+R10 N006 0 100meg
+* floating sub-circuit: reference to ground as in CircuitJS
+R11 N010 0 100meg
+* floating sub-circuit: reference to ground as in CircuitJS
+R12 N014 0 100meg
+.tran 38.4p 768n 0 38.4p uic
+.end

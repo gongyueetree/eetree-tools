@@ -1,0 +1,23 @@
+# eetree-sim 1
+# name rlc-bp-parallel
+# param R1 1000
+# param L1 0.01
+# param C1 1e-07
+# param SCOPE_W 512
+# let fc = 1/(2*PI*sqrt(L1*C1))
+# let fmin = fc/10
+# let fmax = fc*10
+# let dt = 1/(fmax*24)
+# let tsw = 60/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* rlc-bp-parallel
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} L1=${L1} R1=${R1} fmax=${fmax} fmin=${fmin}
+R1 N001 OUT {R1}
+L1 OUT 0 {L1} IC=0
+C1 OUT 0 {C1} IC=0
+V1 N001 0 DC 0 AC 1
+.ac dec 100 {fmin} {fmax}
+.end

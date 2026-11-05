@@ -1,0 +1,65 @@
+* dram
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+C1 N001 0 10n IC=0
+M1 N001 N002 N003 N003 MN_1p5_20m
+C2 N004 0 10n IC=5
+M2 N004 N005 N003 N003 MN_1p5_20m
+C3 N006 0 10n IC=0
+M3 N006 N007 N003 N003 MN_1p5_20m
+C4 N008 0 10n IC=5
+M4 N008 N009 N003 N003 MN_1p5_20m
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(u(V(N010)-2.5)*u(V(N011)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N002 0 V=V(B1y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B2 B2x 0 V=5*(u(V(N012)-2.5)*u(V(N011)-2.5))
+RB2 B2x B2y 1k
+CB2 B2y 0 1p IC=0
+B2o N005 0 V=V(B2y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B3 B3x 0 V=5*(u(V(N010)-2.5)*u(V(N013)-2.5))
+RB3 B3x B3y 1k
+CB3 B3y 0 1p IC=5
+B3o N007 0 V=V(B3y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B4 B4x 0 V=5*(u(V(N012)-2.5)*u(V(N013)-2.5))
+RB4 B4x B4y 1k
+CB4 B4y 0 1p IC=0
+B4o N009 0 V=V(B4y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B5 B5x 0 V=5*(1-u(V(N011)-2.5))
+RB5 B5x B5y 1k
+CB5 B5y 0 1p IC=0
+B5o N013 0 V=V(B5y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B6 B6x 0 V=5*(1-u(V(N010)-2.5))
+RB6 B6x B6y 1k
+CB6 B6y 0 1p IC=0
+B6o N012 0 V=V(B6y)
+* logic input H
+V1 N010 0 5
+* logic input L
+V2 N011 0 0
+* op-amp 1: A0=100000, GBW=1000000, output limited to [0.0, 5.0]
+G_OA1 0 OA1 N003 N014 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N015 0 V=min(max(V(OA1), 0), 5)
+V3 N014 0 2.5
+* analog switch (on when CTL > 2.5 V)
+S1 N003 N015 N016 0 SW_20_10g
+* analog switch (on when CTL > 2.5 V)
+S2 N017 N003 N018 0 SW_20_10g
+* logic input H
+V4 N017 0 5
+* logic input L
+V5 N018 0 0
+* logic input L
+V6 N016 0 0
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.model SW_20_10g SW(Ron=20 Roff=10g Vt=2.5 Vh=0)
+.model SW_20_10gn SW(Ron=20 Roff=10g Vt=-2.5 Vh=0)
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,15 @@
+* tllopass
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N006,N005)
+V1 N001 0 DC 0 AC 5
+T1 N002 0 N003 0 Z0=64.9 Td=31.25p
+T2 N002 0 N004 0 Z0=217.5 Td=31.25p
+T3 N004 0 N006 N005 Z0=217.5 Td=31.25p
+T4 N004 0 N007 0 Z0=70.3 Td=31.25p
+T5 N006 N005 N008 0 Z0=64.9 Td=31.25p
+R1 N006 N005 50
+R2 N001 N002 50
+* floating sub-circuit: reference to ground as in CircuitJS
+R3 N006 0 100meg
+.ac dec 100 2g 8g
+.end

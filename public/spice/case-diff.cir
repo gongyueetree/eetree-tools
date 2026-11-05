@@ -1,0 +1,8 @@
+* diff
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002)
+V1 N001 0 PULSE(-5 5 0 2.5u 2.5u 12.5m 25m)
+C1 N001 N002 9u IC=4.999340978
+R1 N002 0 120
+.tran 5u 768m 0 5u uic
+.end

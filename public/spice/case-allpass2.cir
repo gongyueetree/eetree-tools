@@ -1,0 +1,15 @@
+* allpass2
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N003)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 N002 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N003 0 V=min(max(V(OA1), -15), 15)
+R1 N001 N004 1k
+R2 N002 N004 1k
+R3 N001 N003 1k
+C1 N002 0 1u IC=-4.29293492
+V1 N004 0 PULSE(-5 5 0 1u 1u 5m 10m)
+.tran 5u 192m 0 5u uic
+.end

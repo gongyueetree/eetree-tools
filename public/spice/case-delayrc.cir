@@ -1,0 +1,17 @@
+* delayrc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N005)
+M1 N002 N001 N003 N003 MP_1p5_20m
+M2 N002 N001 0 0 MN_1p5_20m
+* logic input H
+V1 N001 0 5
+V2 N003 0 5
+R1 N002 N004 1.5k
+C1 N004 0 10n IC=4.973779074
+M3 N005 N004 N006 N006 MP_1p5_20m
+M4 N005 N004 0 0 MN_1p5_20m
+V3 N006 0 5
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.model MP_1p5_20m PMOS(Level=1 VTO=-1.5 KP=20m)
+.tran 5n 768u 0 5n uic
+.end

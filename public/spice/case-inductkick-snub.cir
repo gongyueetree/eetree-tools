@@ -1,0 +1,13 @@
+* inductkick-snub
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: I(L1)
+V1 N001 0 5
+* switch closed
+R1 0 N002 1m
+C1 0 N002 500p IC=0
+L1 N001 N003 1 IC=0
+R2 N003 N002 100
+R3 N004 N001 100
+C2 N004 N003 10u IC=41.69291604m
+.tran 5u 768m 0 5u uic
+.end

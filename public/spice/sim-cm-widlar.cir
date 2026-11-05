@@ -1,0 +1,22 @@
+# eetree-sim 1
+# name cm-widlar
+# param Rref 4300
+# param RL 100000
+# param VCC 5
+# param RE 12000
+# param BETA 100
+# let dt = 2e-7
+# let sp = 2
+* cm-widlar
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vcc,N001) V(vcc,VOUT)
+.param RE=${RE} RL=${RL} Rref=${Rref} VCC=${VCC}
+Rref vcc N001 {Rref}
+RL vcc VOUT {RL}
+VCC vcc 0 {VCC}
+RE N002 0 {RE}
+Q1 N001 N001 0 QNPN_100
+Q2 VOUT N001 N002 QNPN_100
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran ${max((dt),(dt)*2400/200000)} ${(dt)*2400} 0 ${max((dt),(dt)*2400/200000)} uic
+.end

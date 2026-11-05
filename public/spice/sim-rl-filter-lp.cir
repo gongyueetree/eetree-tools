@@ -1,0 +1,21 @@
+# eetree-sim 1
+# name rl-filter-lp
+# param R1 100
+# param L1 0.01
+# param SCOPE_W 512
+# let fc = R1/(2*PI*L1)
+# let fmin = fc/10
+# let fmax = fc*10
+# let dt = 1/(fmax*24)
+# let tsw = 60/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* rl-filter-lp
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param L1=${L1} R1=${R1} fmax=${fmax} fmin=${fmin}
+L1 N001 OUT {L1} IC=0
+R1 OUT 0 {R1}
+V1 N001 0 DC 0 AC 1
+.ac dec 100 {fmin} {fmax}
+.end

@@ -1,0 +1,9 @@
+* bandpass
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N001)
+L1 N001 0 500m IC=0
+C1 N001 0 31.7u IC=0
+R1 N002 N001 250
+V1 N002 0 DC 0 AC 5
+.ac dec 100 10 150
+.end

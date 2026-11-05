@@ -1,0 +1,26 @@
+# eetree-sim 1
+# name opamp-noninv
+# param VPK 0.5
+# param F 1000
+# param VDC 0
+# param VOH 13.5
+# param VOL -13.5
+# param R1 20000
+# param R2 180000
+# let VR = max(VOH, -VOL, 1)
+# let dt = 1/(F*256)
+# let sp = 3.2
+* opamp-noninv
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vpk)
+.param F=${F} R1=${R1} R2=${R2} VDC=${VDC} VOH=${VOH} VOL=${VOL} VPK=${VPK}
+R2 N001 VOUT {R2}
+R1 N001 0 {R1}
+V1 vpk 0 SIN({VDC} {VPK} {F} 0 0 0)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 vpk N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), {VOL}), {VOH})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

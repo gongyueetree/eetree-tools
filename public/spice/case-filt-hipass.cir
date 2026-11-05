@@ -1,0 +1,8 @@
+* filt-hipass
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002)
+C1 N001 N002 10u IC=0
+R1 N002 0 35
+V1 N001 0 DC 0 AC 5
+.ac dec 100 20 1k
+.end

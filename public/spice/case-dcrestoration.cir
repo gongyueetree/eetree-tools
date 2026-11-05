@@ -1,0 +1,10 @@
+* dcrestoration
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002)
+V1 N001 0 SIN(0 5 500 0 0 0)
+C1 N001 N002 5u IC=-3.058472073
+D1 0 N002 D_VF0p8059
+R1 N002 0 5k
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 1u 76.8m 0 1u uic
+.end

@@ -1,0 +1,18 @@
+* halfadd
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*((u(V(N001)-2.5)+u(V(N002)-2.5)-2*u(V(N001)-2.5)*u(V(N002)-2.5)))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N003 0 V=V(B1y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B2 B2x 0 V=5*(u(V(N001)-2.5)*u(V(N002)-2.5))
+RB2 B2x B2y 1k
+CB2 B2y 0 1p IC=0
+B2o N004 0 V=V(B2y)
+* logic input L
+V1 N001 0 0
+* logic input L
+V2 N002 0 0
+.tran 5u 768m 0 5u uic
+.end

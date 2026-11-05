@@ -1,0 +1,23 @@
+* opamp-regulator
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N007) V(N005,N005) V(N006)
+R1 N001 N002 10k
+* op-amp 1: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 N002 N003 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N004 0 V=min(max(V(OA1), -15), 15)
+R2 N005 N003 470
+R3 N003 0 470
+Q1 N001 N004 N005 QNPN_100
+V1 N006 0 PULSE(2.5 8.5 0 1.666666667u 1.666666667u 8.333333333m 16.66666667m)
+D1 0 N002 D_VF0p8059_BV6p14
+V2 N007 0 PULSE(14 18 0 4.166666667m 4.166666667m 0 8.333333333m)
+* potentiometer
+R4 N005 N006 500
+R5 N006 N008 500
+R6 N007 N001 100
+.model D_VF0p8059_BV6p14 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p BV=6.14 IBV=5m)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

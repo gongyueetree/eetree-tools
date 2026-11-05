@@ -1,0 +1,15 @@
+* amp-integ
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N004) V(N002)
+* NOTE: phase shift of V1 ignored
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N002 0 V=min(max(V(OA1), -15), 15)
+C1 N001 N002 5.8u IC=0
+V1 N003 0 PULSE(-5 5 0 2.5u 2.5u 12.5m 25m)
+V2 N004 N003 PULSE(-2 2 0 1.25u 1.25u 6.25m 12.5m)
+R1 N004 N001 1k
+.tran 5u 384m 0 5u uic
+.end

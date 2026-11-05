@@ -1,0 +1,19 @@
+* rtlnand
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+V1 N001 0 3.6
+Q1 N003 N002 N004 QNPN_100
+R1 N003 N001 640
+Q2 N004 N005 N006 QNPN_100
+Q3 N006 N007 0 QNPN_100
+R2 N002 N008 470
+R3 N009 N005 470
+R4 N010 N007 470
+* logic input H
+V2 N008 0 3.6
+* logic input H
+V3 N009 0 3.6
+* logic input H
+V4 N010 0 3.6
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

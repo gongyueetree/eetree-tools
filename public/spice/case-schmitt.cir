@@ -1,0 +1,16 @@
+* schmitt
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N006) V(N004)
+R1 N001 N002 500
+R2 N002 N003 100
+Q1 N004 N003 N005 QNPN_100
+Q2 N002 N006 N005 QNPN_100
+R3 N001 N004 500
+R4 N003 0 300
+R5 N005 0 100
+V1 N001 0 5
+V2 N007 0 SIN(0 200m 2k 0 0 0)
+V3 N006 N007 SIN(2 2 40 0 0 0)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

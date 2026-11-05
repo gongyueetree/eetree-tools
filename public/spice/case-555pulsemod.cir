@@ -1,0 +1,19 @@
+* 555pulsemod
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N004) V(N005)
+* 555 timer 1 (CircuitJS TimerElm behaviour)
+R_555a1 N003 N004 5k
+R_555b1 N004 0 10k
+B_555q1 Q555_1x 0 V=(u(V(N004,0)/2-V(N002,0))+(1-u(V(N004,0)/2-V(N002,0)))*(1-u(V(N002)-V(N004)))*u(V(Q555_1)-0.5))*u(V(N003,0)-0.7)
+R_555q1 Q555_1x Q555_1 1k
+C_555q1 Q555_1 0 1p
+B_555o1 Q555_1o 0 V=V(0)+V(Q555_1)*V(N003,0)
+R_555o1 Q555_1o N005 1
+B_555d1 N001 0 I=(1-V(Q555_1))*V(N001,0)/10
+V1 N003 0 5
+V2 N004 0 PULSE(1 5 0 25m 25m 0 50m)
+R1 N001 N003 300
+C1 N002 0 3u IC=1m
+R2 N001 N002 300
+.tran 5u 384m 0 5u uic
+.end

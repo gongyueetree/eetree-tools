@@ -1,0 +1,14 @@
+* eclosc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001)
+L1 N001 0 100m IC=4.198949592m
+C1 N001 0 50u IC=549.1422455m
+Q1 0 N001 N002 QNPN_100
+Q2 N001 0 N002 QNPN_100
+R1 N002 N003 4.7k
+V1 N003 0 -5.2
+R2 N001 0 4.474k
+R3 N001 0 4.474k
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 100u 480m 0 100u uic
+.end

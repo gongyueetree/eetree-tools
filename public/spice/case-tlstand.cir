@@ -1,0 +1,8 @@
+* tlstand
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002,N001)
+T1 N001 0 0 0 Z0=300 Td=2n
+R1 N002 N001 300
+V1 N002 0 SIN(0 5 1.5g 0 0 0)
+.tran 1.92p 38.4n 0 1.92p uic
+.end

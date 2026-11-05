@@ -1,0 +1,43 @@
+* sram
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+M1 N002 N001 0 0 MN_1p5_1m
+M2 N002 N001 N003 N003 MP_1p5_1m
+M3 N001 N002 N003 N003 MP_1p5_1m
+M4 N001 N002 0 0 MN_1p5_1m
+V1 N003 0 5
+M5 N002 N004 N005 N005 MN_1p5_40m
+M6 N006 N004 N001 N001 MN_1p5_40m
+M7 N006 N007 N008 N008 MN_1p5_40m
+M8 N009 N007 N005 N005 MN_1p5_40m
+V2 N010 0 5
+M9 N008 N009 0 0 MN_1p5_1m
+M10 N008 N009 N010 N010 MP_1p5_1m
+M11 N009 N008 N010 N010 MP_1p5_1m
+M12 N009 N008 0 0 MN_1p5_1m
+* logic input H
+V3 N004 0 5
+* analog switch (on when CTL > 2.5 V)
+S1 N011 N005 N012 0 SW_20_10g
+* analog switch (on when CTL > 2.5 V)
+S2 N013 N006 N012 0 SW_20_10g
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N011)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N013 0 V=V(B1y)
+* logic input L
+V4 N012 0 0
+* logic input H
+V5 N011 0 5
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B2 B2x 0 V=5*(1-u(V(N004)-2.5))
+RB2 B2x B2y 1k
+CB2 B2y 0 1p IC=0
+B2o N007 0 V=V(B2y)
+.model MN_1p5_1m NMOS(Level=1 VTO=1.5 KP=1m)
+.model MN_1p5_40m NMOS(Level=1 VTO=1.5 KP=40m)
+.model MP_1p5_1m PMOS(Level=1 VTO=-1.5 KP=1m)
+.model SW_20_10g SW(Ron=20 Roff=10g Vt=2.5 Vh=0)
+.model SW_20_10gn SW(Ron=20 Roff=10g Vt=-2.5 Vh=0)
+.tran 5u 768m 0 5u uic
+.end

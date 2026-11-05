@@ -1,0 +1,22 @@
+* vilnius
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002,N004) V(N005,N003)
+* op-amp 1: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 N002 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N003 0 V=min(max(V(OA1), -15), 15)
+R1 N001 0 10k
+R2 N002 0 1k
+C1 N002 N004 100n IC=-1.520810185
+L1 N004 N005 100m IC=-818.7542293u
+C2 N005 N003 15n IC=514.5384599m
+D1 N005 N003 D_VF0p8059
+R3 N005 N006 20k
+V1 N006 0 20
+* potentiometer
+R4 N001 N003 6.782k
+R5 N003 N003 3.218k
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 5u 768m 0 5u uic
+.end

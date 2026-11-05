@@ -1,0 +1,30 @@
+# eetree-sim 1
+# name r2r-dac
+# param R 10000
+# param VREF 5
+# param fclk 100
+# let dt = 1/(fclk*64)
+# let sp = 8
+* r2r-dac
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param R=${R}
+R1 N001 0 ${2*R}
+R2 N001 N002 ${2*R}
+R N001 N003 {R}
+R3 N003 N004 ${2*R}
+R4 N003 N005 {R}
+R5 N005 N006 ${2*R}
+R6 N005 N007 {R}
+R7 N007 N008 ${2*R}
+V1 N002 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/2)*1e-4} ${1/(fclk/2)*1e-4} ${(0.5)/(fclk/2)} ${1/(fclk/2)})
+V2 N004 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/4)*1e-4} ${1/(fclk/4)*1e-4} ${(0.5)/(fclk/4)} ${1/(fclk/4)})
+V3 N006 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/8)*1e-4} ${1/(fclk/8)*1e-4} ${(0.5)/(fclk/8)} ${1/(fclk/8)})
+V4 N008 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/16)*1e-4} ${1/(fclk/16)*1e-4} ${(0.5)/(fclk/16)} ${1/(fclk/16)})
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-12, 12]
+G_OA1 0 OA1 N007 OUT 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 OUT 0 V=min(max(V(OA1), -12), 12)
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

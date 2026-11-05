@@ -99,7 +99,9 @@ for (const t of TOOLS.filter((t) => !t.ext)) {
   if (sch && !fs.existsSync(path.join(ROOT, 'public/sch', sch + '.svg'))) console.warn('MISSING schematic', sch, 'for', t.id);
   const sims = mod.sim ? (typeof mod.sim === 'object' ? Object.values(mod.sim) : [mod.sim]) : [];
   for (const n of sims) if (!fs.existsSync(path.join(ROOT, 'public/sim', n + '.txt'))) console.warn('MISSING sim template', n, 'for', t.id, '(python3 schematics/gen.py --sim)');
-  const simAttr = sims.length ? ` data-sim-base="${BASE}sim/" data-cjs="${esc(CJS)}"${CJS_EMBED ? ' data-cjs-embed="1"' : ''}` : '';
+  const spice = sims.filter((n) => fs.existsSync(path.join(ROOT, 'public/spice', 'sim-' + n + '.cir')));
+  const simAttr = sims.length ? ` data-sim-base="${BASE}sim/" data-cjs="${esc(CJS)}"${CJS_EMBED ? ' data-cjs-embed="1"' : ''}`
+    + (spice.length ? ` data-spice-base="${BASE}spice/" data-spice="${spice.join(',')}" data-tool="${esc(t.id)}"` : '') : '';
   const schHtml = sch ? `<section class="card"><h2>电路原理图</h2>
 <figure class="sch" id="schfig" data-base="${BASE}sch/" data-cur="${sch}"${simAttr}><div class="img"><img src="${BASE}sch/${sch}.svg" alt="${esc(t.title)} 原理图" loading="eager"></div>
 <figcaption><span class="kicad">KiCad</span><span>标准 KiCad 符号库绘制</span><a class="dl" href="${BASE}sch/${sch}.kicad_sch" download>下载 .kicad_sch</a><a class="zoom" href="${BASE}sch/${sch}.svg" target="_blank" rel="noopener">查看大图 ↗</a></figcaption></figure></section>` : '';
@@ -186,7 +188,7 @@ ${CASES.tops.map((t) => `<section class="cat" id="${CASES.slug(t)}"><h2>${esc(zh
 <div class="case-tags">${lvTag(m)}<span>${esc(c.title)}</span><span>${c.parts} 个元件</span><code>${esc(c.name)}.txt</code></div>
 <div class="case-grid">
 <section class="card"><h2>KiCad 原理图</h2>${schHtml}</section>
-<section class="card"><h2>实时仿真</h2><div id="casesim" data-cjs="${esc(CJS)}" data-file="${esc(c.name)}.txt"${CJS_EMBED ? ' data-cjs-embed="1"' : ''}><noscript><a href="https://www.eetree.cn/circuitjs/circuitjs.html?startCircuit=${esc(c.name)}.txt">在电子森林 CircuitJS 中打开仿真</a></noscript></div></section>
+<section class="card"><h2>实时仿真</h2><div id="casesim" data-cjs="${esc(CJS)}" data-file="${esc(c.name)}.txt"${CJS_EMBED ? ' data-cjs-embed="1"' : ''}><noscript><a href="https://www.eetree.cn/circuitjs/circuitjs.html?startCircuit=${esc(c.name)}.txt">在电子森林 CircuitJS 中打开仿真</a></noscript></div>${fs.existsSync(path.join(ROOT, 'public/spice', 'case-' + c.name + '.cir')) ? `<div class="spice-dl"><a class="btn" href="${BASE}spice/case-${c.name}.cir" download="${esc(c.name)}.cir">下载 LTspice 网表 (.cir)</a><small>用 LTspice 打开（File › Open，文件类型选 Netlists）后点 Run；同样适用于 ngspice</small></div>` : ''}</section>
 </div>
 ${m.observe?.length ? `<section class="card prose" style="margin-top:16px"><h2>观察要点</h2>${list(m.observe)}</section>` : ''}
 ${m.try?.length ? `<section class="card prose" style="margin-top:16px"><h2>动手试试</h2>${list(m.try)}</section>` : ''}

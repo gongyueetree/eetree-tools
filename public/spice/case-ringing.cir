@@ -1,0 +1,9 @@
+* ringing
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001)
+L1 N001 0 2m IC=77.0831872m
+C1 N001 0 12.64u IC=-223.5280437m
+R1 N002 N001 100
+V1 N002 0 PULSE(-5 5 0 1u 1u 5m 10m)
+.tran 5u 192m 0 5u uic
+.end

@@ -1,0 +1,18 @@
+* mirror
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+Q1 N001 N001 N002 QPNP_1000
+Q2 N003 N001 N004 QPNP_1000
+R1 N002 N005 100
+R2 N004 N005 100
+V1 N005 0 5
+R3 N001 0 500
+R4 N003 0 150
+* switch open
+R5 N001 N006 1e12
+R6 N006 0 200
+* switch open
+R7 N003 N007 1e12
+R8 0 N007 10
+.model QPNP_1000 PNP(BF=1000 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,30 @@
+# eetree-sim 1
+# name opamp-differentiator
+# param R1 1000
+# param C1 1e-08
+# param R2 10000
+# param C2 1e-09
+# param VPK 1
+# param F 1000
+# param VOH 13.5
+# param VOL -13.5
+# let VR = max(VOH, -VOL, 1)
+# let dt = 1/(F*1024)
+# let sp = 6.4
+# let VS = min(VR, max(VPK, 4*VPK*F*R2*C1))
+* opamp-differentiator
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vpk)
+.param C1=${C1} C2=${C2} R1=${R1} R2=${R2} VOH=${VOH} VOL=${VOL}
+C1 N001 N002 {C1} IC=0
+R1 vpk N001 {R1}
+R2 N002 VOUT {R2}
+C2 N002 VOUT {C2} IC=0
+V1 vpk 0 PULSE(${(0.0)-(VPK)} ${(0.0)+(VPK)} 0 ${0.5/(F)} ${0.5/(F)} 0 ${1/(F)})
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 0 N002 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), {VOL}), {VOH})
+.tran ${max((dt),(dt)*19200/200000)} ${(dt)*19200} 0 ${max((dt),(dt)*19200/200000)} uic
+.end

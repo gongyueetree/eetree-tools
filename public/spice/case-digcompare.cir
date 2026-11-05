@@ -1,0 +1,67 @@
+* digcompare
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* logic input L
+V1 N001 0 0
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N001)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N002 0 V=V(B1y)
+* logic input L
+V2 N003 0 0
+* logic input L
+V3 N004 0 0
+* logic input L
+V4 N005 0 0
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B2 B2x 0 V=5*(1-u(V(N003)-2.5))
+RB2 B2x B2y 1k
+CB2 B2y 0 1p IC=0
+B2o N006 0 V=V(B2y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B3 B3x 0 V=5*((u(V(N004)-2.5)+u(V(N001)-2.5)-2*u(V(N004)-2.5)*u(V(N001)-2.5)))
+RB3 B3x B3y 1k
+CB3 B3y 0 1p IC=0
+B3o N007 0 V=V(B3y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B4 B4x 0 V=5*((u(V(N005)-2.5)+u(V(N003)-2.5)-2*u(V(N005)-2.5)*u(V(N003)-2.5)))
+RB4 B4x B4y 1k
+CB4 B4y 0 1p IC=0
+B4o N008 0 V=V(B4y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B5 B5x 0 V=5*(1-(u(V(N004)-2.5)*u(V(N002)-2.5)))
+RB5 B5x B5y 1k
+CB5 B5y 0 1p IC=5
+B5o N009 0 V=V(B5y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B6 B6x 0 V=5*(1-(u(V(N010)-2.5)*u(V(N006)-2.5)*u(V(N002)-2.5)))
+RB6 B6x B6y 1k
+CB6 B6y 0 1p IC=5
+B6o N011 0 V=V(B6y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B7 B7x 0 V=5*(1-(u(V(N010)-2.5)*u(V(N005)-2.5)*u(V(N004)-2.5)))
+RB7 B7x B7y 1k
+CB7 B7y 0 1p IC=5
+B7o N012 0 V=V(B7y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B8 B8x 0 V=5*(1-(u(V(N012)-2.5)*u(V(N011)-2.5)*u(V(N009)-2.5)))
+RB8 B8x B8y 1k
+CB8 B8y 0 1p IC=0
+B8o N013 0 V=V(B8y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B9 B9x 0 V=5*(1-(1-u(V(N008)-2.5))*(1-u(V(N007)-2.5)))
+RB9 B9x B9y 1k
+CB9 B9y 0 1p IC=0
+B9o N010 0 V=V(B9y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B10 B10x 0 V=5*(1-u(V(N010)-2.5))
+RB10 B10x B10y 1k
+CB10 B10y 0 1p IC=0
+B10o N014 0 V=V(B10y)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B11 B11x 0 V=5*(1-(1-(1-u(V(N013)-2.5))*(1-u(V(N014)-2.5))))
+RB11 B11x B11y 1k
+CB11 B11y 0 1p IC=0
+B11o N015 0 V=V(B11y)
+.tran 5u 768m 0 5u uic
+.end

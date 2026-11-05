@@ -1,0 +1,13 @@
+* lambda-diode-osc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002,N004) V(N002,N002) I(L1)
+J1 N002 0 N001 JF_J1
+R1 N002 N003 158
+L1 N003 N004 200m IC=-427.1344336u
+C1 N002 N004 56n IC=-3.251406153
+V1 N004 0 3.28
+J2 0 N002 N001 JF_J2
+.model JF_J1 NJF(VTO=-4 BETA=625u)
+.model JF_J2 PJF(VTO=-4 BETA=625u)
+.tran 5u 96m 0 5u uic
+.end

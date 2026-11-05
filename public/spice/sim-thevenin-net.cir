@@ -1,0 +1,17 @@
+# eetree-sim 1
+# name thevenin-net
+# param BT1 12
+# param R1 10000
+# param R2 10000
+# param RL 5000
+# let dt = 1e-6
+* thevenin-net
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(A)
+.param BT1=${BT1} R1=${R1} R2=${R2} RL=${RL}
+V1 N001 0 {BT1}
+R1 N001 A {R1}
+R2 A 0 {R2}
+RL A 0 {RL}
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

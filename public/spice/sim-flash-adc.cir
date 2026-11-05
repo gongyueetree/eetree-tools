@@ -1,0 +1,65 @@
+# eetree-sim 1
+# name flash-adc
+# param R1 1000
+# param R2 1000
+# param R3 1000
+# param R4 1000
+# param R5 1000
+# param R6 1000
+# param R7 1000
+# param R8 1000
+# param VREF 5
+# param F 5
+# let dt = 1/F/2000
+# let sp = 3
+* flash-adc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N008)
+.param R1=${R1} R2=${R2} R3=${R3} R4=${R4} R5=${R5} R6=${R6} R7=${R7} R8=${R8} VREF=${VREF}
+R1 N001 0 {R1}
+R2 N002 N001 {R2}
+R3 N003 N002 {R3}
+R4 N004 N003 {R4}
+R5 N005 N004 {R5}
+R6 N006 N005 {R6}
+R7 N007 N006 {R7}
+R8 vref N007 {R8}
+VREF vref 0 {VREF}
+V1 N008 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${0.5/(F)} ${0.5/(F)} 0 ${1/(F)})
+* op-amp 1: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA1 0 OA1 N008 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 T1 0 V=min(max(V(OA1), 0), 5)
+* op-amp 2: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA2 0 OA2 N008 N002 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 T2 0 V=min(max(V(OA2), 0), 5)
+* op-amp 3: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA3 0 OA3 N008 N003 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 T3 0 V=min(max(V(OA3), 0), 5)
+* op-amp 4: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA4 0 OA4 N008 N004 1
+R_OA4 OA4 0 100k
+C_OA4 OA4 0 159.1549431n
+B_OA4 T4 0 V=min(max(V(OA4), 0), 5)
+* op-amp 5: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA5 0 OA5 N008 N005 1
+R_OA5 OA5 0 100k
+C_OA5 OA5 0 159.1549431n
+B_OA5 T5 0 V=min(max(V(OA5), 0), 5)
+* op-amp 6: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA6 0 OA6 N008 N006 1
+R_OA6 OA6 0 100k
+C_OA6 OA6 0 159.1549431n
+B_OA6 T6 0 V=min(max(V(OA6), 0), 5)
+* op-amp 7: A0=100000, GBW=1000000, output limited to [0, 5]
+G_OA7 0 OA7 N008 N007 1
+R_OA7 OA7 0 100k
+C_OA7 OA7 0 159.1549431n
+B_OA7 T7 0 V=min(max(V(OA7), 0), 5)
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

@@ -75,6 +75,37 @@ export function renderSim(text, simParams = {}) {
   })).join('\n') + '\n';
 }
 
+/** SPICE template (public/spice/*.cir, from cases/spice.py) + simParams -> LTspice/ngspice netlist.
+ *  Same `# param` / `# let` header and ${expr} placeholders as the CircuitJS templates. */
+export function renderSpice(text, simParams = {}) {
+  const env = {}, lets = [], body = [];
+  for (const line of text.split(/\r?\n/)) {
+    let m;
+    if ((m = line.match(/^#\s*param\s+(\w+)\s+(\S+)/))) { env[m[1]] = parseFloat(m[2]); continue; }
+    if ((m = line.match(/^#\s*let\s+(\w+)\s*=\s*(.+)$/))) { lets.push([m[1], m[2]]); continue; }
+    if (line.startsWith('#')) continue;
+    body.push(line);
+  }
+  for (const [k, v] of Object.entries(simParams)) if (typeof v === 'number' && isFinite(v)) env[k] = v;
+  for (const [k, e] of lets) if (!(k in simParams)) env[k] = evalExpr(e, env);
+  return body.map((l) => l.replace(/\$\{([^}]*)\}/g, (_, e) => {
+    const v = evalExpr(e, env);
+    if (typeof v !== 'number' || !isFinite(v)) throw new Error(`${e} = ${v}`);
+    return spiceNum(v);
+  })).join('\n').replace(/\n*$/, '\n');
+}
+
+/** number -> SPICE literal with engineering suffix (10u, 2.2k, 1meg); note SPICE 'm' = milli, 'meg' = mega */
+export function spiceNum(v) {
+  if (v === 0) return '0';
+  const a = Math.abs(v);
+  if (a < 1e-15 || a >= 1e15) return String(+v.toPrecision(10));
+  for (const [f, p] of [[1e12, 't'], [1e9, 'g'], [1e6, 'meg'], [1e3, 'k'], [1, ''], [1e-3, 'm'], [1e-6, 'u'], [1e-9, 'n'], [1e-12, 'p'], [1e-15, 'f']]) {
+    if (a >= f * (1 - 1e-12)) return String(+(v / f).toPrecision(10)) + p;
+  }
+  return String(v);
+}
+
 export const EETREE_CIRCUITJS = 'https://www.eetree.cn/circuitjs/circuitjs.html';
 
 /** CircuitJS URL with the circuit in ?cct= (CirSim reads cct, replaces %24 with $) */
@@ -108,8 +139,45 @@ export function syncSim(root, tool, out, mode) {
   st.tabs.hidden = false;
   st.name = name;
   st.params = out.simParams;
+  const spiceOk = spiceList(fig).includes(name);
+  const sb = st.tabs.querySelector('[data-t="spice"]');
+  if (sb) sb.hidden = !spiceOk;
+  if (st.tab === 'spice' && !spiceOk) show(fig, st, 'sim');
   if (st.tab === 'sim') refresh(fig, st);
   else st.dirty = true;
+  if (st.tab === 'spice') renderSpicePane(fig, st);
+  else st.spDirty = true;
+}
+
+const spiceList = (fig) => (fig.dataset.spice || '').split(',').filter(Boolean);
+
+/** LTspice tab: netlist for the current calculator values, with download + copy */
+async function renderSpicePane(fig, st) {
+  st.spDirty = false;
+  const name = st.name;
+  let net;
+  try {
+    const tpl = await fetchTemplate(`${fig.dataset.spiceBase}sim-${name}.cir`);
+    net = renderSpice(tpl, st.params);
+  } catch (e) {
+    console.error(e);
+    st.sp.innerHTML = `<p class="msg warn">LTspice 网表生成失败：${String(e.message).replace(/[<&]/g, '')}</p>`;
+    return;
+  }
+  if (st.spNet === net && st.sp.firstChild) return;
+  st.spNet = net;
+  if (st.spUrl) URL.revokeObjectURL(st.spUrl);
+  st.spUrl = URL.createObjectURL(new Blob([net], { type: 'text/plain' }));
+  const file = `${(fig.dataset.tool || name)}.cir`;
+  st.sp.innerHTML = `<div class="spice-box"><p class="spice-hint">按<b>当前计算结果</b>生成的 SPICE 网表：下载后用 LTspice 打开（File › Open，文件类型选 Netlists）并点 Run 即可仿真；也可直接用于 ngspice。
+主要元件值写在 <code>.param</code> 行里，可在 LTspice 中直接修改。</p>
+<div class="spice-acts"><a class="btn primary" download="${file}" href="${st.spUrl}">下载 ${file}</a><button class="btn" type="button" data-copy>复制网表</button></div>
+<pre class="spice-net"></pre></div>`;
+  st.sp.querySelector('pre').textContent = net;
+  st.sp.querySelector('[data-copy]').addEventListener('click', (ev) => {
+    const b = ev.currentTarget;
+    navigator.clipboard?.writeText(net).then(() => { b.textContent = '已复制'; setTimeout(() => { b.textContent = '复制网表'; }, 1500); });
+  });
 }
 
 function build(fig, st) {
@@ -117,13 +185,18 @@ function build(fig, st) {
   const tabs = document.createElement('div');
   tabs.className = 'seg sim-tabs';
   tabs.setAttribute('role', 'tablist');
-  tabs.innerHTML = '<button role="tab" data-t="sch" aria-selected="true">KiCad 原理图</button><button role="tab" data-t="sim" aria-selected="false">实时仿真</button>';
+  tabs.innerHTML = '<button role="tab" data-t="sch" aria-selected="true">KiCad 原理图</button><button role="tab" data-t="sim" aria-selected="false">实时仿真</button>'
+    + (fig.dataset.spiceBase ? '<button role="tab" data-t="spice" aria-selected="false">LTspice</button>' : '');
   card.querySelector('h2').after(tabs);
   const pane = document.createElement('div');
   pane.className = 'sim-pane';
   pane.hidden = true;
   fig.after(pane);
-  st.tabs = tabs; st.pane = pane;
+  const sp = document.createElement('div');
+  sp.className = 'spice-pane';
+  sp.hidden = true;
+  pane.after(sp);
+  st.tabs = tabs; st.pane = pane; st.sp = sp;
   tabs.addEventListener('click', (e) => {
     const b = e.target.closest('button[data-t]');
     if (b) show(fig, st, b.dataset.t);
@@ -136,7 +209,9 @@ function show(fig, st, t) {
   st.tabs.querySelectorAll('button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.t === t)));
   fig.hidden = t !== 'sch';
   st.pane.hidden = t !== 'sim';
+  if (st.sp) st.sp.hidden = t !== 'spice';
   if (t === 'sim' && (st.dirty || !st.url)) refresh(fig, st);
+  if (t === 'spice' && (st.spDirty || !st.spNet)) renderSpicePane(fig, st);
 }
 
 function config(fig) {

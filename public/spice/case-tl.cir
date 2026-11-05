@@ -1,0 +1,9 @@
+* tl
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+T1 N002 0 N003 N001 Z0=75 Td=30n
+R1 N003 N001 75
+V1 N002 0 SIN(0 5 40meg 0 0 0)
+* floating sub-circuit: reference to ground as in CircuitJS
+R2 N003 0 100meg
+.tran 38.4p 768n 0 38.4p uic
+.end

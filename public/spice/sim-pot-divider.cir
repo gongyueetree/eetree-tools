@@ -1,0 +1,18 @@
+# eetree-sim 1
+# name pot-divider
+# param VIN 5
+# param RV1 10000
+# param RL 10000
+# param POS 0.5
+# let dt = 1e-6
+* pot-divider
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param RL=${RL} VIN=${VIN}
+* potentiometer
+R1 vin OUT ${max((RV1)*(POS),1e-3)}
+R2 OUT 0 ${max((RV1)*(1-(POS)),1e-3)}
+RL OUT 0 {RL}
+VIN vin 0 {VIN}
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

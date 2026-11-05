@@ -1,0 +1,34 @@
+# eetree-sim 1
+# name wien-oscillator
+# param R1 10000
+# param R2 10000
+# param C1 1e-08
+# param C2 1e-08
+# param Rg 10000
+# param Rf1 15000
+# param Rf2 6800
+# param Vsim 1.54
+# let f = 1/(2*PI*sqrt(R1*R2*C1*C2))
+# let dt = 1/(f*256)
+# let sp = 6.4
+* wien-oscillator
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} C2=${C2} R1=${R1} R2=${R2} Rf1=${Rf1} Rf2=${Rf2} Rg=${Rg}
+R1 N001 OUT {R1}
+C1 N002 N001 {C1} IC=0
+R2 N002 0 {R2}
+C2 N002 0 {C2} IC=10m
+Rf1 N003 N004 {Rf1}
+Rf2 N004 OUT {Rf2}
+D1 N004 OUT D_VF0p8059
+D2 OUT N004 D_VF0p8059
+Rg N003 0 {Rg}
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-12, 12]
+G_OA1 0 OA1 N002 N003 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 OUT 0 V=min(max(V(OA1), -12), 12)
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

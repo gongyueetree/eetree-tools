@@ -1,0 +1,33 @@
+* trianglevco
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N010)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-5, 5]
+G_OA1 0 OA1 N002 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N003 0 V=min(max(V(OA1), -5), 5)
+C1 N001 N003 10n IC=1.873096997
+R1 N002 0 49.9k
+R2 N002 N004 49.9k
+R3 N001 N004 100k
+R4 N001 N005 49.9k
+M1 N005 N006 0 0 MN_1p5_20m
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-5, 5]
+G_OA2 0 OA2 N007 N003 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N006 0 V=min(max(V(OA2), -5), 5)
+R5 N007 N008 100k
+R6 N007 N006 100k
+V1 N008 0 5
+R7 N007 N009 100k
+V2 N004 0 1
+V3 N009 0 -5
+* op-amp 3: A0=100000, GBW=1000000, output limited to [-5, 5]
+G_OA3 0 OA3 N003 N010 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 N010 0 V=min(max(V(OA3), -5), 5)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran 5u 768m 0 5u uic
+.end

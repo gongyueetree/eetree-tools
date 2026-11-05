@@ -1,0 +1,26 @@
+# eetree-sim 1
+# name phase-shift-osc
+# param R 10000
+# param C 1e-08
+# param Rf 316000
+# let f = 1/(2*PI*R*C*sqrt(6))
+# let dt = 1/(f*256)
+# let sp = 6.4
+* phase-shift-osc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C=${C} R=${R} Rf=${Rf}
+C OUT N001 {C} IC=1
+C1 N001 N002 {C} IC=0
+C2 N002 N003 {C} IC=0
+R N003 N004 {R}
+R1 N001 0 {R}
+R2 N002 0 {R}
+Rf N004 OUT {Rf}
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-12, 12]
+G_OA1 0 OA1 0 N004 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 OUT 0 V=min(max(V(OA1), -12), 12)
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

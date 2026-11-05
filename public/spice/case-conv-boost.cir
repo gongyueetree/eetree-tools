@@ -1,0 +1,16 @@
+* conv-boost
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N004)
+M1 N002 N001 0 0 MN_1p5_20m
+D1 0 N002 D_body
+V1 N003 0 5
+L1 N003 N002 1 IC=48.43914363m
+D2 N002 N004 D_default
+C1 N004 0 10u IC=12.06713579
+R1 N004 0 1k
+V2 N001 0 PULSE(0 10 0 100n 100n 680u 1m)
+.model D_body D(Is=1.7143528192808883e-7 N=2 Rs=1m Cjo=1p)
+.model D_default D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran 5u 48m 0 5u uic
+.end

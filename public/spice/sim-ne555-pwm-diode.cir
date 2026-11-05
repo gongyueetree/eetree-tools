@@ -1,0 +1,32 @@
+# eetree-sim 1
+# name ne555-pwm-diode
+# param Ra 4700
+# param Rb 15000
+# param C1 1e-08
+# param VCC 9
+# let T = 0.8*(Ra+Rb)*C1
+# let dt = T/1024
+# let sp = 6.4
+* ne555-pwm-diode
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} Ra=${Ra} Rb=${Rb} VCC=${VCC}
+VCC VCC 0 {VCC}
+Ra VCC DIS {Ra}
+D1 DIS TR D_VF0p8059
+D2 N001 DIS D_VF0p8059
+Rb N001 TR {Rb}
+C1 TR 0 {C1} IC=0
+C2 CV 0 10n IC=0
+* 555 timer 1 (CircuitJS TimerElm behaviour)
+R_555a1 VCC CV 5k
+R_555b1 CV 0 10k
+B_555q1 Q555_1x 0 V=(u(V(CV,0)/2-V(TR,0))+(1-u(V(CV,0)/2-V(TR,0)))*(1-u(V(TR)-V(CV)))*u(V(Q555_1)-0.5))*u(V(VCC,0)-0.7)
+R_555q1 Q555_1x Q555_1 1k
+C_555q1 Q555_1 0 1p
+B_555o1 Q555_1o 0 V=V(0)+V(Q555_1)*V(VCC,0)
+R_555o1 Q555_1o OUT 1
+B_555d1 DIS 0 I=(1-V(Q555_1))*V(DIS,0)/10
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran ${max((dt),(dt)*19200/200000)} ${(dt)*19200} 0 ${max((dt),(dt)*19200/200000)} uic
+.end

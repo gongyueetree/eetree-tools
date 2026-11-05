@@ -1,0 +1,10 @@
+* zenerref
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002)
+V1 N001 0 SIN(6.7 1 40 0 0 0)
+D1 0 N002 D_VF0p8059_BV5p6
+R1 N002 0 10k
+R2 N001 N002 500
+.model D_VF0p8059_BV5p6 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p BV=5.6 IBV=5m)
+.tran 5u 768m 0 5u uic
+.end
