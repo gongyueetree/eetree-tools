@@ -373,6 +373,17 @@ def sch_pot_divider():
     return s
 
 
+def sim_pot_divider():
+    return {
+        "params": {"VIN": 5, "RV1": 10e3, "RL": 10e3, "POS": 0.5},
+        "values": {"RV1.pos": "POS"},
+        "sources": {"VIN": {"type": "dc", "v": "VIN"}},
+        "let": {"dt": "1e-6"}, "timestep": "dt", "speed": 1, "vrange": "VIN",
+        "scopes": [{"plots": [("label", "OUT", "V")], "speed": 4, "vscale": "VIN"}],
+        "notes": ["拖动右侧 RV1 滑块改变滑动端位置，观察 OUT 电压与负载 RL 的分流电流"],
+    }
+
+
 # ---------------------------------------------------------------- LC ladders (Butterworth / Chebyshev)
 def _lc_ladder(resp, topo, n):
     name = f"lc-{resp}-{topo}-{n}"

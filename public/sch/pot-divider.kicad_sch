@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid eeb354fe-4871-4784-ac3e-21a1b7d5702d)
+  (uuid da5f937c-6305-47ba-a2c2-643fca0e63e6)
   (paper "A4")
   (title_block (title "电位器分压（带负载）") (company "EETree 电子森林"))
   (lib_symbols
@@ -151,45 +151,45 @@
   (wire
     (pts (xy 76.2 55.88) (xy 91.44 55.88))
     (stroke (width 0) (type default))
-    (uuid 9dd164b0-3ada-4950-b595-874922c01e85))
+    (uuid e385577d-eb19-4d9e-8e76-c8431187c100))
   (wire
     (pts (xy 91.44 55.88) (xy 91.44 74.93))
     (stroke (width 0) (type default))
-    (uuid dafe03a3-3c1e-48a7-bec6-138a05191c07))
+    (uuid 11fa9461-821d-47ea-a293-7d8cf8dcf702))
   (wire
     (pts (xy 91.44 82.55) (xy 91.44 101.6))
     (stroke (width 0) (type default))
-    (uuid c50efa67-e3fd-42f6-8c1c-a0267b71c55e))
+    (uuid 472579ba-a8c2-4537-a430-dba924befbc7))
   (wire
     (pts (xy 95.25 78.74) (xy 111.76 78.74))
     (stroke (width 0) (type default))
-    (uuid 466f2e3d-5e92-4508-a651-c164b0398494))
+    (uuid 667a53cb-3407-4dbe-b92c-4d3eebfc67e8))
   (wire
     (pts (xy 111.76 78.74) (xy 127.0 78.74))
     (stroke (width 0) (type default))
-    (uuid 4902b489-dc93-45dd-bcc9-84822ab861ae))
+    (uuid 521a53b0-7de7-463a-b04c-f4a836077597))
   (wire
     (pts (xy 111.76 78.74) (xy 111.76 85.09))
     (stroke (width 0) (type default))
-    (uuid 85aca05a-c393-48a3-bbb6-4f2311b0a2df))
+    (uuid 4829b31b-71bd-4a8b-98be-d0ed621ea616))
   (wire
     (pts (xy 111.76 92.71) (xy 111.76 101.6))
     (stroke (width 0) (type default))
-    (uuid 9f14384e-4711-48aa-b2aa-ffa57de20cc8))
+    (uuid 96754772-7d1b-478e-8fa2-6ca8c6434d23))
   (wire
     (pts (xy 111.76 101.6) (xy 101.6 101.6))
     (stroke (width 0) (type default))
-    (uuid f5852cfe-def5-462b-aa3f-8e53bdc10aa0))
+    (uuid 22032de6-92cf-4961-a69c-3592e3e72334))
   (wire
     (pts (xy 101.6 101.6) (xy 91.44 101.6))
     (stroke (width 0) (type default))
-    (uuid 16350ab1-e8fd-408f-9951-ee7a28784a04))
+    (uuid 786d378a-68f4-4bd4-80e8-35738922fc91))
   (global_label "VIN"
     (shape input)
     (at 76.2 55.88 180)
     (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f43b9dcf-59c5-42a9-a70b-e670337e4ecd)
+    (uuid ebd13510-78b5-4df9-940a-d9f465b92fee)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 76.2 55.88 0)
       (effects (font (size 1.27 1.27)) hide)))
@@ -197,29 +197,29 @@
     (at 111.76 78.74)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 554ab08f-35a1-42ef-9424-c321771c0a6a))
+    (uuid 1effa6cf-2e98-409e-8577-8f92ba72fb72))
   (junction
     (at 101.6 101.6)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid beb9d47a-af5c-4a2a-9a90-6f640973f48c))
+    (uuid e7cc224b-3c68-461a-ad8f-e7f316f0f0b4))
   (global_label "OUT"
     (shape output)
     (at 127.0 78.74 0)
     (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 65070336-f934-4f43-9618-555822724478)
+    (uuid e0ce0d35-3fa3-41c1-9669-d947d151e24a)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 127.0 78.74 0)
       (effects (font (size 1.27 1.27)) hide)))
   (text "x·R"
     (at 85.94 88.9 0)
     (effects (font (size 1.1 1.1)) (justify left bottom))
-    (uuid d40e669c-a2ed-42b2-999a-08841ab83315))
+    (uuid 67745eee-5593-42bf-a894-addcf2eabcd8))
   (text "(1−x)·R"
     (at 83.24 69.088 0)
     (effects (font (size 1.1 1.1)) (justify left bottom))
-    (uuid f17c648f-38e0-4872-a3e0-fb7938327daf))
+    (uuid a6a9f51d-9075-444b-9d60-6dc4ba0b0a1f))
   (symbol
     (lib_id "Device:R_Potentiometer")
     (at 91.44 78.74 0)
@@ -227,19 +227,19 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 554acf57-40d5-435e-8436-5c2357f3ffa0)
+    (uuid 0651981b-2a46-42ed-8e00-c26a4d63111f)
     (property "Reference" "RV1"
       (at 82.94 77.74 0)
       (effects (font (size 1.27 1.27)) (justify left)))
     (property "Value" "Rpot"
       (at 82.94 80.33999999999999 0)
       (effects (font (size 1.27 1.27)) (justify left)))
-    (pin "1" (uuid 84fe87ac-8a90-4c96-89f0-756b2cc00915))
-    (pin "2" (uuid 6318b04c-012d-4439-be62-f18d5ceeabe4))
-    (pin "3" (uuid 589f69ae-e8d9-40e5-a571-a3a5b4fb6e10))
+    (pin "1" (uuid f06a790c-25fd-4525-baba-0d21dc1bc3d1))
+    (pin "2" (uuid a753a14c-8e61-461b-a4e5-53959e95c428))
+    (pin "3" (uuid 881d8ca1-7738-4d0d-a2a5-ed0104de1978))
     (instances
       (project "pot-divider"
-        (path "/eeb354fe-4871-4784-ac3e-21a1b7d5702d"
+        (path "/da5f937c-6305-47ba-a2c2-643fca0e63e6"
           (reference "RV1")
           (unit 1)))))
   (symbol
@@ -249,18 +249,18 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 5414d705-80e9-45e2-bcc8-d1bef5b28560)
+    (uuid c933e4c3-3776-41e0-acc6-afe8a1ff7518)
     (property "Reference" "RL"
       (at 114.36 87.9 0)
       (effects (font (size 1.27 1.27)) (justify left)))
     (property "Value" "RL"
       (at 114.36 90.5 0)
       (effects (font (size 1.27 1.27)) (justify left) hide))
-    (pin "1" (uuid 751f8f55-2e0c-438b-8e0d-5bca7e0cd38e))
-    (pin "2" (uuid b2ddddfe-059d-4da1-a2a8-a7b6ae0d169c))
+    (pin "1" (uuid 6106b9d4-d9f5-463b-a57b-d9d26acf7ef5))
+    (pin "2" (uuid e411a194-5e1e-411b-8894-ded7171362e3))
     (instances
       (project "pot-divider"
-        (path "/eeb354fe-4871-4784-ac3e-21a1b7d5702d"
+        (path "/da5f937c-6305-47ba-a2c2-643fca0e63e6"
           (reference "RL")
           (unit 1)))))
   (symbol
@@ -270,17 +270,17 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid d7eea129-b2c9-47c3-bdc8-8dac7bbf2352)
+    (uuid fff40006-3ec6-4723-806f-11d017790b5c)
     (property "Reference" "#PWR01"
       (at 101.6 101.6 0)
       (effects (font (size 1.27 1.27)) hide))
     (property "Value" "GND"
       (at 101.6 106.6 0)
       (effects (font (size 1.27 1.27))))
-    (pin "1" (uuid 01b427a5-76d8-42ba-9405-4a542296b066))
+    (pin "1" (uuid df082802-c06b-4fc3-a771-039576292cc2))
     (instances
       (project "pot-divider"
-        (path "/eeb354fe-4871-4784-ac3e-21a1b7d5702d"
+        (path "/da5f937c-6305-47ba-a2c2-643fca0e63e6"
           (reference "#PWR01")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))

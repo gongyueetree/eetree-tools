@@ -314,6 +314,7 @@ def export(sch, spec):
                 wires.append((a, b))
 
     multi = []    # deferred multi-pin parts: (part, builder)
+    pot_tracks = []   # stretched pot tracks: wire stubs inside them are dropped after splitting
     for part in sch.parts:
         lib = part.lib_id
         name = lib.split(":")[1]
@@ -381,6 +382,29 @@ def export(sch, spec):
                     raise SimError(f"{ref}: VSIN needs a source spec (amplitude, freq) in spec['sources']")
                 r = {"type": "dc", "v": ref if ref in params else (parse_value(part.value) or 5)}
             elms.append(Elm("v", minus[0], plus[0], _wave(r), posts={minus[1]: minus[0], plus[1]: plus[0]}, ref=ref))
+        elif name in ("R_Potentiometer", "R_Potentiometer_Small", "R_Potentiometer_Trim"):
+            # PotElm (174): track point1 -> point2, wiper post3 = interpPoint(p1, p2, .5, offset); the offset is
+            # encoded in the second coordinate.  resistance(point1 -> wiper) = maxResistance * position.
+            a, b, w = pins["1"], pins["3"], pins["2"]
+            if a[0] == b[0] and w[1] == (a[1] + b[1]) // 2:
+                axis = (0, sign(b[1] - a[1]))
+            elif a[1] == b[1] and w[0] == (a[0] + b[0]) // 2:
+                axis = (sign(b[0] - a[0]), 0)
+            else:
+                raise SimError(f"{ref}: potentiometer must be rotated by a multiple of 90°")
+            # PotElm.setPoints rounds the track to a multiple of 2*gridSize (gridSize = 16 px unless the user
+            # enables "small grid"), so stretch the track symmetrically to a multiple of 32 px and bridge the ends
+            L = abs(b[0] - a[0]) + abs(b[1] - a[1])
+            ext = ((-L) % 32) // 2
+            a2 = (a[0] - axis[0] * ext, a[1] - axis[1] * ext)
+            b2 = (b[0] + axis[0] * ext, b[1] + axis[1] * ext)
+            if ext:
+                wires.append((a2, a)); wires.append((b, b2))
+                pot_tracks.append((a2, b2))
+            p2 = (w[0], b2[1]) if axis[0] == 0 else (b2[0], w[1])
+            pos = values.get(ref + ".pos", 0.5)          # fraction of the track between pin 1 and the wiper
+            elms.append(Elm("174", a2, p2, f"{valexpr(part)} {val(pos)} {ref}",
+                            posts={f"{ref}.1": a2, f"{ref}.3": b2, f"{ref}.2": w}, ref=ref))
         elif name in ("SW_SPDT",):
             multi.append((part, "spdt"))
         elif name.startswith("Q_NPN") or name.startswith("Q_PNP"):
@@ -453,7 +477,9 @@ def export(sch, spec):
         cuts = sorted([p for p in pts if _on_seg(p, a, b, inclusive=False)], key=lambda c: abs(c[0] - a[0]) + abs(c[1] - a[1]))
         seq = [a] + cuts + [b]
         split += list(zip(seq, seq[1:]))
-    wire_elms = [Elm("w", a, b, "", kind="wire") for a, b in dict.fromkeys(split)]
+    def _in_track(a, b):
+        return any(_on_seg(a, t0, t1) and _on_seg(b, t0, t1) for t0, t1 in pot_tracks)
+    wire_elms = [Elm("w", a, b, "", kind="wire") for a, b in dict.fromkeys(split) if not _in_track(a, b)]
 
     allel = elms + wire_elms
     # translate so the circuit starts near (64, 64) on the 16 px grid

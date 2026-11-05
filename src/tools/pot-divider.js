@@ -15,6 +15,7 @@ function maxErr(k) {
 
 export default {
   schematic: 'pot-divider',
+  sim: 'pot-divider',
   cases: ['potdivide', 'pot', 'voltdivide'],
   lead: '带负载的电位器分压：负载电阻使输出随旋转角度呈非线性，计算任意位置的输出电压、误差、输出电阻和功耗，并画出不同 R<sub>L</sub>/R<sub>pot</sub> 下的输出曲线。',
   inputs: [
@@ -76,6 +77,8 @@ export default {
     });
     return {
       results: res, warn, info,
+      // CircuitJS pot position = fraction of the track between pin 1 (VIN end) and the wiper
+      simParams: { VIN: vin, RV1: rp, RL: loaded ? rl : 1e12, POS: Math.min(0.995, Math.max(0.005, 1 - a)) },
       chart: { title: '输出比例与滑动位置', x: { label: '滑动位置', unit: '%' }, y: { label: 'VOUT/VIN', unit: '%', min: 0, max: 100 }, series, marks: [{ x, y: r * 100, label: `${(r * 100).toFixed(1)}%` }] },
       table: { title: '各位置输出（当前负载）', head: ['行程', '下段阻值比例', 'V<sub>OUT</sub>', '误差', 'R<sub>out</sub>'], rows },
     };

@@ -33,7 +33,7 @@ function wave(th, tl, vcc, vlo, vhi) {
 
 export default {
   schematic: { pot: 'ne555-pwm', design: 'ne555-pwm-diode', cv: 'ne555-pwm-cv' },
-  sim: { design: 'ne555-pwm-diode', cv: 'ne555-pwm-cv' },
+  sim: { pot: 'ne555-pwm', design: 'ne555-pwm-diode', cv: 'ne555-pwm-cv' },
   lead: '555 占空比可调电路：用两只导引二极管把充电、放电路径分开，电位器滑动即可在几乎 0–100% 间调节占空比而频率基本不变；也可由频率/占空比反算 Ra、Rb，或用控制电压（CV 脚）调制。',
   modes: [{ id: 'pot', label: '电位器调占空比' }, { id: 'design', label: '由 f、D 求 Ra、Rb' }, { id: 'cv', label: 'CV 电压调制' }],
   inputs: [
@@ -139,6 +139,7 @@ export default {
       chart: { title: '输出与电容电压（示意）', x: { label: '时间', unit: 's' }, y: { label: '电压', unit: 'V', min: 0 }, series: [{ name: 'OUT', pts: w.out, color: '#2563eb' }, { name: 'V<sub>C</sub>', pts: w.vc, color: '#0b7a55' }] },
     };
     if (mode === 'design') out.simParams = { Ra, Rb, C1: C, VCC: vcc };
+    if (mode === 'pot') out.simParams = { R1: v.r1, RV1: v.rv, POS: Math.min(0.995, Math.max(0.005, v.pos / 100)), C1: C, VCC: vcc };
     if (table) out.table = table;
     return out;
   },

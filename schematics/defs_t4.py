@@ -651,6 +651,18 @@ def sch_ne555_pwm_diode():
     return _ne555("ne555-pwm-diode", "555 占空比任意可调（导引二极管 + Ra、Rb）", "diode")
 
 
+def sim_ne555_pwm():
+    return {
+        "params": {"R1": 1e3, "RV1": 100e3, "POS": 0.5, "C1": 10e-9, "VCC": 9},
+        "values": {"RV1.pos": "POS"},
+        "let": {"T": "0.8*(R1+RV1)*C1", "dt": "T/1024", "sp": "6.4"},
+        "power": {"VCC": "VCC"},
+        "timestep": "dt", "speed": "sp", "vrange": "VCC",
+        "scopes": [{"plots": [("label", "OUT", "V"), ("part", "C1", "V")], "speed": 8, "freq": True, "vscale": "VCC"}],
+        "notes": ["拖动右侧 RV1 滑块调占空比：频率基本不变；CircuitJS 默认二极管压降约 0.4 V，频率比计算值略高"],
+    }
+
+
 def sim_ne555_pwm_diode():
     return {
         "params": {"Ra": 4.7e3, "Rb": 15e3, "C1": 10e-9, "VCC": 9},
