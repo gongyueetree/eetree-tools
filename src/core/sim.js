@@ -218,3 +218,48 @@ function swapCircuit(frame, url, circuit) {
   } catch { /* cross-origin wrapper: fall through */ }
   frame.src = url;
 }
+
+// ------------------------------------------------------------------ case gallery pages (/cases/<name>/)
+/** URL of a built-in CircuitJS example (CirSim reads ?startCircuit=<file> from its circuits/ folder) */
+export function caseUrl(base, file) {
+  return `${base}${base.includes('?') ? '&' : '?'}startCircuit=${encodeURIComponent(file)}`;
+}
+
+/** live simulation panel of a case page: <div id="casesim" data-cjs=".." data-file="x.txt" [data-cjs-embed="1"]> */
+export function mountCaseSim(el) {
+  if (!el) return;
+  const cfg = config(el);
+  const file = el.dataset.file;
+  const openUrl = caseUrl(cfg.open, file);
+  if (!cfg.embed) {
+    el.innerHTML = `<div class="sim-ext"><p>本电路是 CircuitJS 内置示例，可在电子森林 CircuitJS 中实时仿真：拖动滑块、点击开关、观察电流动画和示波器波形。</p>
+<a class="btn primary" href="${openUrl}" target="_blank" rel="noopener">在电子森林 CircuitJS 中打开仿真 ↗</a>
+<small>部署在 www.eetree.cn 时，仿真会直接嵌入本页。</small></div>`;
+    return;
+  }
+  const url = caseUrl(cfg.base, file);
+  el.innerHTML = `<div class="sim-box"><div class="sim-frame"><button class="sim-tap" type="button">▶ 点击加载实时仿真<small>CircuitJS，约 1 MB</small></button></div>
+<div class="sim-bar"><span>CircuitJS 电路仿真 · 可直接点击开关、拖动滑块</span><button class="btn" data-fs type="button">全屏</button><a class="btn" data-open target="_blank" rel="noopener" href="${url}">新窗口 ↗</a></div></div>`;
+  const box = el.querySelector('.sim-frame');
+  const load = () => {
+    if (box.querySelector('iframe')) return;
+    const f = document.createElement('iframe');
+    f.title = 'CircuitJS 电路仿真';
+    f.allow = 'fullscreen';
+    f.src = url;
+    box.replaceChildren(f);
+  };
+  box.querySelector('.sim-tap').addEventListener('click', load);
+  // desktop: load when the panel scrolls into view; phones: tap to load (saves ~1 MB)
+  if (!window.matchMedia('(max-width: 600px)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((ents) => { if (ents.some((e) => e.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '200px' });
+    io.observe(box);
+  }
+  el.querySelector('[data-fs]').addEventListener('click', () => {
+    load();
+    const b = el.querySelector('.sim-box');
+    if (b.requestFullscreen) b.requestFullscreen().catch(() => window.open(url, '_blank'));
+    else if (b.webkitRequestFullscreen) b.webkitRequestFullscreen();
+    else window.open(url, '_blank');
+  });
+}

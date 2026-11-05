@@ -1,0 +1,488 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 54bb886f-6f7f-43c0-8cf4-284545f74248)
+  (paper "A4")
+  (title_block
+    (title "Relaxation Oscillator")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Amplifier_Operational:LM358"
+      (pin_numbers hide)
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LM358"
+        (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "dual opamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LM358_1_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_2_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_3_1"
+        (pin power_in line
+          (at -2.54 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at -2.54 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 43.18 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 298df4e0-045b-49fa-8a14-0a0cfca09a8c))
+  (junction
+    (at 63.5 38.1)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 985eeb94-ecee-4508-ac38-60c701c6b639))
+  (junction
+    (at 43.18 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e98d808f-9103-40e1-8173-12360bbddaa6))
+  (wire
+    (pts (xy 43.18 35.56) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid 3ae99f51-1079-4d1a-b7b6-265332315e31))
+  (wire
+    (pts (xy 63.5 27.94) (xy 63.5 38.1))
+    (stroke (width 0) (type default))
+    (uuid 2370711b-7dca-45ce-9b6a-a42bd2be6dd8))
+  (wire
+    (pts (xy 63.5 38.1) (xy 63.5 48.26))
+    (stroke (width 0) (type default))
+    (uuid b1783eab-46f4-43f6-9f14-20ab64da181f))
+  (wire
+    (pts (xy 43.18 40.64) (xy 43.18 48.26))
+    (stroke (width 0) (type default))
+    (uuid 63652958-0334-488e-bf26-be7ffab35764))
+  (wire
+    (pts (xy 63.5 38.1) (xy 76.2 38.1))
+    (stroke (width 0) (type default))
+    (uuid 0cd60c06-84aa-454e-8f91-dda1a1912d75))
+  (wire
+    (pts (xy 49.53 27.94) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid e4707f56-c9ea-4253-82bd-88f3a39f95ae))
+  (wire
+    (pts (xy 57.15 27.94) (xy 63.5 27.94))
+    (stroke (width 0) (type default))
+    (uuid 46e1492e-b3ca-4d59-82b0-75e58499b45a))
+  (wire
+    (pts (xy 57.15 48.26) (xy 63.5 48.26))
+    (stroke (width 0) (type default))
+    (uuid 940f7173-5211-4654-b5a9-8973c5fe87ef))
+  (wire
+    (pts (xy 49.53 48.26) (xy 43.18 48.26))
+    (stroke (width 0) (type default))
+    (uuid c7f62fe3-93de-4a30-92e3-aa705187a4c8))
+  (wire
+    (pts (xy 39.37 48.26) (xy 43.18 48.26))
+    (stroke (width 0) (type default))
+    (uuid 356f6546-3a89-4ff4-92af-d6fc562497cb))
+  (wire
+    (pts (xy 31.75 48.26) (xy 27.94 48.26))
+    (stroke (width 0) (type default))
+    (uuid b976c78f-3f92-42d5-ab84-05b8d2c675c9))
+  (wire
+    (pts (xy 39.37 27.94) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid ba074640-de3f-4ff3-831f-0892f78b3ea2))
+  (wire
+    (pts (xy 31.75 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 5c46ffee-2498-4ba8-8138-fcc47c772d49))
+  (wire
+    (pts (xy 45.72 35.56) (xy 43.18 35.56))
+    (stroke (width 0) (type default))
+    (uuid f63f1cc2-994c-406f-a28f-d8edda0a9159))
+  (wire
+    (pts (xy 45.72 40.64) (xy 43.18 40.64))
+    (stroke (width 0) (type default))
+    (uuid 46e5043c-5169-4701-81f1-9dbca50e2d86))
+  (wire
+    (pts (xy 60.96 38.1) (xy 63.5 38.1))
+    (stroke (width 0) (type default))
+    (uuid 818d967c-2eba-4bbd-a331-ea23af459a98))
+  (global_label "AUDIO"
+    (shape output)
+    (at 76.2 38.1 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1307179b-3ad6-41a8-8e3b-a9cd14cfaa21)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 38.1 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 50a044bf-a7da-4001-94cd-685301c437fb)
+    (property "Reference" "#PWR001"
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7aa36679-1ed3-4364-aad8-b1692d00e815))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0bd6111a-db59-40c7-8573-e458a51f7e4f)
+    (property "Reference" "#PWR002"
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 320c2a42-848c-436d-95dd-e89304809bd5))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 53.34 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 45860132-e102-49df-b8bf-6f45399eb41d)
+    (property "Reference" "R1"
+      (at 53.34 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 53.34 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b5ab80f5-a9f2-443e-8855-96c206e83031))
+    (pin "2" (uuid f0543797-8c71-4533-9b40-61cc9efba1a1))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 53.34 48.26 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 74e0204c-931e-4371-aae1-86d32247db83)
+    (property "Reference" "R2"
+      (at 53.34 44.1325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100kΩ"
+      (at 53.34 45.72 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4d6dd851-6040-452b-8d8c-4971c86559de))
+    (pin "2" (uuid 6d417179-fbc0-4e73-b6e7-71c3e5d4d0cf))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 48.26 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 91c8ca36-0567-4695-8f17-8a83ddd09a48)
+    (property "Reference" "R3"
+      (at 35.56 44.1325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100kΩ"
+      (at 35.56 45.72 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f9752459-256d-42ce-8d7a-fcd6f3e53af8))
+    (pin "2" (uuid b6a2ebf8-0199-463e-ae7c-0cdae1869b6b))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "R3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 35.56 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2ae3b083-19df-4b1c-95c9-614c5379674a)
+    (property "Reference" "C1"
+      (at 35.56 22.70125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "400nF"
+      (at 35.56 24.28875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7a877d6d-563d-474e-8e9c-92fb0f8f1446))
+    (pin "2" (uuid 600d1c94-d500-44b2-af57-6ef7d817b7a5))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Amplifier_Operational:LM358")
+    (at 53.34 38.1 0)
+    (mirror x)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7a58ab1e-ce2d-4d66-9eb6-4d4c47ba5866)
+    (property "Reference" "U1"
+      (at 53.34 31.4325 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 53.34 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 53.34 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 20d87fd0-0f5c-4dfc-a3c6-bfbf7c150f4e))
+    (pin "2" (uuid 6de6e201-9f54-4434-b761-f2b77605e6fd))
+    (pin "3" (uuid 3bc884d6-5127-4100-9dea-a29b4209624a))
+    (pin "5" (uuid 4015ee48-407c-46d0-bd4e-ad1e6867ea11))
+    (pin "6" (uuid c43a7720-d99a-47a5-abf0-c62bd09a24a1))
+    (pin "7" (uuid 59864832-8963-4936-a5e5-43755268f3e5))
+    (pin "4" (uuid 445cfc27-8b52-4313-a0a2-891fc7302463))
+    (pin "8" (uuid 21503043-857c-4822-bd2e-a7b9d9b988bd))
+    (instances
+      (project "relaxosc"
+        (path "/d559bfc5-8c9f-4c6b-8941-d6ed77e23cb5"
+          (reference "U1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

@@ -1,0 +1,275 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 536a2b9b-44fb-47c8-b20d-6bf7c006c00b)
+  (paper "A4")
+  (title_block
+    (title "Potentiometer Divider")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Device:Battery"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "BT"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Battery"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "batt voltage-source cell"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Multiple-cell battery"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Battery_0_1"
+        (rectangle
+          (start -2.286 -1.27)
+          (end 2.286 -1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -2.286 1.778)
+          (end 2.286 1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 -2.032)
+          (end 1.524 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 1.016)
+          (end 1.524 0.508)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts (xy 0 -1.016) (xy 0 -0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 -0.508) (xy 0 -0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.778) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 3.048) (xy 1.778 3.048))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 3.556) (xy 1.27 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Battery_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R_Potentiometer"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at -4.445 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R_Potentiometer"
+        (at -2.54 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "resistor variable"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Potentiometer"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Potentiometer*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_Potentiometer_0_1"
+        (polyline
+          (pts (xy 2.54 0) (xy 1.524 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.143 0)
+            (xy 2.286 0.508)
+            (xy 2.286 -0.508)
+            (xy 1.143 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start 1.016 2.54)
+          (end -1.016 -2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_Potentiometer_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 40.64 25.4)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 4225db11-f226-4dde-89b0-eff075d92570))
+  (junction
+    (at 40.64 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7ff5f494-b49e-4b7d-9062-d0c1695a78aa))
+  (wire
+    (pts (xy 27.94 25.4) (xy 40.64 25.4))
+    (stroke (width 0) (type default))
+    (uuid e3a90bd8-4e4a-4173-bd10-0d6bcead1dd0))
+  (wire
+    (pts (xy 27.94 66.04) (xy 40.64 66.04))
+    (stroke (width 0) (type default))
+    (uuid 8c0f5d37-9a15-4175-bd1b-e22c3fc16f09))
+  (wire
+    (pts (xy 40.64 25.4) (xy 58.42 25.4))
+    (stroke (width 0) (type default))
+    (uuid 73853f8e-6edf-43e6-8889-e0edc3799b54))
+  (wire
+    (pts (xy 50.8 45.72) (xy 58.42 45.72))
+    (stroke (width 0) (type default))
+    (uuid 97039309-b2d2-4fcb-949c-cb3ff3d941cf))
+  (wire
+    (pts (xy 40.64 66.04) (xy 58.42 66.04))
+    (stroke (width 0) (type default))
+    (uuid 6acb14e1-bbf0-4501-a37a-d92c46da4faf))
+  (wire
+    (pts (xy 27.94 50.8) (xy 27.94 66.04))
+    (stroke (width 0) (type default))
+    (uuid 712c66c0-3e58-48fe-a7c6-69d156fe1fc6))
+  (wire
+    (pts (xy 27.94 40.64) (xy 27.94 25.4))
+    (stroke (width 0) (type default))
+    (uuid fec5d952-0d55-4f82-ba8b-543f35cb5f1a))
+  (wire
+    (pts (xy 44.45 45.72) (xy 50.8 45.72))
+    (stroke (width 0) (type default))
+    (uuid c989fea6-b48c-47de-89da-5c034c89b317))
+  (wire
+    (pts (xy 40.64 41.91) (xy 40.64 25.4))
+    (stroke (width 0) (type default))
+    (uuid 96db6349-cb5c-433f-bda4-4a1b9d5d8d4f))
+  (wire
+    (pts (xy 40.64 49.53) (xy 40.64 66.04))
+    (stroke (width 0) (type default))
+    (uuid b54ccd5a-333a-4c74-946e-77e337e8866a))
+  (global_label "VOUT1"
+    (shape output)
+    (at 58.42 25.4 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid abc0b7ee-8eb2-4088-93b6-c540520bb343)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 58.42 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "VOUT2"
+    (shape output)
+    (at 58.42 45.72 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0c944b36-f321-4bb7-a307-37ee80bbc807)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 58.42 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "VOUT3"
+    (shape output)
+    (at 58.42 66.04 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 67ed9f39-d5c8-4899-9b42-e1eb473bc1c2)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 58.42 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:Battery")
+    (at 27.94 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6cd85750-674a-4a34-8d28-82f43e6fa4bc)
+    (property "Reference" "BT1"
+      (at 32.86125 44.45 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V"
+      (at 32.86125 46.0375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 50dc2840-fb06-4158-bb2e-58555a893a57))
+    (pin "2" (uuid 93ecfcd6-f28c-4c21-a3bd-4cfec596444f))
+    (instances
+      (project "potdivide"
+        (path "/f92a9978-5439-449d-9831-74ac92b38e68"
+          (reference "BT1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R_Potentiometer")
+    (at 40.64 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f3232acd-fd0f-4301-ba0a-9c7b95e83ebf)
+    (property "Reference" "RV1"
+      (at 36.98875 44.92625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1kΩ"
+      (at 36.98875 46.51375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 40.64 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1565e18d-be09-4cf5-b6b6-1f801d604726))
+    (pin "2" (uuid fc7f0faa-c61a-4f0d-86fc-307049eebae2))
+    (pin "3" (uuid c47a1cc0-a16b-4ad9-950e-5de1f4dc35c1))
+    (instances
+      (project "potdivide"
+        (path "/f92a9978-5439-449d-9831-74ac92b38e68"
+          (reference "RV1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

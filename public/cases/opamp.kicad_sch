@@ -1,0 +1,292 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 4047b0ab-9b35-427c-bb28-a7b9f32dbc29)
+  (paper "A4")
+  (title_block
+    (title "Op-Amp")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "CircuitJS:PWR_abb1a4"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ1"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_abb1a4_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_abb1a4_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:PWR_cdd831"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ2"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_cdd831_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_cdd831_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ2" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Amplifier_Operational:LM358"
+      (pin_numbers hide)
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LM358"
+        (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "dual opamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LM358_1_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_2_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_3_1"
+        (pin power_in line
+          (at -2.54 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at -2.54 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 35.56 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 48818456-48e1-40a1-968d-dd7495dcc85f))
+  (wire
+    (pts (xy 35.56 33.02) (xy 27.94 33.02))
+    (stroke (width 0) (type default))
+    (uuid c97d8593-5fa2-4c17-a4c7-cfdbe419a55c))
+  (wire
+    (pts (xy 55.88 30.48) (xy 63.5 30.48))
+    (stroke (width 0) (type default))
+    (uuid 3824b85d-c98f-4457-b6ab-bcee939e9089))
+  (wire
+    (pts (xy 38.1 27.94) (xy 35.56 27.94))
+    (stroke (width 0) (type default))
+    (uuid b5749488-33ec-425c-8f01-a4019fdb5900))
+  (wire
+    (pts (xy 38.1 33.02) (xy 35.56 33.02))
+    (stroke (width 0) (type default))
+    (uuid 596105b2-8680-45bf-bb48-c6115fd89a35))
+  (wire
+    (pts (xy 53.34 30.48) (xy 55.88 30.48))
+    (stroke (width 0) (type default))
+    (uuid b7dec3f7-0859-4781-8e4b-51c9dcb4029d))
+  (global_label "VOUT"
+    (shape output)
+    (at 63.5 30.48 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0b285b5c-70a7-4220-8996-5cdfcf357894)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 63.5 30.48 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "CircuitJS:PWR_abb1a4")
+    (at 27.94 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ece2489c-598c-42ba-8d7a-81bd9ad777f9)
+    (property "Reference" "#PWR001"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "5V 可调"
+      (at 22.06625 27.94 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 777618b4-b609-4150-a357-deb94d6fac84))
+    (instances
+      (project "opamp"
+        (path "/98e59344-c064-4404-9a05-577119567b91"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:PWR_cdd831")
+    (at 27.94 33.02 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7bc5ccae-dced-46b9-aeea-cc55698c38ff)
+    (property "Reference" "#PWR002"
+      (at 27.94 33.02 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "5V 可调"
+      (at 22.06625 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7a298714-1af7-4b39-8937-c32885f10067))
+    (instances
+      (project "opamp"
+        (path "/98e59344-c064-4404-9a05-577119567b91"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Amplifier_Operational:LM358")
+    (at 45.72 30.48 0)
+    (mirror x)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b0765094-3da5-406c-badb-1ce31e6937f3)
+    (property "Reference" "U1"
+      (at 45.72 23.8125 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 45.72 30.48 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 30.48 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7d9acf3d-7e44-4986-b396-dc7e2e8f8fa8))
+    (pin "2" (uuid 8998e277-519b-411f-b22e-9fdcc145c0c4))
+    (pin "3" (uuid 52ae4465-93ce-44e0-8fe7-21ac383a6b0b))
+    (pin "5" (uuid 1ed1876a-f702-4384-b87c-ab277641f7ec))
+    (pin "6" (uuid f938eb47-6086-43aa-8e32-8c0148a0ee19))
+    (pin "7" (uuid 4f6963f0-fef6-4edb-9875-86122c9d81d7))
+    (pin "4" (uuid 21c08ded-e150-4c70-a4db-4983435fbacd))
+    (pin "8" (uuid 9e1c203f-0de9-496c-8336-64956ee41e27))
+    (instances
+      (project "opamp"
+        (path "/98e59344-c064-4404-9a05-577119567b91"
+          (reference "U1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

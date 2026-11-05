@@ -1,0 +1,396 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid f32900bd-d652-4f86-97af-dc8d0a883c6a)
+  (paper "A4")
+  (title_block
+    (title "NMOS Inverter 2")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:+5V"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+5V_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NMOS_GDS"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NMOS_GDS"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "N-MOSFET transistor, gate/drain/source"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NMOS_GDS_0_1"
+        (polyline
+          (pts (xy 0.254 0) (xy -2.54 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.254 1.905) (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 -1.27) (xy 0.762 -2.286))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 0.508) (xy 0.762 -0.508))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 2.286) (xy 0.762 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 2.54) (xy 2.54 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.762 -1.778)
+            (xy 3.302 -1.778)
+            (xy 3.302 1.778)
+            (xy 0.762 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 2.032 0.381)
+            (xy 2.032 -0.381)
+            (xy 1.016 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts
+            (xy 2.794 0.508)
+            (xy 2.921 0.381)
+            (xy 3.683 0.381)
+            (xy 3.81 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 3.302 0.381)
+            (xy 2.921 -0.254)
+            (xy 3.683 -0.254)
+            (xy 3.302 0.381))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 1.651 0)
+          (radius 2.794)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.54 -1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 2.54 1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline))))
+      (symbol "Q_NMOS_GDS_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 45.72 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 652a0c1b-6d61-4845-bd8f-c265341af1b9))
+  (junction
+    (at 55.88 40.64)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 319f4625-c3ca-4979-8074-039d1faabd5e))
+  (junction
+    (at 55.88 45.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 585491b2-be89-4480-b9db-bf35ceaa447a))
+  (wire
+    (pts (xy 35.56 27.94) (xy 45.72 27.94))
+    (stroke (width 0) (type default))
+    (uuid 8c985ca3-790a-4928-a7e7-c2da56082372))
+  (wire
+    (pts (xy 45.72 27.94) (xy 45.72 38.1))
+    (stroke (width 0) (type default))
+    (uuid 273bc6a5-725b-44d0-b24f-5de90876ba12))
+  (wire
+    (pts (xy 45.72 27.94) (xy 55.88 27.94))
+    (stroke (width 0) (type default))
+    (uuid 0c55add6-feb6-4a32-9dc2-1c568ee5bef4))
+  (wire
+    (pts (xy 55.88 27.94) (xy 55.88 35.56))
+    (stroke (width 0) (type default))
+    (uuid e6dd74b7-0f50-47e2-acbe-4fa93f409585))
+  (wire
+    (pts (xy 55.88 40.64) (xy 55.88 48.26))
+    (stroke (width 0) (type default))
+    (uuid 5d8df768-2706-4db1-8dcc-b566cca3d456))
+  (wire
+    (pts (xy 35.56 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid eda46caa-a954-40f6-bbe9-ec87ff4dacfb))
+  (wire
+    (pts (xy 45.72 50.8) (xy 38.1 50.8))
+    (stroke (width 0) (type default))
+    (uuid 2e215aa6-1c3d-4290-8e90-37962882dce6))
+  (wire
+    (pts (xy 55.88 40.64) (xy 63.5 40.64))
+    (stroke (width 0) (type default))
+    (uuid f54f413e-a27f-4267-8e9a-c94adfb5ab28))
+  (wire
+    (pts (xy 45.72 40.64) (xy 45.72 38.1))
+    (stroke (width 0) (type default))
+    (uuid c383d854-9579-4880-a049-ba1249acc777))
+  (wire
+    (pts (xy 53.34 35.56) (xy 55.88 35.56))
+    (stroke (width 0) (type default))
+    (uuid d4f9801e-32c5-4363-98cd-1b6e325b865b))
+  (wire
+    (pts (xy 53.34 45.72) (xy 55.88 45.72))
+    (stroke (width 0) (type default))
+    (uuid 3002aa60-7224-4c03-8ecd-92d782197078))
+  (wire
+    (pts (xy 55.88 45.72) (xy 55.88 40.64))
+    (stroke (width 0) (type default))
+    (uuid b2ea74c2-7a15-4f16-b1c6-682359215abc))
+  (wire
+    (pts (xy 48.26 50.8) (xy 45.72 50.8))
+    (stroke (width 0) (type default))
+    (uuid 14a0e761-209b-46cc-908a-4e0a449465be))
+  (wire
+    (pts (xy 55.88 55.88) (xy 55.88 53.34))
+    (stroke (width 0) (type default))
+    (uuid 23718f89-b34a-44e8-bd86-795e65a53213))
+  (wire
+    (pts (xy 55.88 45.72) (xy 55.88 48.26))
+    (stroke (width 0) (type default))
+    (uuid a4e1bb93-d236-41a7-a27f-5492dd61bfde))
+  (global_label "IN"
+    (shape input)
+    (at 38.1 50.8 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 2a7c2ddb-7ee2-4269-b923-30951f2763cf)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 38.1 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "OUT"
+    (shape output)
+    (at 63.5 40.64 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 21320349-8f75-4ff1-89fd-d6e827789341)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 63.5 40.64 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "power:+5V")
+    (at 27.94 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fcf892e3-e298-45c3-b112-8825a4d30f83)
+    (property "Reference" "#PWR001"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 23.1775 27.94 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7b389ada-75e5-49ec-b3ac-c85cd19d0576))
+    (instances
+      (project "nmosinverter2"
+        (path "/6c6d286d-03dc-4386-a780-32fe34c51672"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 55.88 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b565cec8-d4f7-426c-a6bf-396345be1606)
+    (property "Reference" "#PWR002"
+      (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a32ba441-97c9-4a1e-861c-09b316f16a03))
+    (instances
+      (project "nmosinverter2"
+        (path "/6c6d286d-03dc-4386-a780-32fe34c51672"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NMOS_GDS")
+    (at 50.8 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4cc318e9-c2aa-4486-b5af-87c6a597f653)
+    (property "Reference" "Q1"
+      (at 57.4675 37.62375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 50.8 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 50.8 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ff834298-1e2d-43f8-9ed8-d4f6402a9c1e))
+    (pin "2" (uuid 6455c6ff-e670-4644-ac79-168b9a4c5fde))
+    (pin "3" (uuid 2142d563-15c6-4962-9bff-d86225ef8dc9))
+    (instances
+      (project "nmosinverter2"
+        (path "/6c6d286d-03dc-4386-a780-32fe34c51672"
+          (reference "Q1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NMOS_GDS")
+    (at 53.34 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 16e37f6d-a9ea-407e-a12b-21c7adbef591)
+    (property "Reference" "Q2"
+      (at 60.0075 50.8 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 53.34 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 53.34 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9ac83f64-6a7d-44b6-b506-de17f7a745bf))
+    (pin "2" (uuid eeb66806-cc61-4f9f-ab34-ee3335d09475))
+    (pin "3" (uuid 57687a13-3f45-4613-aeaf-6324af598984))
+    (instances
+      (project "nmosinverter2"
+        (path "/6c6d286d-03dc-4386-a780-32fe34c51672"
+          (reference "Q2")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

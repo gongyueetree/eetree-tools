@@ -1,0 +1,725 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 9d81daaa-d83a-47bc-a029-0481564214bd)
+  (paper "A4")
+  (title_block
+    (title "Relay OR")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:+5V"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+5V_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:relay_8f3abc4f"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "K"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "RELAY"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "relay_8f3abc4f_0_1"
+        (polyline
+          (pts (xy 3.81 0.0) (xy 8.5725 2.2225))
+          (stroke (width 0.3) (type default))
+          (fill (type none)))
+        (circle
+          (center 3.81 0.0)
+          (radius 0.35)
+          (stroke (width 0.254) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start 5.08 -4.445)
+          (end 7.62 -8.255)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts (xy 5.08 -8.255) (xy 7.62 -4.445))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.35 -4.445) (xy 6.35 0.0))
+          (stroke (width 0.2) (type dash))
+          (fill (type none))))
+      (symbol "relay_8f3abc4f_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:relay_5cbf94b1"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "K"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "RELAY"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "relay_5cbf94b1_0_1"
+        (polyline
+          (pts (xy 3.81 0.0) (xy 8.5725 2.2225))
+          (stroke (width 0.3) (type default))
+          (fill (type none)))
+        (circle
+          (center 3.81 0.0)
+          (radius 0.35)
+          (stroke (width 0.254) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start 5.08 -4.445)
+          (end 7.62 -8.255)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts (xy 5.08 -8.255) (xy 7.62 -4.445))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.35 -4.445) (xy 6.35 0.0))
+          (stroke (width 0.2) (type dash))
+          (fill (type none))))
+      (symbol "relay_5cbf94b1_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:relay_2d6a6e62"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "K"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "RELAY"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "relay_2d6a6e62_0_1"
+        (polyline
+          (pts (xy 3.81 0.0) (xy 8.5725 2.2225))
+          (stroke (width 0.3) (type default))
+          (fill (type none)))
+        (circle
+          (center 3.81 0.0)
+          (radius 0.35)
+          (stroke (width 0.254) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start 5.08 -4.445)
+          (end 7.62 -8.255)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts (xy 5.08 -8.255) (xy 7.62 -4.445))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.35 -4.445) (xy 6.35 0.0))
+          (stroke (width 0.2) (type dash))
+          (fill (type none))))
+      (symbol "relay_2d6a6e62_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -2.54 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 5.08)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.0 1.0))))))))
+  (junction
+    (at 81.28 25.4)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 54464fda-9108-4c4c-bd7b-c1c0207792c8))
+  (junction
+    (at 109.22 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a19306a7-290a-486c-b2d5-7f76b7fce6f7))
+  (wire
+    (pts (xy 33.02 38.1) (xy 27.94 38.1))
+    (stroke (width 0) (type default))
+    (uuid 635cf4a7-bc8f-4a48-8f41-451d84906a6f))
+  (wire
+    (pts (xy 63.5 38.1) (xy 58.42 38.1))
+    (stroke (width 0) (type default))
+    (uuid 2d5fa5d3-e527-421b-85a7-89016ed80304))
+  (wire
+    (pts (xy 91.44 38.1) (xy 86.36 38.1))
+    (stroke (width 0) (type default))
+    (uuid df2ad393-8586-41dc-890a-ef4978c1a726))
+  (wire
+    (pts (xy 45.72 35.56) (xy 50.8 35.56))
+    (stroke (width 0) (type default))
+    (uuid 7deb5363-a579-45a6-bf36-892385b97e7e))
+  (wire
+    (pts (xy 50.8 35.56) (xy 50.8 25.4))
+    (stroke (width 0) (type default))
+    (uuid 0b583c86-bc1a-4994-bb00-4fb4f1ab4c19))
+  (wire
+    (pts (xy 50.8 25.4) (xy 81.28 25.4))
+    (stroke (width 0) (type default))
+    (uuid c80a9218-37f3-462c-8c8a-834d74bb59bc))
+  (wire
+    (pts (xy 81.28 25.4) (xy 81.28 35.56))
+    (stroke (width 0) (type default))
+    (uuid 6634d9f6-7ea7-4b67-9836-6416524f4a16))
+  (wire
+    (pts (xy 81.28 35.56) (xy 76.2 35.56))
+    (stroke (width 0) (type default))
+    (uuid 66301ba2-c0b9-4f2d-bd84-6983daf13797))
+  (wire
+    (pts (xy 81.28 25.4) (xy 109.22 25.4))
+    (stroke (width 0) (type default))
+    (uuid b6192bb9-afa9-4185-9522-1d6a0d05f35e))
+  (wire
+    (pts (xy 109.22 25.4) (xy 109.22 35.56))
+    (stroke (width 0) (type default))
+    (uuid 3d5e1281-6380-44c6-9784-2b99f243f274))
+  (wire
+    (pts (xy 104.14 35.56) (xy 109.22 35.56))
+    (stroke (width 0) (type default))
+    (uuid 43f7b119-e09b-425f-a48e-6a0d299eb3ea))
+  (wire
+    (pts (xy 33.02 33.02) (xy 27.94 33.02))
+    (stroke (width 0) (type default))
+    (uuid 37790913-8dc2-47c3-bb0e-3608793388d9))
+  (wire
+    (pts (xy 27.94 38.1) (xy 27.94 50.8))
+    (stroke (width 0) (type default))
+    (uuid 8efe8a16-29e0-4c94-b443-ab7f8ce389f4))
+  (wire
+    (pts (xy 58.42 38.1) (xy 58.42 50.8))
+    (stroke (width 0) (type default))
+    (uuid 0c569f53-48a9-441d-9faf-e92ed62de3e4))
+  (wire
+    (pts (xy 86.36 38.1) (xy 86.36 50.8))
+    (stroke (width 0) (type default))
+    (uuid 81aece96-7b89-4ae0-b56c-605bdc52c809))
+  (wire
+    (pts (xy 109.22 35.56) (xy 116.84 35.56))
+    (stroke (width 0) (type default))
+    (uuid b9a61cc3-eeff-4657-88ba-8c237fb151ee))
+  (wire
+    (pts (xy 63.5 33.02) (xy 58.42 33.02))
+    (stroke (width 0) (type default))
+    (uuid 4aaf2bb1-166f-4eba-81be-c31827857c73))
+  (wire
+    (pts (xy 91.44 33.02) (xy 86.36 33.02))
+    (stroke (width 0) (type default))
+    (uuid 1a0da509-e501-46d5-a1d6-e0e29e052859))
+  (wire
+    (pts (xy 109.22 38.1) (xy 109.22 35.56))
+    (stroke (width 0) (type default))
+    (uuid b862e18c-5aee-4cad-b164-7eb8a967413e))
+  (wire
+    (pts (xy 109.22 45.72) (xy 109.22 48.26))
+    (stroke (width 0) (type default))
+    (uuid 4a3b1ed1-eda2-4dab-83cb-d25df26891df))
+  (global_label "IN1"
+    (shape input)
+    (at 27.94 50.8 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 2e17b420-7b3b-453d-abe2-f20f48905075)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 27.94 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN2"
+    (shape input)
+    (at 58.42 50.8 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 58657f72-3823-4e84-a3ec-9e43203b8e72)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 58.42 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN3"
+    (shape input)
+    (at 86.36 50.8 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 007c01bc-177e-4eb0-ac16-4969f47496c3)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 86.36 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "OUT"
+    (shape output)
+    (at 116.84 35.56 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 82cb2562-d006-4346-9ab2-298d759b1658)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 116.84 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "power:+5V")
+    (at 27.94 33.02 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 54cf8b69-a57d-4073-9ac8-72fa50bed848)
+    (property "Reference" "#PWR001"
+      (at 27.94 33.02 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 23.1775 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fdf6072e-edda-4e7b-9384-b4827081117d))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 33.02 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 575c037b-d56f-4bf9-a0eb-6fa6f672b3e8)
+    (property "Reference" "#PWR002"
+      (at 33.02 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 33.02 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 33.02 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b2089cd4-3946-4cde-9164-85772f6e0416))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 63.5 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 85217112-63fd-42c5-a9be-1be302a35b29)
+    (property "Reference" "#PWR003"
+      (at 63.5 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 63.5 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 63.5 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6614cd95-01c5-473c-915e-06c39ce0bd26))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 91.44 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a23aa366-43cd-4879-a80b-47fb3f843a3e)
+    (property "Reference" "#PWR004"
+      (at 91.44 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 91.44 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 91.44 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid eea32fcb-a47a-43b6-a78d-a1d7d07df680))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR004")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 109.22 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f79dfdd9-c352-4530-8874-2d3be65d0d89)
+    (property "Reference" "#PWR005"
+      (at 109.22 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 109.22 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 109.22 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4e81c03a-50b2-416e-b684-a9b2bdf0e69e))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR005")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+5V")
+    (at 58.42 33.02 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 90dd4cc7-32a8-4562-b319-9b05c62ec540)
+    (property "Reference" "#PWR006"
+      (at 58.42 33.02 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 53.6575 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f342552e-6504-4a7f-b779-2d3570f27482))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR006")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+5V")
+    (at 86.36 33.02 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 441f9805-7e54-4fd9-bd69-fbc6f3b68f88)
+    (property "Reference" "#PWR007"
+      (at 86.36 33.02 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 81.5975 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 86.36 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e6e4e60b-8bff-4569-82be-43d78e814915))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "#PWR007")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 109.22 41.91 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d0f053b5-8fd7-4cea-82e9-713f0749c486)
+    (property "Reference" "R1"
+      (at 113.50625 41.11625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 113.50625 42.70375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 109.22 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e46d2d2a-5f0f-4df5-9f06-868eba5aa8fd))
+    (pin "2" (uuid 28bc2013-ba46-405a-a234-d4b4264eacf6))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:relay_8f3abc4f")
+    (at 33.02 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6fdeac7a-2259-49a3-b2b4-5c631e633f57)
+    (property "Reference" "K1"
+      (at 39.0525 29.21 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "RELAY"
+      (at 33.02 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 33.02 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 88043e69-3929-4657-8e49-a54f672d4f67))
+    (pin "2" (uuid 1f65ec55-32a8-4b74-894b-26540fd0bb08))
+    (pin "3" (uuid ed46616d-3101-4fb2-aac0-f3ca14406524))
+    (pin "4" (uuid 5f179bbd-0bc6-4305-b021-699ec70bc612))
+    (pin "5" (uuid 8a3abbe9-c48d-4b1b-8a3e-bc4c1b4949b4))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "K1")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:relay_5cbf94b1")
+    (at 63.5 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7e3e2536-77a1-47ca-88ce-53a4d2a9dda4)
+    (property "Reference" "K2"
+      (at 69.5325 29.21 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "RELAY"
+      (at 63.5 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 63.5 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f23a836c-a707-4c2e-84d3-12910aab24ce))
+    (pin "2" (uuid dd742d03-312e-48f8-97b2-38a511aa419e))
+    (pin "3" (uuid ee93414f-3833-4709-89f6-850df972647c))
+    (pin "4" (uuid 4628af17-3a2f-4c95-8835-988c62735622))
+    (pin "5" (uuid 0dcc2363-1319-412c-b7c0-067f52ce361a))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "K2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:relay_2d6a6e62")
+    (at 91.44 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 54816137-8733-452a-8062-3ee333121200)
+    (property "Reference" "K3"
+      (at 97.4725 29.21 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "RELAY"
+      (at 91.44 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 91.44 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 817b3f95-41c7-42c4-af14-a96037888c03))
+    (pin "2" (uuid 6cfb3ffd-8fc1-4a8b-943b-363233427df4))
+    (pin "3" (uuid 5e75560f-6c42-4117-aa7c-ed7117c7ddd0))
+    (pin "4" (uuid 34a0d145-514e-4b05-a4f7-7aa9d63191a1))
+    (pin "5" (uuid 7a621dc6-4119-44be-bb89-91755d86e1a1))
+    (instances
+      (project "relayor"
+        (path "/18d0aa06-06f0-421c-8fe5-b8b23f681b1d"
+          (reference "K3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

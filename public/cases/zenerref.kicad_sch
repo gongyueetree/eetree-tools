@@ -1,0 +1,416 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid b129a778-712a-43e3-9fdf-5a1c5ca0528b)
+  (paper "A4")
+  (title_block
+    (title "Voltage Reference")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D_Zener"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D_Zener"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Zener diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_Zener_0_1"
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy -0.762 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_Zener_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 48.26 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 73a28248-891c-440d-aeb6-1a7c2535a061))
+  (wire
+    (pts (xy 48.26 27.94) (xy 60.96 27.94))
+    (stroke (width 0) (type default))
+    (uuid eafeebf4-6e6e-4e27-9dc7-be08c5b0b591))
+  (wire
+    (pts (xy 48.26 41.91) (xy 48.26 48.26))
+    (stroke (width 0) (type default))
+    (uuid 0a434b8b-bd75-4641-b92b-6ba1565f49c4))
+  (wire
+    (pts (xy 48.26 34.29) (xy 48.26 27.94))
+    (stroke (width 0) (type default))
+    (uuid 3bd246bd-593c-4f3e-a767-921816cad353))
+  (wire
+    (pts (xy 60.96 34.29) (xy 60.96 27.94))
+    (stroke (width 0) (type default))
+    (uuid 0852a277-fa1c-45dc-904b-a862522fed4e))
+  (wire
+    (pts (xy 60.96 41.91) (xy 60.96 48.26))
+    (stroke (width 0) (type default))
+    (uuid 7e61c307-bf47-42da-819c-284536978ef3))
+  (wire
+    (pts (xy 39.37 27.94) (xy 38.1 27.94))
+    (stroke (width 0) (type default))
+    (uuid 3f5e522c-7fda-43c3-bb83-0178808e70d7))
+  (wire
+    (pts (xy 46.99 27.94) (xy 48.26 27.94))
+    (stroke (width 0) (type default))
+    (uuid 0458a3be-92cd-449d-9830-9e759176b18f))
+  (symbol
+    (lib_id "power:GND")
+    (at 48.26 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b1edddea-16f1-4034-8eb5-0f56cc0b21cf)
+    (property "Reference" "#PWR001"
+      (at 48.26 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 48.26 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 48.26 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bdcd61bf-3def-44b6-bb11-93d23352223f))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 60.96 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2e287ca7-998c-4ee4-886e-4740a54d2a8b)
+    (property "Reference" "#PWR002"
+      (at 60.96 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 60.96 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 60.96 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 84ab1044-2234-4801-a0cd-e9ebd68b7f29))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Zener")
+    (at 48.26 38.1 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1e2482cb-0df3-4868-a124-7df3daeb19ad)
+    (property "Reference" "D1"
+      (at 52.86375 37.30625 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5.6V"
+      (at 52.86375 38.89375 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 48.26 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 51e769a1-e34a-4f25-9952-36554b400ec1))
+    (pin "2" (uuid e30d6c84-20bf-42bb-aa4a-20f51280a69a))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 60.96 38.1 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8e46d360-3000-44ed-929a-ab203d5729fa)
+    (property "Reference" "R1"
+      (at 65.24625 37.30625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 65.24625 38.89375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 60.96 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 053da141-5b27-4cb8-8c24-c360d923febe))
+    (pin "2" (uuid d4cccef5-30dd-468e-a8a1-01d4cd043b3c))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0cb82e17-b5b3-47a1-a1ae-274e7520dc6d)
+    (property "Reference" "R2"
+      (at 43.18 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "500Ω"
+      (at 43.18 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4e527dc6-9a9d-48a3-beac-ff2966150182))
+    (pin "2" (uuid 6bc9a8af-7a8c-41d7-bfc7-2c0e7f227f67))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 33.02 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fb22ac8a-cdd1-4626-95cd-7cc0abbeffbc)
+    (property "Reference" "V1"
+      (at 33.02 22.225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1V 40Hz"
+      (at 33.02 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e2df3a6e-ae2f-4cc9-ab55-3dc16cd2caab))
+    (pin "2" (uuid d8160cd3-cfa6-4867-b68d-afc3be0ce36f))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6e8855a0-70a8-4121-84da-bd8bd79f7096)
+    (property "Reference" "#PWR003"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 93ef8c61-d5e6-4018-8951-0fb675939b71))
+    (instances
+      (project "zenerref"
+        (path "/6b35f04f-2dfc-40bd-9831-db8c41157b20"
+          (reference "#PWR003")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

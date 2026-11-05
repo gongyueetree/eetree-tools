@@ -1,0 +1,33 @@
+# eetree-sim 1
+# name rlc-bp-parallel
+# param R1 1000
+# param L1 0.01
+# param C1 1e-07
+# param SCOPE_W 512
+# let fc = 1/(2*PI*sqrt(L1*C1))
+# let fmin = fc/10
+# let fmax = fc*10
+# let dt = 1/(fmax*24)
+# let tsw = 60/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+$ 1 ${dt} ${sp} 50 ${1} 50
+r 168 96 216 96 0 ${R1}
+l 288 152 288 200 0 ${L1} 0
+c 384 152 384 200 0 ${C1} 0 0
+g 328 256 328 272 0 0
+170 96 96 64 96 1 ${fmin} ${fmax} 1 ${tsw}
+207 480 96 512 96 0 OUT
+w 96 96 168 96 0
+w 216 96 288 96 0
+w 288 96 384 96 0
+w 384 96 480 96 0
+w 288 96 288 152 0
+w 384 96 384 152 0
+w 288 200 288 256 0
+w 288 256 328 256 0
+w 328 256 384 256 0
+w 384 256 384 200 0
+x 64 56 264 60 0 18 并联谐振带通
+x 64 312 264 316 0 14 对数扫频 ${si(fmin)}Hz → ${si(fmax)}Hz（f0 ＝ ${si(fc)}Hz），示波器包络 ＝ 幅频响应
+o 5 ${ssp} 0 4098 ${1} 0.01 0 2 4 0

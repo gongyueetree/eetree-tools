@@ -1,0 +1,402 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 58b4be54-b50d-4a34-803d-bb09e0d1da37)
+  (paper "A4")
+  (title_block (title "INA128 仪表放大器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Amplifier_Instrumentation:INA128"
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 3.81 3.175 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "INA128"
+        (at 3.81 -3.175 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina128.pdf"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "instrumentation opamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Precision, Low Power Instrumentation Amplifier G = 1 + 50kOhm/Rg, DIP-8/SOIC-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "DIP*W7.62mm* SOIC*P1.27mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "INA128_0_1"
+        (polyline
+          (pts
+            (xy 7.62 0)
+            (xy -5.08 6.35)
+            (xy -5.08 -6.35)
+            (xy 7.62 0))
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "INA128_1_1"
+        (pin passive line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "Rg" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -5.08 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 5.08 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at 0 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at 2.54 -7.62 90)
+          (length 5.08)
+          (name "Ref" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin output line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at 0 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "Rg" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VEE"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VEE"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VEE\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VEE_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.762 1.27)
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+            (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type outline))))
+      (symbol "VEE_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VEE" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 119.38 71.12) (xy 116.84 71.12))
+    (stroke (width 0) (type default))
+    (uuid fbcd8917-378b-404a-a182-6114f792f933))
+  (wire
+    (pts (xy 116.84 71.12) (xy 116.84 63.5))
+    (stroke (width 0) (type default))
+    (uuid 40b0a792-93bc-4a7c-9362-1b1ead39f022))
+  (wire
+    (pts (xy 116.84 63.5) (xy 93.98 63.5))
+    (stroke (width 0) (type default))
+    (uuid ce20d9ea-9d4a-4630-8058-3df66ad20f0f))
+  (wire
+    (pts (xy 119.38 81.28) (xy 116.84 81.28))
+    (stroke (width 0) (type default))
+    (uuid a334f7a3-d36c-4ab8-a1bb-d13bd7288958))
+  (wire
+    (pts (xy 116.84 81.28) (xy 116.84 88.9))
+    (stroke (width 0) (type default))
+    (uuid b7d5e410-216d-4617-9f2d-980e05054308))
+  (wire
+    (pts (xy 116.84 88.9) (xy 93.98 88.9))
+    (stroke (width 0) (type default))
+    (uuid 1a4dfc84-fcf6-4720-9c50-d5a82b961c99))
+  (wire
+    (pts (xy 119.38 73.66) (xy 111.76 73.66))
+    (stroke (width 0) (type default))
+    (uuid 4a55679e-6bbf-42e6-a4b6-da7a0c934f4f))
+  (wire
+    (pts (xy 111.76 73.66) (xy 111.76 72.39))
+    (stroke (width 0) (type default))
+    (uuid a2a1a9ac-4c2c-4cef-b526-50b682d0b150))
+  (wire
+    (pts (xy 111.76 72.39) (xy 106.68 72.39))
+    (stroke (width 0) (type default))
+    (uuid dca89f95-1062-421a-8707-a0fc042e2e09))
+  (wire
+    (pts (xy 119.38 78.74) (xy 111.76 78.74))
+    (stroke (width 0) (type default))
+    (uuid 0a77ce71-d720-413a-a017-bcc01a7c0e60))
+  (wire
+    (pts (xy 111.76 78.74) (xy 111.76 80.01))
+    (stroke (width 0) (type default))
+    (uuid c4aad6cc-9b14-42b4-a5e9-5f47b761b5ba))
+  (wire
+    (pts (xy 111.76 80.01) (xy 106.68 80.01))
+    (stroke (width 0) (type default))
+    (uuid 2230aae5-e20c-4ff9-a21f-0bd073600c46))
+  (wire
+    (pts (xy 127.0 68.58) (xy 127.0 66.04))
+    (stroke (width 0) (type default))
+    (uuid 79381d99-711a-4ac4-a4a2-77f98bcf6daf))
+  (wire
+    (pts (xy 127.0 83.82) (xy 127.0 88.9))
+    (stroke (width 0) (type default))
+    (uuid 4580345e-e09c-49a8-9f41-9abf1e4c3549))
+  (wire
+    (pts (xy 129.54 83.82) (xy 129.54 88.9))
+    (stroke (width 0) (type default))
+    (uuid 8747cb23-b217-4b0e-b8bc-4e61bc9d2f2a))
+  (wire
+    (pts (xy 129.54 88.9) (xy 137.16 88.9))
+    (stroke (width 0) (type default))
+    (uuid 410703c3-e417-4373-ad48-51a2b6d45d3e))
+  (wire
+    (pts (xy 137.16 76.2) (xy 147.32 76.2))
+    (stroke (width 0) (type default))
+    (uuid 3259b7ce-0447-4ad6-af3a-29aa292bc3b7))
+  (global_label "IN+"
+    (shape input)
+    (at 93.98 63.5 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 09ed3c2f-2d3c-428f-9d44-eb79bbced862)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 93.98 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN-"
+    (shape input)
+    (at 93.98 88.9 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid d407045d-c3a0-4641-9581-2d9bc1647a81)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 93.98 88.9 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "REF"
+    (shape input)
+    (at 137.16 88.9 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 8b9a691c-97c4-4e18-92c2-7f4c10ae18a3)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 137.16 88.9 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "VOUT"
+    (shape output)
+    (at 147.32 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 793ae8a9-b704-49aa-a375-35fad1b39e14)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 147.32 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Amplifier_Instrumentation:INA128")
+    (at 127.0 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c26bd840-1a69-4003-9b01-4d0c71061ceb)
+    (property "Reference" "U1"
+      (at 132.08 62.230000000000004 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "INA128"
+      (at 132.08 66.04 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 6403e01d-e077-4596-994f-e1779aa0fff4))
+    (pin "2" (uuid 6ef0ca21-cfec-4fa2-aa33-b7a92b8a7cce))
+    (pin "3" (uuid f3b48cda-96bc-4ff1-82e7-f624f61e5558))
+    (pin "4" (uuid 388f5a47-3eb9-4221-a1da-07af70ea864e))
+    (pin "5" (uuid 476db59e-485c-4055-b825-0e5b18cac053))
+    (pin "6" (uuid c10b3309-3997-4306-b200-4e808a239711))
+    (pin "7" (uuid 323fb67c-03de-4674-abaa-ee17828b6d05))
+    (pin "8" (uuid e73546c0-9629-485b-801a-e2ee5fd0b9b4))
+    (instances
+      (project "inamp-ina128"
+        (path "/58b4be54-b50d-4a34-803d-bb09e0d1da37"
+          (reference "U1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 106.68 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 11e31598-793d-4596-94f8-e5f9dc7b5a17)
+    (property "Reference" "Rg"
+      (at 102.27999999999999 75.2 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "Rg"
+      (at 102.27999999999999 77.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 9dc0a1d7-3a91-4a52-9990-cdc7da4b65f5))
+    (pin "2" (uuid 60f34871-ff4e-491d-980b-40c7f2731372))
+    (instances
+      (project "inamp-ina128"
+        (path "/58b4be54-b50d-4a34-803d-bb09e0d1da37"
+          (reference "Rg")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VCC")
+    (at 127.0 66.04 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 284bb87e-966b-4d6f-8c33-3a8b77f05cd2)
+    (property "Reference" "#PWR01"
+      (at 127.0 66.03999999999999 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 127.0 62.239999999999995 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 15e9f8d3-ddb8-4e62-83d9-c14d6bf8329d))
+    (instances
+      (project "inamp-ina128"
+        (path "/58b4be54-b50d-4a34-803d-bb09e0d1da37"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VEE")
+    (at 127.0 88.9 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 424eaf76-af95-4b89-b290-5834cd86c936)
+    (property "Reference" "#PWR02"
+      (at 127.0 88.89999999999999 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VEE"
+      (at 127.0 93.89999999999999 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 43e964b7-0d76-43b4-9abe-7a7619078b9b))
+    (instances
+      (project "inamp-ina128"
+        (path "/58b4be54-b50d-4a34-803d-bb09e0d1da37"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

@@ -1,0 +1,240 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 90c19dd4-e84d-4c47-abf9-b23b0016cf3c)
+  (paper "A4")
+  (title_block
+    (title "Op-Amp Feedback")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "CircuitJS:PWR_2f3f82"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_2f3f82_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_2f3f82_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Amplifier_Operational:LM358"
+      (pin_numbers hide)
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LM358"
+        (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "dual opamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LM358_1_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_2_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_3_1"
+        (pin power_in line
+          (at -2.54 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at -2.54 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 55.88 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6e107b2d-bb9e-4a08-b78a-18ee4f21d682))
+  (wire
+    (pts (xy 55.88 35.56) (xy 55.88 25.4))
+    (stroke (width 0) (type default))
+    (uuid 7fedd926-5220-448f-9e0e-4819ef0fd309))
+  (wire
+    (pts (xy 35.56 25.4) (xy 35.56 33.02))
+    (stroke (width 0) (type default))
+    (uuid 478a9c02-07aa-4e72-ac27-f43c28218cf3))
+  (wire
+    (pts (xy 35.56 25.4) (xy 55.88 25.4))
+    (stroke (width 0) (type default))
+    (uuid 24ea721a-65dd-4725-af2f-ee0fc934766a))
+  (wire
+    (pts (xy 35.56 38.1) (xy 27.94 38.1))
+    (stroke (width 0) (type default))
+    (uuid 3ae613bf-9409-46d1-a8b8-8af939cdd9c0))
+  (wire
+    (pts (xy 55.88 35.56) (xy 63.5 35.56))
+    (stroke (width 0) (type default))
+    (uuid f4fa527e-8dae-4c9f-981c-803b09febc7f))
+  (wire
+    (pts (xy 38.1 33.02) (xy 35.56 33.02))
+    (stroke (width 0) (type default))
+    (uuid 8913027d-91c5-4618-8d8b-ee792007e1fa))
+  (wire
+    (pts (xy 38.1 38.1) (xy 35.56 38.1))
+    (stroke (width 0) (type default))
+    (uuid 1699c950-69c4-4293-91d6-2745232ca3cc))
+  (wire
+    (pts (xy 53.34 35.56) (xy 55.88 35.56))
+    (stroke (width 0) (type default))
+    (uuid 3368b59f-2078-4fcb-9804-85e016c7eb91))
+  (global_label "VOUT"
+    (shape output)
+    (at 63.5 35.56 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e91f328d-f817-421a-ae0c-684961e286ff)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 63.5 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "CircuitJS:PWR_2f3f82")
+    (at 27.94 38.1 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2f82bb8e-8914-495b-9935-b78d1bc7f50e)
+    (property "Reference" "#PWR001"
+      (at 27.94 38.1 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "5V 可调"
+      (at 22.06625 38.1 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b3c2dba2-24ae-461b-ba3d-7b6c06992782))
+    (instances
+      (project "opampfeedback"
+        (path "/4d26cbf8-8d2d-4797-9d53-9c58cd3716f4"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "Amplifier_Operational:LM358")
+    (at 45.72 35.56 0)
+    (mirror x)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a3153b51-ab3c-45e8-9db3-94e3df53796f)
+    (property "Reference" "U1"
+      (at 45.72 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 45.72 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2809ae97-8dbc-4b52-afa3-897d839afee0))
+    (pin "2" (uuid cf6aa4f8-ac4e-4378-a27e-b596a86e79fd))
+    (pin "3" (uuid cac85977-2bb9-4108-8775-df741c49eedf))
+    (pin "5" (uuid 60b163ee-4d1b-4205-9822-8693834f0c1c))
+    (pin "6" (uuid 79e372a5-3c35-47b1-a674-3d7c98a19664))
+    (pin "7" (uuid 1f7e1dea-d9b0-4432-af4c-d48b362bf7e6))
+    (pin "4" (uuid 8157aaa9-415f-467e-add4-72f9a05ca050))
+    (pin "8" (uuid a62ea88e-ec53-41d6-a356-93245f099049))
+    (instances
+      (project "opampfeedback"
+        (path "/4d26cbf8-8d2d-4797-9d53-9c58cd3716f4"
+          (reference "U1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

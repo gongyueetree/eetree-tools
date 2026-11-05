@@ -1,0 +1,641 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 454e08ae-f073-4aaa-bcb8-ff5024970ba6)
+  (paper "A4")
+  (title_block
+    (title "DIAC/TRIAC Dimmer")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:DIAC"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "DIAC"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "AC diode DIAC"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Diode for alternating current"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "DIAC_0_1"
+        (polyline
+          (pts
+            (xy -1.27 -2.54)
+            (xy -1.27 2.54)
+            (xy 1.27 1.27)
+            (xy -1.27 0))
+          (stroke (width 0.254) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts
+            (xy 1.27 2.54)
+            (xy 1.27 -2.54)
+            (xy -1.27 -1.27)
+            (xy 1.27 0))
+          (stroke (width 0.254) (type default))
+          (fill (type outline))))
+      (symbol "DIAC_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Lamp"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "LA"
+        (at 0.635 3.81 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Lamp"
+        (at 0.635 -3.81 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 2.54 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 2.54 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "lamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Lamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Lamp_0_1"
+        (polyline
+          (pts (xy -1.778 1.778) (xy 1.778 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.778 1.778) (xy -1.778 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "Lamp_1_1"
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_TRIAC_A1A2G"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 3.175 0.635 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_TRIAC_A1A2G"
+        (at 3.175 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 1.905 0.635 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "TRIAC"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Triode for alternating current, anode1/anode2/gate"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_TRIAC_A1A2G_0_1"
+        (polyline
+          (pts (xy -2.54 -1.27) (xy 2.54 -1.27))
+          (stroke (width 0.2032) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.54 1.27) (xy 2.54 1.27))
+          (stroke (width 0.2032) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 -2.54) (xy -0.635 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.54 1.27) (xy -1.27 -1.27) (xy 0 1.27))
+          (stroke (width 0.2032) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 -1.27) (xy 1.27 1.27) (xy 2.54 -1.27))
+          (stroke (width 0.2032) (type default))
+          (fill (type none))))
+      (symbol "Q_TRIAC_A1A2G_1_1"
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.54)
+          (name "A1" (effects (font (size 0.635 0.635))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.54)
+          (name "A2" (effects (font (size 0.635 0.635))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -3.81 -2.54 0)
+          (length 2.54)
+          (name "G" (effects (font (size 0.635 0.635))))
+          (number "3" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 50.8 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7edaa34d-f06e-4f84-867f-2bbe829ee763))
+  (junction
+    (at 50.8 53.34)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2c31f2f6-8cb2-4adc-9ccd-ef76edfe3f94))
+  (wire
+    (pts (xy 50.8 27.94) (xy 66.04 27.94))
+    (stroke (width 0) (type default))
+    (uuid 86949cb8-60eb-472b-a0c4-69bbeaf141a1))
+  (wire
+    (pts (xy 50.8 36.83) (xy 50.8 27.94))
+    (stroke (width 0) (type default))
+    (uuid 98281474-7af1-40f2-9bd9-274b14aa86cc))
+  (wire
+    (pts (xy 50.8 44.45) (xy 50.8 53.34))
+    (stroke (width 0) (type default))
+    (uuid 1f30661f-76f0-4fef-8a4b-0c7732ef9397))
+  (wire
+    (pts (xy 50.8 57.15) (xy 50.8 53.34))
+    (stroke (width 0) (type default))
+    (uuid b5f76369-25a1-4611-9966-64bf59afbd42))
+  (wire
+    (pts (xy 50.8 64.77) (xy 50.8 68.58))
+    (stroke (width 0) (type default))
+    (uuid 014dd8ae-b826-46f1-813b-404538870015))
+  (wire
+    (pts (xy 52.07 53.34) (xy 50.8 53.34))
+    (stroke (width 0) (type default))
+    (uuid 39e6fd37-3cb1-4a1b-a7a2-e9e7163d050f))
+  (wire
+    (pts (xy 59.69 53.34) (xy 60.96 53.34))
+    (stroke (width 0) (type default))
+    (uuid d26c28be-46af-456f-a31a-ec2463447307))
+  (wire
+    (pts (xy 39.37 27.94) (xy 38.1 27.94))
+    (stroke (width 0) (type default))
+    (uuid 1cd2f682-19e5-49a7-863c-e84be8bfa371))
+  (wire
+    (pts (xy 49.53 27.94) (xy 50.8 27.94))
+    (stroke (width 0) (type default))
+    (uuid 8ef0f96e-a5fe-49f0-b916-ea08c8580b9b))
+  (wire
+    (pts (xy 62.23 53.34) (xy 60.96 53.34))
+    (stroke (width 0) (type default))
+    (uuid 86e32696-622c-455d-b309-7ba8d68ff9c1))
+  (wire
+    (pts (xy 66.04 54.61) (xy 66.04 68.58))
+    (stroke (width 0) (type default))
+    (uuid 1120b822-5dec-45e0-8190-64a18c4591ce))
+  (wire
+    (pts (xy 66.04 46.99) (xy 66.04 27.94))
+    (stroke (width 0) (type default))
+    (uuid d19f6e5f-bfcc-4ce6-a86f-44944991cf16))
+  (symbol
+    (lib_id "power:GND")
+    (at 66.04 68.58 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ea410930-2563-42cd-875e-590c9022384e)
+    (property "Reference" "#PWR001"
+      (at 66.04 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 66.04 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 66.04 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5f564e15-196a-4270-ad67-d8fa1dfe455b))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 50.8 68.58 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 03d133f1-245f-4069-8a2f-a4dc9960e669)
+    (property "Reference" "#PWR002"
+      (at 50.8 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 50.8 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 50.8 68.58 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6a97c3e1-ae49-4949-9d13-d34f828d7037))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 40.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 01bc1098-b608-449e-bc89-22255f107351)
+    (property "Reference" "R1"
+      (at 56.1975 39.84625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "16.1kΩ"
+      (at 56.1975 41.43375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c3168380-692c-4630-a864-9d522e616212))
+    (pin "2" (uuid 00806cdf-1757-4c02-a9b0-376b379cceb7))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 50.8 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fac02869-ef2e-4932-8858-2fc254c93090)
+    (property "Reference" "C1"
+      (at 55.5625 60.16625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1µF"
+      (at 55.5625 61.75375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 60.96 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ffcbd927-d7cb-4eab-85f9-eebe1e8dd2dc))
+    (pin "2" (uuid cb02e9da-308f-413d-b8da-fb4d04a99607))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:DIAC")
+    (at 55.88 53.34 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3ba05c3a-3859-4247-b9d9-c53005468f30)
+    (property "Reference" "D1"
+      (at 55.88 49.2125 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0eb4108d-ba48-450f-ab4c-13c8ad71685d))
+    (pin "2" (uuid b4f779ec-eb20-4cba-b2de-5c88fa83767a))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Lamp")
+    (at 44.45 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ca6eaed3-0f27-4aab-8c6e-ee0f1fe9c016)
+    (property "Reference" "LA1"
+      (at 44.45 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 44.45 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 44.45 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b0c23922-0277-4b05-ac73-fa28463480ee))
+    (pin "2" (uuid 301d3650-cfba-4539-baf5-c5007ad573ea))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "LA1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_TRIAC_A1A2G")
+    (at 66.04 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 94f364e9-ff7c-4605-9cff-3f3f0a84063e)
+    (property "Reference" "Q1"
+      (at 70.8025 51.435 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 66.04 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 66.04 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e6c96a10-8665-48fe-9e33-068b94690b6f))
+    (pin "2" (uuid 96ef5e13-c81e-4216-858c-4b80682e09fb))
+    (pin "3" (uuid bb1a1875-a15a-42e0-91db-ed556bf200e9))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "Q1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 33.02 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3285dfce-d5da-4a07-aa70-5dc970897467)
+    (property "Reference" "V1"
+      (at 33.02 22.225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "170V 60Hz"
+      (at 33.02 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ac34f5e1-0e15-4f13-9272-ecd2cdee0116))
+    (pin "2" (uuid 8108efc8-b79c-42e0-ae84-e8fb19828fa8))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 866425a1-3e37-4c14-98fb-41c1e2d24b49)
+    (property "Reference" "#PWR003"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7b737396-53c7-4d5f-8f56-f3efaf30ddaa))
+    (instances
+      (project "triacdimmer"
+        (path "/e6f1a470-5c5c-487e-b582-29cefc7b4989"
+          (reference "#PWR003")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

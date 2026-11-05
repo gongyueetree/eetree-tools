@@ -1,0 +1,283 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 22db64d6-7e67-42ca-9a4d-6e4ff0850ab7)
+  (paper "A4")
+  (title_block
+    (title "Inductor")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:L"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L"
+        (at -1.27 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "L"
+        (at 1.905 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Inductor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (arc
+          (start 0 -2.54)
+          (mid 0.6323 -1.905)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 0.635)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 1.905)
+          (end 0 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "L_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 27.94 55.88) (xy 53.34 55.88))
+    (stroke (width 0) (type default))
+    (uuid bc4a6cca-930d-4019-9b72-b5194ced3627))
+  (wire
+    (pts (xy 27.94 46.99) (xy 27.94 55.88))
+    (stroke (width 0) (type default))
+    (uuid e660fcc6-fec0-4d33-8479-6fd865f88f0a))
+  (wire
+    (pts (xy 27.94 36.83) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 170fd860-1497-4986-8950-e28ad567c861))
+  (wire
+    (pts (xy 36.83 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 356b2f2b-592d-4363-aa4c-d68cadaaf6a3))
+  (wire
+    (pts (xy 44.45 27.94) (xy 53.34 27.94))
+    (stroke (width 0) (type default))
+    (uuid 2ae9602e-a54f-4f77-8479-487b05906661))
+  (wire
+    (pts (xy 53.34 38.1) (xy 53.34 27.94))
+    (stroke (width 0) (type default))
+    (uuid dbad1567-6eb0-44e0-abd7-03bdaab22a32))
+  (wire
+    (pts (xy 53.34 45.72) (xy 53.34 55.88))
+    (stroke (width 0) (type default))
+    (uuid 121dce34-bc4b-4de1-88e6-37c27bf1c40e))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 27.94 41.91 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a48efce5-7805-48f9-ae79-8217d33c05b7)
+    (property "Reference" "V1"
+      (at 35.40125 41.11625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 40Hz"
+      (at 35.40125 42.70375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 56776be9-9e4e-4c5d-8dae-994a6d784deb))
+    (pin "2" (uuid cf1b426f-435d-4e67-ad0a-602f3db3d705))
+    (instances
+      (project "inductac"
+        (path "/32c1e04e-03e2-4558-a186-6b289fda64fd"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 40.64 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 617a5670-c83b-4954-a530-333878b7f649)
+    (property "Reference" "R1"
+      (at 40.64 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "180Ω"
+      (at 40.64 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 40.64 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 595a4baf-d618-43ed-93a5-c33ea35833d8))
+    (pin "2" (uuid 1bff3f84-beca-434a-a36a-5ac2863225f0))
+    (instances
+      (project "inductac"
+        (path "/32c1e04e-03e2-4558-a186-6b289fda64fd"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 53.34 41.91 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3e624834-1f73-47c5-a82a-c5c2125f499d)
+    (property "Reference" "L1"
+      (at 56.1975 41.11625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1H"
+      (at 56.1975 42.70375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid dcc38e47-80a4-4e51-9548-d7c7a1c4c616))
+    (pin "2" (uuid 1cbc7fe9-0a31-4ce6-970d-ce177ec27cf6))
+    (instances
+      (project "inductac"
+        (path "/32c1e04e-03e2-4558-a186-6b289fda64fd"
+          (reference "L1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

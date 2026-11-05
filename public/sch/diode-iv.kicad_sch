@@ -1,0 +1,372 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 15546eec-37e3-467b-b9a0-3438be67dbcc)
+  (paper "A4")
+  (title_block (title "二极管伏安特性测试") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:Battery"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "BT"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Battery"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "batt voltage-source cell"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Multiple-cell battery"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Battery_0_1"
+        (rectangle
+          (start -2.286 -1.27)
+          (end 2.286 -1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -2.286 1.778)
+          (end 2.286 1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 -2.032)
+          (end 1.524 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 1.016)
+          (end 1.524 0.508)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts (xy 0 -1.016) (xy 0 -0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 -0.508) (xy 0 -0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.778) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 3.048) (xy 1.778 3.048))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 3.556) (xy 1.27 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Battery_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "D"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 63.5) (xy 76.2 55.88))
+    (stroke (width 0) (type default))
+    (uuid 176fd80a-7150-41d5-85ca-8a24f83d5ea9))
+  (wire
+    (pts (xy 76.2 73.66) (xy 76.2 81.28))
+    (stroke (width 0) (type default))
+    (uuid 73035523-b453-432e-bb13-3ef1326cad1d))
+  (wire
+    (pts (xy 76.2 55.88) (xy 87.63 55.88))
+    (stroke (width 0) (type default))
+    (uuid c9ec6aff-87d8-490a-85f2-db2e173b22e1))
+  (wire
+    (pts (xy 95.25 55.88) (xy 106.68 55.88))
+    (stroke (width 0) (type default))
+    (uuid 56d17d0f-5ccc-4c13-b586-fc5bc9da4cb7))
+  (wire
+    (pts (xy 106.68 55.88) (xy 106.68 64.77))
+    (stroke (width 0) (type default))
+    (uuid 6e635cb7-a2fb-4f36-a088-86b9408ff9a4))
+  (wire
+    (pts (xy 106.68 72.39) (xy 106.68 81.28))
+    (stroke (width 0) (type default))
+    (uuid b15f2d80-88c7-4e54-ba3c-44380e093703))
+  (wire
+    (pts (xy 76.2 81.28) (xy 91.44 81.28))
+    (stroke (width 0) (type default))
+    (uuid 0de3e245-ca96-4772-a05b-43f041e1999c))
+  (wire
+    (pts (xy 91.44 81.28) (xy 106.68 81.28))
+    (stroke (width 0) (type default))
+    (uuid 145f3366-232e-48f9-a82d-6ecc79bb2802))
+  (wire
+    (pts (xy 106.68 55.88) (xy 119.38 55.88))
+    (stroke (width 0) (type default))
+    (uuid 3a46b867-e262-494b-8943-05334aee5f91))
+  (junction
+    (at 91.44 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid ad0c514a-9f4e-4579-a556-08e5f633f0cb))
+  (junction
+    (at 106.68 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 819fd107-89f2-46d9-9c5c-4fb6cd1d1737))
+  (global_label "VD"
+    (shape output)
+    (at 119.38 55.88 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f3e57673-ac5d-43fb-95aa-1d2c2b154b56)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 119.38 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "I →"
+    (at 81.28 54.88 0)
+    (effects (font (size 1.4 1.4)) (justify left bottom))
+    (uuid f11aae96-d122-4353-a2c9-69776c507013))
+  (symbol
+    (lib_id "Device:Battery")
+    (at 76.2 68.58 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a3e36fdd-0ada-4765-a502-1f20fd04a877)
+    (property "Reference" "BT1"
+      (at 67.7 67.58 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "VS"
+      (at 69.2 70.58 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 875152bf-4ab5-4545-b7b7-f08bf87be5c4))
+    (pin "2" (uuid a6958bb1-8a17-42ef-a159-b53245edeb01))
+    (instances
+      (project "diode-iv"
+        (path "/15546eec-37e3-467b-b9a0-3438be67dbcc"
+          (reference "BT1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 91.44 55.88 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2397c7c7-dbf4-42ab-a42b-0b986baee02e)
+    (property "Reference" "R1"
+      (at 91.44 52.480000000000004 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R1"
+      (at 91.44 59.080000000000005 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c3c2002c-e222-445e-ac83-a3af46c2d5b8))
+    (pin "2" (uuid e5ec3a36-7463-427b-8485-9c2bf6ae6249))
+    (instances
+      (project "diode-iv"
+        (path "/15546eec-37e3-467b-b9a0-3438be67dbcc"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D")
+    (at 106.68 68.58 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid aad969f9-8e92-4b30-88c7-b9d78c1fd947)
+    (property "Reference" "D1"
+      (at 109.68 67.58 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D"
+      (at 109.68 70.17999999999999 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ec76844c-8fa3-4b46-b920-1560ddc33acf))
+    (pin "2" (uuid 13ad12a9-8357-4360-a997-1c4e646858e6))
+    (instances
+      (project "diode-iv"
+        (path "/15546eec-37e3-467b-b9a0-3438be67dbcc"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 91.44 81.28 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0dd81982-808d-4643-86d0-7d7b4a07d4b4)
+    (property "Reference" "#PWR01"
+      (at 91.44 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 91.44 86.28 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 77dc19e0-986d-4b9d-b384-c926aca14b5d))
+    (instances
+      (project "diode-iv"
+        (path "/15546eec-37e3-467b-b9a0-3438be67dbcc"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

@@ -1,0 +1,335 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 8603a03e-47db-4ba8-a6b5-77fe2a31cbed)
+  (paper "A4")
+  (title_block
+    (title "PNP Transistor")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "CircuitJS:PWR_abb1a4"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ1"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_abb1a4_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_abb1a4_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:PWR_7dabb9"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+2V"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_7dabb9_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_7dabb9_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+2V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:PWR_cdd831"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ2"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_cdd831_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_cdd831_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ2" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_PNP_BCE"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_PNP_BCE"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor PNP"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "PNP transistor, base/collector/emitter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_PNP_BCE_0_1"
+        (polyline
+          (pts (xy 0.635 0.635) (xy 2.54 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.286 -1.778)
+            (xy 1.778 -2.286)
+            (xy 1.27 -1.27)
+            (xy 2.286 -1.778)
+            (xy 2.286 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_PNP_BCE_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 50.8 45.72) (xy 50.8 53.34))
+    (stroke (width 0) (type default))
+    (uuid 7bccd803-a9c6-4f82-9526-c126d0e4da0c))
+  (wire
+    (pts (xy 50.8 40.64) (xy 50.8 33.02))
+    (stroke (width 0) (type default))
+    (uuid 6db3e700-d49a-418f-a824-9cd849cc2f50))
+  (wire
+    (pts (xy 33.02 43.18) (xy 43.18 43.18))
+    (stroke (width 0) (type default))
+    (uuid 6db604c0-6dfe-4834-8d69-c1328bdeda3f))
+  (wire
+    (pts (xy 33.02 43.18) (xy 27.94 43.18))
+    (stroke (width 0) (type default))
+    (uuid 1ba381e2-b52f-42ad-9233-6a6d82e0d092))
+  (wire
+    (pts (xy 50.8 33.02) (xy 50.8 27.94))
+    (stroke (width 0) (type default))
+    (uuid cc8ddbeb-67e1-48e0-bcb6-5f7fb604da44))
+  (wire
+    (pts (xy 50.8 53.34) (xy 50.8 58.42))
+    (stroke (width 0) (type default))
+    (uuid a80a4dcb-9561-4566-9e9a-bf9211857357))
+  (wire
+    (pts (xy 50.8 48.26) (xy 50.8 45.72))
+    (stroke (width 0) (type default))
+    (uuid 16f86401-9590-4f8b-95d3-2a150b22856f))
+  (wire
+    (pts (xy 50.8 38.1) (xy 50.8 40.64))
+    (stroke (width 0) (type default))
+    (uuid ac616d81-3365-4199-b921-9119f1c3a29b))
+  (symbol
+    (lib_id "CircuitJS:PWR_abb1a4")
+    (at 27.94 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6e05303c-e5dd-4b61-b0cb-281e641f2165)
+    (property "Reference" "#PWR001"
+      (at 27.94 43.18 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "2.75V 可调"
+      (at 20.32 43.18 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cba88fea-b413-43a6-be65-b7a2bf541f44))
+    (instances
+      (project "pnp"
+        (path "/d655d16e-1cdd-4c21-81c6-2237b2f2b3fe"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:PWR_7dabb9")
+    (at 50.8 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 30681322-4a46-49ad-b13d-937b5ed330e5)
+    (property "Reference" "#PWR002"
+      (at 50.8 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+2V"
+      (at 50.8 24.4475 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4531bd9b-faa9-4c39-8ba1-20feb8b2016e))
+    (instances
+      (project "pnp"
+        (path "/d655d16e-1cdd-4c21-81c6-2237b2f2b3fe"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:PWR_cdd831")
+    (at 50.8 58.42 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 80d0ed04-ffc2-40b5-86c0-dd7eb83330ed)
+    (property "Reference" "#PWR003"
+      (at 50.8 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "2V 可调"
+      (at 50.8 61.9125 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b53f0a90-cc4e-476b-9429-3e1b21be6d8d))
+    (instances
+      (project "pnp"
+        (path "/d655d16e-1cdd-4c21-81c6-2237b2f2b3fe"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_PNP_BCE")
+    (at 48.26 43.18 0)
+    (mirror x)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bbb7a240-9240-4abc-8b7e-3c65c009a41b)
+    (property "Reference" "Q1"
+      (at 54.61 43.18 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 48.26 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 48.26 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 87b1093b-c5b8-4cff-851e-e1a268ddc878))
+    (pin "2" (uuid 0e9eb78d-9339-4f26-8f5c-da8354024112))
+    (pin "3" (uuid 5e1e8d1a-b157-4382-b5be-9231ab84faa1))
+    (instances
+      (project "pnp"
+        (path "/d655d16e-1cdd-4c21-81c6-2237b2f2b3fe"
+          (reference "Q1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

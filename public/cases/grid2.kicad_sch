@@ -1,0 +1,4328 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid c5fe2da1-ca81-46bf-b9d7-e67b54466f4a)
+  (paper "A4")
+  (title_block
+    (title "Resistor Grid 2")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Device:Battery"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "BT"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Battery"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "batt voltage-source cell"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Multiple-cell battery"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Battery_0_1"
+        (rectangle
+          (start -2.286 -1.27)
+          (end 2.286 -1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -2.286 1.778)
+          (end 2.286 1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 -2.032)
+          (end 1.524 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 1.016)
+          (end 1.524 0.508)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts (xy 0 -1.016) (xy 0 -0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 -0.508) (xy 0 -0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.778) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 3.048) (xy 1.778 3.048))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 3.556) (xy 1.27 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Battery_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 66.04 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f17d7223-6acd-4994-aad8-b905eac95012))
+  (junction
+    (at 66.04 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 10873219-ee40-4222-9b4c-37d25f9debd0))
+  (junction
+    (at 27.94 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid fae4eaac-0e51-4965-8201-59de39d1275e))
+  (junction
+    (at 27.94 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 681c04a4-2f4e-48d0-9a3f-57d5d32dbb27))
+  (junction
+    (at 27.94 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2483e452-3a96-400a-ad19-7d40fd709b35))
+  (junction
+    (at 27.94 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f2f75463-7827-42bc-b53d-bddbc44cd0bc))
+  (junction
+    (at 27.94 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 0ee62fdc-e83e-47d0-8cbe-c39d49e7ad6e))
+  (junction
+    (at 27.94 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a6275969-e63e-4df9-8585-36e760d7d513))
+  (junction
+    (at 35.56 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 77ba5aff-52dc-4d74-b96c-302e4b58135b))
+  (junction
+    (at 35.56 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a091ad70-1702-4eb8-a171-f6466178676a))
+  (junction
+    (at 35.56 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1a4b3617-1c65-4510-ad8a-e42683938f63))
+  (junction
+    (at 35.56 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1c52bf84-9b9a-4838-84c0-d23ac9d4507f))
+  (junction
+    (at 35.56 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6451fb4a-ae3b-4903-8f3e-312e2287177d))
+  (junction
+    (at 35.56 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 52155095-aa2b-409c-8f7e-afbdcabef32c))
+  (junction
+    (at 35.56 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 0973606c-8fcd-42d3-9794-3e7deb63c76c))
+  (junction
+    (at 35.56 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 95f2e585-a710-4b9a-9d97-e79379880766))
+  (junction
+    (at 43.18 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1639ff82-ff3c-434a-a8f2-fae6149ca4ed))
+  (junction
+    (at 43.18 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid ba538f80-55c7-4133-ba26-1b321b4515c8))
+  (junction
+    (at 43.18 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f144578b-8c68-4c3c-b7c3-775001feca2f))
+  (junction
+    (at 43.18 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6ae7ffc7-d0ea-417e-be00-0a8c4aa285d1))
+  (junction
+    (at 43.18 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 28da8058-c3e1-46e4-95fd-cb9f70a600f4))
+  (junction
+    (at 43.18 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 937acf0b-ae5d-4292-88a9-db02049f04ef))
+  (junction
+    (at 43.18 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 99b0a513-a87a-40db-8af4-c4d675052009))
+  (junction
+    (at 43.18 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 66327d87-1dbf-4ab7-95c5-da431b5bfca4))
+  (junction
+    (at 50.8 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid db750af4-5400-4b3b-85c1-74b073fa16f3))
+  (junction
+    (at 50.8 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid d4e61726-4e00-4d69-bc20-af0468f376aa))
+  (junction
+    (at 50.8 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 50ecc494-e65f-4457-8376-cbb6e6ba95fd))
+  (junction
+    (at 50.8 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 8fb69abb-8069-4e76-b7fc-5570b0837bdf))
+  (junction
+    (at 50.8 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 645ca371-5a14-4363-9ec7-43015d446fc6))
+  (junction
+    (at 50.8 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 36385110-6307-466a-b47d-946b865636ea))
+  (junction
+    (at 50.8 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 50a47fee-1d02-4ec6-b653-87802fcc670b))
+  (junction
+    (at 50.8 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 249078ef-118b-4904-bc8a-8e66369be17d))
+  (junction
+    (at 58.42 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid bb675143-867f-4ae2-8619-dce5fbebde46))
+  (junction
+    (at 58.42 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid fcc1a75c-7956-4245-9f91-8c25e235ffe5))
+  (junction
+    (at 58.42 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 42f3f9f4-cc09-44e8-8801-0881e7f23544))
+  (junction
+    (at 58.42 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid aadf4046-c8c4-4e54-b3c9-77bc7f17deed))
+  (junction
+    (at 58.42 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 79aa1055-126a-42c9-adef-4916361971ba))
+  (junction
+    (at 58.42 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 07a9d16b-b952-435d-803a-1a8cd7c0d3d6))
+  (junction
+    (at 58.42 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 96806bdf-06a1-417f-b5c4-8e981c8f171d))
+  (junction
+    (at 58.42 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a83c5e32-2e35-4efe-833a-4e7d63c28e8e))
+  (junction
+    (at 66.04 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7437ad6f-1f87-41f6-8557-09ccc08fb88a))
+  (junction
+    (at 66.04 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1deb855d-e127-41c9-a60f-5447e49ae372))
+  (junction
+    (at 66.04 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid c9687bec-aaa1-4712-82a7-5c62b2214a83))
+  (junction
+    (at 66.04 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 453ba791-b00f-4576-a000-3c6960fbaa92))
+  (junction
+    (at 66.04 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 123212b2-850c-4761-abad-f75b90a1b6af))
+  (junction
+    (at 66.04 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2d5859f9-d102-4e33-ad79-586ec65b2bc1))
+  (junction
+    (at 73.66 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2d97c2fe-4814-4407-86f5-88941a617973))
+  (junction
+    (at 73.66 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 4110a380-0cf2-4a98-a6ad-3808d28c2da7))
+  (junction
+    (at 73.66 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid dc540296-5c62-4c95-9d8e-f76d30496185))
+  (junction
+    (at 73.66 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 594f7296-a8ea-4052-aa56-26ec15bb184d))
+  (junction
+    (at 73.66 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 3f5f2d34-cbcc-4817-bef2-33365ffba8d2))
+  (junction
+    (at 73.66 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 5cc218dd-ea18-4c1d-9606-fa940495442d))
+  (junction
+    (at 73.66 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6cd86b6b-8d7e-4ba5-9a1a-906af2c4ad81))
+  (junction
+    (at 73.66 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid aad67014-4881-4a4a-9b45-e4c05ff28b6a))
+  (junction
+    (at 81.28 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6d87fc03-ed35-4304-a3f8-e45a11fa9801))
+  (junction
+    (at 81.28 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 35977116-8833-4971-9a12-bd862371cad1))
+  (junction
+    (at 81.28 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 43076ac9-25bc-4ade-9ee6-63ac34f64f88))
+  (junction
+    (at 81.28 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f91d7c91-a3bd-43ff-8c1b-69854c6e3930))
+  (junction
+    (at 81.28 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1886fd9f-da8a-4a2b-8f2c-cda45611104b))
+  (junction
+    (at 81.28 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 69543e17-c936-4fa9-8abe-9443722db444))
+  (junction
+    (at 81.28 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 939b8c8a-85ec-47ed-8c9c-ca35d310de1f))
+  (junction
+    (at 81.28 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid c31d002b-90c6-431a-85e9-d4403a86bc1a))
+  (junction
+    (at 88.9 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2105d859-9b6e-49e9-b15c-74040c480df7))
+  (junction
+    (at 88.9 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 9c135f9f-eeba-441e-86bf-0a2de88f33d5))
+  (junction
+    (at 88.9 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid c6088cd5-b255-46af-8151-e7842a883c7c))
+  (junction
+    (at 88.9 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 88e290c2-7177-474f-a02e-29348ad12c28))
+  (junction
+    (at 88.9 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7f88936c-943c-4de1-931e-2ddec72262de))
+  (junction
+    (at 88.9 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid aacb389b-b1a7-411d-969d-3f57e7cfed4e))
+  (junction
+    (at 88.9 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 83fad81d-d78c-444c-af20-2863ba842f83))
+  (junction
+    (at 88.9 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a60fca07-6c82-44f5-b533-4a8aa88ac93b))
+  (junction
+    (at 96.52 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 9bd0a240-0929-414d-98bc-c68958a34c12))
+  (junction
+    (at 96.52 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 57dbdde6-4645-4bf8-b06e-209c694dc4a0))
+  (junction
+    (at 96.52 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 75c20281-69ac-44e4-bf88-e4d3ff629ac4))
+  (junction
+    (at 96.52 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a38cbd01-94b6-4c2b-a55a-50f055ec961b))
+  (junction
+    (at 96.52 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 5874eeed-f10a-4794-83ab-ee69a3f23548))
+  (junction
+    (at 96.52 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 649e8894-7378-456e-8de8-5870ea13ace9))
+  (junction
+    (at 96.52 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 8f99b516-a340-4e55-9788-19570493c66f))
+  (junction
+    (at 96.52 81.28)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2f8b2c26-d8c5-430e-97d8-f97becc74787))
+  (junction
+    (at 104.14 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7246ef1b-5062-4978-844a-fc29edd77e47))
+  (junction
+    (at 104.14 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 906fa36b-b142-4496-bfc9-36c74d18c4e3))
+  (junction
+    (at 104.14 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 71085e6a-f477-424b-8c39-d419d299ad38))
+  (junction
+    (at 104.14 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e6bd8ad6-927c-44e3-bfa4-4812898aa4a8))
+  (junction
+    (at 104.14 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 35c363ee-96be-4ab6-92a0-72f72a4d741a))
+  (junction
+    (at 104.14 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid cc3e6c6a-096c-4820-b5f4-d49140b79f57))
+  (wire
+    (pts (xy 66.04 59.69) (xy 66.04 58.42))
+    (stroke (width 0) (type default))
+    (uuid 0c9762d9-3f57-4b82-b993-7714743d639e))
+  (wire
+    (pts (xy 66.04 49.53) (xy 66.04 50.8))
+    (stroke (width 0) (type default))
+    (uuid f50c148f-3eb8-4d87-af25-fa3cfd72d750))
+  (symbol
+    (lib_id "Device:Battery")
+    (at 66.04 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a81ab379-b5bb-4f9d-bc54-c292f5edff49)
+    (property "Reference" "BT1"
+      (at 70.96125 53.34 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "0V"
+      (at 70.96125 54.9275 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d4a0b373-21f3-4bd4-9e52-c0f43a9342da))
+    (pin "2" (uuid c2183dcc-4303-4f28-b73b-a999db38b5ba))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "BT1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ecd9bbba-e371-416c-98a1-4d52c54450ef)
+    (property "Reference" "R1"
+      (at 31.59125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e12d7643-0e4e-4622-869f-5f2978cd202b))
+    (pin "2" (uuid 0c6b99d9-bc66-4299-a7fa-4a3e777f394a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b2bcd3bc-b973-4844-b8cb-00b869f2323c)
+    (property "Reference" "R2"
+      (at 31.59125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8363c457-a506-4541-b85c-147fe4c659aa))
+    (pin "2" (uuid 8c5b21d8-e690-4436-9685-c5113c3fa6f6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d636a4f0-fc1f-46bb-b1b0-1a61dfe45106)
+    (property "Reference" "R3"
+      (at 31.59125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f1bec86f-756a-4e75-ac40-6988e83b7bde))
+    (pin "2" (uuid 01587941-5504-4ca8-980f-dd041e095acc))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5044b9dd-793a-4b03-83d5-28c3211eec21)
+    (property "Reference" "R4"
+      (at 31.59125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 17d985f3-6a00-4376-abc3-1da981b7aa63))
+    (pin "2" (uuid 21252bfd-ac0e-4862-b75a-bd9c4c168032))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R4")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1ea49051-ad17-4443-a817-316a330c1ed9)
+    (property "Reference" "R5"
+      (at 31.59125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid aa6c5a1a-0293-46b2-b791-8a5a0b76091c))
+    (pin "2" (uuid 06b3a3d5-7159-404c-a521-839e4f00c36f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R5")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4ab38a52-cf69-4040-962d-3e9b928f8fef)
+    (property "Reference" "R6"
+      (at 31.59125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a7e61849-9ad6-46f5-9c93-bac7238f2992))
+    (pin "2" (uuid 12ba8d63-fec5-451b-ad5f-2620e5a2cb7e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R6")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 27.94 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c5651ae8-54c3-4600-b47f-8df1cfc7714f)
+    (property "Reference" "R7"
+      (at 31.59125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.59125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid dc2b5c17-000d-462e-8455-4dbb7dcb710b))
+    (pin "2" (uuid e80cd308-186f-41b4-a1be-f3b7a3ec6bb8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R7")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fa47240b-765f-43a8-b3f3-0866665425da)
+    (property "Reference" "R8"
+      (at 39.21125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 54800158-4c09-4bd5-88dc-1ec010ceafac))
+    (pin "2" (uuid f1abe3ee-5f19-41f9-80c4-97410c7ba3ee))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R8")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8555153c-3626-4d84-9c6a-813eae7b5684)
+    (property "Reference" "R9"
+      (at 39.21125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 010afe55-9477-440a-8a06-bfa0bc08b650))
+    (pin "2" (uuid 14ae0fd6-13d0-4fdf-9d2c-73224b649936))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R9")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 305c085a-5544-49d2-bbb7-478b2ee50d2c)
+    (property "Reference" "R10"
+      (at 39.21125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fd59bf55-dc98-4440-a7cc-f13b1894537f))
+    (pin "2" (uuid a0b6d0f3-d51a-47be-bad6-d60eb99f8cfe))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R10")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 293d2f3f-7679-46a9-a62e-64bd81d25b0b)
+    (property "Reference" "R11"
+      (at 39.21125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b06dd340-d62e-46be-ade4-22a79898e76c))
+    (pin "2" (uuid 8fe2fdb4-bba3-4491-949e-08bb263c7919))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R11")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5448be4c-368d-45cb-8cd1-f80918d5398c)
+    (property "Reference" "R12"
+      (at 39.21125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9ceb0fc7-0bd5-42bc-8cab-0c5033b5142f))
+    (pin "2" (uuid 67f52d19-1b55-40a0-bd88-bd227a8a9aaa))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R12")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 70d263da-12b1-46e6-b1d3-019e26d4917d)
+    (property "Reference" "R13"
+      (at 39.21125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a86601e3-3dad-4b17-8bdf-5fabf7bbeafc))
+    (pin "2" (uuid 1ee69a8c-da52-417b-be20-972b270d967b))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R13")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0aa51943-11b0-4469-9933-922394a18a3d)
+    (property "Reference" "R14"
+      (at 39.21125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.21125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e9a2707c-f559-42ed-b657-e912e1f3cc6b))
+    (pin "2" (uuid 8e74f7ee-b210-43ab-95d7-37cc93025cd8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R14")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6ddf823e-4558-4389-a1d8-21838fb665d9)
+    (property "Reference" "R15"
+      (at 46.83125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f6a430ea-7ed7-45b7-84be-dad05cf0ea2b))
+    (pin "2" (uuid fac9bc65-98b5-4200-ae54-3fa222f9ce1a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R15")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4c794687-6496-418e-b25f-fd43b700e683)
+    (property "Reference" "R16"
+      (at 46.83125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5aa0376d-6fde-450f-b2c3-3bc92aaa2abd))
+    (pin "2" (uuid de8d9ee6-f0d1-42e5-9f76-03f8399adf8d))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R16")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b011337b-cbb5-45a6-8248-cc6d5df14f27)
+    (property "Reference" "R17"
+      (at 46.83125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 03108135-e22a-4954-bf46-3c6d2c801826))
+    (pin "2" (uuid 47ba9be0-d6e4-4a15-a39c-7831d8069409))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R17")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0f387062-ccd6-4443-919e-c93ebb1547c3)
+    (property "Reference" "R18"
+      (at 46.83125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e8eaf4be-0dfe-47dc-b0e7-db6f33809112))
+    (pin "2" (uuid 04c514a8-e523-447e-af9a-0141f8a21952))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R18")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 99f91d56-7cb0-4bb9-bb76-7dbe826e76d7)
+    (property "Reference" "R19"
+      (at 46.83125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7400f624-04f8-4060-904d-0a032a67755d))
+    (pin "2" (uuid 00fd317d-e38b-4c99-ad80-cc5fafb51a75))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R19")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9da9098c-037c-4f08-924d-242b42969e47)
+    (property "Reference" "R20"
+      (at 46.83125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e8248238-4d9b-452c-af65-1d378d3a6999))
+    (pin "2" (uuid 2a1b40b4-54b4-4256-80d6-9c0da98ed03a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R20")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5e1b126c-4f41-4e88-aca3-e20876fff119)
+    (property "Reference" "R21"
+      (at 46.83125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.83125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fa538907-b549-4bf7-aa24-4f7821923e14))
+    (pin "2" (uuid 93107d1c-eda4-4076-96ca-91e4a758fda6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R21")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c46d328d-df0f-48dc-87ea-84fe4e48b055)
+    (property "Reference" "R22"
+      (at 54.45125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e5c74597-0a85-4e66-8fbd-ddf787c861f5))
+    (pin "2" (uuid 2abc6321-0942-4617-aea3-46839d9e01f5))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R22")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a1c05915-1829-4598-81c8-8dce321ba403)
+    (property "Reference" "R23"
+      (at 54.45125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2dee419e-79ca-4d00-b833-abce5374c204))
+    (pin "2" (uuid e57798fd-8847-4ec1-aa19-388190e45deb))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R23")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d1a04546-f9f4-4719-be32-22bdd6ff1c07)
+    (property "Reference" "R24"
+      (at 54.45125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3e494233-a7f0-441c-94ee-388fa9f90c52))
+    (pin "2" (uuid af04a896-062e-4d9d-8c87-ecbb8a184860))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R24")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e110d039-68c1-4cb5-81c7-2c5fcb9a7099)
+    (property "Reference" "R25"
+      (at 54.45125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8c4b959b-29df-49a0-b348-a6482adb1aa9))
+    (pin "2" (uuid 3808dab5-f9f7-4c57-b999-5c9b58b4cf22))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R25")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 19c95f70-b989-4bfe-a0f7-4044e2694f81)
+    (property "Reference" "R26"
+      (at 54.45125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4e98301f-8a5d-4f4b-b16b-b18430ff61bf))
+    (pin "2" (uuid 9e6945b6-775e-4242-8818-c84971a121bd))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R26")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ca6a5ac4-0c82-43a5-bf1a-e6cbde1f87ef)
+    (property "Reference" "R27"
+      (at 54.45125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3e4eaa0b-c880-46ec-92df-3f22ff580b3e))
+    (pin "2" (uuid 476c7954-f069-48c2-beac-6d547825fc1a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R27")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid dba0d47f-dacf-46cf-a37e-5bd521e51cf8)
+    (property "Reference" "R28"
+      (at 54.45125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.45125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3d1eebef-49b7-42ae-8496-14d346d65bca))
+    (pin "2" (uuid 3144507f-bade-4ed4-8326-82153899e448))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R28")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f6bb9713-e978-4809-93ed-39ac2b36e1cc)
+    (property "Reference" "R29"
+      (at 62.07125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7e15b710-d3be-40c2-9837-9e99ba687604))
+    (pin "2" (uuid e4c556a5-913f-465b-98c6-10521f1018f4))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R29")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ffbb722d-c58d-4c22-88e8-81b6d315232b)
+    (property "Reference" "R30"
+      (at 62.07125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 03ca0039-b05c-4986-9bb4-382779ac1489))
+    (pin "2" (uuid f0f0b5fa-71b6-4ddf-b41f-0d2e8acc6667))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R30")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9b830902-0a33-4fba-b6ef-b89a8dadae29)
+    (property "Reference" "R31"
+      (at 62.07125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fafc9f31-ec5f-4b4b-a6b0-18b50c8a25fc))
+    (pin "2" (uuid d7e00ce5-0ea2-4556-ac5f-2a2831599546))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R31")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f093744f-c730-4b41-a210-4d32a71e493e)
+    (property "Reference" "R32"
+      (at 62.07125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 62c8d1a3-3e76-4419-81c7-96f4f26fd972))
+    (pin "2" (uuid 635f9f68-bb72-4d92-a72a-185d17991751))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R32")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 73b4923f-b7be-4e34-8b0c-222ba3ad20a1)
+    (property "Reference" "R33"
+      (at 62.07125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f244d32c-66b9-4ec8-81d6-bcb5ded33027))
+    (pin "2" (uuid 0345cd1c-4508-4efa-90d7-d791accb3ada))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R33")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 18ff17bc-68ba-4e2e-b415-0091f9651d03)
+    (property "Reference" "R34"
+      (at 62.07125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 001b3363-0a9d-4c00-b129-49cda99ad816))
+    (pin "2" (uuid 6ac31826-6b6b-4e5f-89a7-c12d239750d8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R34")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 580961ce-70f8-4ce5-bf8c-eb7444c7309a)
+    (property "Reference" "R35"
+      (at 62.07125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.07125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3f828d5c-6605-4ff2-a20b-97bd168ef732))
+    (pin "2" (uuid 5e0b3d7b-0268-42b0-b1e0-f821cf8821d7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R35")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3b055cd0-fcf8-4bdf-b894-2239421350b8)
+    (property "Reference" "R36"
+      (at 69.69125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 789009bc-b344-4b7d-bdc6-81eb4c23675b))
+    (pin "2" (uuid 4d897053-adb0-4d4f-abc9-b553d3ea4f1e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R36")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 08a1289c-712c-4d34-8987-37c4a86d4115)
+    (property "Reference" "R37"
+      (at 69.69125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3de4f361-50de-4723-ad91-84b9cbdc8c24))
+    (pin "2" (uuid 75f15736-e80d-4718-858a-d4d6e0db29fb))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R37")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 38c9acf5-e4a5-4e1d-86ab-cae0872019ce)
+    (property "Reference" "R38"
+      (at 69.69125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9b8046e1-5aa4-4e18-8360-e9f584605b29))
+    (pin "2" (uuid bf3875d8-45d1-4b24-84e9-bd249e40f266))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R38")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid add508fd-47b6-4108-bf6c-411bd8faad29)
+    (property "Reference" "R39"
+      (at 69.69125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f5c5c6ba-155b-4e2c-8a4e-ebf7be2dd594))
+    (pin "2" (uuid a7fe286f-4b84-40f7-8de2-171f26de17be))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R39")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e0c138b4-0ae7-4760-89bd-8a9768bf08bd)
+    (property "Reference" "R40"
+      (at 69.69125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3e106d38-1e69-4d76-a7d6-7c86baac77b2))
+    (pin "2" (uuid 44523a86-1e7c-43e3-877b-93d30fefae13))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R40")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 66.04 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid caab8334-7e0a-467d-a0f0-9f14e201d141)
+    (property "Reference" "R41"
+      (at 69.69125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.69125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 66.04 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d32e7b06-524b-4d9f-bb95-dbece9f92819))
+    (pin "2" (uuid b6d637b1-e96a-41be-85b8-514fc76fce44))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R41")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2aadd958-5c85-471a-a8da-4b11e6ae02f6)
+    (property "Reference" "R42"
+      (at 77.31125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a51e889d-b71e-4d67-b6ac-afc48017d068))
+    (pin "2" (uuid 79100022-7ae0-478b-87fe-256d4547f150))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R42")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2a07cd76-e3ac-4584-a401-1fab7a73da2f)
+    (property "Reference" "R43"
+      (at 77.31125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 63cd0d15-ef84-4302-b053-f16efc1684e7))
+    (pin "2" (uuid 7d7d016e-0c9b-4c0e-a12b-d71b81516d99))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R43")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b8b79013-efd2-4e64-bf81-e110d9472020)
+    (property "Reference" "R44"
+      (at 77.31125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8a4dea8f-ef8a-46b9-94a1-2631ee49b898))
+    (pin "2" (uuid a51f4d5d-d899-4a6a-90d2-181f37b604f0))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R44")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2020d4e8-326e-4b85-87b1-916a8ceae068)
+    (property "Reference" "R45"
+      (at 77.31125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 551abfcb-8e38-441d-8c5a-0b3078e1f377))
+    (pin "2" (uuid 8ac8ede2-b820-4aff-8e35-1d771253743d))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R45")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 36a0f45b-b867-42a1-8d75-59f98a3b7139)
+    (property "Reference" "R46"
+      (at 77.31125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b4b83162-e5d5-4c8a-bf3d-df02fa28d8a7))
+    (pin "2" (uuid d6396b78-8181-464d-a3d0-0dd48f24c7ad))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R46")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9315a45f-546c-4792-ada5-e49604775cbd)
+    (property "Reference" "R47"
+      (at 77.31125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9b6211aa-0305-43bc-b65d-90926f915ea7))
+    (pin "2" (uuid 4b330cbf-93ca-42cc-ab97-b2bce6f8e086))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R47")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 73.66 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b69bc791-3e83-4ea2-9001-29e3d4a4db1f)
+    (property "Reference" "R48"
+      (at 77.31125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.31125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0672ab29-0213-4ddc-aea0-210b3eb607d8))
+    (pin "2" (uuid 7ff7540d-a7d1-4f9d-ac89-efe7b8e0ee0e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R48")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f00ba0dd-7807-44d6-9434-3a28d0d0248d)
+    (property "Reference" "R49"
+      (at 84.93125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5c7e445f-09d8-454e-97f0-cd1e6337ce9f))
+    (pin "2" (uuid bc32d537-36e4-44c9-857f-d3db13c0c7af))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R49")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 237ca50b-94ec-4c70-9de6-e4b049367257)
+    (property "Reference" "R50"
+      (at 84.93125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 85f5d251-4f8b-4252-aea5-9e42512c8f62))
+    (pin "2" (uuid d5241f6a-f06e-40be-86df-a631f6808798))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R50")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f63e9343-852b-45b8-9079-16846b03591c)
+    (property "Reference" "R51"
+      (at 84.93125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 00fd5904-2948-477e-8831-ac1a3f3be065))
+    (pin "2" (uuid 785ccce1-2951-4332-8a6a-d41969225e17))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R51")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 15fa70be-cef5-4352-9464-f5bab8ec526a)
+    (property "Reference" "R52"
+      (at 84.93125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4850af68-03f7-44e2-a592-969e1a82dc56))
+    (pin "2" (uuid 2af6ff83-6016-4cf6-bf19-b9e135046907))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R52")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 36f2bc03-9fb0-41b3-b7d2-faa5498353b1)
+    (property "Reference" "R53"
+      (at 84.93125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 400c87dc-77f9-4e49-a158-bc66bd6f3590))
+    (pin "2" (uuid fb7f8674-323c-47f8-91d4-830497592dd6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R53")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e2dc7849-b5ea-4ab5-9392-3c3cace50b9c)
+    (property "Reference" "R54"
+      (at 84.93125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 952cd015-f367-4b2c-8209-6142d685a2a1))
+    (pin "2" (uuid 8f679b0c-bd31-4c06-b05c-77ef6ff6a602))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R54")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fac85e42-cf45-406e-bf81-77adf1708fd9)
+    (property "Reference" "R55"
+      (at 84.93125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 84.93125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 81.28 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c1a5aafe-58a1-41a5-9927-54bdab531f25))
+    (pin "2" (uuid 4cace084-e983-4578-9c91-a13aaaaa9b6d))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R55")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 071619bb-8736-41f5-b497-3a02045ac13b)
+    (property "Reference" "R56"
+      (at 92.55125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 06bc8d57-4932-4656-b17e-17d7fac739b5))
+    (pin "2" (uuid c431932f-c293-4f90-ae7d-30b2e24e8eb1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R56")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 73b2505b-8235-49d5-8359-6d77d164b550)
+    (property "Reference" "R57"
+      (at 92.55125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6ca437bd-10bf-4c2b-88ed-7bb219f1ab5f))
+    (pin "2" (uuid 1f6a8f81-8e68-401a-a010-fe285591cb91))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R57")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4ada5396-e46b-467f-b281-45182fd880e8)
+    (property "Reference" "R58"
+      (at 92.55125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8bb5958c-3f55-40f0-bb1d-08eecd5ae8e2))
+    (pin "2" (uuid 6f876bbb-00d5-4c5f-8d79-f54c745d562b))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R58")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0be4f369-22f9-4e73-8b3d-838fcf6cc039)
+    (property "Reference" "R59"
+      (at 92.55125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1d154aa0-674a-4289-b475-689dcd952aba))
+    (pin "2" (uuid 412f904c-79a1-4ed5-966b-7cadbeb94002))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R59")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 67065e30-42e1-4caa-9822-ef84f0a290e7)
+    (property "Reference" "R60"
+      (at 92.55125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9e8b778d-bd90-42c7-a5b0-765edf36a6a2))
+    (pin "2" (uuid 9da66dbf-2d78-40e4-a768-4cd23f8622e8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R60")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a7c1dbb8-89e1-4ec6-af7e-17ffa868b2f5)
+    (property "Reference" "R61"
+      (at 92.55125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 53f7cc33-8f44-4666-bc4b-ca8d207233ed))
+    (pin "2" (uuid 84ec3521-f677-4170-8d42-952461ccdb37))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R61")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4206f051-b0be-4ab5-89eb-0aaa45f7f990)
+    (property "Reference" "R62"
+      (at 92.55125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.55125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e5bb55ca-9e62-48ac-ad53-03647d15f6c2))
+    (pin "2" (uuid 7524cf1e-9210-42e0-9e4f-f6b3362aa5b3))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R62")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9693cbe2-c78c-4f9e-b7c1-637a5577d5a4)
+    (property "Reference" "R63"
+      (at 100.17125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 44bee4c5-1a42-4121-b119-d8c7dbc7e280))
+    (pin "2" (uuid 8f159dfc-1bfe-44c2-b6ef-e46bc180f2c7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R63")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 31ed6211-b0af-4da0-ac90-3853aff051ee)
+    (property "Reference" "R64"
+      (at 100.17125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b0afced6-c718-4b9d-a35f-a8b6985d32c6))
+    (pin "2" (uuid 6637137d-a2ac-4de5-8a1a-94e6fa6e538c))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R64")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cb7bd3f0-8d94-4f6e-ba24-602851f62392)
+    (property "Reference" "R65"
+      (at 100.17125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fbe21268-318a-4435-849a-9a609eadbf6a))
+    (pin "2" (uuid 888ad288-118b-4ea4-b554-1ce3d93b5144))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R65")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 75de5f30-f4af-412f-af91-7cd1059fe736)
+    (property "Reference" "R66"
+      (at 100.17125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d56cfb99-dcbb-4f43-85eb-2896c6d90d80))
+    (pin "2" (uuid 9a24fe84-32cd-4955-ab18-01c81fdf0ad7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R66")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7c2c8ad4-cedc-4562-bb0f-5b1c9a68c320)
+    (property "Reference" "R67"
+      (at 100.17125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 79c21121-edaf-453d-b623-0e911a1f9cf9))
+    (pin "2" (uuid 19eb109e-f81e-44c8-aec5-a6b28079d822))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R67")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 14c508c1-25f3-43ad-9fa5-f1428ccdb62e)
+    (property "Reference" "R68"
+      (at 100.17125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 74f66c37-ee1e-402c-9c10-c4bd9d645856))
+    (pin "2" (uuid 83ab54b4-14a3-48b7-8acd-5095d4d4c7b0))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R68")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 663ade50-3c86-43af-a8cb-57494e143feb)
+    (property "Reference" "R69"
+      (at 100.17125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.17125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 96.52 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c4a4eb3f-5d20-485c-8b05-228b853c0b78))
+    (pin "2" (uuid 0eba7b8a-662c-4ae3-bae4-d81d5566acbf))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R69")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ce2b2662-1e25-4594-90e3-2f1523920c7d)
+    (property "Reference" "R70"
+      (at 107.79125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d61ac9ea-5b96-4a98-b94e-42e5e4705d9c))
+    (pin "2" (uuid e2348cbf-7589-45d3-8909-730615d463bc))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R70")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5aa1cf42-a0e9-4d25-b49c-ba42e0c15ff5)
+    (property "Reference" "R71"
+      (at 107.79125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e4fb3825-4aa3-4f3a-861d-34d8cc8a241f))
+    (pin "2" (uuid 626fae50-4fed-47fc-b4c1-c9db3d28feb1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R71")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 925edefc-0103-46cc-8b4f-20893c63993a)
+    (property "Reference" "R72"
+      (at 107.79125 46.19625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 47.78375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f52fbbb6-31af-4084-b5ff-90f280958388))
+    (pin "2" (uuid 519cde56-14e3-47d1-8f81-871611213983))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R72")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4fbf35a3-8f04-49aa-9a20-9f8fd6bfaab6)
+    (property "Reference" "R73"
+      (at 107.79125 53.81625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 55.40375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 54.61 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 651c6475-9fae-44a1-9d4c-5598c7e6db32))
+    (pin "2" (uuid b51c828c-4704-4b2f-a266-76d598f3d4c8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R73")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9c7e4474-3868-40f8-a834-44583f77e2ad)
+    (property "Reference" "R74"
+      (at 107.79125 61.43625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 63.02375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 62.23 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cac31cf5-7bf4-4012-ba4a-092ae096ddf1))
+    (pin "2" (uuid b9e3811f-93da-441b-a75a-19928dba336f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R74")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 69.85 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0c589c0c-0cc1-4d25-91e1-bcfe5e0c65f0)
+    (property "Reference" "R75"
+      (at 107.79125 69.05625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 70.64375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 69.85 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a85bfeaa-685b-4626-8686-fc6d309eca1c))
+    (pin "2" (uuid 643c6c49-ee7d-43c2-b907-261a2dff5c59))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R75")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 77.47 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 32115a74-a532-404d-b788-8bf57dfc66d2)
+    (property "Reference" "R76"
+      (at 107.79125 76.67625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 107.79125 78.26375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 104.14 77.47 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d1021cf6-3a8a-44fc-8074-5c8a68c3aff3))
+    (pin "2" (uuid 41cefd56-33a5-4b14-99b7-16a4d27500d1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R76")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3c77c138-9010-49fa-b54d-ca77bc89a0a2)
+    (property "Reference" "R77"
+      (at 31.75 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d49d378d-6bc1-41df-a669-650446db0a88))
+    (pin "2" (uuid b3ddd6d7-b851-492a-a161-c1ab6a4094c7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R77")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3519bad3-b87c-4d14-88af-d65b03284f94)
+    (property "Reference" "R78"
+      (at 31.75 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid afa6f0aa-ddd0-43f7-bad1-e43f2cb5f426))
+    (pin "2" (uuid 7788d877-8d51-4bf6-a4f5-c6f718d8fe9c))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R78")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c0b8651a-5f5a-4ed0-8f85-a5ed4c3b93b0)
+    (property "Reference" "R79"
+      (at 31.75 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4c848b62-58d3-4f0a-b24f-9b7eeb42c488))
+    (pin "2" (uuid dd182167-280b-458f-bb7f-2f7e29b9a9d9))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R79")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8c36d857-657c-4036-a57d-9142a83d26c2)
+    (property "Reference" "R80"
+      (at 31.75 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d25a220a-bafc-4536-a37c-b14727bc32ab))
+    (pin "2" (uuid f6e56f4c-3d80-41cf-8150-538600095c1f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R80")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f223b740-10da-4829-aefd-de0064690fe6)
+    (property "Reference" "R81"
+      (at 31.75 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid df96de0b-c4ff-4cea-b4ad-55847a794728))
+    (pin "2" (uuid 4a783aef-a986-4c3a-952d-1c0889dde230))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R81")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ef70804a-2452-44c6-abc8-fc533045c859)
+    (property "Reference" "R82"
+      (at 31.75 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7e5864d3-ed14-439b-894a-f072b89ead92))
+    (pin "2" (uuid f1288f8d-9863-411c-888a-a1a7a53598c0))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R82")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1d660db9-9347-4a74-b8f0-3f91022c9d87)
+    (property "Reference" "R83"
+      (at 31.75 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4bf39046-1848-450e-8a50-5259cfb666de))
+    (pin "2" (uuid baa4f9d2-29a6-448a-8a0c-76ed204e781a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R83")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 31.75 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 148119eb-7e32-41af-8c99-a9869256598c)
+    (property "Reference" "R84"
+      (at 31.75 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 31.75 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 31.75 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6ed154bf-0b24-490c-a53b-73735e095484))
+    (pin "2" (uuid 7521edec-ace7-47cc-b697-2d9a179abd0b))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R84")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 287ce387-cdc4-4346-b64f-701bfaf9541b)
+    (property "Reference" "R85"
+      (at 39.37 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d18e572c-d86f-41c9-9d04-d6b2dd4b437b))
+    (pin "2" (uuid c90a8067-4a25-42f4-a7c2-074ae9202881))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R85")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8972d37e-ae2e-46ae-ab00-129a32b96b4a)
+    (property "Reference" "R86"
+      (at 39.37 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6cde728f-e920-439e-8c3e-7de7d0393553))
+    (pin "2" (uuid 5dec55a8-f070-4d75-a9cf-8257b7cc46a8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R86")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a3a47eea-0052-4d39-85a0-5596df3daf70)
+    (property "Reference" "R87"
+      (at 39.37 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d788485f-d728-40fa-9abe-7cd311d43b42))
+    (pin "2" (uuid 4dab4f6a-e75a-479d-b23d-3025ca98ced0))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R87")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 78f60e9f-5447-45b5-8951-6f01dc88cac9)
+    (property "Reference" "R88"
+      (at 39.37 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 024691f8-8c67-4b9e-bf7f-50a5980d5711))
+    (pin "2" (uuid 1a2a6935-29e2-44e8-afbd-08feb01f1b25))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R88")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 74ccd3bd-823b-402c-8012-906b1835c1f7)
+    (property "Reference" "R89"
+      (at 39.37 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0b7d08fc-6fb6-4443-8aca-9c27e9973d4b))
+    (pin "2" (uuid 085e2e45-e68f-438e-9aff-d08829a40a2b))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R89")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 80f56953-fdeb-439e-ab0b-30c5ea370839)
+    (property "Reference" "R90"
+      (at 39.37 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d8b7260c-14ce-41e7-a302-d8d57dde219f))
+    (pin "2" (uuid 06935013-2e1d-43d5-9c25-da244ee83529))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R90")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 326d989c-80f1-47de-9b54-0538c3ac9d21)
+    (property "Reference" "R91"
+      (at 39.37 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 414ff057-4e8a-4ef7-b2bc-70b95bc3d35d))
+    (pin "2" (uuid 6ff70dce-b79e-4267-9957-fe8fc29fa545))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R91")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 37c992e0-7fde-4e2f-8f21-bcba6bf03f94)
+    (property "Reference" "R92"
+      (at 39.37 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 39.37 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bd700412-864e-470d-8775-5ce6c42716ae))
+    (pin "2" (uuid 548e7257-b391-469d-83d5-8afa8a8b9414))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R92")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 14d2aff0-c02c-4df5-98f6-df895cb0c8c3)
+    (property "Reference" "R93"
+      (at 46.99 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bc829369-77d9-431a-8435-7ae06a0ff77a))
+    (pin "2" (uuid adebaf2f-b397-43fd-b67b-6d2b77f0b936))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R93")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0121296f-2af1-48db-9a36-bd83393316ec)
+    (property "Reference" "R94"
+      (at 46.99 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5b742886-940f-4334-aba1-e6055a9657f4))
+    (pin "2" (uuid 02f82c79-88ec-4ade-a8f5-0ffea67b8b97))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R94")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7e3e5c0e-c486-4208-bbe2-68545f1a601e)
+    (property "Reference" "R95"
+      (at 46.99 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 96ed952e-e8a5-474d-8e47-073cddc3278e))
+    (pin "2" (uuid f6c1a7cf-3c8c-4dd8-ab02-1b5484c07e26))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R95")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4a91bdea-da45-4f27-bafe-7e52077cec0b)
+    (property "Reference" "R96"
+      (at 46.99 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 28d83d19-7045-4e1b-a418-29d142cadd67))
+    (pin "2" (uuid c4e4343e-efc7-4cd0-b0d7-dcc2c447bc74))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R96")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ce63c26e-2d06-48a7-9a7e-784221a36060)
+    (property "Reference" "R97"
+      (at 46.99 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 23aec693-77dc-407a-9bda-80cb1bb8af83))
+    (pin "2" (uuid 42699af2-b439-44c5-89de-f90454e3b3f6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R97")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 15127624-0d5f-4d94-aaed-5fde9a028e0b)
+    (property "Reference" "R98"
+      (at 46.99 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d0eb61cf-9fab-4514-add0-1aca99206d9e))
+    (pin "2" (uuid fabd616c-360f-4bfb-9af1-4799770ca39e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R98")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f698cc44-fbc4-41a8-9d16-c01d978f6d97)
+    (property "Reference" "R99"
+      (at 46.99 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a6ec7394-8e0c-4501-aa35-4f7ce39e5e3f))
+    (pin "2" (uuid 38d1cd5f-3de0-4434-9e8d-0c610b9e33c5))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R99")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 46.99 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bdf889bd-37a0-47a3-8387-9e1c00d5eb2f)
+    (property "Reference" "R100"
+      (at 46.99 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 46.99 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 169b5c57-6cfd-4532-8a83-775cc308b3e3))
+    (pin "2" (uuid 36b0234d-da2a-4bf3-8b5b-d06d9b5e5e40))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R100")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 45b696aa-55f4-4c81-805f-1a44b594baa7)
+    (property "Reference" "R101"
+      (at 54.61 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7b2c0a52-dce8-4e8a-bbc3-9f88e1d3df88))
+    (pin "2" (uuid 56f7f6e1-6981-4360-8484-27e94373104f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R101")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid dc417f64-e0c0-45f1-ab58-61d9bbe77132)
+    (property "Reference" "R102"
+      (at 54.61 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8b47b9ca-38f1-44e4-ab0d-e8036e4fd661))
+    (pin "2" (uuid 9e30dfdd-6e96-41fb-a317-432f94c6a737))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R102")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4139b834-f454-42ef-9158-dd52de3f5819)
+    (property "Reference" "R103"
+      (at 54.61 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c1c9c50b-1a55-4ddd-864e-c0d399f9a493))
+    (pin "2" (uuid 3e8ee597-234c-42d4-9744-9a717748d6c6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R103")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 07971221-1238-4d60-a1ba-edc8150e9e39)
+    (property "Reference" "R104"
+      (at 54.61 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 70ade97b-1db3-43f8-8e77-b97a93bea12b))
+    (pin "2" (uuid 48daee30-6ee2-48ff-910d-274a422c67f1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R104")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7b0f4255-7058-4e0a-b0ca-1a5b12bbfeb0)
+    (property "Reference" "R105"
+      (at 54.61 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d5a8b2c4-8507-476e-9b74-5c05f9a8888d))
+    (pin "2" (uuid 56aeee05-bff2-4c04-8650-0451b8568b20))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R105")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 15c5f5d5-cd12-4156-abdf-56479424d31e)
+    (property "Reference" "R106"
+      (at 54.61 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e90679d3-ed2f-43b8-a8bd-f37beff009aa))
+    (pin "2" (uuid dc7bd520-b214-41aa-ba08-e46260017a11))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R106")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ed4d4daf-1632-4532-9e14-09853261f2f5)
+    (property "Reference" "R107"
+      (at 54.61 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 608dff5e-100a-4893-8a0e-a228f90c2fb5))
+    (pin "2" (uuid 9b2eb4e1-2b21-4524-859b-1ba488444b62))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R107")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 54.61 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 153a4412-1fd4-48a4-9b58-540efa18d498)
+    (property "Reference" "R108"
+      (at 54.61 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 54.61 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 54.61 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c2cb9536-c07c-46b8-a091-ea1873174b02))
+    (pin "2" (uuid 3fb5b559-cfe1-4eee-8927-d9d891b08f1d))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R108")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 14ee018f-af3b-4004-8b85-66160aa1d50a)
+    (property "Reference" "R109"
+      (at 62.23 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 30bbfe61-e29f-4050-873f-9e1e62de660a))
+    (pin "2" (uuid 9722a338-0996-4cd0-bdfa-a58c794caaf4))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R109")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7dfad75c-47be-4674-9268-4f9e7da35ff7)
+    (property "Reference" "R110"
+      (at 62.23 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 086e54db-f777-4201-88a0-faecb6984daa))
+    (pin "2" (uuid 36666a87-a1c5-4145-8952-f3ae69de0f34))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R110")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 682152f4-cd4a-4ece-936a-637c31b199e2)
+    (property "Reference" "R111"
+      (at 62.23 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bb0aed53-981c-4e73-9128-7bb127564aaa))
+    (pin "2" (uuid 2d7583fd-cc2f-4f4a-8aca-c5e2b84d29c2))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R111")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7f8ae1c7-d7b5-4c14-b6e6-3914c2f478d5)
+    (property "Reference" "R112"
+      (at 62.23 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c4c04420-648f-4319-8e84-fbcfe313c05d))
+    (pin "2" (uuid fc456668-7e6b-4192-9522-437206bab72c))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R112")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9e5babd2-7ad1-4dbb-bb9b-7410dd39a8fe)
+    (property "Reference" "R113"
+      (at 62.23 60.96 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 62.5475 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b2b8c420-865d-4b41-94a3-4ec34d0e4f25))
+    (pin "2" (uuid 9364bce5-1834-4c56-bde6-a58ad4afabb2))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R113")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1a037dfe-60c6-4e7b-8ef8-99be4d1ee84c)
+    (property "Reference" "R114"
+      (at 62.23 68.58 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 70.1675 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fbff5539-5086-4a22-9b10-5c487d201ac5))
+    (pin "2" (uuid bca868e1-497b-4f7f-bf7f-62df96c6cc8b))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R114")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6391f481-b4ef-4397-960c-b4e5c0136c9f)
+    (property "Reference" "R115"
+      (at 62.23 76.2 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 77.7875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f8c6012b-42da-4378-843d-dc83ee00bf96))
+    (pin "2" (uuid 9e1adabf-0c3c-4bdc-8e96-13f5fa80ba65))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R115")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 62.23 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b14a6c5d-e047-4a4a-b26d-3e7a26d225d6)
+    (property "Reference" "R116"
+      (at 62.23 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 62.23 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 62.23 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f3db092f-1565-46a7-b0b0-337762e9e7a2))
+    (pin "2" (uuid 820e5640-242e-409f-b9ee-1314f43a383c))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R116")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4e52e926-3427-4b39-8f6d-966a8f2997d0)
+    (property "Reference" "R117"
+      (at 69.85 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6203cc1d-e5d7-4f03-84f5-9878d6f0c1aa))
+    (pin "2" (uuid ed6f8a3f-ba21-4d64-9a58-ca36a84c850e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R117")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a43e3d7a-cd26-4429-9970-f84aa257bde5)
+    (property "Reference" "R118"
+      (at 69.85 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 04b51347-2792-48ba-b2da-43454e3886f6))
+    (pin "2" (uuid c757398f-18f1-4fdb-b600-14693356cb26))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R118")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3e2c8671-8751-4841-b6f9-a3917f76b316)
+    (property "Reference" "R119"
+      (at 69.85 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1e048731-7540-4bde-ba16-c32be897a6e8))
+    (pin "2" (uuid a0c955a0-580d-49ef-b02c-ee3a3e79afe7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R119")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 963c0d4e-4875-48bd-8c98-1b771b441c5a)
+    (property "Reference" "R120"
+      (at 69.85 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d57951fe-8f59-4457-86b9-d252198ff2e9))
+    (pin "2" (uuid eab3ffa4-3be0-4dc7-9acb-ca764f695105))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R120")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid eb0768e7-471f-4f1a-a817-4a6608b7a0ea)
+    (property "Reference" "R121"
+      (at 69.85 60.96 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 62.5475 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9333d777-2acf-4cfa-acfb-976dfe9c21a0))
+    (pin "2" (uuid 2bf0e21a-5c97-4c3f-8735-49dcbf0897e1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R121")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ab23d0b9-3028-408d-86ea-b64926bba6de)
+    (property "Reference" "R122"
+      (at 69.85 68.58 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 70.1675 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ef00978d-eaaa-4f04-9288-5096ed1eeecb))
+    (pin "2" (uuid 2f2dc90e-e88e-4df1-af14-3fdab8eaa512))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R122")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 35f19709-b375-4eeb-ad87-005748859c1f)
+    (property "Reference" "R123"
+      (at 69.85 76.2 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 77.7875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 178dfee6-1b9b-4dea-b716-3257372e84a6))
+    (pin "2" (uuid af95849e-156b-4c3b-b1f9-f0a9d982c86f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R123")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 69.85 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 96bb0c0a-9929-4a4b-9bf4-0436b665ba58)
+    (property "Reference" "R124"
+      (at 69.85 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 69.85 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 69.85 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e2cc54a3-b712-4e92-94de-23fac485f078))
+    (pin "2" (uuid 57c90ace-f17d-4b76-a057-d8b9b90014eb))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R124")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 50e1d02f-1210-4ac9-af30-563c89d2af41)
+    (property "Reference" "R125"
+      (at 77.47 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid faa0a0cb-201f-41d8-83d6-ddd201f7699b))
+    (pin "2" (uuid 2a403242-0212-4f6f-b81e-c7892cbc0563))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R125")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 492136fc-736a-4ede-a520-fb23faab5752)
+    (property "Reference" "R126"
+      (at 77.47 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7b96540e-54e3-46dd-9751-30d0e3cc183b))
+    (pin "2" (uuid d081699e-85f0-4494-97bf-71998bcaa8b3))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R126")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 35632f1b-9822-4f64-ba80-ef5dacec4781)
+    (property "Reference" "R127"
+      (at 77.47 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0cc698cf-b3c5-4277-aa6f-454c7cb71b4a))
+    (pin "2" (uuid c05f87de-0eb1-40e5-9033-5becc8ebe77c))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R127")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c847849c-2321-4d3a-bcb3-cfb835b5223e)
+    (property "Reference" "R128"
+      (at 77.47 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 90331a6b-4daf-4cf7-b4bc-e91d03bc0598))
+    (pin "2" (uuid 6a662b41-425d-4513-a010-04516fbf6045))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R128")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 67002cbe-fa11-4cc6-9357-2bf1975e7120)
+    (property "Reference" "R129"
+      (at 77.47 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ff7a2b1c-bfa9-4b24-a9f8-ece97e24b497))
+    (pin "2" (uuid 303468e4-2cc7-4486-b9e7-702526151fce))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R129")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0f67fd1d-cbd7-40ae-b591-6a450efb77b5)
+    (property "Reference" "R130"
+      (at 77.47 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid aee0a41d-e79b-4386-930a-3fb678c3f2c4))
+    (pin "2" (uuid 80aea382-a1c3-45fd-a417-5124bb7ca50a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R130")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ee9aa424-1ea7-4d2a-9d69-291adf561a93)
+    (property "Reference" "R131"
+      (at 77.47 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a0cd9483-db15-4ee7-a725-1b11340a21ea))
+    (pin "2" (uuid c833e98c-a6e8-4f20-bf04-46b0166ff560))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R131")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 77.47 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7afa9500-655d-4125-ba09-db92209df071)
+    (property "Reference" "R132"
+      (at 77.47 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 77.47 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 77.47 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b59e42a6-297d-4b19-99ec-fba732522e00))
+    (pin "2" (uuid b9a8f044-3840-462c-842d-2d4f5e6899a2))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R132")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 15b82111-601b-4cbf-a7f4-14603b17c1f1)
+    (property "Reference" "R133"
+      (at 85.09 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f7adb107-ff7e-4ecc-a25a-d2345c6fa70d))
+    (pin "2" (uuid cb4903ed-c1a3-4a39-87b6-4bbbfe3e9ea5))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R133")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 35cc25ae-1632-497b-81f2-d273e7e89054)
+    (property "Reference" "R134"
+      (at 85.09 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 63e2608b-7575-4568-8bf5-2fd1af0d03c7))
+    (pin "2" (uuid bd371e7f-2b02-42de-9a1c-23c7739162b1))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R134")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6528e816-4326-4ab5-a91a-2935f35b5f34)
+    (property "Reference" "R135"
+      (at 85.09 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1b789c90-109b-4470-af1f-eb68e32eaeed))
+    (pin "2" (uuid 6db7a8ea-c1fa-425f-b490-28f451163efa))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R135")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid dc3ac6ea-e6b6-4235-8d84-bfde84af487c)
+    (property "Reference" "R136"
+      (at 85.09 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0243922b-b7f7-45d1-b735-dfef655db8c4))
+    (pin "2" (uuid 34d3e32c-e8f1-4059-bc0b-9fdb1bb48e3d))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R136")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bdc52d41-9df9-4d14-927f-a813cfce31dd)
+    (property "Reference" "R137"
+      (at 85.09 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 234e8417-d2c3-43a1-8a40-715f4c52acc0))
+    (pin "2" (uuid b8fbe7ca-05fb-4527-b03d-b396b3581510))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R137")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 10fa2eda-f1ce-4510-87c6-3d430349fd5b)
+    (property "Reference" "R138"
+      (at 85.09 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3931dcbf-7fe3-48c6-970f-c5035d523820))
+    (pin "2" (uuid adede088-7b76-4258-9b1e-dc39a0d85929))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R138")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 764985f0-6c93-4a97-a405-29771d24f76a)
+    (property "Reference" "R139"
+      (at 85.09 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 70918555-be2e-40a8-b2e7-eef5992781e2))
+    (pin "2" (uuid 60bc5a47-13fb-44f0-b931-e5d58ea160c7))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R139")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 85.09 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d972113c-7580-497e-8e27-6ea7cebe081e)
+    (property "Reference" "R140"
+      (at 85.09 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 85.09 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 85.09 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 98a054e2-eb7a-4321-9b22-6fe15f4b5565))
+    (pin "2" (uuid d50ae364-1833-4a4b-b038-6743ab55cbd6))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R140")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8d2c5f36-5698-4ce0-9808-dc78798ecf8c)
+    (property "Reference" "R141"
+      (at 92.71 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 19d3555c-9cd7-45f8-a3e9-40d67112058a))
+    (pin "2" (uuid 807da4de-798a-4485-8efe-52d5ea7d5610))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R141")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 78a310ab-8d89-49a4-b789-683f48f21a72)
+    (property "Reference" "R142"
+      (at 92.71 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fad4ed9c-6a50-4b2d-a96a-fe49534840f7))
+    (pin "2" (uuid 5c45e76e-7f8d-40a4-bc2c-acd2b66e1d13))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R142")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 67b1eb70-eaa3-42e4-ae3f-2e96e9cd02bc)
+    (property "Reference" "R143"
+      (at 92.71 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b8a644af-26b4-44e7-8f96-9c27d8b70b0d))
+    (pin "2" (uuid 1f8bf1ca-043e-4a83-aece-d1a1c214ce5f))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R143")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 290208aa-3962-46b0-a1da-50d2716a1629)
+    (property "Reference" "R144"
+      (at 92.71 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ca3b788a-9be1-4e5a-babd-45f7ec7e0fca))
+    (pin "2" (uuid 7e9d4e85-f0d8-4e9c-a65d-da83d77a916e))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R144")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e71ec927-fb51-4bde-8aaf-f26f86433f3b)
+    (property "Reference" "R145"
+      (at 92.71 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 30a7afc2-69ba-4b11-9ce4-104662336d71))
+    (pin "2" (uuid 92701d1e-0cf9-4604-8463-c38f9816d715))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R145")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4eb75214-1aa1-4f8d-9984-20642d1dc537)
+    (property "Reference" "R146"
+      (at 92.71 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3e769e13-cbd2-4bbe-a2d8-fda12747c217))
+    (pin "2" (uuid 6df8792e-ee33-4988-8a49-394513700eb8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R146")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0b345f27-54c4-43d1-a0d4-58c4a95cea6a)
+    (property "Reference" "R147"
+      (at 92.71 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9519c6e4-05f1-4630-9f8b-e4535af67afd))
+    (pin "2" (uuid 2e986b59-9202-45fc-a263-83eadfc9a847))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R147")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 92.71 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3c8f0ac3-24c3-4144-a82a-0f8bb332a491)
+    (property "Reference" "R148"
+      (at 92.71 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 92.71 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 92.71 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 01ce0420-79af-4170-b166-c661e35bba89))
+    (pin "2" (uuid 65bc8038-01e8-4475-aeef-f439ed999945))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R148")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fb6e5066-cc29-4514-8bac-740588a185c3)
+    (property "Reference" "R149"
+      (at 100.33 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5111c51d-18a0-4487-a54b-ba27a529c173))
+    (pin "2" (uuid 572249ea-56e8-42d9-b8ad-6d9142a319f8))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R149")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 46dca11e-3e03-4be1-877b-b978180c2227)
+    (property "Reference" "R150"
+      (at 100.33 31.4325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 33.02 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0e1271c8-2d03-4722-88e3-c934102e03ee))
+    (pin "2" (uuid bcd59dd5-875d-48c4-bfec-f747ffb27f17))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R150")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 43.18 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid efa60a13-7e70-4a29-a89d-d5803bc20c9e)
+    (property "Reference" "R151"
+      (at 100.33 39.0525 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 40.64 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 67d1dd45-276f-4ea1-90d6-1cef8d60db4a))
+    (pin "2" (uuid ad2b4f71-7197-45ba-95f7-72612d1d471a))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R151")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 50.8 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 06ad9ad6-e418-4af8-8fc9-df998e553a13)
+    (property "Reference" "R152"
+      (at 100.33 46.6725 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 48.26 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f7c3888e-37c4-4ab4-939b-823015e6573a))
+    (pin "2" (uuid 210eef95-f887-4bdd-a6fc-a5542688ada9))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R152")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 58.42 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 26a6e1d7-ad47-4e1a-995d-319ea20f09c4)
+    (property "Reference" "R153"
+      (at 100.33 54.2925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 55.88 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6515f3d1-36b4-4570-9b7d-220ab104b6d5))
+    (pin "2" (uuid 98cd32d0-c239-4075-8a81-b1c931e2ce83))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R153")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b7aabfa7-6672-4257-aef1-093f405a2f29)
+    (property "Reference" "R154"
+      (at 100.33 61.9125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 63.5 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 66.04 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 28ce0577-aa7a-4fce-9c59-393c65de1383))
+    (pin "2" (uuid df63d221-e6e3-45e0-b321-761298040eec))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R154")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8c0f1a54-0656-4061-be81-9765a43ac589)
+    (property "Reference" "R155"
+      (at 100.33 69.5325 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 71.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 73.66 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 94e56110-4522-452b-9e41-4745f211f70e))
+    (pin "2" (uuid 73b1610d-a56e-4b55-bab5-56050c034eea))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R155")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 81.28 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 94692789-933a-4a94-8484-849c75096372)
+    (property "Reference" "R156"
+      (at 100.33 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 100.33 85.4075 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 100.33 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 45559c5d-7288-4dfd-8cff-ada87c9349c3))
+    (pin "2" (uuid 2cb8cbb8-c555-4fbd-a94a-e576d3e007e0))
+    (instances
+      (project "grid2"
+        (path "/da0d697a-4d24-4e22-88e5-82c9d6aeb9fd"
+          (reference "R156")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

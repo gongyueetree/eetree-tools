@@ -1,0 +1,269 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 0c232d1d-2f54-4233-9df1-882818b0359f)
+  (paper "A4")
+  (title_block
+    (title "Hard-Switching 2")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Memristor"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "MR"
+        (at 2.54 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "Memristor"
+        (at -2.54 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "memristor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Memristor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Memristor_0_0"
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 1.27 2.54)
+            (xy 1.27 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 0)
+            (xy 1.27 -1.27)
+            (xy -1.27 -1.27)
+            (xy -1.27 -2.54)
+            (xy 0 -2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Memristor_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 27.94 43.18) (xy 27.94 38.1))
+    (stroke (width 0) (type default))
+    (uuid bc01790e-8f74-45dd-981d-4f1554cd7179))
+  (wire
+    (pts (xy 27.94 50.8) (xy 27.94 55.88))
+    (stroke (width 0) (type default))
+    (uuid 01b8547d-7bcb-42ee-9885-b2cfe601104e))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 55.88 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 92a9d474-662d-4bb0-879d-31523eb65384)
+    (property "Reference" "#PWR001"
+      (at 27.94 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 34b6b0ac-a4c5-45ee-8c4c-49383c1d8a81))
+    (instances
+      (project "mr-sine3"
+        (path "/dab9ed4a-80a6-4b2f-b1a0-d5c796a1e05d"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Memristor")
+    (at 27.94 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a3e27309-3245-4cf7-b806-e956cb6c751f)
+    (property "Reference" "M1"
+      (at 31.4325 46.99 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 27.94 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 281cea78-d072-4e0c-8d37-2b0fb5f93728))
+    (pin "2" (uuid 30fa65c6-cc7b-498a-b783-9314c019b0e9))
+    (instances
+      (project "mr-sine3"
+        (path "/dab9ed4a-80a6-4b2f-b1a0-d5c796a1e05d"
+          (reference "M1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 27.94 33.02 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c904afbd-e632-46bb-8c79-b97efb9a0bbf)
+    (property "Reference" "V1"
+      (at 35.40125 32.22625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "2V 8kHz"
+      (at 35.40125 33.81375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c7f81fee-6d05-4c63-bd00-fb61db1c0c35))
+    (pin "2" (uuid 84142b36-6582-4328-8866-528d605f9d1b))
+    (instances
+      (project "mr-sine3"
+        (path "/dab9ed4a-80a6-4b2f-b1a0-d5c796a1e05d"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2a19bba3-86b2-40e4-8a3e-3f7481dba156)
+    (property "Reference" "#PWR002"
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ff633c64-8e2c-49d4-b404-e671e5a4ef58))
+    (instances
+      (project "mr-sine3"
+        (path "/dab9ed4a-80a6-4b2f-b1a0-d5c796a1e05d"
+          (reference "#PWR002")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

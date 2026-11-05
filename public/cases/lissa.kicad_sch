@@ -1,0 +1,577 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 9019252c-fc6e-4b70-84a0-df9cfc6d181e)
+  (paper "A4")
+  (title_block
+    (title "Lissajous Figures")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Voltmeter_DC"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "MES"
+        (at -3.302 1.016 0)
+        (effects (font (size 1.27 1.27)) (justify right)))
+      (property "Value" "Voltmeter_DC"
+        (at -3.302 -0.762 0)
+        (effects (font (size 1.27 1.27)) (justify right)))
+      (property "Footprint" ""
+        (at 0 2.54 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 2.54 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "voltmeter DC"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "DC voltmeter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Voltmeter_DC_0_0"
+        (polyline
+          (pts (xy -3.175 -3.175) (xy -1.905 -1.905))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.905 1.905) (xy 3.175 3.175))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.905 3.175)
+            (xy 3.175 3.175)
+            (xy 3.175 1.905))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "V"
+          (at 0 0 0)
+          (effects (font (size 2.54 2.54)))))
+      (symbol "Voltmeter_DC_0_1"
+        (polyline
+          (pts (xy 0.254 3.81) (xy 0.762 3.81))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.508 4.064) (xy 0.508 3.556))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Voltmeter_DC_1_1"
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 27.94 25.4) (xy 35.56 25.4))
+    (stroke (width 0) (type default))
+    (uuid 4fbe47cd-2938-4679-aca4-cd8d88f76980))
+  (wire
+    (pts (xy 27.94 45.72) (xy 35.56 45.72))
+    (stroke (width 0) (type default))
+    (uuid d0b7f593-b6fd-4c96-b037-f6121b03234b))
+  (wire
+    (pts (xy 27.94 53.34) (xy 35.56 53.34))
+    (stroke (width 0) (type default))
+    (uuid 424aa937-98d8-436e-b2cb-56ea67bff837))
+  (wire
+    (pts (xy 27.94 76.2) (xy 35.56 76.2))
+    (stroke (width 0) (type default))
+    (uuid ba2af50f-9b4c-416a-b55c-360a6e5a6a8e))
+  (wire
+    (pts (xy 48.26 25.4) (xy 55.88 25.4))
+    (stroke (width 0) (type default))
+    (uuid cb06c17b-905a-45de-9cd3-62e54a3f013e))
+  (wire
+    (pts (xy 48.26 45.72) (xy 55.88 45.72))
+    (stroke (width 0) (type default))
+    (uuid 43ce955d-03fa-48e4-9922-b3657a3b9c64))
+  (wire
+    (pts (xy 48.26 53.34) (xy 55.88 53.34))
+    (stroke (width 0) (type default))
+    (uuid 5349bc8b-edce-4e6b-841e-3a02ad7e85b7))
+  (wire
+    (pts (xy 48.26 76.2) (xy 55.88 76.2))
+    (stroke (width 0) (type default))
+    (uuid 28bf6d3e-e404-417a-b8ea-ccf58f759050))
+  (wire
+    (pts (xy 68.58 53.34) (xy 76.2 53.34))
+    (stroke (width 0) (type default))
+    (uuid a184b0d7-99af-4d08-a139-919bd85ca0b1))
+  (wire
+    (pts (xy 68.58 25.4) (xy 76.2 25.4))
+    (stroke (width 0) (type default))
+    (uuid 8687270b-2ec7-49c4-a8e1-9600c606506e))
+  (wire
+    (pts (xy 68.58 45.72) (xy 76.2 45.72))
+    (stroke (width 0) (type default))
+    (uuid 073e5ad5-cd07-463f-aca9-dbc2219ffe95))
+  (wire
+    (pts (xy 68.58 76.2) (xy 76.2 76.2))
+    (stroke (width 0) (type default))
+    (uuid 07c4a665-d6f8-4f22-947d-314f456da2db))
+  (wire
+    (pts (xy 27.94 40.64) (xy 27.94 45.72))
+    (stroke (width 0) (type default))
+    (uuid ad1f9ffd-9ce5-41d4-bdc8-03e333312fbf))
+  (wire
+    (pts (xy 27.94 30.48) (xy 27.94 25.4))
+    (stroke (width 0) (type default))
+    (uuid 302a7523-5a75-40eb-929b-e5ed0b4ddc13))
+  (wire
+    (pts (xy 27.94 69.85) (xy 27.94 76.2))
+    (stroke (width 0) (type default))
+    (uuid eeebaae6-ab28-4a20-98c5-36ba3d89f47a))
+  (wire
+    (pts (xy 27.94 59.69) (xy 27.94 53.34))
+    (stroke (width 0) (type default))
+    (uuid 41b21bf5-250c-4e5c-9a66-1dfd80cccfd7))
+  (wire
+    (pts (xy 35.56 30.48) (xy 35.56 25.4))
+    (stroke (width 0) (type default))
+    (uuid 08c6b56e-d891-4c12-b88a-293c3c209eeb))
+  (wire
+    (pts (xy 35.56 40.64) (xy 35.56 45.72))
+    (stroke (width 0) (type default))
+    (uuid 498df2f4-253c-419c-ad02-3ef5224d358b))
+  (wire
+    (pts (xy 35.56 59.69) (xy 35.56 53.34))
+    (stroke (width 0) (type default))
+    (uuid 626b423c-cd58-4d83-90a2-aa2654bf5b57))
+  (wire
+    (pts (xy 35.56 69.85) (xy 35.56 76.2))
+    (stroke (width 0) (type default))
+    (uuid b29d3500-418b-4c14-9e0c-322b7347dc69))
+  (wire
+    (pts (xy 48.26 40.64) (xy 48.26 45.72))
+    (stroke (width 0) (type default))
+    (uuid d4a8409d-ead6-4092-898d-79e6271b8eba))
+  (wire
+    (pts (xy 48.26 30.48) (xy 48.26 25.4))
+    (stroke (width 0) (type default))
+    (uuid 96fe2449-2943-4a09-87dc-4a8a4e53c4fe))
+  (wire
+    (pts (xy 48.26 69.85) (xy 48.26 76.2))
+    (stroke (width 0) (type default))
+    (uuid 91a040a3-5553-4539-b5bb-dfc172f12bde))
+  (wire
+    (pts (xy 48.26 59.69) (xy 48.26 53.34))
+    (stroke (width 0) (type default))
+    (uuid a57cfe0e-e970-453a-9cd8-0ec3930e5970))
+  (wire
+    (pts (xy 68.58 40.64) (xy 68.58 45.72))
+    (stroke (width 0) (type default))
+    (uuid 39cc8b1a-ffad-4bf5-976f-f5ec66482799))
+  (wire
+    (pts (xy 68.58 30.48) (xy 68.58 25.4))
+    (stroke (width 0) (type default))
+    (uuid a2bda9e0-1bfa-4073-a054-99bfbcdadff4))
+  (wire
+    (pts (xy 68.58 69.85) (xy 68.58 76.2))
+    (stroke (width 0) (type default))
+    (uuid bb9068aa-ef33-4ac2-aa82-53b381c7db89))
+  (wire
+    (pts (xy 68.58 59.69) (xy 68.58 53.34))
+    (stroke (width 0) (type default))
+    (uuid cca3a0ad-1883-44cb-b4be-5cea52b946c8))
+  (wire
+    (pts (xy 55.88 30.48) (xy 55.88 25.4))
+    (stroke (width 0) (type default))
+    (uuid e8b874be-a174-4431-b98c-a9902768e9dd))
+  (wire
+    (pts (xy 55.88 40.64) (xy 55.88 45.72))
+    (stroke (width 0) (type default))
+    (uuid a646ab22-16fc-4f05-a9ff-ac10d3211cd1))
+  (wire
+    (pts (xy 55.88 59.69) (xy 55.88 53.34))
+    (stroke (width 0) (type default))
+    (uuid 91a036d3-75f1-4bc6-8287-b8b4aeb04bb6))
+  (wire
+    (pts (xy 55.88 69.85) (xy 55.88 76.2))
+    (stroke (width 0) (type default))
+    (uuid 21a3e99b-427e-4573-9248-c2007d168d28))
+  (wire
+    (pts (xy 76.2 30.48) (xy 76.2 25.4))
+    (stroke (width 0) (type default))
+    (uuid 6170028c-23cd-44d8-89e0-dd64b59cb72f))
+  (wire
+    (pts (xy 76.2 40.64) (xy 76.2 45.72))
+    (stroke (width 0) (type default))
+    (uuid d80935e5-e5ea-45dd-864d-fcb6c06e1e16))
+  (wire
+    (pts (xy 76.2 59.69) (xy 76.2 53.34))
+    (stroke (width 0) (type default))
+    (uuid e6d0e117-aa5c-4aa4-96ab-17a8035a6c16))
+  (wire
+    (pts (xy 76.2 69.85) (xy 76.2 76.2))
+    (stroke (width 0) (type default))
+    (uuid 59592e03-fab1-45c4-9216-9f2486c48d69))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 27.94 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6c1986ac-86a8-4c83-b566-3f77bf1f7c38)
+    (property "Reference" "V1"
+      (at 19.84375 34.76625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 100Hz"
+      (at 19.84375 36.35375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f80ac6eb-87fe-4729-888a-0ff4564c7aea))
+    (pin "2" (uuid df68bd29-145c-486b-b3b7-a897a9c6a632))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 27.94 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 62838dc4-54f4-4237-90ea-fdcbe0b15d44)
+    (property "Reference" "V2"
+      (at 19.84375 63.97625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 104Hz"
+      (at 19.84375 65.56375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 145fbe01-cbcc-476b-8b85-1d2ebdaa4585))
+    (pin "2" (uuid 3d79a54e-9ed9-4ea9-a5d8-7fc9d18d6458))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 35.56 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 20c8a83e-9420-45a3-8a4e-f0f0e325e1b1)
+    (property "Reference" "MES1"
+      (at 42.06875 35.08375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 35.56 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 35.56 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d2c2ee88-8af2-4571-a8f1-a3e7bb4794bb))
+    (pin "2" (uuid 790d0c8f-d87d-4df5-8b07-bac564f6cf03))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 35.56 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1e37e7f6-5ef9-4cd4-b20f-7b17189cc2fc)
+    (property "Reference" "MES2"
+      (at 42.06875 64.29375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 35.56 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 35.56 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid dc966206-12fc-49bd-a99d-8755577238d1))
+    (pin "2" (uuid 6a0f5521-e0ba-432b-939c-b0368e0082ad))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 48.26 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e5c2182b-6857-4d92-b5e8-eb4e824caddb)
+    (property "Reference" "V3"
+      (at 48.26 29.845 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 40Hz"
+      (at 48.26 31.4325 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 48.26 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fb1ded46-576b-42f9-80ab-fed06694e41c))
+    (pin "2" (uuid b9e7422a-94ee-40c2-a761-f6856d30da28))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 48.26 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7050bfd5-6a26-4849-860f-16bf88688374)
+    (property "Reference" "V4"
+      (at 48.26 68.8975 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 101Hz"
+      (at 48.26 70.485 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 48.26 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 97b8c0d1-5c2e-4785-b0f1-bcc9b47f2adf))
+    (pin "2" (uuid e79b1e4f-6cb7-4ae3-98f4-011f2ad1363e))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V4")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 68.58 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 64d8faf6-652e-4e8c-b010-0e1fe49a8ca4)
+    (property "Reference" "V5"
+      (at 68.58 29.845 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 91Hz"
+      (at 68.58 31.4325 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 68.58 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 35e5ee62-c804-4ee1-84e0-4f76d62f5650))
+    (pin "2" (uuid fe91c75a-9c1e-43fd-9873-dcac11a62450))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V5")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 68.58 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cb4951ea-fc24-4c8d-8f8c-b77bfbe962fc)
+    (property "Reference" "V6"
+      (at 68.58 59.055 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 30Hz"
+      (at 68.58 60.6425 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 68.58 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2b687f18-6021-4fc9-b2cd-845890675d89))
+    (pin "2" (uuid f7fe02f3-01cb-480b-af22-4fe73909e4ea))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "V6")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 55.88 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5c514f13-9c60-4fbf-acc5-c8cfb6db1a90)
+    (property "Reference" "MES3"
+      (at 62.38875 35.08375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 55.88 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 55.88 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ea9b828e-a0cf-403d-8814-f82316bcc38d))
+    (pin "2" (uuid 1097cdb8-6880-4a96-bb43-bd22c9a3c73c))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 55.88 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fc8401f8-b9b9-4162-9e0c-53f76cad5871)
+    (property "Reference" "MES4"
+      (at 62.38875 64.29375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 55.88 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 55.88 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2fbc9c31-e02b-4b48-8497-7f32789d4d3b))
+    (pin "2" (uuid 216ec36c-12a5-4cf5-a9bd-2df7fa135e8c))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES4")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 76.2 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2c35c0cb-89ae-4bf5-a79c-5bb57c2459d7)
+    (property "Reference" "MES5"
+      (at 82.70875 35.08375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 76.2 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 76.2 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5b0cb165-f807-4ad2-ad68-636f0e199409))
+    (pin "2" (uuid e6576648-0da8-41a5-a7b2-84a2741671af))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES5")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Voltmeter_DC")
+    (at 76.2 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 60dbeec4-f122-49f5-bb3f-a2ea33030e3c)
+    (property "Reference" "MES6"
+      (at 82.70875 64.29375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 76.2 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 76.2 64.77 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a0aede96-bda7-4d92-9dbf-1e3e4853db61))
+    (pin "2" (uuid 026501ec-c2cd-4900-a578-a7142e44314e))
+    (instances
+      (project "lissa"
+        (path "/32eb8477-c352-497c-8aa6-624cc88e6983"
+          (reference "MES6")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

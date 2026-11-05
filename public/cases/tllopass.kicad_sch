@@ -1,0 +1,999 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 9f6a0842-cee9-4e01-a143-0818aefc6ce9)
+  (paper "A4")
+  (title_block
+    (title "Low-Pass Filter")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:tline_6813a0c6"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TL"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "tline_6813a0c6_0_1"
+        (polyline
+          (pts (xy 0.0 0.0) (xy 17.78 0.0))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.0 -7.62) (xy 17.78 -7.62))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.2225 -0.0) (xy 2.2225 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 4.445 -0.0) (xy 4.445 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.6675 -0.0) (xy 6.6675 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 8.89 -0.0) (xy 8.89 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 11.1125 -0.0) (xy 11.1125 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 13.335 -0.0) (xy 13.335 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 15.5575 -0.0) (xy 15.5575 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none))))
+      (symbol "tline_6813a0c6_1_1"
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:tline_14590e29"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TL"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "tline_14590e29_0_1"
+        (polyline
+          (pts (xy 0.0 0.0) (xy 17.78 0.0))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.0 -7.62) (xy 17.78 -7.62))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.2225 -0.0) (xy 2.2225 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 4.445 -0.0) (xy 4.445 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.6675 -0.0) (xy 6.6675 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 8.89 -0.0) (xy 8.89 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 11.1125 -0.0) (xy 11.1125 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 13.335 -0.0) (xy 13.335 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 15.5575 -0.0) (xy 15.5575 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none))))
+      (symbol "tline_14590e29_1_1"
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:tline_30accabe"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TL"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "tline_30accabe_0_1"
+        (polyline
+          (pts (xy 0.0 0.0) (xy 15.24 0.0))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.0 -7.62) (xy 15.24 -7.62))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.905 -0.0) (xy 1.905 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 3.81 -0.0) (xy 3.81 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 5.715 -0.0) (xy 5.715 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 7.62 -0.0) (xy 7.62 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 9.525 -0.0) (xy 9.525 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 11.43 -0.0) (xy 11.43 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 13.335 -0.0) (xy 13.335 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none))))
+      (symbol "tline_30accabe_1_1"
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:tline_c46f9a45"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TL"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "tline_c46f9a45_0_1"
+        (polyline
+          (pts (xy 0.0 0.0) (xy 15.24 0.0))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.0 -7.62) (xy 15.24 -7.62))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.905 -0.0) (xy 1.905 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 3.81 -0.0) (xy 3.81 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 5.715 -0.0) (xy 5.715 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 7.62 -0.0) (xy 7.62 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 9.525 -0.0) (xy 9.525 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 11.43 -0.0) (xy 11.43 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 13.335 -0.0) (xy 13.335 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none))))
+      (symbol "tline_c46f9a45_1_1"
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:tline_573c164b"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TL"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "tline_573c164b_0_1"
+        (polyline
+          (pts (xy 0.0 0.0) (xy 15.24 0.0))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.0 -7.62) (xy 15.24 -7.62))
+          (stroke (width 0.4) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.905 -0.0) (xy 1.905 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 3.81 -0.0) (xy 3.81 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 5.715 -0.0) (xy 5.715 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 7.62 -0.0) (xy 7.62 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 9.525 -0.0) (xy 9.525 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 11.43 -0.0) (xy 11.43 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none)))
+        (polyline
+          (pts (xy 13.335 -0.0) (xy 13.335 -7.62))
+          (stroke (width 0.1) (type dash))
+          (fill (type none))))
+      (symbol "tline_573c164b_1_1"
+        (pin passive line
+          (at 0.0 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -7.62 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 0)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 50.8 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2ff42977-8f2e-496d-bb9c-23b0573d247e))
+  (junction
+    (at 71.12 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2de2c322-ae96-410a-beea-911d1c9ea3f0))
+  (junction
+    (at 68.58 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1304920b-f34b-4edf-b75f-b350fe2274f2))
+  (junction
+    (at 73.66 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 838af30f-0f4c-4279-8bd3-c6d9fbc8a796))
+  (junction
+    (at 93.98 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 24fa0117-e055-4a39-806f-844ab5eadb89))
+  (junction
+    (at 96.52 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 371fd80e-2b47-42dc-b5c0-67aa1729bc16))
+  (junction
+    (at 45.72 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid aed509d1-85d1-4144-9165-1da9bf69420f))
+  (wire
+    (pts (xy 48.26 35.56) (xy 48.26 50.8))
+    (stroke (width 0) (type default))
+    (uuid 568fa69f-6ff0-445f-8c3e-ba19562440a2))
+  (wire
+    (pts (xy 48.26 50.8) (xy 50.8 50.8))
+    (stroke (width 0) (type default))
+    (uuid ab26f6c4-9fe1-435d-b367-da8e5ba5e815))
+  (wire
+    (pts (xy 48.26 35.56) (xy 50.8 35.56))
+    (stroke (width 0) (type default))
+    (uuid f9f44eca-d83f-4db1-996f-f21dd4298c1d))
+  (wire
+    (pts (xy 68.58 27.94) (xy 71.12 27.94))
+    (stroke (width 0) (type default))
+    (uuid 67791b5a-788e-4e7e-bb17-ab5afa349435))
+  (wire
+    (pts (xy 71.12 27.94) (xy 71.12 43.18))
+    (stroke (width 0) (type default))
+    (uuid 28850428-25b9-4509-b5a1-09871a18b3d6))
+  (wire
+    (pts (xy 71.12 43.18) (xy 76.2 43.18))
+    (stroke (width 0) (type default))
+    (uuid 61a62a63-833b-4402-975d-d52aaa46afc8))
+  (wire
+    (pts (xy 68.58 35.56) (xy 73.66 35.56))
+    (stroke (width 0) (type default))
+    (uuid fd6715e1-4941-45ab-b5de-83026984f476))
+  (wire
+    (pts (xy 73.66 35.56) (xy 73.66 50.8))
+    (stroke (width 0) (type default))
+    (uuid 68fbba83-6983-4d48-9ad1-e1feed86f7bb))
+  (wire
+    (pts (xy 73.66 50.8) (xy 76.2 50.8))
+    (stroke (width 0) (type default))
+    (uuid 91116259-bac3-49f0-aeb5-423755bb88a6))
+  (wire
+    (pts (xy 71.12 27.94) (xy 76.2 27.94))
+    (stroke (width 0) (type default))
+    (uuid 36bde497-62ec-4777-adf7-ac02c953a9d8))
+  (wire
+    (pts (xy 73.66 35.56) (xy 76.2 35.56))
+    (stroke (width 0) (type default))
+    (uuid 70d2f1a6-f0aa-497e-860c-38a03997e179))
+  (wire
+    (pts (xy 91.44 27.94) (xy 93.98 27.94))
+    (stroke (width 0) (type default))
+    (uuid e16e5cce-fb07-4ae9-9bfb-3d0a9849097a))
+  (wire
+    (pts (xy 93.98 27.94) (xy 93.98 43.18))
+    (stroke (width 0) (type default))
+    (uuid c8b7264f-295d-41f7-8d23-807187f6443c))
+  (wire
+    (pts (xy 93.98 43.18) (xy 99.06 43.18))
+    (stroke (width 0) (type default))
+    (uuid 9a4719aa-7c16-4c50-b7bc-3ed16ef94988))
+  (wire
+    (pts (xy 91.44 35.56) (xy 96.52 35.56))
+    (stroke (width 0) (type default))
+    (uuid f8dd8837-8668-49bb-8b45-8f9db10fbf7d))
+  (wire
+    (pts (xy 96.52 35.56) (xy 96.52 50.8))
+    (stroke (width 0) (type default))
+    (uuid ca93e976-220b-408b-bebc-a7d2159cfc68))
+  (wire
+    (pts (xy 96.52 50.8) (xy 99.06 50.8))
+    (stroke (width 0) (type default))
+    (uuid ae612533-325a-46f8-87b3-7563ae952c48))
+  (wire
+    (pts (xy 93.98 27.94) (xy 101.6 27.94))
+    (stroke (width 0) (type default))
+    (uuid 9e2a208a-cc7f-4a44-9ce5-9ed8922fab1a))
+  (wire
+    (pts (xy 96.52 35.56) (xy 101.6 35.56))
+    (stroke (width 0) (type default))
+    (uuid f2fa9c26-3813-476e-aa88-07cfc3177d8c))
+  (wire
+    (pts (xy 45.72 27.94) (xy 45.72 43.18))
+    (stroke (width 0) (type default))
+    (uuid 7c4f967b-8dc2-4bb7-98c1-311ce8c9e3b3))
+  (wire
+    (pts (xy 45.72 43.18) (xy 50.8 43.18))
+    (stroke (width 0) (type default))
+    (uuid 6e353a1b-eba0-42f2-84c1-3c26342a0150))
+  (wire
+    (pts (xy 45.72 27.94) (xy 50.8 27.94))
+    (stroke (width 0) (type default))
+    (uuid d8004514-bda9-4f00-8dce-930d6fb45458))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7a6b95d1-9cc5-4dc3-a650-d585c2e92d8d)
+    (property "Reference" "#PWR001"
+      (at 68.58 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 68.58 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 68.58 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 80e1ef11-6216-4516-bfcb-f3ce30356695))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 91.44 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9490f2f9-e2ab-47fa-9249-0e8dae29b98a)
+    (property "Reference" "#PWR002"
+      (at 91.44 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 91.44 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 91.44 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8876a145-6049-47fb-a37b-11b2a6ed5e28))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 114.3 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a83dea72-c737-4eb6-a059-e21265393a54)
+    (property "Reference" "#PWR003"
+      (at 114.3 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 114.3 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 114.3 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 35cd04c1-3f84-479c-b491-8f3e47c8e4d8))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8a5d44d8-6ad5-465b-8d14-06b67fe30c19)
+    (property "Reference" "#PWR004"
+      (at 68.58 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 68.58 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 68.58 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1ac06920-0a22-4d4b-ae8f-aa1db913431c))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR004")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 50.8 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c7b084c8-eb1e-4435-8038-262fe2192635)
+    (property "Reference" "#PWR005"
+      (at 50.8 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 50.8 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 50.8 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c502dfce-1473-4fb9-aa8d-13264999561f))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR005")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 31.75 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 88105480-97ac-4a68-bc09-1a52aa8e2c64)
+    (property "Reference" "R1"
+      (at 105.25125 30.95625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "50Ω"
+      (at 105.25125 32.54375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 101.6 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 394a9d4a-6e07-4949-b2e7-84a84154159f))
+    (pin "2" (uuid 1bf1c83f-8fda-481e-93fd-d45b1236f6e8))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 41.91 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c13a4029-0f89-4c84-90d2-1c9bb7c1103f)
+    (property "Reference" "R2"
+      (at 41.91 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "50Ω"
+      (at 41.91 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 41.91 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bda1c2ff-da00-418a-9045-f237e2f7240e))
+    (pin "2" (uuid 7e7f28ad-6175-4378-b64b-db6824d25461))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:tline_6813a0c6")
+    (at 50.8 43.18 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 00bcdbb5-37d0-489c-853f-6f39582af7a5)
+    (property "Reference" "TL1"
+      (at 59.69 40.005 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Z₀=64.9Ω"
+      (at 59.69 41.5925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e3e5924c-ecb1-47dd-bb17-3a3445cc6aa5))
+    (pin "2" (uuid 4a36eebc-f88d-47b6-a203-300fe4ce5330))
+    (pin "3" (uuid dd88a986-236f-4964-a7d1-ae33ec3c8dea))
+    (pin "4" (uuid 95025389-7f4f-47d4-9125-fcc5d7ab5ed5))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "TL1")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:tline_14590e29")
+    (at 50.8 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e3b15810-3450-4acc-a5a8-b28be5599d15)
+    (property "Reference" "TL2"
+      (at 59.69 24.765 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Z₀=218Ω"
+      (at 59.69 26.3525 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0a4e75ef-17f6-4f58-8c33-8f5c77297c27))
+    (pin "2" (uuid b12cc44a-420c-48f1-92c9-373b85533c57))
+    (pin "3" (uuid d4f022d5-b896-4a69-b23e-03f2de187584))
+    (pin "4" (uuid 51e35eff-e287-426e-8462-12b22c568df3))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "TL2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:tline_30accabe")
+    (at 76.2 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 61a32aa9-3b17-45b9-a66f-3cb735786b60)
+    (property "Reference" "TL3"
+      (at 83.82 24.765 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Z₀=218Ω"
+      (at 83.82 26.3525 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 76.2 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid beed1ca7-1c14-42f4-ba1b-9e4cd10bb061))
+    (pin "2" (uuid 3987e6a6-bad6-4bd8-91f1-2534c98fbfe8))
+    (pin "3" (uuid ef6bd788-27e7-47e7-95fa-b92ced987952))
+    (pin "4" (uuid f8bec1ea-68c4-4c9e-bf42-e6d513a6d52c))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "TL3")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:tline_c46f9a45")
+    (at 76.2 43.18 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d9303491-8b36-414f-a47d-c1f104726065)
+    (property "Reference" "TL4"
+      (at 83.82 40.005 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Z₀=70.3Ω"
+      (at 83.82 41.5925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 76.2 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3ad114d7-a37b-477e-bb0d-1d0ae8d393cf))
+    (pin "2" (uuid c4e91526-5138-4684-9392-3e4507e9da49))
+    (pin "3" (uuid bf336e04-1bf4-4b2d-ba28-26a236fe057f))
+    (pin "4" (uuid d6217181-15ab-47e3-9977-6f717111fe98))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "TL4")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:tline_573c164b")
+    (at 99.06 43.18 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4e3baac5-e19f-489a-aef6-5751a235bdbc)
+    (property "Reference" "TL5"
+      (at 106.68 40.005 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Z₀=64.9Ω"
+      (at 106.68 41.5925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 99.06 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 088b402a-a0e2-4959-a633-ed5affb08f06))
+    (pin "2" (uuid b4472fe8-bd35-43a1-a91f-d1d10be597ca))
+    (pin "3" (uuid af462c20-91e7-485a-a7a1-563d9729b686))
+    (pin "4" (uuid ebb55d7e-a4b7-4719-9908-377874bbff11))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "TL5")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 33.02 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 04149e2b-ad91-4f49-a92d-8a85340cdf84)
+    (property "Reference" "V1"
+      (at 33.02 32.0675 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "sweep 2GHz–8GHz"
+      (at 33.02 33.655 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e324d084-b160-4338-aae0-18e692c4e0a9))
+    (pin "2" (uuid 67b8efe6-12c6-4e53-8e14-128413744ed7))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9aca8174-b096-49e2-833c-eb1f5f2e8e05)
+    (property "Reference" "#PWR006"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 00773e42-e841-4162-bb37-6ce5bc63510b))
+    (instances
+      (project "tllopass"
+        (path "/b3041a74-9a86-4908-90bd-8cc95839d080"
+          (reference "#PWR006")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

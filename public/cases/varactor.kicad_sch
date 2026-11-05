@@ -1,0 +1,633 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 215a7d96-8e65-4661-bbbd-3cda068f5f6b)
+  (paper "A4")
+  (title_block
+    (title "Varactor")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D_Capacitance"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D_Capacitance"
+        (at 0 -3.302 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "capacitance diode varicap varactor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Variable capacitance diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_Capacitance_0_1"
+        (polyline
+          (pts (xy -1.27 -1.778) (xy -0.1524 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 0) (xy 1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -0.1524 -1.27) (xy -0.1524 -2.286))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.1524 -1.778) (xy 1.27 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.1524 -1.27) (xy 0.1524 -2.286))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_Capacitance_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 38.1 31.75) (xy 38.1 27.94))
+    (stroke (width 0) (type default))
+    (uuid e775ca60-8484-44c7-a7d2-2732e62b88df))
+  (wire
+    (pts (xy 38.1 39.37) (xy 38.1 43.18))
+    (stroke (width 0) (type default))
+    (uuid a4fdf186-19c0-4ce5-a23d-b204ec53e503))
+  (wire
+    (pts (xy 38.1 44.45) (xy 38.1 43.18))
+    (stroke (width 0) (type default))
+    (uuid 1db2e226-7674-4539-b1d3-2f40cfc8bbf9))
+  (wire
+    (pts (xy 38.1 52.07) (xy 38.1 53.34))
+    (stroke (width 0) (type default))
+    (uuid c957dcef-88d4-4066-9cd0-17fd1d007127))
+  (wire
+    (pts (xy 58.42 44.45) (xy 58.42 43.18))
+    (stroke (width 0) (type default))
+    (uuid f5d9ccd6-5f75-4922-a691-ffca500eef37))
+  (wire
+    (pts (xy 58.42 52.07) (xy 58.42 53.34))
+    (stroke (width 0) (type default))
+    (uuid 85dcbaf3-d2a0-43ee-9307-232ed1c2656a))
+  (wire
+    (pts (xy 58.42 31.75) (xy 58.42 27.94))
+    (stroke (width 0) (type default))
+    (uuid 5a13f1eb-acf4-4096-bae8-8cbfdac3a3bf))
+  (wire
+    (pts (xy 58.42 39.37) (xy 58.42 43.18))
+    (stroke (width 0) (type default))
+    (uuid 5475f6b9-2741-4dcc-af0f-67aec8c1511c))
+  (wire
+    (pts (xy 78.74 31.75) (xy 78.74 27.94))
+    (stroke (width 0) (type default))
+    (uuid 36cd8702-6e77-4af9-86d8-1297f6eeaef3))
+  (wire
+    (pts (xy 78.74 39.37) (xy 78.74 43.18))
+    (stroke (width 0) (type default))
+    (uuid 84abe1b2-7545-437d-8942-db8dc03901b9))
+  (wire
+    (pts (xy 78.74 44.45) (xy 78.74 43.18))
+    (stroke (width 0) (type default))
+    (uuid 662e1e44-3c53-48c8-8943-035c13318dd4))
+  (wire
+    (pts (xy 78.74 52.07) (xy 78.74 53.34))
+    (stroke (width 0) (type default))
+    (uuid 404b5d68-e515-4b9f-9c0e-b07e28773209))
+  (symbol
+    (lib_id "power:GND")
+    (at 38.1 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 44b976dc-3f34-45c7-84c6-3a0a0a649ced)
+    (property "Reference" "#PWR001"
+      (at 38.1 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 38.1 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 38.1 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6f7aecb7-4b2c-436e-9427-3baf67e592b4))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 58.42 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid be7031d9-f45a-4204-9e11-6e8500a8c79a)
+    (property "Reference" "#PWR002"
+      (at 58.42 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 58.42 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 58.42 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4f23b1c0-f9fc-4599-bf5a-41816bca0a63))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 78.74 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f554bf06-a6fd-46da-8bc9-ca450bdf5fd8)
+    (property "Reference" "#PWR003"
+      (at 78.74 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 78.74 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 78.74 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 31a80695-c7be-42f8-b21e-c70da6d603e9))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Capacitance")
+    (at 38.1 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1681d933-f4fa-425f-bc3f-54e61a3ebeb9)
+    (property "Reference" "D1"
+      (at 42.545 35.56 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 38.1 35.56 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 38.1 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 651f95cc-c2df-46f2-95a2-bf08a737fe77))
+    (pin "2" (uuid 605d428b-cf8e-45e7-9446-001cc5015327))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 38.1 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0c485f35-ea56-4db0-bd0f-b327d01e2a81)
+    (property "Reference" "R1"
+      (at 42.38625 47.46625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 42.38625 49.05375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 38.1 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e9d66e48-3d05-4baf-ba36-e78d9397c0d6))
+    (pin "2" (uuid 39f76876-1777-4fad-a0a8-b5be45b37ffb))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5394cff4-8920-4e49-9672-68048e318341)
+    (property "Reference" "R2"
+      (at 62.70625 47.46625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 62.70625 49.05375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fbc76667-93fe-4f9d-af2d-bb97d86b0dbc))
+    (pin "2" (uuid ea0ec424-032d-4e1e-9914-1516ae30655b))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Capacitance")
+    (at 58.42 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid acc15fcc-b737-4e4e-8c53-cb99bcbf0aae)
+    (property "Reference" "D2"
+      (at 62.865 35.56 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 58.42 35.56 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 58.42 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fb8f6060-b8cb-4ba1-b22d-a4c24258c5b6))
+    (pin "2" (uuid e603c93f-e96d-4d3e-b6ed-0101549583f6))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "D2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Capacitance")
+    (at 78.74 35.56 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ccb77d1c-d9d2-47be-9748-075ce435b805)
+    (property "Reference" "D3"
+      (at 83.185 35.56 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 78.74 35.56 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 78.74 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2b7ed936-96e4-49a6-a695-d29e549c5a96))
+    (pin "2" (uuid 904da473-807e-4cc5-922d-48ce776745dc))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "D3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 78.74 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bb3fafe1-c193-4224-9203-db40e6b915c1)
+    (property "Reference" "R3"
+      (at 83.02625 47.46625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 83.02625 49.05375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 78.74 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4900461e-e761-4368-9b9f-55a92d213332))
+    (pin "2" (uuid 77282895-1934-4fd1-aec4-f952c9100fbc))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "R3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 33.02 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 819315fc-32b6-4ac2-8af9-cc2326b00a25)
+    (property "Reference" "V1"
+      (at 33.02 22.225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1V 800MHz"
+      (at 33.02 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5516d0e8-7cd0-48a5-ae6c-1ab47f0b95a1))
+    (pin "2" (uuid 3e53e1e3-4cee-493b-b660-db8c7220a029))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bba6ac23-9b9c-4b6e-8149-810531adfbeb)
+    (property "Reference" "#PWR004"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1f878901-6357-4748-80f8-da9884b92083))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR004")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 53.34 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7c163671-e2da-459b-acca-01194038c1a6)
+    (property "Reference" "V2"
+      (at 53.34 22.225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1V 800MHz"
+      (at 53.34 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 40e7be2b-87e4-4195-8b91-7ce070b137e7))
+    (pin "2" (uuid 34994adc-802e-4138-b93c-7166e4eeb790))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "V2")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 48.26 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 82bafea0-38a2-4a53-82a4-f4c7ec504016)
+    (property "Reference" "#PWR005"
+      (at 48.26 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 48.26 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 48.26 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1343c84e-7297-4764-8250-138a7c3e1c3f))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR005")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 73.66 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 031c48bf-612a-42be-b02d-a952f6c611c4)
+    (property "Reference" "V3"
+      (at 73.66 22.225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1V 800MHz"
+      (at 73.66 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 73.66 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 592245fa-e6a1-4533-a769-5c85c1ccd75f))
+    (pin "2" (uuid 8e0630f5-7c0a-4f1f-9da5-fb7529ec7343))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "V3")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b3de34b3-b8d7-4084-984e-9a508fbd343a)
+    (property "Reference" "#PWR006"
+      (at 68.58 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 68.58 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 68.58 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7491c443-30d2-4cb1-8be5-026cbbb02709))
+    (instances
+      (project "varactor"
+        (path "/f2f56e5d-afc6-4d3d-882a-360fae885646"
+          (reference "#PWR006")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

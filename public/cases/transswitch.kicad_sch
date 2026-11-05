@@ -1,0 +1,439 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid d101c45f-c271-4091-aa16-10b64b428241)
+  (paper "A4")
+  (title_block
+    (title "Switch")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Device:Battery"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "BT"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Battery"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 1.524 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "batt voltage-source cell"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Multiple-cell battery"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Battery_0_1"
+        (rectangle
+          (start -2.286 -1.27)
+          (end 2.286 -1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -2.286 1.778)
+          (end 2.286 1.524)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 -2.032)
+          (end 1.524 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (rectangle
+          (start -1.524 1.016)
+          (end 1.524 0.508)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts (xy 0 -1.016) (xy 0 -0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 -0.508) (xy 0 -0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.778) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 3.048) (xy 1.778 3.048))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 3.556) (xy 1.27 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Battery_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Switch:SW_SPST"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 3.175 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "SW_SPST"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "switch lever"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Single Pole Single Throw (SPST) switch"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "SW_SPST_0_0"
+        (circle
+          (center -2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.524 0.254) (xy 1.524 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "SW_SPST_1_1"
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 0 180)
+          (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NPN_BCE"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NPN_BCE"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NPN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "NPN transistor, base/collector/emitter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NPN_BCE_0_1"
+        (polyline
+          (pts (xy 0.635 0.635) (xy 2.54 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.778)
+            (xy 1.778 -1.27)
+            (xy 2.286 -2.286)
+            (xy 1.27 -1.778)
+            (xy 1.27 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_NPN_BCE_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 45.72 25.4)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 0ae3c8d9-161f-4534-b1b6-1006cf27bbb7))
+  (wire
+    (pts (xy 27.94 25.4) (xy 45.72 25.4))
+    (stroke (width 0) (type default))
+    (uuid 302fd498-570a-4595-9c77-ca05554e5f7a))
+  (wire
+    (pts (xy 45.72 25.4) (xy 63.5 25.4))
+    (stroke (width 0) (type default))
+    (uuid bacd9bdd-a0ca-4cf1-a944-e35574611540))
+  (wire
+    (pts (xy 63.5 55.88) (xy 63.5 68.58))
+    (stroke (width 0) (type default))
+    (uuid 7453aafc-31ad-4022-aea1-5b03a0d3186c))
+  (wire
+    (pts (xy 63.5 68.58) (xy 27.94 68.58))
+    (stroke (width 0) (type default))
+    (uuid 06354cb8-4cbb-4c9f-8c8d-db161aff4286))
+  (wire
+    (pts (xy 27.94 52.07) (xy 27.94 68.58))
+    (stroke (width 0) (type default))
+    (uuid 8f0a01dd-9b4e-4ca4-88e9-525f84c476ee))
+  (wire
+    (pts (xy 27.94 41.91) (xy 27.94 25.4))
+    (stroke (width 0) (type default))
+    (uuid f06c6d21-d4ef-49b8-a280-5f4315305b20))
+  (wire
+    (pts (xy 45.72 29.21) (xy 45.72 25.4))
+    (stroke (width 0) (type default))
+    (uuid 6026029e-ccef-43b9-93e3-829bfd25789a))
+  (wire
+    (pts (xy 45.72 36.83) (xy 45.72 40.64))
+    (stroke (width 0) (type default))
+    (uuid a04dbf65-4c2a-42c5-be9c-1ede353ecb97))
+  (wire
+    (pts (xy 45.72 41.91) (xy 45.72 40.64))
+    (stroke (width 0) (type default))
+    (uuid 3b2aa194-9c4c-40cb-8cf8-f465b7bfdb9b))
+  (wire
+    (pts (xy 45.72 52.07) (xy 45.72 53.34))
+    (stroke (width 0) (type default))
+    (uuid 65039db3-150d-4865-a1b7-63f7c4cdaf82))
+  (wire
+    (pts (xy 63.5 34.29) (xy 63.5 25.4))
+    (stroke (width 0) (type default))
+    (uuid 4aea22ed-664c-44d8-b507-b0557cba2ab3))
+  (wire
+    (pts (xy 63.5 41.91) (xy 63.5 50.8))
+    (stroke (width 0) (type default))
+    (uuid 6f64b826-3e71-4f49-9865-6cad90a921e8))
+  (wire
+    (pts (xy 63.5 48.26) (xy 63.5 50.8))
+    (stroke (width 0) (type default))
+    (uuid b621994a-afa9-48aa-84a7-eb771073f6c1))
+  (wire
+    (pts (xy 63.5 58.42) (xy 63.5 55.88))
+    (stroke (width 0) (type default))
+    (uuid f4c05ee2-e17d-4a8f-afca-f9e677dffc16))
+  (wire
+    (pts (xy 55.88 53.34) (xy 45.72 53.34))
+    (stroke (width 0) (type default))
+    (uuid 7ea57ffb-6609-477a-8cae-77b0c48a56ae))
+  (symbol
+    (lib_id "Device:Battery")
+    (at 27.94 46.99 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid dd288019-5159-4611-943b-b2c7d0d4d701)
+    (property "Reference" "BT1"
+      (at 32.86125 45.72 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V"
+      (at 32.86125 47.3075 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 371f2056-f026-4a69-b57c-f0b3b0bbd2ab))
+    (pin "2" (uuid 8e7cc6b8-ae2b-4edd-9cfa-712365d862d0))
+    (instances
+      (project "transswitch"
+        (path "/e2e6ef86-f938-49c7-95a8-b7ae48a9a2b8"
+          (reference "BT1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 45.72 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 63c9881d-392b-4486-8705-43c9ed532cda)
+    (property "Reference" "R1"
+      (at 50.00625 32.22625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 50.00625 33.81375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid eb06bd8b-4ba5-482b-999a-8090365fda58))
+    (pin "2" (uuid 4bd04564-ce61-4269-948c-7038389ef76f))
+    (instances
+      (project "transswitch"
+        (path "/e2e6ef86-f938-49c7-95a8-b7ae48a9a2b8"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Switch:SW_SPST")
+    (at 45.72 46.99 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 600d6273-fa7e-4380-8dbd-ac0957307ce9)
+    (property "Reference" "SW1"
+      (at 50.165 46.99 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 45.72 46.99 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 46.99 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c142071f-b58e-46ea-922f-299f059c749a))
+    (pin "2" (uuid 6e38f7f6-946e-4610-b6b2-2ab6aeba7095))
+    (instances
+      (project "transswitch"
+        (path "/e2e6ef86-f938-49c7-95a8-b7ae48a9a2b8"
+          (reference "SW1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 63.5 38.1 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 39fc00e1-8513-4d20-adde-6a462760927c)
+    (property "Reference" "R2"
+      (at 67.78625 37.30625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "300Ω"
+      (at 67.78625 38.89375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 63.5 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d02c2ee3-e90b-4df0-b9a3-ac82ce23a7d5))
+    (pin "2" (uuid 4d0ccbba-421c-4471-b2ab-c8a3a9a51e9f))
+    (instances
+      (project "transswitch"
+        (path "/e2e6ef86-f938-49c7-95a8-b7ae48a9a2b8"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NPN_BCE")
+    (at 60.96 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 656705ef-265c-48b2-87c2-e5f8ed8c762b)
+    (property "Reference" "Q1"
+      (at 67.31 53.34 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 60.96 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 60.96 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 66574d75-1da9-4033-8a35-99b3b613527b))
+    (pin "2" (uuid c96d35e5-8a97-4b74-bd1a-861c5da7f351))
+    (pin "3" (uuid 6326e434-d994-41ae-afdd-e81a590b0219))
+    (instances
+      (project "transswitch"
+        (path "/e2e6ef86-f938-49c7-95a8-b7ae48a9a2b8"
+          (reference "Q1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

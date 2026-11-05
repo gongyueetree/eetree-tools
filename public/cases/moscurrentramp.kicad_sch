@@ -1,0 +1,658 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 2493b310-37e7-4e59-9064-c0ba2068fa56)
+  (paper "A4")
+  (title_block
+    (title "Current Ramp")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:+2V5"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+2V5"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+2V5\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+2V5_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+2V5_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+2V5" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:+10V"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+10V"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+10V\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+10V_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+10V_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+10V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Switch:SW_Push"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 1.27 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "SW_Push"
+        (at 0 -1.524 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "switch normally-open pushbutton push-button"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Push button switch, generic, two pins"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "SW_Push_0_1"
+        (circle
+          (center -2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.27) (xy 0 3.048))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 1.27) (xy -2.54 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 0 180)
+          (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NMOS_GDS"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NMOS_GDS"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "N-MOSFET transistor, gate/drain/source"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NMOS_GDS_0_1"
+        (polyline
+          (pts (xy 0.254 0) (xy -2.54 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.254 1.905) (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 -1.27) (xy 0.762 -2.286))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 0.508) (xy 0.762 -0.508))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 2.286) (xy 0.762 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 2.54) (xy 2.54 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.762 -1.778)
+            (xy 3.302 -1.778)
+            (xy 3.302 1.778)
+            (xy 0.762 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 2.032 0.381)
+            (xy 2.032 -0.381)
+            (xy 1.016 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts
+            (xy 2.794 0.508)
+            (xy 2.921 0.381)
+            (xy 3.683 0.381)
+            (xy 3.81 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 3.302 0.381)
+            (xy 2.921 -0.254)
+            (xy 3.683 -0.254)
+            (xy 3.302 0.381))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 1.651 0)
+          (radius 2.794)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.54 -1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 2.54 1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline))))
+      (symbol "Q_NMOS_GDS_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 45.72 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 828c7435-7ba4-4698-88f0-2a7ed70d282f))
+  (junction
+    (at 45.72 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 750e87b6-fb3e-49ac-bdd2-2dca5c7c1e7f))
+  (wire
+    (pts (xy 45.72 58.42) (xy 45.72 50.8))
+    (stroke (width 0) (type default))
+    (uuid 63d31ef9-aca9-4eb0-9d7a-efe80e6a016a))
+  (wire
+    (pts (xy 45.72 50.8) (xy 60.96 50.8))
+    (stroke (width 0) (type default))
+    (uuid 3dc8cb47-3eea-4f8e-9d3f-f3dcabe3b3e7))
+  (wire
+    (pts (xy 45.72 35.56) (xy 60.96 35.56))
+    (stroke (width 0) (type default))
+    (uuid 55adff40-7f4d-4775-bb3c-d6fef0d0d8d2))
+  (wire
+    (pts (xy 45.72 35.56) (xy 38.1 35.56))
+    (stroke (width 0) (type default))
+    (uuid b2268d61-dfaa-4a33-9134-9cd4206eca8c))
+  (wire
+    (pts (xy 45.72 50.8) (xy 38.1 50.8))
+    (stroke (width 0) (type default))
+    (uuid 0a6d055d-25fd-42c8-bd49-7f3f3b856c59))
+  (wire
+    (pts (xy 35.56 60.96) (xy 27.94 60.96))
+    (stroke (width 0) (type default))
+    (uuid c14269e0-f339-4426-bcb9-9f80ced40991))
+  (wire
+    (pts (xy 45.72 35.56) (xy 45.72 27.94))
+    (stroke (width 0) (type default))
+    (uuid 7ffa1b4f-114e-4792-b926-9877c194f648))
+  (wire
+    (pts (xy 45.72 39.37) (xy 45.72 35.56))
+    (stroke (width 0) (type default))
+    (uuid 22d2a41e-5d92-407e-8cfd-532730a500a5))
+  (wire
+    (pts (xy 45.72 46.99) (xy 45.72 50.8))
+    (stroke (width 0) (type default))
+    (uuid be532b48-1a6d-40d0-9539-8e503b6ea5ac))
+  (wire
+    (pts (xy 60.96 39.37) (xy 60.96 35.56))
+    (stroke (width 0) (type default))
+    (uuid 8e6a18f6-bb33-4ece-9f70-3caef20d175b))
+  (wire
+    (pts (xy 60.96 46.99) (xy 60.96 50.8))
+    (stroke (width 0) (type default))
+    (uuid b5a8a330-70f4-441f-977e-afab63af866c))
+  (wire
+    (pts (xy 38.1 38.1) (xy 38.1 35.56))
+    (stroke (width 0) (type default))
+    (uuid 856296c0-ba70-4c31-8461-350affcd23d0))
+  (wire
+    (pts (xy 38.1 48.26) (xy 38.1 50.8))
+    (stroke (width 0) (type default))
+    (uuid bd58c25a-7ee9-4147-a653-c333512ce6aa))
+  (wire
+    (pts (xy 35.56 58.42) (xy 35.56 60.96))
+    (stroke (width 0) (type default))
+    (uuid 56713b97-67da-41ad-8202-88c827e2e537))
+  (wire
+    (pts (xy 43.18 63.5) (xy 45.72 63.5))
+    (stroke (width 0) (type default))
+    (uuid 271e7f4d-ef85-4488-af4c-ecdd0c1af76f))
+  (wire
+    (pts (xy 43.18 53.34) (xy 45.72 53.34))
+    (stroke (width 0) (type default))
+    (uuid df160a24-74aa-44c9-a071-01da692163fc))
+  (wire
+    (pts (xy 45.72 53.34) (xy 45.72 58.42))
+    (stroke (width 0) (type default))
+    (uuid 59bc0a5f-4125-417a-9fc7-c3a265027a22))
+  (symbol
+    (lib_id "power:GND")
+    (at 45.72 71.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 71ce7a10-f401-4985-940b-da9ca5cfd15f)
+    (property "Reference" "#PWR001"
+      (at 45.72 71.12 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 45.72 71.12 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 71.12 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 01e61747-40d4-4cf0-b586-6eb0561d3254))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+2V5")
+    (at 27.94 60.96 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e50e2597-628a-4721-ace9-1f543188844a)
+    (property "Reference" "#PWR002"
+      (at 27.94 60.96 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+2V5"
+      (at 22.5425 60.96 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 60.96 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7f2797b4-c3fa-4819-b3b3-2741b5aaced3))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+10V")
+    (at 45.72 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 46408102-b869-4888-905e-77c68b8011fd)
+    (property "Reference" "#PWR003"
+      (at 45.72 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+10V"
+      (at 45.72 24.4475 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 842909d4-e7e8-4e0b-8f2e-34dd36f66ad3))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 45.72 67.31 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c0e964ba-c4f0-415d-8d56-aa380d1200cd)
+    (property "Reference" "R1"
+      (at 49.37125 66.51625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10Ω"
+      (at 49.37125 68.10375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 67.31 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d8434413-69b6-40e6-a74b-b0e21d5632a9))
+    (pin "2" (uuid 5053d3eb-3787-4d21-aba1-b5b937ffc4d9))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 45.72 43.18 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 813537a2-885d-409a-a53c-a4af4aed5935)
+    (property "Reference" "C1"
+      (at 51.1175 42.38625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "50µF"
+      (at 51.1175 43.97375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d87898c5-01fc-420c-99c0-3e7bfd092e8c))
+    (pin "2" (uuid f1a2064c-10f3-4da8-a2d0-c48ae1150e7a))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 60.96 43.18 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4c8c3f93-c651-49eb-b93b-985d0a2107ba)
+    (property "Reference" "R2"
+      (at 65.24625 42.38625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 65.24625 43.97375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 60.96 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2815b759-d7c6-4e40-8743-67aa9070a1f9))
+    (pin "2" (uuid 8282ccf3-f162-4f78-a0fe-cfcf74ae883a))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Switch:SW_Push")
+    (at 38.1 43.18 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ead423c5-52a7-49e7-9fae-9325f497f579)
+    (property "Reference" "SW1"
+      (at 34.925 43.18 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 38.1 43.18 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 38.1 43.18 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 65d43a07-bfa5-4e9a-a1d1-60b3e60e6e03))
+    (pin "2" (uuid c536819d-9c1d-47ee-9826-e9e83d5e9505))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "SW1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NMOS_GDS")
+    (at 40.64 58.42 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fb616750-0bd1-4fb8-a9d6-39fba3a9e7c1)
+    (property "Reference" "Q1"
+      (at 47.3075 58.42 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 40.64 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 40.64 58.42 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c86855d5-acca-4f04-877c-00c30f2e6002))
+    (pin "2" (uuid 076bfd13-9736-4442-b52f-1c0ae0f4d48d))
+    (pin "3" (uuid 843ba906-5781-458c-bd14-a630182c577c))
+    (instances
+      (project "moscurrentramp"
+        (path "/67bddab7-d91d-4478-acb8-4a8e135fa21e"
+          (reference "Q1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

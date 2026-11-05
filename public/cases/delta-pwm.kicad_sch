@@ -1,0 +1,988 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 7801888f-8ce7-4b53-91f8-8c3f2b318460)
+  (paper "A4")
+  (title_block
+    (title "Delta PWM Encoder")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:+2V5"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+2V5"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+2V5\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+2V5_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+2V5_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+2V5" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R_Small"
+      (pin_numbers hide)
+      (pin_names (offset 0.254) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0.762 0.508 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "R_Small"
+        (at 0.762 -1.016 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor, small symbol"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_Small_0_1"
+        (rectangle
+          (start -0.762 1.778)
+          (end 0.762 -1.778)
+          (stroke (width 0.2032) (type default))
+          (fill (type none))))
+      (symbol "R_Small_1_1"
+        (pin passive line
+          (at 0 2.54 270)
+          (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:gate_bf7fc362"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "NOT"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "gate_bf7fc362_0_1"
+        (polyline
+          (pts
+            (xy 1.27 2.54)
+            (xy 5.715 0.0)
+            (xy 1.27 -2.54)
+            (xy 1.27 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts
+            (xy 2.0701 -0.4445)
+            (xy 2.9591 -0.4445)
+            (xy 2.9591 0.4445)
+            (xy 3.6703 0.4445))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (circle
+          (center 6.1913 0.0)
+          (radius 0.4763)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "gate_bf7fc362_1_1"
+        (pin passive line
+          (at 0.0 -0.0 0)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 7.62 -0.0 180)
+          (length 0.9525)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:opamp_711a2dc2"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "OpAmp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "opamp_711a2dc2_0_1"
+        (polyline
+          (pts
+            (xy 2.2225 5.08)
+            (xy 10.4775 0.0)
+            (xy 2.2225 -5.08)
+            (xy 2.2225 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (text "-"
+          (at 3.81 2.286 0)
+          (effects (font (size 1.27 1.27))))
+        (text "+"
+          (at 3.81 -2.286 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "opamp_711a2dc2_1_1"
+        (pin passive line
+          (at 0.0 2.54 0)
+          (length 2.2225)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -2.54 0)
+          (length 2.2225)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -0.0 180)
+          (length 2.2225)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:opamp_56f19bd1"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "OpAmp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "opamp_56f19bd1_0_1"
+        (polyline
+          (pts
+            (xy 1.5875 5.08)
+            (xy 9.8425 0.0)
+            (xy 1.5875 -5.08)
+            (xy 1.5875 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (text "-"
+          (at 3.175 2.286 0)
+          (effects (font (size 1.27 1.27))))
+        (text "+"
+          (at 3.175 -2.286 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "opamp_56f19bd1_1_1"
+        (pin passive line
+          (at 0.0 2.54 0)
+          (length 1.5875)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -2.54 0)
+          (length 1.5875)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 11.43 -0.0 180)
+          (length 1.5875)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:opamp_ba329b71"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "OpAmp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "opamp_ba329b71_0_1"
+        (polyline
+          (pts
+            (xy 2.3813 2.54)
+            (xy 6.5088 0.0)
+            (xy 2.3813 -2.54)
+            (xy 2.3813 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (text "-"
+          (at 3.175 1.143 0)
+          (effects (font (size 1.0 1.0))))
+        (text "+"
+          (at 3.175 -1.143 0)
+          (effects (font (size 1.0 1.0)))))
+      (symbol "opamp_ba329b71_1_1"
+        (pin passive line
+          (at 0.0 1.27 0)
+          (length 2.38125)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -1.27 0)
+          (length 2.38125)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 8.89 -0.0 180)
+          (length 2.38125)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 95.25 41.91)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 9540eee6-aee2-470f-86d4-99cef4befb40))
+  (junction
+    (at 82.55 39.37)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e959f2d4-1c82-44d8-bfdb-00bb23d031ab))
+  (junction
+    (at 45.72 36.83)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid cc28d105-773b-43d9-b760-6adc36207195))
+  (junction
+    (at 57.15 31.75)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid be5fbca9-b612-438e-97a2-076b267809b5))
+  (junction
+    (at 57.15 39.37)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid fead38c4-cd84-4406-930e-7ffe0dfc2f9c))
+  (junction
+    (at 95.25 54.61)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid bdc3ceec-66d6-47eb-9164-2c125e0cafc0))
+  (junction
+    (at 67.31 38.1)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 705df79a-49f2-4a0d-9d6e-735303cdb6da))
+  (junction
+    (at 45.72 41.91)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2756da7c-0c11-4618-8fea-c1ee4547a1e8))
+  (wire
+    (pts (xy 95.25 34.29) (xy 95.25 41.91))
+    (stroke (width 0) (type default))
+    (uuid bcf7fcbb-cc43-4fec-8c9c-83adb64d652d))
+  (wire
+    (pts (xy 82.55 34.29) (xy 82.55 39.37))
+    (stroke (width 0) (type default))
+    (uuid 23e2d946-eaf0-4fe3-8890-390d4a2e8484))
+  (wire
+    (pts (xy 45.72 36.83) (xy 45.72 31.75))
+    (stroke (width 0) (type default))
+    (uuid b4dc42d7-48b6-4465-bdf8-d7b70f5e3b95))
+  (wire
+    (pts (xy 57.15 31.75) (xy 57.15 39.37))
+    (stroke (width 0) (type default))
+    (uuid 445b773a-cbe4-400f-9d1e-97d1dac7bf20))
+  (wire
+    (pts (xy 38.1 54.61) (xy 38.1 41.91))
+    (stroke (width 0) (type default))
+    (uuid d46ca42e-c19d-4409-a612-ebb71662b7f8))
+  (wire
+    (pts (xy 95.25 41.91) (xy 95.25 54.61))
+    (stroke (width 0) (type default))
+    (uuid 0124857a-6637-4b35-9b8c-8138db44c7af))
+  (wire
+    (pts (xy 95.25 54.61) (xy 38.1 54.61))
+    (stroke (width 0) (type default))
+    (uuid d178d446-fa6c-44a1-89e3-11b8d97798d2))
+  (wire
+    (pts (xy 64.77 39.37) (xy 64.77 38.1))
+    (stroke (width 0) (type default))
+    (uuid e7cf0fff-9ffe-48c8-beb6-321daf20c427))
+  (wire
+    (pts (xy 64.77 38.1) (xy 67.31 38.1))
+    (stroke (width 0) (type default))
+    (uuid 5c21ecd1-57d9-4ae5-8dc0-fd1e36edef5f))
+  (wire
+    (pts (xy 67.31 40.64) (xy 67.31 45.72))
+    (stroke (width 0) (type default))
+    (uuid b7a74f73-6607-46cb-b75d-660988bb82a0))
+  (wire
+    (pts (xy 57.15 31.75) (xy 57.15 25.4))
+    (stroke (width 0) (type default))
+    (uuid e60fd741-84c0-4ed0-b4b2-579c28a60e07))
+  (wire
+    (pts (xy 95.25 54.61) (xy 95.25 59.69))
+    (stroke (width 0) (type default))
+    (uuid 4096ba2e-4081-4c45-8c06-f4b85e99910c))
+  (wire
+    (pts (xy 67.31 38.1) (xy 67.31 31.75))
+    (stroke (width 0) (type default))
+    (uuid ef029933-f01c-4e0d-b69c-0cde3b31d79a))
+  (wire
+    (pts (xy 85.09 34.29) (xy 82.55 34.29))
+    (stroke (width 0) (type default))
+    (uuid 47fde24c-b3e5-4854-bee1-f4c3f3a57d45))
+  (wire
+    (pts (xy 92.71 34.29) (xy 95.25 34.29))
+    (stroke (width 0) (type default))
+    (uuid 844861c5-d10c-4070-912b-7a746212cfce))
+  (wire
+    (pts (xy 76.835 39.37) (xy 76.2 39.37))
+    (stroke (width 0) (type default))
+    (uuid 8dd2c6c3-2ee7-462c-b8fb-2f6fa4a5bcf5))
+  (wire
+    (pts (xy 81.915 39.37) (xy 82.55 39.37))
+    (stroke (width 0) (type default))
+    (uuid 3f2616e7-b24e-48ec-9fd1-d36e10f77e7d))
+  (wire
+    (pts (xy 47.625 31.75) (xy 45.72 31.75))
+    (stroke (width 0) (type default))
+    (uuid fa69ac70-e6fe-4c64-a51e-606a430d1b02))
+  (wire
+    (pts (xy 55.245 31.75) (xy 57.15 31.75))
+    (stroke (width 0) (type default))
+    (uuid b81e2694-56cf-456f-ac03-39c58b9cd91a))
+  (global_label "difference"
+    (shape bidirectional)
+    (at 57.15 25.4 90)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e990322e-d8f5-4e36-a41c-21a1fa06b90f)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 57.15 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "decoded"
+    (shape bidirectional)
+    (at 95.25 59.69 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid efc94c52-d4ef-49f6-9e15-f85419f17fa5)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 95.25 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "encoded"
+    (shape bidirectional)
+    (at 67.31 31.75 90)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid bed5358e-4c65-4406-bdd0-b1eb188ac903)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 67.31 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "power:GND")
+    (at 45.72 49.53 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4d2101aa-3a91-4ef0-b604-4dfeab40aecc)
+    (property "Reference" "#PWR001"
+      (at 45.72 49.53 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 45.72 49.53 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 49.53 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 48ede728-5775-4e04-9833-92457d802488))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 82.55 44.45 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4f88831d-c689-403c-aa33-c30f782cd5e3)
+    (property "Reference" "#PWR002"
+      (at 82.55 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 82.55 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 82.55 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4a5dc244-f0cc-4718-b5cd-3e5ce276b186))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+2V5")
+    (at 67.31 45.72 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d6d1500f-b18b-455e-95e7-f8b4810ad20d)
+    (property "Reference" "#PWR003"
+      (at 67.31 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+2V5"
+      (at 67.31 49.2125 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 67.31 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 742fb573-d11b-468f-a063-d7763cd489fb))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "#PWR003")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 88.9 34.29 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9eb61aeb-862e-4a6d-99db-96429693b850)
+    (property "Reference" "C1"
+      (at 88.9 29.05125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5.8µF"
+      (at 88.9 30.63875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 88.9 34.29 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 65138a2e-df49-4863-84e2-ed2412dc7c03))
+    (pin "2" (uuid c676fa61-7891-4e22-8931-c67dd6c4d3cd))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R_Small")
+    (at 79.375 39.37 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 40237b5a-b2fc-409b-8ea8-bcbd7f73ccd2)
+    (property "Reference" "R1"
+      (at 79.375 35.40125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1kΩ"
+      (at 79.375 36.98875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 79.375 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6610c00d-4586-4a9a-92f0-2a5805b04910))
+    (pin "2" (uuid 639a8609-2c4d-41b2-a382-8653dab6b6d0))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 51.435 31.75 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 34601d8e-d581-41ab-9ea3-99431e2206df)
+    (property "Reference" "R2"
+      (at 51.435 27.6225 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 51.435 29.21 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 51.435 31.75 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 057a4e49-627f-4870-a041-9add97124361))
+    (pin "2" (uuid ed69587a-4828-4600-abef-01c2e80d5c6f))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 41.91 36.83 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 394ab2e2-016c-4c05-9483-ba8c9a30569f)
+    (property "Reference" "R3"
+      (at 41.91 32.7025 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 41.91 34.29 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 41.91 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 64dcb216-51fc-40a6-8f83-a745ed0032f6))
+    (pin "2" (uuid bbbec37e-1ae5-4f73-b765-6660efedcb6e))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "R3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 41.91 41.91 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 724a0a51-cfe4-4c06-8d7a-c8517bfa09d2)
+    (property "Reference" "R4"
+      (at 41.91 44.45 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 41.91 46.0375 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 41.91 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0db7fc2e-0438-4505-8246-66386abe9453))
+    (pin "2" (uuid 14bdb112-2674-4e4f-8bca-0a31ec048879))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "R4")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 45.72 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0f60c6fe-3542-4618-bbd6-cde2d04f3d1c)
+    (property "Reference" "R5"
+      (at 50.00625 48.41875 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 50.00625 50.00625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4ff70edc-9d70-42d2-b9eb-f021dca446a5))
+    (pin "2" (uuid 1d2f08d3-9e78-4a86-b8dd-9f1bf8420167))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "R5")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:gate_bf7fc362")
+    (at 57.15 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7310ad79-f750-4dad-8507-cf70b958d8a8)
+    (property "Reference" "U1"
+      (at 61.11875 35.2425 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "NOT"
+      (at 57.15 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 57.15 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e76d1b2e-962d-44af-bc11-ff331f9ac700))
+    (pin "2" (uuid c2aaca6d-6931-429c-aaca-9a8b767e6b04))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "U1")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:opamp_711a2dc2")
+    (at 82.55 41.91 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c3c6f5b3-f5fc-4a4b-81f9-be2df9310d8a)
+    (property "Reference" "U2"
+      (at 88.9 48.5775 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 82.55 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 82.55 41.91 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4619533d-ff8e-42a4-a5fe-f6d3394618a8))
+    (pin "2" (uuid 71ac2aec-79c0-4ae7-9eb4-2d496701ef4b))
+    (pin "3" (uuid 137ef913-bad6-4c26-b431-bde8ec0d33f4))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "U2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:opamp_56f19bd1")
+    (at 45.72 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7aae37a0-3dd2-45d5-944e-90a030c61015)
+    (property "Reference" "U3"
+      (at 51.435 46.0375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 45.72 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 45.72 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid be845ab8-3a6f-4e68-866b-86da836393bd))
+    (pin "2" (uuid af36c2e7-320d-4843-9b60-b64ddf0a42a8))
+    (pin "3" (uuid 25b59177-9f94-48ac-99da-197f5d84fd7f))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "U3")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:opamp_ba329b71")
+    (at 67.31 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1065324f-cbae-43f4-a1cc-0e6fc70d8bf4)
+    (property "Reference" "U4"
+      (at 71.755 35.2425 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "OpAmp"
+      (at 67.31 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 67.31 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bca30d74-7bd0-45f0-ac98-f8c8fd7f997a))
+    (pin "2" (uuid 0239857e-8932-4011-a5b7-1746587a8e8f))
+    (pin "3" (uuid 65eb770b-ac48-400d-9eda-c4113ddac187))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "U4")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 33.02 36.83 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 137f2ec5-03cd-4bd2-a259-7e5196f7b7f4)
+    (property "Reference" "V1"
+      (at 33.02 31.115 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 40Hz"
+      (at 33.02 32.7025 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7e121d28-22b6-4a6c-b906-d039a99c64a9))
+    (pin "2" (uuid 70d6c1cf-126a-4da1-8887-96f8a95e3ebf))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 36.83 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1454db6d-10af-443a-af99-54f21129e15a)
+    (property "Reference" "#PWR004"
+      (at 27.94 36.83 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 36.83 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 58fbbb90-46dd-48f5-8414-d85a7068228a))
+    (instances
+      (project "delta-pwm"
+        (path "/adf8dc9e-6bce-41b3-9681-e58c0cdefccb"
+          (reference "#PWR004")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

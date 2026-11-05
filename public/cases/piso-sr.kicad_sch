@@ -1,0 +1,896 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid ab712f6b-5dc9-4628-bb33-28c4a20fbd66)
+  (paper "A4")
+  (title_block
+    (title "Parallel-In Serial-Out")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "CircuitJS:chip_d7225e92"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D-FF"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_d7225e92_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_d7225e92_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -10.16 180)
+          (length 2.54)
+          (name "~{Q}" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive clock
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_fd962d32"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D-FF"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_fd962d32_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_fd962d32_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -10.16 180)
+          (length 2.54)
+          (name "~{Q}" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive clock
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_85710b7d"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "MUX"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_85710b7d_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_85710b7d_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "I0" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "I1" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 -15.24 90)
+          (length 2.54)
+          (name "S0" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_daf307a9"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "MUX"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_daf307a9_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_daf307a9_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "I0" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "I1" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 -15.24 90)
+          (length 2.54)
+          (name "S0" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_046a7204"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D-FF"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_046a7204_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_046a7204_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -10.16 180)
+          (length 2.54)
+          (name "~{Q}" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive clock
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_851990df"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "MUX"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_851990df_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_851990df_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "I0" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "I1" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 -15.24 90)
+          (length 2.54)
+          (name "S0" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:chip_0a31e156"
+      (pin_numbers hide)
+      (pin_names (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D-FF"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "chip_0a31e156_0_1"
+        (rectangle
+          (start 2.54 2.54)
+          (end 12.7 -12.7)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "chip_0a31e156_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 0.0 180)
+          (length 2.54)
+          (name "Q" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 15.24 -10.16 180)
+          (length 2.54)
+          (name "~{Q}" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive clock
+          (at 0.0 -5.08 0)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0)))))))
+    (symbol "CircuitJS:gate_b6af6602"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "NOT"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "gate_b6af6602_0_1"
+        (polyline
+          (pts
+            (xy 3.81 2.54)
+            (xy 8.255 0.0)
+            (xy 3.81 -2.54)
+            (xy 3.81 2.54))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (circle
+          (center 8.7312 0.0)
+          (radius 0.4763)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "gate_b6af6602_1_1"
+        (pin passive line
+          (at 0.0 -0.0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -0.0 180)
+          (length 3.4925)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))))
+    (symbol "Simulation_SPICE:VPULSE"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VPULSE"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Type" "PULSE"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "Sim.Params" "y1=0 y2=1 td=2n tr=2n tf=2n tw=50n per=100n"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "ki_keywords" "simulation"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, pulse"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VPULSE_0_0"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy -1.397 -0.762)
+            (xy -1.143 0.762)
+            (xy -0.127 0.762)
+            (xy 0.127 -0.762)
+            (xy 1.143 -0.762)
+            (xy 1.397 0.762)
+            (xy 2.032 0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VPULSE_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VPULSE_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 50.8 53.34)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7ac11828-6f2c-440b-b990-82943b9aedcd))
+  (junction
+    (at 83.82 53.34)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid bb7d7a0e-440e-4ee6-aa6b-6687d3ae5959))
+  (junction
+    (at 116.84 53.34)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e6a8ce6b-bb23-4637-aa7e-d58569899f04))
+  (junction
+    (at 78.74 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 3fa8b2c5-962e-4f13-8c9a-ce8550914e7f))
+  (junction
+    (at 111.76 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid be8b6fc2-1cf8-4d73-ad62-337be6a0607b))
+  (wire
+    (pts (xy 66.04 33.02) (xy 68.58 33.02))
+    (stroke (width 0) (type default))
+    (uuid 86476115-e893-462d-9807-2dacf4ae768c))
+  (wire
+    (pts (xy 99.06 33.02) (xy 101.6 33.02))
+    (stroke (width 0) (type default))
+    (uuid f855b161-b9d1-4d99-8112-aa8a011f12f3))
+  (wire
+    (pts (xy 132.08 33.02) (xy 134.62 33.02))
+    (stroke (width 0) (type default))
+    (uuid d675ee58-4676-463a-866d-0497cb719ecb))
+  (wire
+    (pts (xy 38.1 53.34) (xy 50.8 53.34))
+    (stroke (width 0) (type default))
+    (uuid baf0a819-1438-4c1b-bc0e-19b9facc6e67))
+  (wire
+    (pts (xy 50.8 53.34) (xy 50.8 38.1))
+    (stroke (width 0) (type default))
+    (uuid 0361c99f-ddcf-4ace-afad-c4d147617bd5))
+  (wire
+    (pts (xy 50.8 53.34) (xy 83.82 53.34))
+    (stroke (width 0) (type default))
+    (uuid b3500bf8-2da8-46cd-a55e-e6e4daf2986e))
+  (wire
+    (pts (xy 83.82 53.34) (xy 83.82 38.1))
+    (stroke (width 0) (type default))
+    (uuid 35643a27-cba6-4c60-b2bd-305c81a9e6bf))
+  (wire
+    (pts (xy 83.82 53.34) (xy 116.84 53.34))
+    (stroke (width 0) (type default))
+    (uuid c10fed3a-135e-4d96-bf7c-f133565ea455))
+  (wire
+    (pts (xy 116.84 53.34) (xy 116.84 38.1))
+    (stroke (width 0) (type default))
+    (uuid c80487f4-cab1-424e-9b66-8e0c64b63c80))
+  (wire
+    (pts (xy 116.84 53.34) (xy 149.86 53.34))
+    (stroke (width 0) (type default))
+    (uuid a28980ce-9a03-49c4-a84d-4f6399dabd95))
+  (wire
+    (pts (xy 149.86 53.34) (xy 149.86 38.1))
+    (stroke (width 0) (type default))
+    (uuid 7c1252c5-5988-47e8-ab1e-c38bc95913fa))
+  (wire
+    (pts (xy 38.1 48.26) (xy 78.74 48.26))
+    (stroke (width 0) (type default))
+    (uuid 358db967-f9a6-478b-9772-47158044d391))
+  (wire
+    (pts (xy 78.74 48.26) (xy 111.76 48.26))
+    (stroke (width 0) (type default))
+    (uuid 9e12f7e4-d5f7-494e-8f41-2b5fefcac3fd))
+  (wire
+    (pts (xy 111.76 48.26) (xy 144.78 48.26))
+    (stroke (width 0) (type default))
+    (uuid 48e78633-003f-4300-9224-0fdf77beb40b))
+  (wire
+    (pts (xy 45.72 33.02) (xy 50.8 33.02))
+    (stroke (width 0) (type default))
+    (uuid a3114452-3dee-431d-af4e-ea9257744dd4))
+  (wire
+    (pts (xy 45.72 33.02) (xy 45.72 66.04))
+    (stroke (width 0) (type default))
+    (uuid ebd44a65-c9f4-4f03-9a8b-7f31555e9cb8))
+  (wire
+    (pts (xy 68.58 38.1) (xy 68.58 66.04))
+    (stroke (width 0) (type default))
+    (uuid 354b369a-b03d-4d51-a7cc-74b10d271816))
+  (wire
+    (pts (xy 101.6 38.1) (xy 101.6 66.04))
+    (stroke (width 0) (type default))
+    (uuid d4e692ca-70c9-4a07-a7dd-0c2382325125))
+  (wire
+    (pts (xy 134.62 38.1) (xy 134.62 66.04))
+    (stroke (width 0) (type default))
+    (uuid d11facfc-8699-46e8-96ea-8244e294335b))
+  (wire
+    (pts (xy 38.1 35.56) (xy 30.48 35.56))
+    (stroke (width 0) (type default))
+    (uuid bf5fdd8e-cf18-4dc8-bcfd-06f032932a6a))
+  (wire
+    (pts (xy 165.1 33.02) (xy 175.26 33.02))
+    (stroke (width 0) (type default))
+    (uuid 0c5a1fa9-2929-47c6-b056-488f417a0941))
+  (global_label "IN1"
+    (shape input)
+    (at 45.72 66.04 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid ca8b24a5-826d-4fec-9d1e-3e015487a9cf)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 45.72 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN2"
+    (shape input)
+    (at 68.58 66.04 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 6b32e0cd-e6a5-44a2-990c-c293e43fd68e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 68.58 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN3"
+    (shape input)
+    (at 101.6 66.04 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 82b609a7-fd8b-4adf-bd0b-c5a4541a95dc)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 101.6 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN4"
+    (shape input)
+    (at 134.62 66.04 270)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 1722fee1-5382-4d85-8393-6266d2c71720)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 134.62 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "IN5"
+    (shape input)
+    (at 30.48 35.56 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid a6949600-816d-4882-bea6-08282a1417fc)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 30.48 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "OUT"
+    (shape output)
+    (at 175.26 33.02 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d2a66148-7f8e-4ef7-9a02-6d0bddb269b5)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 175.26 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "load/shift"
+    (at 26.3525 30.7975 0)
+    (effects (font (size 2.36 2.36)) (justify left bottom))
+    (uuid f5e58412-ae4f-4adb-a4e2-32cb2005d6f2))
+  (text "inputs"
+    (at 29.36875 66.51625 0)
+    (effects (font (size 2.36 2.36)) (justify left bottom))
+    (uuid 05fd182e-2828-48d0-bb72-3b40d7ff36c2))
+  (text "output"
+    (at 170.33875 26.19375 0)
+    (effects (font (size 2.36 2.36)) (justify left bottom))
+    (uuid f84d391a-3e01-4332-9faf-4ca4ac7ada13))
+  (symbol
+    (lib_id "CircuitJS:chip_d7225e92")
+    (at 50.8 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8aee68b0-1cf9-47ef-b28b-ef479c9aaf10)
+    (property "Reference" "U1"
+      (at 58.42 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D-FF"
+      (at 58.42 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 50.8 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6bdaa661-678f-4957-9a0f-bd81c7575a98))
+    (pin "2" (uuid 4f04d62e-957b-49a8-8e68-a1f6b41b6929))
+    (pin "3" (uuid 52e9570d-ecc5-4edb-a3ac-e37a2d69339b))
+    (pin "4" (uuid 059ebe8d-34c1-4c69-b54f-92c85785905c))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U1")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_fd962d32")
+    (at 83.82 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 30f3fbba-9787-4b2c-b245-bb9dae324066)
+    (property "Reference" "U2"
+      (at 91.44 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D-FF"
+      (at 91.44 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 83.82 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4894ee71-8b23-4460-8706-bb602061833e))
+    (pin "2" (uuid 4569e492-0897-4574-8430-15da5a529da6))
+    (pin "3" (uuid ad95a946-c99f-4069-84a4-7738868adf41))
+    (pin "4" (uuid 924d6d18-d265-4e70-a8ee-ef5c16d5985c))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_85710b7d")
+    (at 68.58 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2834c2c4-15b0-48b7-a9c9-f5a8f8aff7aa)
+    (property "Reference" "U3"
+      (at 76.2 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "MUX"
+      (at 76.2 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 68.58 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 137e4359-db6f-401a-b9df-5c5746139eb3))
+    (pin "2" (uuid 405014cf-5e90-4568-8ab6-2b0329b129e1))
+    (pin "3" (uuid 06dac8fe-eff2-4a13-a45f-e460eb89a4e9))
+    (pin "4" (uuid 2f6d63b8-344b-4b85-a79a-da645322ea66))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U3")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_daf307a9")
+    (at 101.6 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid efa0f2f6-fd3f-4639-b9dc-e9efa5969a0c)
+    (property "Reference" "U4"
+      (at 109.22 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "MUX"
+      (at 109.22 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 101.6 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cd113ea1-0038-4449-bfc2-e5f5d91a2535))
+    (pin "2" (uuid 66ffce00-a79e-4efc-af9d-061c65c50da6))
+    (pin "3" (uuid 26503853-3e1e-493d-82c3-e670bcd3fd97))
+    (pin "4" (uuid 52ac7bba-c00b-4c12-94fb-fb145132ebed))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U4")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_046a7204")
+    (at 116.84 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 44a3e719-7310-4ade-9752-44cb28a4d0a7)
+    (property "Reference" "U5"
+      (at 124.46 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D-FF"
+      (at 124.46 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 116.84 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 17a1cf93-4202-4be9-bf3d-53030109b355))
+    (pin "2" (uuid 32ceb95f-f33d-4a3c-b227-56e803ec0203))
+    (pin "3" (uuid 09cfec78-361d-404e-8da2-d019b16a9d40))
+    (pin "4" (uuid efa77806-fa50-40ab-b871-ab955849deda))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U5")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_851990df")
+    (at 134.62 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e5fd3d50-191c-40f8-b7bb-ea13bae9bb9b)
+    (property "Reference" "U6"
+      (at 142.24 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "MUX"
+      (at 142.24 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 134.62 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c1fe332d-5b5f-4c70-8ec6-a46c8ace8940))
+    (pin "2" (uuid 3969a6c6-e4a8-4194-ad74-06573df3e5d2))
+    (pin "3" (uuid 2db69c84-7dcd-45d8-bf2d-1d2a5735cfd0))
+    (pin "4" (uuid d3d28259-25e3-44ff-a2f0-363e894b156c))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U6")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:chip_0a31e156")
+    (at 149.86 33.02 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 900d4cb2-b0fb-4748-ad6a-a364f4b2340d)
+    (property "Reference" "U7"
+      (at 157.48 27.305 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D-FF"
+      (at 157.48 28.8925 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 149.86 33.02 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 99008550-7f04-4847-b99d-92da8601853c))
+    (pin "2" (uuid affbc8eb-3ee0-4b17-9094-a90581d33bd8))
+    (pin "3" (uuid a0850007-a790-4283-b915-a70ea456bae1))
+    (pin "4" (uuid 661a213a-238b-498e-83ab-f9c5d2972552))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U7")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:gate_b6af6602")
+    (at 38.1 35.56 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ac9dbaba-7f22-41e6-8d6d-7a344b0372e4)
+    (property "Reference" "U8"
+      (at 42.8625 42.06875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "NOT"
+      (at 38.1 35.56 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 38.1 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f1ef4053-c298-4001-b617-8a0d9119cd22))
+    (pin "2" (uuid d0449afa-c686-46db-a2e5-4a351ebe5432))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "U8")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VPULSE")
+    (at 33.02 53.34 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 24276110-2180-40e5-8603-5acdd15347bb)
+    (property "Reference" "V1"
+      (at 33.02 57.4675 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "2.5V 100Hz"
+      (at 33.02 59.055 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b03ae573-359c-4755-b7f2-ff307239a955))
+    (pin "2" (uuid 6f725db3-c8b3-46bd-b5a6-98c12ccfac26))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 53.34 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5b7fdee9-9dfb-498a-be77-5f69905e6e94)
+    (property "Reference" "#PWR001"
+      (at 27.94 53.34 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 53.34 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 69171baf-e66e-4cad-88c7-b4c9f4c23e9a))
+    (instances
+      (project "piso-sr"
+        (path "/c95c5183-b5d4-4b44-8919-49caf596dc10"
+          (reference "#PWR001")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

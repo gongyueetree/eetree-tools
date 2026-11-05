@@ -1,0 +1,423 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid c4a02660-9819-45ba-97fb-ad56d3535ced)
+  (paper "A4")
+  (title_block
+    (title "Spike Generator")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Simulation_SPICE:VPULSE"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VPULSE"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Type" "PULSE"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "Sim.Params" "y1=0 y2=1 td=2n tr=2n tf=2n tw=50n per=100n"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "ki_keywords" "simulation"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, pulse"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VPULSE_0_0"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy -1.397 -0.762)
+            (xy -1.143 0.762)
+            (xy -0.127 0.762)
+            (xy 0.127 -0.762)
+            (xy 1.143 -0.762)
+            (xy 1.397 0.762)
+            (xy 2.032 0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VPULSE_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VPULSE_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "D"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 48.26 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 2cac5a99-5fb7-4ced-a489-65ee4767580f))
+  (junction
+    (at 68.58 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 75ee3b9e-800d-46f6-9e5d-468397ea17d0))
+  (junction
+    (at 48.26 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid c673cd5f-8e71-48f9-b0a6-06e36700fafc))
+  (wire
+    (pts (xy 27.94 50.8) (xy 48.26 50.8))
+    (stroke (width 0) (type default))
+    (uuid 9843c3e0-05c2-48a5-99c6-b9fb68d542b5))
+  (wire
+    (pts (xy 48.26 50.8) (xy 68.58 50.8))
+    (stroke (width 0) (type default))
+    (uuid daf05b99-92d2-4c3b-acf9-f861b7aa1f79))
+  (wire
+    (pts (xy 68.58 27.94) (xy 78.74 27.94))
+    (stroke (width 0) (type default))
+    (uuid 61d517a0-937b-421e-9878-474288589369))
+  (wire
+    (pts (xy 27.94 44.45) (xy 27.94 50.8))
+    (stroke (width 0) (type default))
+    (uuid 5de257f7-e58f-4fae-955f-f2a86af060b3))
+  (wire
+    (pts (xy 27.94 34.29) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid e5432286-05ac-4259-b8e9-43419a55ab69))
+  (wire
+    (pts (xy 48.26 35.56) (xy 48.26 27.94))
+    (stroke (width 0) (type default))
+    (uuid ee5e9ad6-ea6f-45dc-8237-7bd456e1d1a2))
+  (wire
+    (pts (xy 48.26 43.18) (xy 48.26 50.8))
+    (stroke (width 0) (type default))
+    (uuid 0cb73f87-5b2b-40af-8544-82509c2a99a1))
+  (wire
+    (pts (xy 54.61 27.94) (xy 48.26 27.94))
+    (stroke (width 0) (type default))
+    (uuid 1bf5bdad-b5f2-4958-bc30-3cfc185b0db8))
+  (wire
+    (pts (xy 62.23 27.94) (xy 68.58 27.94))
+    (stroke (width 0) (type default))
+    (uuid fc27e2a2-3b09-4519-ad41-aa6933c4d179))
+  (wire
+    (pts (xy 34.29 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 8c13103c-bd56-4854-89f3-eb3b0035e9d5))
+  (wire
+    (pts (xy 41.91 27.94) (xy 48.26 27.94))
+    (stroke (width 0) (type default))
+    (uuid d5f2cdb9-77ef-455f-b755-63c47db16352))
+  (wire
+    (pts (xy 68.58 35.56) (xy 68.58 27.94))
+    (stroke (width 0) (type default))
+    (uuid b6d59e66-a170-456f-891e-182e85b86d13))
+  (wire
+    (pts (xy 68.58 43.18) (xy 68.58 50.8))
+    (stroke (width 0) (type default))
+    (uuid 2f7ab5bf-f5f5-4dfe-a5b1-e7401bd63689))
+  (global_label "VOUT"
+    (shape output)
+    (at 78.74 27.94 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 81c2a38f-116f-4ebc-8bdc-e5231c879e71)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 78.74 27.94 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Simulation_SPICE:VPULSE")
+    (at 27.94 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 415ed9d5-0311-420b-8c1c-d4efde00ce42)
+    (property "Reference" "V1"
+      (at 35.40125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 40Hz"
+      (at 35.40125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e76b62d1-7e04-4ae8-ac10-effa8739490d))
+    (pin "2" (uuid 478288f9-b099-40b9-bb74-797dfd9cfa6e))
+    (instances
+      (project "spikegen"
+        (path "/48b739a0-b89e-46b0-a338-18468c3cf353"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 48.26 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 00bb92ad-4629-4cfb-8492-3661a40c7895)
+    (property "Reference" "R1"
+      (at 52.54625 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "110Ω"
+      (at 52.54625 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 48.26 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 771e67f6-e8cb-47d6-9228-bdc0ffd54bde))
+    (pin "2" (uuid 7f69cca8-625a-4efd-b6c8-b7764fc8b7b0))
+    (instances
+      (project "spikegen"
+        (path "/48b739a0-b89e-46b0-a338-18468c3cf353"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D")
+    (at 58.42 27.94 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f38411ea-d423-4829-a0b2-b8e1d9692708)
+    (property "Reference" "D1"
+      (at 58.42 25.0825 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 58.42 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 58.42 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3e7ce5ee-5411-46d4-8273-da936a2d6bd2))
+    (pin "2" (uuid 2aceb50b-5be6-42c6-b561-7f99d13726eb))
+    (instances
+      (project "spikegen"
+        (path "/48b739a0-b89e-46b0-a338-18468c3cf353"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 38.1 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 320a092a-f421-4ec5-bcf7-8adb35db95ad)
+    (property "Reference" "C1"
+      (at 38.1 22.70125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10µF"
+      (at 38.1 24.28875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 38.1 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7ec4a385-3ad2-43c4-ae43-26e850ab63aa))
+    (pin "2" (uuid 31188143-2505-47c3-96fe-ea6eab764c16))
+    (instances
+      (project "spikegen"
+        (path "/48b739a0-b89e-46b0-a338-18468c3cf353"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 68.58 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fcfa68ee-8506-4f0d-b25a-fe6c48b2a5f4)
+    (property "Reference" "R2"
+      (at 72.86625 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100Ω"
+      (at 72.86625 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 68.58 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6139a95b-73db-4091-a462-30f4063c0945))
+    (pin "2" (uuid 5bc2481f-05b1-4221-8c78-055ecb1ebc53))
+    (instances
+      (project "spikegen"
+        (path "/48b739a0-b89e-46b0-a338-18468c3cf353"
+          (reference "R2")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

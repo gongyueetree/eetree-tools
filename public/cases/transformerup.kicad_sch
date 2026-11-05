@@ -1,0 +1,462 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid b116a63b-e41a-4552-893b-769ef674fa54)
+  (paper "A4")
+  (title_block
+    (title "Step-Up Transformer")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:xfmr_cd550f03"
+      (pin_numbers hide)
+      (pin_names (offset 0.508) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "T"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "xfmr_cd550f03_0_1"
+        (arc
+          (start 4.445 -0.0)
+          (mid 3.81 -0.635)
+          (end 4.445 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 4.445 -1.27)
+          (mid 3.81 -1.905)
+          (end 4.445 -2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 4.445 -2.54)
+          (mid 3.81 -3.175)
+          (end 4.445 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 4.445 -3.81)
+          (mid 3.81 -4.445)
+          (end 4.445 -5.08)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 8.255 -0.0)
+          (mid 8.89 -0.635)
+          (end 8.255 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 8.255 -1.27)
+          (mid 8.89 -1.905)
+          (end 8.255 -2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 8.255 -2.54)
+          (mid 8.89 -3.175)
+          (end 8.255 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (arc
+          (start 8.255 -3.81)
+          (mid 8.89 -4.445)
+          (end 8.255 -5.08)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.0325 0.635) (xy 6.0325 -5.715))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 6.6675 0.635) (xy 6.6675 -5.715))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "xfmr_cd550f03_1_1"
+        (pin passive line
+          (at 0.0 0.0 0)
+          (length 4.445)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 4.445)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 0.0 -5.08 0)
+          (length 4.445)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -5.08 180)
+          (length 4.445)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.0 1.0))))))))
+  (junction
+    (at 27.94 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid ab097655-c7de-4f0a-9dec-e0377dee9cd8))
+  (junction
+    (at 71.12 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 8a30d431-7cf6-4711-83f0-03a1065b4ff2))
+  (wire
+    (pts (xy 55.88 40.64) (xy 55.88 48.26))
+    (stroke (width 0) (type default))
+    (uuid 6439d62e-b214-480b-8894-41b8b6f23aeb))
+  (wire
+    (pts (xy 43.18 35.56) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid 660c8fa3-d502-4d92-a825-f94e8ecbe119))
+  (wire
+    (pts (xy 43.18 40.64) (xy 43.18 48.26))
+    (stroke (width 0) (type default))
+    (uuid d86734a3-4153-4253-ab23-1dac373c843f))
+  (wire
+    (pts (xy 27.94 48.26) (xy 43.18 48.26))
+    (stroke (width 0) (type default))
+    (uuid 0eada47b-8ee8-4c7e-b645-ca263bcd0b16))
+  (wire
+    (pts (xy 55.88 48.26) (xy 71.12 48.26))
+    (stroke (width 0) (type default))
+    (uuid 139e5240-4c34-42b1-af8c-27fcaf28b48c))
+  (wire
+    (pts (xy 55.88 27.94) (xy 71.12 27.94))
+    (stroke (width 0) (type default))
+    (uuid 178d395e-61b1-40fc-a29a-0972a3a01ebb))
+  (wire
+    (pts (xy 55.88 35.56) (xy 55.88 27.94))
+    (stroke (width 0) (type default))
+    (uuid fd8968b5-fb45-45da-a1aa-bd31467f3f6d))
+  (wire
+    (pts (xy 27.94 43.18) (xy 27.94 48.26))
+    (stroke (width 0) (type default))
+    (uuid 95f0a8be-f663-40b9-ae92-81c10cbceadb))
+  (wire
+    (pts (xy 27.94 33.02) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 3478a922-b28e-4a18-8656-599af94cd2d1))
+  (wire
+    (pts (xy 39.37 27.94) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid c6761080-4673-4b38-bba5-6fc1f59a4ff7))
+  (wire
+    (pts (xy 31.75 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid d2f8d5eb-c6d4-4669-b3a4-b78e9feca6a4))
+  (wire
+    (pts (xy 71.12 34.29) (xy 71.12 27.94))
+    (stroke (width 0) (type default))
+    (uuid fff46887-8f78-4523-b74d-ad67563b8bf7))
+  (wire
+    (pts (xy 71.12 41.91) (xy 71.12 48.26))
+    (stroke (width 0) (type default))
+    (uuid 76fc8e29-c66b-4dc9-bb84-d0f0405ead14))
+  (symbol
+    (lib_id "power:GND")
+    (at 27.94 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 741e6e11-0db6-43ee-9040-b049794ab06b)
+    (property "Reference" "#PWR001"
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 27.94 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ef4e6d9c-f783-46e5-9497-855443d4c61b))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 71.12 48.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bc5442b1-fce8-46e1-8d8f-0f5cbf7c7bc6)
+    (property "Reference" "#PWR002"
+      (at 71.12 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 71.12 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 71.12 48.26 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2b76baf4-a556-4d8a-b1ee-364c959ddd9c))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 27.94 38.1 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 63fc4b07-8be0-4a25-b251-8a3d3160db47)
+    (property "Reference" "V1"
+      (at 36.03625 37.30625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10V 60Hz"
+      (at 36.03625 38.89375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid c2f82349-0762-453f-be57-e2662e8394e3))
+    (pin "2" (uuid 52de33f6-61ce-408d-9009-d73ed3954587))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 35.56 27.94 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5477c3ea-2845-4f21-8714-c94f73e41c8e)
+    (property "Reference" "R1"
+      (at 35.56 23.8125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100mΩ"
+      (at 35.56 25.4 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 35.56 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0982ea35-4cb6-4d07-8d98-ea38333665f9))
+    (pin "2" (uuid 6714cd6d-fd20-4cb5-99f1-db820ba00c42))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 71.12 38.1 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 09edcf78-4918-41ff-a829-f8c5d2318fa7)
+    (property "Reference" "R2"
+      (at 74.77125 37.30625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "2kΩ"
+      (at 74.77125 38.89375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 71.12 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a6f0556a-b121-417c-a8c1-3ca2a8310e7b))
+    (pin "2" (uuid 2c264a71-4f67-48b9-90f4-7974d3218b99))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:xfmr_cd550f03")
+    (at 43.18 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a9fc0ef9-7a3f-457d-9fef-4a578fd5d4c2)
+    (property "Reference" "T1"
+      (at 49.53 33.3375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 43.18 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 43.18 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f7e19915-3333-4cde-8275-3a775abd4325))
+    (pin "2" (uuid 990caa70-389c-4d96-a629-372872402538))
+    (pin "3" (uuid c1b8dc95-0080-4fe2-9ea2-6a549e7a9403))
+    (pin "4" (uuid caa2a193-4c34-4b42-9cf8-26d8330d438d))
+    (instances
+      (project "transformerup"
+        (path "/c3078137-3d16-4670-bb5e-4c53bf4c3c57"
+          (reference "T1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

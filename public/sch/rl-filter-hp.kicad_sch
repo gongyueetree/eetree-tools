@@ -1,0 +1,258 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid c0d2915c-f306-40d8-9031-e5822487a17e)
+  (paper "A4")
+  (title_block (title "RL 一阶高通") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:L"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L"
+        (at -1.27 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "L"
+        (at 1.905 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Inductor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (arc
+          (start 0 -2.54)
+          (mid 0.6323 -1.905)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 0.635)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 1.905)
+          (end 0 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "L_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 71.12 76.2) (xy 82.55 76.2))
+    (stroke (width 0) (type default))
+    (uuid e4505074-453f-478a-aedd-b9c39017922f))
+  (wire
+    (pts (xy 90.17 76.2) (xy 101.6 76.2))
+    (stroke (width 0) (type default))
+    (uuid eb06450b-f1f1-4a9d-ae14-13dff205b932))
+  (wire
+    (pts (xy 101.6 76.2) (xy 116.84 76.2))
+    (stroke (width 0) (type default))
+    (uuid 80e6da8b-fd2e-490d-812f-e31f9b098fa4))
+  (wire
+    (pts (xy 101.6 76.2) (xy 101.6 85.09))
+    (stroke (width 0) (type default))
+    (uuid 50e7c281-73a7-4756-b108-ffbe7a2ba3d1))
+  (wire
+    (pts (xy 101.6 92.71) (xy 101.6 101.6))
+    (stroke (width 0) (type default))
+    (uuid 53431ee3-4b13-43d4-8b07-43ca8d488880))
+  (global_label "VIN"
+    (shape input)
+    (at 71.12 76.2 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 54f6a6ae-db1f-4c3f-9953-8f6fd8ee9701)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 71.12 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 101.6 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 3f170bdd-0a48-437b-9832-22e5314a417f))
+  (global_label "OUT"
+    (shape output)
+    (at 116.84 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1cdde707-66ac-4603-9849-477ab3bc4730)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 116.84 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:R")
+    (at 86.36 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7cb704d1-c20a-4ecd-972d-fe332bd6b525)
+    (property "Reference" "R1"
+      (at 86.36 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R1"
+      (at 86.36 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bfa3ed7c-55ed-46a2-bd07-8b660af692d7))
+    (pin "2" (uuid 411ef2fb-096d-41e5-bd06-3634b8c988b5))
+    (instances
+      (project "rl-filter-hp"
+        (path "/c0d2915c-f306-40d8-9031-e5822487a17e"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 101.6 88.9 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8c742657-8ed1-450a-bd45-3313182184ab)
+    (property "Reference" "L1"
+      (at 104.19999999999999 87.9 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "L1"
+      (at 104.19999999999999 90.5 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid adacd302-ca27-45ba-b1fb-96b9232a4ecd))
+    (pin "2" (uuid 4bc233e2-9e0e-44ef-9ccf-8539ad9415d7))
+    (instances
+      (project "rl-filter-hp"
+        (path "/c0d2915c-f306-40d8-9031-e5822487a17e"
+          (reference "L1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 101.6 101.6 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid aa6640f3-b707-4ff3-a733-d2a660916ee1)
+    (property "Reference" "#PWR01"
+      (at 101.6 101.6 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 101.6 106.6 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 944ea35d-3f53-4169-bf85-06f1c276b21b))
+    (instances
+      (project "rl-filter-hp"
+        (path "/c0d2915c-f306-40d8-9031-e5822487a17e"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

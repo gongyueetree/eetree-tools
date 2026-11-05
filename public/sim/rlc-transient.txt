@@ -1,0 +1,28 @@
+# eetree-sim 1
+# name rlc-transient
+# param R1 10
+# param L1 0.001
+# param C1 1e-06
+# param VS 5
+# param SCOPE_W 512
+# let Th = 6*(2*L1/R1 + R1*C1) + 6*PI*sqrt(L1*C1)
+# let dt = min(2*Th/512, 2*PI*sqrt(L1*C1)/48)
+# let sp = max(0.5, 2*Th/dt/640)
+# let ssp = max(1, round(2*Th/dt/SCOPE_W))
+$ 1 ${dt} ${sp} 50 ${VS} 50
+r 168 96 216 96 0 ${R1}
+l 264 96 312 96 0 ${L1} 0
+c 384 152 384 200 0 ${C1} 0 0
+g 384 256 384 272 0 0
+R 96 96 64 96 0 2 ${1/(2*Th)} ${VS/2} ${VS/2} 0 0.5
+207 480 96 512 96 0 OUT
+w 96 96 168 96 0
+w 216 96 264 96 0
+w 312 96 384 96 0
+w 384 96 480 96 0
+w 384 96 384 152 0
+w 384 200 384 256 0
+x 64 56 264 60 0 18 串联 RLC 阶跃响应
+x 64 312 264 316 0 14 VIN 为 0/Vs 方波（每半周期 ${si(Th)}s），上：电容电压 OUT，下：电感电流
+o 5 ${ssp} 0 4098 ${2*VS} 0.01 0 2 4 0
+o 1 ${ssp} 3 4099 5 ${VS/R1} 1 1

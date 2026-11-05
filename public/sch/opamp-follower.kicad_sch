@@ -1,0 +1,173 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid f72a1fb6-6f52-46f4-bc95-ef00c101035d)
+  (paper "A4")
+  (title_block (title "电压跟随器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Amplifier_Operational:LM358"
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LM358"
+        (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "dual opamp"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LM358_1_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_2_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "LM358_3_1"
+        (pin power_in line
+          (at -2.54 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at -2.54 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 119.38 73.66) (xy 101.6 73.66))
+    (stroke (width 0) (type default))
+    (uuid 98b38309-9cc2-4291-81c2-e1a84c5f7c74))
+  (wire
+    (pts (xy 119.38 78.74) (xy 114.3 78.74))
+    (stroke (width 0) (type default))
+    (uuid a0de53b6-2198-4703-a4f8-865cee2de25f))
+  (wire
+    (pts (xy 114.3 78.74) (xy 114.3 86.36))
+    (stroke (width 0) (type default))
+    (uuid 1204e561-d2e1-437e-91df-e27af6eb8155))
+  (wire
+    (pts (xy 114.3 86.36) (xy 142.24 86.36))
+    (stroke (width 0) (type default))
+    (uuid e3a1fecd-b988-4951-8a2c-44ce3daf300d))
+  (wire
+    (pts (xy 142.24 86.36) (xy 142.24 76.2))
+    (stroke (width 0) (type default))
+    (uuid 328e3c0f-a53d-4bee-88c6-d71be3036613))
+  (wire
+    (pts (xy 134.62 76.2) (xy 142.24 76.2))
+    (stroke (width 0) (type default))
+    (uuid ae24bf84-c8ce-4f65-8503-d5fe26b6aeb6))
+  (wire
+    (pts (xy 142.24 76.2) (xy 149.86 76.2))
+    (stroke (width 0) (type default))
+    (uuid 315400d5-246b-4ecb-8d6f-a9385907ad6c))
+  (global_label "VIN"
+    (shape input)
+    (at 101.6 73.66 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid c056b41f-fb8b-4696-aeb8-bf3c5be3eb75)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 101.6 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 142.24 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 19b0862d-8b8c-42a4-b9ac-07b696626bf8))
+  (global_label "VOUT"
+    (shape output)
+    (at 149.86 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a9e0c81c-eef1-44fe-bb24-616df67c757c)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 149.86 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Amplifier_Operational:LM358")
+    (at 127.0 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 81d0ea6f-71c5-4830-be66-23b7dac305e0)
+    (property "Reference" "U1"
+      (at 130.81 68.58 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM358"
+      (at 130.81 83.82000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid b96cebc8-658a-47a4-b087-b8f3a5d205c4))
+    (pin "2" (uuid 4b672edf-447c-4efc-9799-269b894ead10))
+    (pin "3" (uuid ee9938aa-6675-47c5-9fe5-e4a60e781fec))
+    (pin "5" (uuid b82aee4c-b21e-49b6-ba57-8085c3733354))
+    (pin "6" (uuid 93946d31-c533-46d8-9061-2731dbb5314d))
+    (pin "7" (uuid 11557e70-0bf6-438c-9d4d-ab60de80724f))
+    (pin "4" (uuid 4df8eb49-7b58-4a0b-9ff6-1d4fc3231aae))
+    (pin "8" (uuid 903b9eb7-5a09-4748-8214-da424c209228))
+    (instances
+      (project "opamp-follower"
+        (path "/f72a1fb6-6f52-46f4-bc95-ef00c101035d"
+          (reference "U1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

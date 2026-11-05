@@ -1,0 +1,737 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 05bae13c-a0d1-4966-874a-868219423b0c)
+  (paper "A4")
+  (title_block (title "RC 按键消抖 + 施密特反相器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Switch:SW_Push"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 1.27 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "SW_Push"
+        (at 0 -1.524 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "switch normally-open pushbutton push-button"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Push button switch, generic, two pins"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "SW_Push_0_1"
+        (circle
+          (center -2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 1.27) (xy 0 3.048))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 1.27) (xy -2.54 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.032 0)
+          (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 0 180)
+          (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "74xx:74HC14"
+      (pin_names (offset 1.016))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 1.27 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "74HC14"
+        (at 0 -1.27 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "HCMOS not inverter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Hex inverter schmitt trigger"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "DIP*W7.62mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "74HC14_1_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_1_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_2_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_2_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_3_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_3_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_4_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "9" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_4_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_5_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "11" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_5_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_6_0"
+        (polyline
+          (pts
+            (xy -3.81 3.81)
+            (xy -3.81 -3.81)
+            (xy 3.81 0)
+            (xy -3.81 3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output inverted
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "12" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "13" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_6_1"
+        (polyline
+          (pts
+            (xy -1.905 -1.27)
+            (xy -1.905 1.27)
+            (xy -0.635 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 1.27)
+            (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "74HC14_7_0"
+        (pin power_in line
+          (at 0 12.7 270)
+          (length 5.08)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "14" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at 0 -12.7 90)
+          (length 5.08)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "74HC14_7_1"
+        (rectangle
+          (start -5.08 7.62)
+          (end 5.08 -7.62)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))))
+  (wire
+    (pts (xy 101.6 45.72) (xy 101.6 54.61))
+    (stroke (width 0) (type default))
+    (uuid 07d27b46-d1df-444e-b00e-9d7ba8a8df88))
+  (wire
+    (pts (xy 101.6 62.23) (xy 101.6 71.12))
+    (stroke (width 0) (type default))
+    (uuid 35674caf-0363-4760-9162-fa9e586a1ee4))
+  (wire
+    (pts (xy 101.6 71.12) (xy 101.6 78.74))
+    (stroke (width 0) (type default))
+    (uuid 89b09395-ca7d-4091-84ca-090aa2d12e18))
+  (wire
+    (pts (xy 101.6 88.9) (xy 101.6 96.52))
+    (stroke (width 0) (type default))
+    (uuid 884e0cec-c0ed-4ca1-bbbe-f12448a28936))
+  (wire
+    (pts (xy 101.6 71.12) (xy 102.87 71.12))
+    (stroke (width 0) (type default))
+    (uuid 8776cfdc-d6fb-426f-9b71-76da81ccfdac))
+  (wire
+    (pts (xy 102.87 71.12) (xy 109.22 71.12))
+    (stroke (width 0) (type default))
+    (uuid 56320c02-657b-4698-9062-c42339da6ec1))
+  (wire
+    (pts (xy 116.84 71.12) (xy 124.46 71.12))
+    (stroke (width 0) (type default))
+    (uuid db0a91f5-d75a-48dd-bc84-aeb15cf4f169))
+  (wire
+    (pts (xy 124.46 71.12) (xy 124.46 80.01))
+    (stroke (width 0) (type default))
+    (uuid 8c3554ce-cb0d-4794-bbd1-f0022d8d12c2))
+  (wire
+    (pts (xy 124.46 87.63) (xy 124.46 96.52))
+    (stroke (width 0) (type default))
+    (uuid d88f73b4-9bf4-403c-b8c0-bcaee9001e95))
+  (wire
+    (pts (xy 101.6 96.52) (xy 114.3 96.52))
+    (stroke (width 0) (type default))
+    (uuid 890c95c3-6d85-480c-8957-b3996bbc90b9))
+  (wire
+    (pts (xy 114.3 96.52) (xy 124.46 96.52))
+    (stroke (width 0) (type default))
+    (uuid 1a5a4777-25e4-4408-9740-53123c7e4adb))
+  (wire
+    (pts (xy 124.46 71.12) (xy 125.73 71.12))
+    (stroke (width 0) (type default))
+    (uuid 44c7317d-f870-443c-8724-df47de714617))
+  (wire
+    (pts (xy 125.73 71.12) (xy 134.62 71.12))
+    (stroke (width 0) (type default))
+    (uuid d616ff66-dea9-4161-9bc5-e53dcf1361c6))
+  (wire
+    (pts (xy 149.86 71.12) (xy 157.48 71.12))
+    (stroke (width 0) (type default))
+    (uuid e769745a-612c-4a3c-b28e-232580741c7d))
+  (junction
+    (at 101.6 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 18693a80-f84b-4e6f-9b25-e86ab1607827))
+  (junction
+    (at 114.3 96.52)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 430d77bb-d2d5-448c-8a27-df60d2c4e05d))
+  (junction
+    (at 124.46 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a63ed8c2-5c1c-4268-a517-8f6f24127cba))
+  (global_label "OUT"
+    (shape output)
+    (at 157.48 71.12 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 08640c17-33a0-4501-9146-0333de6333a4)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 157.48 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (label "A"
+    (at 102.87 71.12 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 955573e6-5330-4a0e-89ae-30ecee8ef82a))
+  (label "VC"
+    (at 125.73 71.12 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 3ab724c0-7bb4-4a12-8049-f6fe39b4d549))
+  (text "按下：C1 经 R2 放电；松开：经 R1+R2 充电"
+    (at 93.98 109.22 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 1a611114-9b51-4aa1-a155-7a76253dbc02))
+  (symbol
+    (lib_id "power:VCC")
+    (at 101.6 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c6bfff35-7e44-46fb-9700-8d78dceb5fac)
+    (property "Reference" "#PWR01"
+      (at 101.6 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 101.6 41.92 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 324c1e7c-8109-4664-ba5c-bbc21bbf617e))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 58.42 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e7cd0b24-f05a-4fc1-8e9e-70c9dc99eede)
+    (property "Reference" "R1"
+      (at 104.19999999999999 57.42 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R1"
+      (at 104.19999999999999 60.02 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid aa915e62-c91e-4efe-8aa4-5f9126e8c731))
+    (pin "2" (uuid 6a96d4f2-78c6-4227-a35e-f20227389528))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Switch:SW_Push")
+    (at 101.6 83.82 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6cc553e4-ce56-41e6-9997-1874ba3bb009)
+    (property "Reference" "SW1"
+      (at 105.39999999999999 82.82000000000001 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "按键"
+      (at 105.39999999999999 85.42 90)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 8750aabd-a8aa-4c06-84e9-b8a929557bc3))
+    (pin "2" (uuid 48756340-9b0a-4753-a0be-e938d6534103))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "SW1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 113.03 71.12 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e4f825ec-f015-482c-bba1-63c5552f40a3)
+    (property "Reference" "R2"
+      (at 113.03 68.72 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R2"
+      (at 113.03 73.52000000000001 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid eda056f6-4749-4873-abbc-1237028d77d3))
+    (pin "2" (uuid b8acc425-9414-4e24-95c0-fdd30a07ab5e))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 124.46 83.82 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5b5440a3-102b-4ec2-89ea-8052d46774c0)
+    (property "Reference" "C1"
+      (at 127.05999999999999 82.82000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "C1"
+      (at 127.05999999999999 85.42 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 4f2e5728-d93a-4c96-a9a2-056d808d8b52))
+    (pin "2" (uuid 204b57b7-c836-4982-a0ae-db64a10f59ea))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 114.3 96.52 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 62b6f91f-19c6-4273-9143-fe0e750596f0)
+    (property "Reference" "#PWR02"
+      (at 114.3 96.52 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 114.3 101.52 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 45b01d6e-0e92-47a5-b404-085001f0584f))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "#PWR02")
+          (unit 1)))))
+  (symbol
+    (lib_id "74xx:74HC14")
+    (at 142.24 71.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 70507550-6c31-42cf-9971-6999ab56de95)
+    (property "Reference" "U1"
+      (at 137.16 63.50000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "74HC14"
+      (at 137.16 80.26400000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 336189af-72c9-4384-b83a-4f701f9f7944))
+    (pin "2" (uuid d7bd25df-5589-4e9f-9615-e29a63ac3af7))
+    (pin "3" (uuid c1ca7fa4-a753-4c9f-8de7-58f46d28e456))
+    (pin "4" (uuid 6cb37b07-b6d0-485b-9bcb-ae0115a5e012))
+    (pin "5" (uuid 8b6b2eb6-2387-41c0-9699-e3924285bc48))
+    (pin "6" (uuid 04ae8fff-32a1-45a1-8f43-49ebe2a19b34))
+    (pin "8" (uuid 078e13d3-0e14-42bb-a395-db0cae093c4a))
+    (pin "9" (uuid 49974b8e-bca2-4ba8-b03d-d73d1a21a62f))
+    (pin "10" (uuid 1b4f9f00-3444-4db0-96da-3c49a1644722))
+    (pin "11" (uuid b8a30269-4509-4c13-b27c-24bd57a2acba))
+    (pin "12" (uuid 8df1e037-e8d9-4c8b-afc6-39c3d3fb0f96))
+    (pin "13" (uuid 836f69f9-0f42-408a-923e-eb7619a43555))
+    (pin "14" (uuid e46b0b2e-f19b-435a-9248-65d1e66ff361))
+    (pin "7" (uuid 1d1db22a-1b10-45f1-8c70-0f504d383fbc))
+    (instances
+      (project "debounce"
+        (path "/05bae13c-a0d1-4966-874a-868219423b0c"
+          (reference "U1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

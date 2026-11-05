@@ -1,0 +1,267 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 35016b15-bdda-418f-b66a-bfe685a8786e)
+  (paper "A4")
+  (title_block
+    (title "Differentiator")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "Simulation_SPICE:VPULSE"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VPULSE"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Type" "PULSE"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "Sim.Params" "y1=0 y2=1 td=2n tr=2n tf=2n tw=50n per=100n"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "ki_keywords" "simulation"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, pulse"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VPULSE_0_0"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy -1.397 -0.762)
+            (xy -1.143 0.762)
+            (xy -0.127 0.762)
+            (xy 0.127 -0.762)
+            (xy 1.143 -0.762)
+            (xy 1.397 0.762)
+            (xy 2.032 0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VPULSE_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VPULSE_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 27.94 50.8) (xy 58.42 50.8))
+    (stroke (width 0) (type default))
+    (uuid 7fc7bd25-7bd2-48c2-896f-cce5637de16a))
+  (wire
+    (pts (xy 27.94 44.45) (xy 27.94 50.8))
+    (stroke (width 0) (type default))
+    (uuid f7a26332-9209-4be5-a95c-d6f17eb31be6))
+  (wire
+    (pts (xy 27.94 34.29) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 67f989dc-0cfa-4b5f-9df9-604d7547f204))
+  (wire
+    (pts (xy 39.37 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 228a2e2b-a579-4e37-9d54-5d67324b9939))
+  (wire
+    (pts (xy 46.99 27.94) (xy 58.42 27.94))
+    (stroke (width 0) (type default))
+    (uuid eb1b6d7c-080d-4e38-bf20-6a50e73cd37d))
+  (wire
+    (pts (xy 58.42 35.56) (xy 58.42 27.94))
+    (stroke (width 0) (type default))
+    (uuid e1b36348-3ffe-4c2f-858d-d52067acf80e))
+  (wire
+    (pts (xy 58.42 43.18) (xy 58.42 50.8))
+    (stroke (width 0) (type default))
+    (uuid 8fbbc84e-3651-4d36-811d-473c621d40b4))
+  (symbol
+    (lib_id "Simulation_SPICE:VPULSE")
+    (at 27.94 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9743ca86-f36d-48e5-a8b6-67a93e45a866)
+    (property "Reference" "V1"
+      (at 35.40125 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 40Hz"
+      (at 35.40125 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4cc79a35-bf7b-4232-8736-c1d3d2ca0924))
+    (pin "2" (uuid 00fb3301-f25b-4848-b500-81b6b2e3b909))
+    (instances
+      (project "diff"
+        (path "/108ad38e-75e0-42bc-b8c4-0d14b91cc5b1"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 43.18 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4d197bd6-6ded-4246-ba10-43e23d593980)
+    (property "Reference" "C1"
+      (at 43.18 22.70125 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "9µF"
+      (at 43.18 24.28875 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 43.18 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 68807c5e-fdc5-447a-aa96-04427f995652))
+    (pin "2" (uuid 935c0770-ab49-4b15-921b-2f080bab6743))
+    (instances
+      (project "diff"
+        (path "/108ad38e-75e0-42bc-b8c4-0d14b91cc5b1"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 58.42 39.37 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 72fc36d0-5c03-4391-8195-ca2989065828)
+    (property "Reference" "R1"
+      (at 62.70625 38.57625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "120Ω"
+      (at 62.70625 40.16375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 58.42 39.37 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3a445d6a-05c2-4c48-8069-c785ac1ee271))
+    (pin "2" (uuid c4b53371-3c58-48d6-8edb-57ac9db77a6d))
+    (instances
+      (project "diff"
+        (path "/108ad38e-75e0-42bc-b8c4-0d14b91cc5b1"
+          (reference "R1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

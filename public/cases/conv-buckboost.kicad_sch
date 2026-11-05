@@ -1,0 +1,792 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 6dea5382-c12c-49e6-a6e1-6d2d04f9c6a6)
+  (paper "A4")
+  (title_block
+    (title "Buck-Boost Converter")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:+5V"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V"
+        (at 0 3.556 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+5V_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:L"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L"
+        (at -1.27 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "L"
+        (at 1.905 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Inductor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (arc
+          (start 0 -2.54)
+          (mid 0.6323 -1.905)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 0.635)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 1.905)
+          (end 0 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "L_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "D"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VPULSE"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VPULSE"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Type" "PULSE"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "Sim.Params" "y1=0 y2=1 td=2n tr=2n tf=2n tw=50n per=100n"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "ki_keywords" "simulation"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, pulse"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VPULSE_0_0"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy -1.397 -0.762)
+            (xy -1.143 0.762)
+            (xy -0.127 0.762)
+            (xy 0.127 -0.762)
+            (xy 1.143 -0.762)
+            (xy 1.397 0.762)
+            (xy 2.032 0.762))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VPULSE_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VPULSE_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NMOS_GDS"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NMOS_GDS"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "N-MOSFET transistor, gate/drain/source"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NMOS_GDS_0_1"
+        (polyline
+          (pts (xy 0.254 0) (xy -2.54 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.254 1.905) (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 -1.27) (xy 0.762 -2.286))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 0.508) (xy 0.762 -0.508))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.762 2.286) (xy 0.762 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 2.54) (xy 2.54 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.762 -1.778)
+            (xy 3.302 -1.778)
+            (xy 3.302 1.778)
+            (xy 0.762 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 2.032 0.381)
+            (xy 2.032 -0.381)
+            (xy 1.016 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (polyline
+          (pts
+            (xy 2.794 0.508)
+            (xy 2.921 0.381)
+            (xy 3.683 0.381)
+            (xy 3.81 0.254))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 3.302 0.381)
+            (xy 2.921 -0.254)
+            (xy 3.683 -0.254)
+            (xy 3.302 0.381))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (circle
+          (center 1.651 0)
+          (radius 2.794)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (circle
+          (center 2.54 -1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 2.54 1.778)
+          (radius 0.254)
+          (stroke (width 0) (type default))
+          (fill (type outline))))
+      (symbol "Q_NMOS_GDS_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 63.5 45.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 63539c72-200c-48a8-8892-8f10f364c3f2))
+  (junction
+    (at 53.34 45.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid ba1c9789-8ef4-4c2b-b3e0-aee7252c765c))
+  (junction
+    (at 63.5 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a3256c5b-a9ed-4f58-b73d-9d6da190355b))
+  (junction
+    (at 83.82 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid b840ed6f-b573-46e2-b09f-4396f72798d7))
+  (junction
+    (at 53.34 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f217902a-0095-441d-ab8e-92b3895d2a51))
+  (junction
+    (at 50.8 27.94)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 34633510-9e0e-45ce-a2b4-58b3395aef3b))
+  (wire
+    (pts (xy 63.5 45.72) (xy 53.34 45.72))
+    (stroke (width 0) (type default))
+    (uuid 6fec67d8-6e84-49ae-871d-425ae2524d8b))
+  (wire
+    (pts (xy 83.82 45.72) (xy 63.5 45.72))
+    (stroke (width 0) (type default))
+    (uuid 3feedce1-bbe7-44c3-882d-fe9f6846b976))
+  (wire
+    (pts (xy 63.5 27.94) (xy 83.82 27.94))
+    (stroke (width 0) (type default))
+    (uuid de5e0bd7-d6a0-4316-9a66-35e3f4c6bfd7))
+  (wire
+    (pts (xy 53.34 27.94) (xy 50.8 27.94))
+    (stroke (width 0) (type default))
+    (uuid 2ab0d720-9285-4014-a050-cb5f874d3ca3))
+  (wire
+    (pts (xy 50.8 27.94) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid a87c3efd-045c-4fa9-8616-d2ee92844f42))
+  (wire
+    (pts (xy 50.8 27.94) (xy 50.8 38.1))
+    (stroke (width 0) (type default))
+    (uuid 242e6b45-7ec6-4ba5-8a7d-86708abd3754))
+  (wire
+    (pts (xy 38.1 27.94) (xy 27.94 27.94))
+    (stroke (width 0) (type default))
+    (uuid 34712102-d97a-4a4f-ac40-bf273ea30efb))
+  (wire
+    (pts (xy 83.82 27.94) (xy 91.44 27.94))
+    (stroke (width 0) (type default))
+    (uuid 440108b3-b4f1-4a53-a889-efc738bb2e8e))
+  (wire
+    (pts (xy 53.34 40.64) (xy 53.34 45.72))
+    (stroke (width 0) (type default))
+    (uuid 757fbab3-4d4c-4db6-9f88-256cc52e6a6d))
+  (wire
+    (pts (xy 53.34 33.02) (xy 53.34 27.94))
+    (stroke (width 0) (type default))
+    (uuid c5057d20-1bd3-467b-89bb-97e83c82aee1))
+  (wire
+    (pts (xy 62.23 27.94) (xy 63.5 27.94))
+    (stroke (width 0) (type default))
+    (uuid fc8ddb43-74ac-479e-ac17-f948792a1523))
+  (wire
+    (pts (xy 54.61 27.94) (xy 53.34 27.94))
+    (stroke (width 0) (type default))
+    (uuid c5c16d48-1a41-4f6d-a355-c5ce3b189e4a))
+  (wire
+    (pts (xy 63.5 33.02) (xy 63.5 27.94))
+    (stroke (width 0) (type default))
+    (uuid acf2ce96-ad13-4cdd-893f-1f2e7d65f2f1))
+  (wire
+    (pts (xy 63.5 40.64) (xy 63.5 45.72))
+    (stroke (width 0) (type default))
+    (uuid 215fac9a-c6ca-4bff-8c52-7fc6b6c8f99c))
+  (wire
+    (pts (xy 83.82 33.02) (xy 83.82 27.94))
+    (stroke (width 0) (type default))
+    (uuid 3768dc29-8a1c-45a7-898f-328d202c77a4))
+  (wire
+    (pts (xy 83.82 40.64) (xy 83.82 45.72))
+    (stroke (width 0) (type default))
+    (uuid 5d2452d2-2dbe-41d6-945f-d9d5563e25c7))
+  (wire
+    (pts (xy 40.64 35.56) (xy 40.64 38.1))
+    (stroke (width 0) (type default))
+    (uuid 1b2dc381-b7eb-460f-a20e-c53ef3d916f2))
+  (wire
+    (pts (xy 45.72 27.94) (xy 43.18 27.94))
+    (stroke (width 0) (type default))
+    (uuid 2581a923-2489-4412-8fe4-c52c91fb9da3))
+  (wire
+    (pts (xy 35.56 27.94) (xy 38.1 27.94))
+    (stroke (width 0) (type default))
+    (uuid 5d81dfb5-c477-495e-89fd-ed0893270f41))
+  (global_label "VOUT"
+    (shape output)
+    (at 91.44 27.94 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 039a3382-95b0-44b7-8693-da62d83f1e0e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 91.44 27.94 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "power:+5V")
+    (at 27.94 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 16456341-9c87-451a-89f2-3820457e34e4)
+    (property "Reference" "#PWR001"
+      (at 27.94 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V"
+      (at 23.1775 27.94 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9435b036-292c-4a7b-b079-5bac558d58fe))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 53.34 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 57d22132-e546-4aba-b0e0-4f8bc7e86adb)
+    (property "Reference" "#PWR002"
+      (at 53.34 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 53.34 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 53.34 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0cbbfcb2-3ff2-47c6-a196-829b82216417))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 53.34 36.83 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b3031b30-5370-4c2d-bb90-e8c60cf59570)
+    (property "Reference" "L1"
+      (at 55.5625 36.03625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1H"
+      (at 55.5625 37.62375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b3142ec7-ddbc-43d4-a69d-99a7e2c133a4))
+    (pin "2" (uuid eacda3c0-fffe-40fa-8d01-8b8021ed7d19))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "L1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D")
+    (at 58.42 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bed133a5-40ac-4ca4-a01b-1bacef5b96b0)
+    (property "Reference" "D1"
+      (at 58.42 25.0825 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 58.42 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 58.42 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2b766dc5-e666-4cd1-ab29-7c5fc247de1c))
+    (pin "2" (uuid e9e357f7-a081-4e86-9bee-ac77fc2c8ad8))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 63.5 36.83 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ed112d3a-c527-4b75-9bbb-3d9c06123633)
+    (property "Reference" "C1"
+      (at 68.8975 36.03625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10µF"
+      (at 68.8975 37.62375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 63.5 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9bd75c30-e91f-4298-9831-9431867adf6e))
+    (pin "2" (uuid 1deaa372-367f-4a82-b7f4-cfc3eb52db20))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 83.82 36.83 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9b126c11-5d4d-4b24-b3ef-e2b827348328)
+    (property "Reference" "R1"
+      (at 87.47125 36.03625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "1kΩ"
+      (at 87.47125 37.62375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 83.82 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b3fb05bc-eaf2-40b8-ba42-5cb0a7a27400))
+    (pin "2" (uuid 4eb1e6a1-b070-412a-80df-5cba826ad6b0))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VPULSE")
+    (at 45.72 38.1 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1568dee1-1f81-4395-ac9f-55545c725f3b)
+    (property "Reference" "V1"
+      (at 45.72 42.2275 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "5V 1kHz"
+      (at 45.72 43.815 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 38.1 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 724a5241-feb4-4f43-a6c7-2a80e6ff7b03))
+    (pin "2" (uuid 3563b9f9-c777-48be-89ec-c2b1788a4e29))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NMOS_GDS")
+    (at 40.64 30.48 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 66edf316-2149-4761-8615-226dc6a69af4)
+    (property "Reference" "Q1"
+      (at 40.64 24.4475 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 40.64 30.48 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 40.64 30.48 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1f109a43-cea9-4c28-a938-efd1fbadcb08))
+    (pin "2" (uuid 263fe31e-b6d6-4f0c-85f7-8895c66bd407))
+    (pin "3" (uuid a4e3986d-ea10-442d-ae41-2b7fa0270a95))
+    (instances
+      (project "conv-buckboost"
+        (path "/292225b0-c3ee-41b0-927e-6271b603313b"
+          (reference "Q1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

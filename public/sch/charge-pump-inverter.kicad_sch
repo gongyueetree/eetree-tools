@@ -1,0 +1,416 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid f7048eae-9c12-428a-a12d-6d7c66f7a87e)
+  (paper "A4")
+  (title_block (title "二极管电荷泵反相（负压）") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D_Schottky"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Schottky diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_Schottky_0_1"
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_Schottky_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 71.12 55.88) (xy 80.01 55.88))
+    (stroke (width 0) (type default))
+    (uuid 0f3fbf70-a32f-49c5-a847-5f5d098445f1))
+  (wire
+    (pts (xy 87.63 55.88) (xy 96.52 55.88))
+    (stroke (width 0) (type default))
+    (uuid 609b23b7-81ca-4b2c-95aa-3f19fca6ad87))
+  (wire
+    (pts (xy 96.52 55.88) (xy 96.52 67.31))
+    (stroke (width 0) (type default))
+    (uuid f3239d3f-3a1c-4640-8975-4878c8fa70a3))
+  (wire
+    (pts (xy 96.52 74.93) (xy 96.52 86.36))
+    (stroke (width 0) (type default))
+    (uuid 1d0253c4-761a-47b3-a33e-fd375f7ac949))
+  (wire
+    (pts (xy 96.52 55.88) (xy 105.41 55.88))
+    (stroke (width 0) (type default))
+    (uuid 328b420b-d07f-4b58-8b6c-04e1f10ab4ca))
+  (wire
+    (pts (xy 113.03 55.88) (xy 124.46 55.88))
+    (stroke (width 0) (type default))
+    (uuid d04b7320-f9cd-40a5-b5da-de59c50aa7f0))
+  (wire
+    (pts (xy 124.46 55.88) (xy 139.7 55.88))
+    (stroke (width 0) (type default))
+    (uuid fa8cf960-84db-4ef0-b25d-806b7ab31ce9))
+  (wire
+    (pts (xy 124.46 55.88) (xy 124.46 67.31))
+    (stroke (width 0) (type default))
+    (uuid 5d941db8-a742-4e13-abd7-29523d25793b))
+  (wire
+    (pts (xy 124.46 74.93) (xy 124.46 86.36))
+    (stroke (width 0) (type default))
+    (uuid 39c9a061-77e8-4193-bebf-0bdb5270ff2f))
+  (wire
+    (pts (xy 139.7 55.88) (xy 139.7 67.31))
+    (stroke (width 0) (type default))
+    (uuid fecdd40d-7b0d-4521-9f22-627706c7e458))
+  (wire
+    (pts (xy 139.7 74.93) (xy 139.7 86.36))
+    (stroke (width 0) (type default))
+    (uuid 935ecead-06d9-4188-802c-7cf5195a25d4))
+  (wire
+    (pts (xy 96.52 86.36) (xy 124.46 86.36))
+    (stroke (width 0) (type default))
+    (uuid c2c8ab48-e7d7-4302-a23a-0cedcfa5474d))
+  (wire
+    (pts (xy 124.46 86.36) (xy 139.7 86.36))
+    (stroke (width 0) (type default))
+    (uuid 00db3af0-1672-4fd8-8117-c1acd3ed4d00))
+  (wire
+    (pts (xy 139.7 55.88) (xy 152.4 55.88))
+    (stroke (width 0) (type default))
+    (uuid 1eb6abe7-5fa8-44c3-a54b-4c15cd648777))
+  (global_label "CLK"
+    (shape input)
+    (at 71.12 55.88 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 2acfdb50-ed80-4026-8b0e-4ca58740e164)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 71.12 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 96.52 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7510a45b-8e36-49aa-a4a3-53ebbe055aa6))
+  (junction
+    (at 124.46 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e8de1ccc-fa70-4fdd-8ea4-507893f7d4e6))
+  (junction
+    (at 124.46 86.36)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 0e609b3b-71c7-4d5b-bb96-7512c5418be9))
+  (junction
+    (at 139.7 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid b19d59ff-3526-4366-8317-ff76494952de))
+  (global_label "VOUT"
+    (shape output)
+    (at 152.4 55.88 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid bab39694-c9a5-4589-b11d-52d69e24014a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 152.4 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:C")
+    (at 83.82 55.88 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 465a42bc-a071-41ce-ac6f-22d78647bdd7)
+    (property "Reference" "C1"
+      (at 83.82000000000001 52.480000000000004 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C1"
+      (at 83.82000000000001 59.080000000000005 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 345c45a3-2d29-42a4-af24-5811739568f3))
+    (pin "2" (uuid 712effaf-e3a2-4035-9325-02d3d71eaeb2))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Schottky")
+    (at 96.52 71.12 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 69e619ee-ddb8-4a38-a49d-9bc7e68b9e79)
+    (property "Reference" "D1"
+      (at 99.52000000000001 70.12 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "D"
+      (at 99.52000000000001 72.72 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b02b1932-1f3c-46a4-8ffe-009279641fa4))
+    (pin "2" (uuid 7447f041-9bd3-419d-8925-b3c2517f5125))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Schottky")
+    (at 109.22 55.88 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4c168a59-5382-40d2-91cb-ab1d739d3fe0)
+    (property "Reference" "D2"
+      (at 109.22000000000001 52.68 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "D"
+      (at 109.22000000000001 59.28 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid d3f63e4e-f5d0-47ec-b27a-9d3f30fae679))
+    (pin "2" (uuid 41b49c46-fe92-45c2-906d-9ea81094d51b))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "D2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 124.46 71.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ef194a5c-fc90-4880-8769-e0c25f50d65a)
+    (property "Reference" "Co"
+      (at 127.06 70.12 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "Co"
+      (at 127.06 72.72 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 1cb30102-e087-418d-89ad-4ac4dabe0962))
+    (pin "2" (uuid 70a14eb3-0b8e-4e09-8353-a32bca9980b5))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "Co")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 139.7 71.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d63243ed-71ff-4500-ac64-7d6b8be23454)
+    (property "Reference" "RL"
+      (at 142.3 70.12 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RL"
+      (at 142.3 72.72 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 067751d4-410c-4d95-9db0-2e3e22305f6e))
+    (pin "2" (uuid 3c389830-080a-4e8a-9118-c62b8696b833))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "RL")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 124.46 86.36 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 849c19de-8d1d-4919-b8a3-a46dcbf9fbb9)
+    (property "Reference" "#PWR01"
+      (at 124.46000000000001 86.36 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 124.46000000000001 91.36 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid dbc31699-c40f-4319-a810-9264996d2c49))
+    (instances
+      (project "charge-pump-inverter"
+        (path "/f7048eae-9c12-428a-a12d-6d7c66f7a87e"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

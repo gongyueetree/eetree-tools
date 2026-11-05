@@ -1,0 +1,651 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 1f239e65-78ac-4cd5-bdd4-b5d89af67c6c)
+  (paper "A4")
+  (title_block
+    (title "Lambda Diode Oscillator")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "CircuitJS:PWR_2f3f82"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VADJ"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_2f3f82_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_2f3f82_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VADJ" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:L"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L"
+        (at -1.27 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "L"
+        (at 1.905 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Inductor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (arc
+          (start 0 -2.54)
+          (mid 0.6323 -1.905)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 0.635)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 1.905)
+          (end 0 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "L_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NJFET_DSG"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NJFET_DSG"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NJFET N-JFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "N-JFET transistor, drain/source/gate"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NJFET_DSG_0_1"
+        (polyline
+          (pts
+            (xy 0.254 1.905)
+            (xy 0.254 -1.905)
+            (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 -2.54)
+            (xy 2.54 -1.27)
+            (xy 0.254 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 2.54)
+            (xy 2.54 1.397)
+            (xy 0.254 1.397))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy -1.016 0.381)
+            (xy -1.016 -0.381)
+            (xy 0 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_NJFET_DSG_1_1"
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.334)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_PJFET_DSG"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_PJFET_DSG"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor PJFET P-JFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "P-JFET transistor, drain/source/gate"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_PJFET_DSG_0_1"
+        (polyline
+          (pts
+            (xy 0.254 1.905)
+            (xy 0.254 -1.905)
+            (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 -2.54)
+            (xy 2.54 -1.27)
+            (xy 0.254 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 2.54)
+            (xy 2.54 1.397)
+            (xy 0.254 1.397))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.143 0)
+            (xy -0.127 0.381)
+            (xy -0.127 -0.381)
+            (xy -1.143 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_PJFET_DSG_1_1"
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.334)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 33.02 63.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6c787d51-1e61-492c-a3f3-36fbaebed1d3))
+  (junction
+    (at 33.02 53.34)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 5d2b1e20-c4e9-4701-b505-9610053d72ca))
+  (junction
+    (at 33.02 48.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 43b0c085-c68a-46b4-8fa7-e97aa0a174bb))
+  (junction
+    (at 33.02 33.02)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 21d7d29e-6ec8-46ad-a73c-2ae128f2d2c6))
+  (wire
+    (pts (xy 33.02 63.5) (xy 27.94 63.5))
+    (stroke (width 0) (type default))
+    (uuid 5c412e81-8c27-4d14-953c-62d9996f5caf))
+  (wire
+    (pts (xy 33.02 53.34) (xy 38.1 53.34))
+    (stroke (width 0) (type default))
+    (uuid 1cf8f937-c332-48b9-8ece-c754a1d75b54))
+  (wire
+    (pts (xy 27.94 48.26) (xy 33.02 48.26))
+    (stroke (width 0) (type default))
+    (uuid 4a9d8b7d-db68-4eeb-8051-29dad08b3cc3))
+  (wire
+    (pts (xy 33.02 48.26) (xy 38.1 48.26))
+    (stroke (width 0) (type default))
+    (uuid b8090327-a2fe-4873-94fb-6307599a3609))
+  (wire
+    (pts (xy 38.1 33.02) (xy 33.02 33.02))
+    (stroke (width 0) (type default))
+    (uuid 7d9b5b9f-79ce-45dd-8bad-0ba88b247722))
+  (wire
+    (pts (xy 33.02 33.02) (xy 27.94 33.02))
+    (stroke (width 0) (type default))
+    (uuid a7e37eb4-932b-45d6-b203-fe1c3058ff17))
+  (wire
+    (pts (xy 33.02 48.26) (xy 33.02 53.34))
+    (stroke (width 0) (type default))
+    (uuid f82baa20-b962-4a6d-a5f0-61f67bef8581))
+  (wire
+    (pts (xy 38.1 60.96) (xy 38.1 53.34))
+    (stroke (width 0) (type default))
+    (uuid 12cd3cc5-9e2d-4e9b-a38e-99741bd75921))
+  (wire
+    (pts (xy 27.94 63.5) (xy 27.94 55.88))
+    (stroke (width 0) (type default))
+    (uuid d1f40cfd-7c45-44c7-8fdb-a4dc89e9fe6e))
+  (wire
+    (pts (xy 33.02 33.02) (xy 33.02 27.94))
+    (stroke (width 0) (type default))
+    (uuid f67a7e02-ba17-4918-a5c7-c14dfac90ebe))
+  (wire
+    (pts (xy 27.94 44.45) (xy 27.94 48.26))
+    (stroke (width 0) (type default))
+    (uuid 217bd19f-c5de-4abf-9928-be19b075e586))
+  (wire
+    (pts (xy 27.94 36.83) (xy 27.94 33.02))
+    (stroke (width 0) (type default))
+    (uuid a99a2299-5683-45be-ab44-c38cc22ca637))
+  (wire
+    (pts (xy 25.4 55.88) (xy 27.94 55.88))
+    (stroke (width 0) (type default))
+    (uuid 5813817d-e407-49f9-9058-02c39f070216))
+  (wire
+    (pts (xy 33.02 60.96) (xy 33.02 58.42))
+    (stroke (width 0) (type default))
+    (uuid 6a6ac5de-aa94-4f5e-a8ec-6583ba47624c))
+  (wire
+    (pts (xy 33.02 50.8) (xy 33.02 53.34))
+    (stroke (width 0) (type default))
+    (uuid 411ac8af-ee8c-447d-b338-abeb1eb5ab85))
+  (wire
+    (pts (xy 40.64 63.5) (xy 38.1 63.5))
+    (stroke (width 0) (type default))
+    (uuid b372e7cc-9acd-4196-82c3-39cbc013a0bc))
+  (wire
+    (pts (xy 38.1 63.5) (xy 38.1 60.96))
+    (stroke (width 0) (type default))
+    (uuid 1008db5b-03f7-409c-8d73-0e89258f4c9e))
+  (wire
+    (pts (xy 33.02 68.58) (xy 33.02 63.5))
+    (stroke (width 0) (type default))
+    (uuid 03f753c9-d782-4968-b6b3-c08cf0cc67c5))
+  (symbol
+    (lib_id "power:GND")
+    (at 33.02 63.5 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e60215dd-a2c5-41ea-903d-62d5be3d0f43)
+    (property "Reference" "#PWR001"
+      (at 33.02 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 33.02 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 33.02 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 560e1c71-76bc-4577-8d88-664b0b7661f2))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "CircuitJS:PWR_2f3f82")
+    (at 33.02 27.94 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 75dfdc84-e365-4331-a87b-8d2f3b1abd2d)
+    (property "Reference" "#PWR002"
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "6V 可调"
+      (at 33.02 24.4475 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 33.02 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 04035431-21c3-4da0-bc6b-2dd788e70b68))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 38.1 44.45 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 98aac6e3-d733-4386-9957-4b83e88b3c0d)
+    (property "Reference" "R1"
+      (at 42.38625 43.65625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "158Ω"
+      (at 42.38625 45.24375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 38.1 44.45 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e6c062c8-0994-41da-ba7f-d3018cf51d6d))
+    (pin "2" (uuid b1d87dd7-1aa0-4a10-8bd4-b27b94ff99c4))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 38.1 36.83 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2d459d49-fa1e-46cd-89bc-0c35e9d2c03a)
+    (property "Reference" "L1"
+      (at 41.91 36.03625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "200mH"
+      (at 41.91 37.62375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 38.1 36.83 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 572af238-9ae3-4544-b7d3-946366280673))
+    (pin "2" (uuid dad95fc8-fb65-4a06-b8a2-818a2ea22db4))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "L1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 27.94 40.64 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d33e814a-cc25-4f54-a3e2-bb719d58c094)
+    (property "Reference" "C1"
+      (at 33.3375 39.84625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "56nF"
+      (at 33.3375 41.43375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 27.94 40.64 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 100f01ad-575f-4118-9385-7afa5cf5e7a8))
+    (pin "2" (uuid 870ae4af-b25f-4d3b-aae7-3a22617d46b2))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NJFET_DSG")
+    (at 30.48 55.88 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid beb853f6-d601-4e30-ab50-d039f9e2e97f)
+    (property "Reference" "Q1"
+      (at 36.83 55.88 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 30.48 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 30.48 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 6364801a-40ae-4338-822f-84fc2d5f8a84))
+    (pin "2" (uuid a8fe0f56-a8f0-4196-960c-cc47df2f1e38))
+    (pin "3" (uuid 7461ee6b-3690-478a-8351-626481d8c406))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "Q1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_PJFET_DSG")
+    (at 35.56 63.5 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid aad099ec-4325-4065-aa52-2a06443d1058)
+    (property "Reference" "Q2"
+      (at 29.21 66.51625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 35.56 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 35.56 63.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8b334008-f2ee-4bf6-b5f1-d2f12bd80a30))
+    (pin "2" (uuid 5445cf06-3a5f-41e0-84e1-506dafef8d1b))
+    (pin "3" (uuid 9f417c12-fcae-412c-ae9f-96018a7bc69b))
+    (instances
+      (project "lambda-diode-osc"
+        (path "/e59ee569-b263-4b53-ad4b-e9eb3859ffa8"
+          (reference "Q2")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

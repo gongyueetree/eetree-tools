@@ -1,0 +1,389 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid bcda0b05-a316-47ce-a6fb-b45e279b0654)
+  (paper "A4")
+  (title_block
+    (title "RTL Inverter")
+    (company "EETree 电子森林 · CircuitJS 示例转换"))
+  (lib_symbols
+    (symbol "CircuitJS:PWR_6bb37c"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+3.6V"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "PWR_6bb37c_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "PWR_6bb37c_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "+3.6V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Q_NPN_BCE"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NPN_BCE"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NPN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "NPN transistor, base/collector/emitter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NPN_BCE_0_1"
+        (polyline
+          (pts (xy 0.635 0.635) (xy 2.54 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.778)
+            (xy 1.778 -1.27)
+            (xy 2.286 -2.286)
+            (xy 1.27 -1.778)
+            (xy 1.27 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_NPN_BCE_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))))
+  (junction
+    (at 53.34 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid f9ce41d6-95ec-4e7f-a0c4-7d0a3ebb2763))
+  (wire
+    (pts (xy 53.34 48.26) (xy 53.34 55.88))
+    (stroke (width 0) (type default))
+    (uuid 72291530-c3f3-4065-bc02-00b2d005e87c))
+  (wire
+    (pts (xy 33.02 45.72) (xy 25.4 45.72))
+    (stroke (width 0) (type default))
+    (uuid 8182b82f-aa0a-4ea0-bb3b-460e9b2aba3d))
+  (wire
+    (pts (xy 53.34 27.94) (xy 45.72 27.94))
+    (stroke (width 0) (type default))
+    (uuid 134b067c-9399-477a-ae62-c6e6ac00196b))
+  (wire
+    (pts (xy 53.34 43.18) (xy 63.5 43.18))
+    (stroke (width 0) (type default))
+    (uuid 0ca3a214-c6d6-4f5d-b31f-1579568086ac))
+  (wire
+    (pts (xy 35.56 45.72) (xy 33.02 45.72))
+    (stroke (width 0) (type default))
+    (uuid afea8839-3b44-439c-8844-4923b33c2a34))
+  (wire
+    (pts (xy 43.18 45.72) (xy 45.72 45.72))
+    (stroke (width 0) (type default))
+    (uuid 659be353-e632-4855-b4e8-9ca6b3623392))
+  (wire
+    (pts (xy 53.34 39.37) (xy 53.34 43.18))
+    (stroke (width 0) (type default))
+    (uuid 92f2b7bf-876f-4212-9104-6084731d0432))
+  (wire
+    (pts (xy 53.34 31.75) (xy 53.34 27.94))
+    (stroke (width 0) (type default))
+    (uuid 9531dca1-7297-41cc-ac83-33396b1f700f))
+  (wire
+    (pts (xy 53.34 40.64) (xy 53.34 43.18))
+    (stroke (width 0) (type default))
+    (uuid a72d7fc3-fc1c-42b6-9622-f18cbecf6cd6))
+  (wire
+    (pts (xy 53.34 50.8) (xy 53.34 48.26))
+    (stroke (width 0) (type default))
+    (uuid dafd6aff-fa19-4b07-8279-1b24e028821b))
+  (global_label "IN"
+    (shape input)
+    (at 25.4 45.72 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid a329fcb8-ca4e-4c64-a444-959d92ca9d32)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 25.4 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "OUT"
+    (shape output)
+    (at 63.5 43.18 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 6aeffe49-854f-49b4-9ede-128bd7198449)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 63.5 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "CircuitJS:PWR_6bb37c")
+    (at 45.72 27.94 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1e1e3c61-cb6c-4637-818a-029d02288785)
+    (property "Reference" "#PWR001"
+      (at 45.72 27.94 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3.6V"
+      (at 39.84625 27.94 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 45.72 27.94 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cb8a31fd-cc4e-4db8-b71e-2ffee47fb5dc))
+    (instances
+      (project "rtlinverter"
+        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+          (reference "#PWR001")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 53.34 55.88 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a1a09275-2118-44bd-aa2d-2594af52ba5c)
+    (property "Reference" "#PWR002"
+      (at 53.34 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 53.34 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 53.34 55.88 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fbc7c0eb-f0b2-4128-bc66-09ee4c15d37c))
+    (instances
+      (project "rtlinverter"
+        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+          (reference "#PWR002")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 39.37 45.72 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7f64d13f-d8f5-440a-8c21-7d08e66f08c3)
+    (property "Reference" "R1"
+      (at 39.37 41.5925 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "470Ω"
+      (at 39.37 43.18 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 39.37 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d7f22d8b-c51c-421a-a34f-66f0772ac38a))
+    (pin "2" (uuid 80fce88d-7836-4ec6-8d22-2bbd0a657276))
+    (instances
+      (project "rtlinverter"
+        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 53.34 35.56 180)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fe42410c-eab3-4ad8-8605-513e2938397f)
+    (property "Reference" "R2"
+      (at 57.62625 34.76625 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "640Ω"
+      (at 57.62625 36.35375 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 53.34 35.56 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 222e55b2-bee7-477d-9b13-4820fc93c2a9))
+    (pin "2" (uuid c3e6c4c4-2206-4b05-b969-936343164ecd))
+    (instances
+      (project "rtlinverter"
+        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Q_NPN_BCE")
+    (at 50.8 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 719dbb39-65fd-49fb-a954-98b0e198105a)
+    (property "Reference" "Q1"
+      (at 57.15 45.72 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" ""
+      (at 50.8 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Footprint" ""
+      (at 50.8 45.72 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 02463418-c205-4d78-9121-abc4afbcc998))
+    (pin "2" (uuid bccf9e91-6a15-49af-b06f-bfdabfd056a5))
+    (pin "3" (uuid de43ac2f-3871-4a5a-9c30-67c8ca8bae6e))
+    (instances
+      (project "rtlinverter"
+        (path "/bc3ac66f-e283-4098-9b07-bea2793beffd"
+          (reference "Q1")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

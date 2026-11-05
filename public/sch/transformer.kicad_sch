@@ -1,0 +1,377 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 634b6a3f-0a26-44f2-b8a8-1fe43df48ed2)
+  (paper "A4")
+  (title_block (title "变压器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:Transformer_1P_1S"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "T"
+        (at 0 6.35 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "Transformer_1P_1S"
+        (at 0 -7.62 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transformer coil magnet"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Transformer, single primary, single secondary"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Transformer_1P_1S_0_1"
+        (arc
+          (start -2.54 -5.0546)
+          (mid -1.6599 -4.6901)
+          (end -1.27 -3.81)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -2.54 -2.5146)
+          (mid -1.6599 -2.1501)
+          (end -1.27 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -2.54 0.0254)
+          (mid -1.6599 0.3899)
+          (end -1.27 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -2.54 2.5654)
+          (mid -1.6599 2.9299)
+          (end -1.27 3.81)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -1.27 -3.81)
+          (mid -1.642 -2.912)
+          (end -2.54 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -1.27 -1.27)
+          (mid -1.642 -0.372)
+          (end -2.54 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -1.27 1.27)
+          (mid -1.642 2.168)
+          (end -2.54 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start -1.27 3.81)
+          (mid -1.642 4.708)
+          (end -2.54 5.08)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -0.635 5.08) (xy -0.635 -5.08))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0.635 -5.08) (xy 0.635 5.08))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 1.2954 -1.27)
+          (mid 1.6599 -2.1501)
+          (end 2.54 -2.5146)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 1.2954 1.27)
+          (mid 1.6599 0.3899)
+          (end 2.54 0.0254)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 1.2954 3.81)
+          (mid 1.6599 2.9299)
+          (end 2.54 2.5654)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 1.3208 -3.81)
+          (mid 1.6853 -4.6901)
+          (end 2.5654 -5.0546)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 2.54 0)
+          (mid 1.642 -0.372)
+          (end 1.2954 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 2.54 2.54)
+          (mid 1.642 2.168)
+          (end 1.2954 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 2.54 5.08)
+          (mid 1.642 4.708)
+          (end 1.2954 3.81)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 2.5654 -2.54)
+          (mid 1.6674 -2.912)
+          (end 1.3208 -3.81)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "Transformer_1P_1S_1_1"
+        (pin passive line
+          (at -10.16 5.08 0)
+          (length 7.62)
+          (name "AA" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -10.16 -5.08 0)
+          (length 7.62)
+          (name "AB" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 10.16 -5.08 180)
+          (length 7.62)
+          (name "SA" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 10.16 5.08 180)
+          (length 7.62)
+          (name "SB" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))))
+    (symbol "Simulation_SPICE:VSIN"
+      (pin_numbers hide)
+      (pin_names (offset 0.0254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "V"
+        (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "VSIN"
+        (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=+ 2=-"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+        (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Sim.Type" "SIN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "V"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide))
+      (property "ki_keywords" "simulation ac vac"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Voltage source, sinusoidal"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VSIN_0_0"
+        (arc
+          (start 0 0)
+          (mid -0.635 0.6323)
+          (end -1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.635 -0.6323)
+          (end 1.27 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (text "+"
+          (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))))
+      (symbol "VSIN_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "VSIN_1_1"
+        (pin passive line
+          (at 0 5.08 270)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 71.12) (xy 96.52 71.12))
+    (stroke (width 0) (type default))
+    (uuid f0e31dc6-a623-4529-ab31-b155c246ca1e))
+  (wire
+    (pts (xy 76.2 81.28) (xy 96.52 81.28))
+    (stroke (width 0) (type default))
+    (uuid d237280e-eb36-44e2-9001-4fd5950f6992))
+  (wire
+    (pts (xy 116.84 71.12) (xy 137.16 71.12))
+    (stroke (width 0) (type default))
+    (uuid c1c5dc08-8d63-44e9-a016-3504702f2d20))
+  (wire
+    (pts (xy 137.16 71.12) (xy 137.16 72.39))
+    (stroke (width 0) (type default))
+    (uuid 7b69e48d-6221-4c72-9d9f-7d967a87a7de))
+  (wire
+    (pts (xy 116.84 81.28) (xy 137.16 81.28))
+    (stroke (width 0) (type default))
+    (uuid 99d3e50b-8df3-42da-8436-df8e402f0d06))
+  (wire
+    (pts (xy 137.16 81.28) (xy 137.16 80.01))
+    (stroke (width 0) (type default))
+    (uuid 471670bd-7524-417e-bfe4-b547bc7f9769))
+  (text "I1 →"
+    (at 83.82 70.12 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 921ac883-582b-45ff-bfe8-8cc1275362c3))
+  (text "I2 →"
+    (at 121.92 70.12 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 555aa37e-38f1-40e2-8e84-9afbeb0dc56b))
+  (text "N1"
+    (at 100.68 76.8 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 4d269f45-66c7-486d-81f2-925931b77810))
+  (text "N2"
+    (at 110.08 76.8 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 06abad2c-d74e-4c7b-a6ca-2318a5d55595))
+  (text "Zin = n²·RL"
+    (at 68.58 85.28 0)
+    (effects (font (size 1.2 1.2)) (justify left bottom))
+    (uuid 2c8e7f26-0ec8-4440-98ee-f9816faabb01))
+  (symbol
+    (lib_id "Device:Transformer_1P_1S")
+    (at 106.68 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 789d3955-60fa-4c1d-817b-4ba90a8f55b7)
+    (property "Reference" "T1"
+      (at 106.68 68.7 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "N1:N2"
+      (at 106.68 84.7 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid c030e331-90d8-42eb-a98e-66bc60453d1d))
+    (pin "2" (uuid 407efd23-99e0-408c-b230-6d04cccd571b))
+    (pin "3" (uuid e593ed65-c598-4d17-a759-f8609b09bdb6))
+    (pin "4" (uuid 087c8ba2-a0c9-4f6f-ae6c-c19bb968d9dd))
+    (instances
+      (project "transformer"
+        (path "/634b6a3f-0a26-44f2-b8a8-1fe43df48ed2"
+          (reference "T1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Simulation_SPICE:VSIN")
+    (at 76.2 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a2f8113f-d1dc-4f93-ba83-16684dd84030)
+    (property "Reference" "V1"
+      (at 69.2 76.7 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "V1"
+      (at 78.8 77.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid e9e584ed-c253-4204-a7d0-c95948fcb080))
+    (pin "2" (uuid 5acaca56-0789-4a92-9fbe-0bce89439a3b))
+    (instances
+      (project "transformer"
+        (path "/634b6a3f-0a26-44f2-b8a8-1fe43df48ed2"
+          (reference "V1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 137.16 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1a953e24-836d-40e6-9c70-7db3254ce00c)
+    (property "Reference" "RL"
+      (at 139.76 75.2 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RL"
+      (at 139.76 77.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 530beeb6-5187-4d32-ba1b-cf8347ba2dca))
+    (pin "2" (uuid 9b04aa03-34aa-4dcb-b1a2-4a5b0571c6e6))
+    (instances
+      (project "transformer"
+        (path "/634b6a3f-0a26-44f2-b8a8-1fe43df48ed2"
+          (reference "RL")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))
