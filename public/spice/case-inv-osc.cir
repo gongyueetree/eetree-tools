@@ -1,0 +1,18 @@
+* inv-osc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N001)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N002 0 V=V(B1y)
+C1 N002 N003 40u IC=397.9592824m
+R1 N003 N004 4k
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B2 B2x 0 V=5*(1-u(V(N004)-2.5))
+RB2 B2x B2y 1k
+CB2 B2y 0 1p IC=0
+B2o N001 0 V=V(B2y)
+R2 N003 N001 400
+.tran 7.68u 1.536 0 7.68u uic
+.end

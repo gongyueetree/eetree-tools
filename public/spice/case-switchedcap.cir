@@ -1,0 +1,25 @@
+* switchedcap
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N006)
+* analog switch (on when CTL > 2.5 V)
+S1 N001 N002 N003 0 SW_20_10g
+* analog switch (on when CTL > 2.5 V)
+S2 N002 N004 N005 0 SW_20_10g
+C1 N004 0 4.877u IC=0
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 N004 N006 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N006 0 V=min(max(V(OA1), -15), 15)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N003)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N005 0 V=V(B1y)
+V1 N003 0 PULSE(0 5 0 50n 50n 250u 500u)
+C2 0 N002 95.123u IC=0
+V2 N001 0 DC 0 AC 5
+.model SW_20_10g SW(Ron=20 Roff=10g Vt=2.5 Vh=0)
+.model SW_20_10gn SW(Ron=20 Roff=10g Vt=-2.5 Vh=0)
+.ac dec 100 10 400
+.end

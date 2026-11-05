@@ -1,0 +1,23 @@
+* peak-detect
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N004)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA1 0 OA1 N002 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N003 0 V=min(max(V(OA1), -15), 15)
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA2 0 OA2 N001 N004 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N004 0 V=min(max(V(OA2), -15), 15)
+D1 N003 N001 D_VF0p8059
+C1 N001 0 10u IC=2.662398812m
+V1 N005 0 SIN(0 5 40 0 0 0)
+V2 N002 N005 SIN(0 3 110 0 0 0)
+* switch open
+R1 N001 N006 1e12
+R2 N006 0 10
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 5u 768m 0 5u uic
+.end

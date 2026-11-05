@@ -1,0 +1,18 @@
+* trans-diffamp-cursrc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N004) V(N005)
+Q1 N002 N001 N003 QNPN_100
+Q2 N005 N004 N003 QNPN_100
+R1 N005 N002 7.5k
+V1 N002 0 15
+V2 N001 0 SIN(0 4 40 0 0 0)
+V3 N006 0 SIN(0 4 40 0 0 0)
+Q3 N003 N007 N008 QNPN_100
+R2 N007 N009 2.7k
+R3 N008 N009 1k
+R4 N007 0 13k
+V4 N009 0 -15
+V5 N006 N004 PULSE(0 400m 0 333.3333333n 333.3333333n 1.666666667m 3.333333333m)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 384m 0 5u uic
+.end

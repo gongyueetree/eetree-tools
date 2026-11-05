@@ -1,0 +1,28 @@
+# eetree-sim 1
+# name snubber-zener
+# param V 12
+# param L1 0.1
+# param Rcoil 400
+# param Th 0.0015
+# param dt 3.75e-06
+# param Vg 10
+# param SCOPE_W 512
+# param D2 24
+# let sp = max(0.5, 2*Th/dt/800)
+# let ssp = max(1, round(2*Th/dt/SCOPE_W))
+* snubber-zener
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(SW) I(L1)
+.param L1=${L1} Rcoil=${Rcoil} V_=${V}
+V v 0 {V_}
+L1 v N001 {L1} IC=0
+Rcoil N001 SW {Rcoil}
+D1 v N002 DZ_0
+D2 SW N002 D_VF0p8059
+V1 N003 0 PULSE(${(Vg/2)-(Vg/2)} ${(Vg/2)+(Vg/2)} 0 ${1/(1/(2*Th))*1e-4} ${1/(1/(2*Th))*1e-4} ${(0.5)/(1/(2*Th))} ${1/(1/(2*Th))})
+M1 SW N003 0 0 MN_2_20m
+.model DZ_0 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p BV=${D2} IBV=5m)
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model MN_2_20m NMOS(Level=1 VTO=2 KP=20m)
+.tran ${max((dt),(dt)*153600/200000)} ${(dt)*153600} 0 ${max((dt),(dt)*153600/200000)} uic
+.end

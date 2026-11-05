@@ -1,0 +1,19 @@
+* coupled1
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N009) V(N004)
+L1 N001 N002 1 IC=0
+L2 N002 N003 1 IC=0
+C1 N001 N004 10u IC=5
+C2 N002 0 10u IC=0
+C3 N003 N005 10u IC=5
+R1 N004 0 1
+R2 0 N005 1
+L3 N006 N007 1 IC=0
+L4 N007 N008 1 IC=0
+C4 N006 N009 10u IC=5
+C5 N007 0 10u IC=0
+C6 N008 N010 10u IC=-5
+R3 N009 0 1
+R4 0 N010 1
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,28 @@
+* 555missing
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002,N002) V(N005)
+* 555 timer 1 (CircuitJS TimerElm behaviour)
+R_555a1 N003 N004 5k
+R_555b1 N004 0 10k
+B_555q1 Q555_1x 0 V=(u(V(N004,0)/2-V(N002,0))+(1-u(V(N004,0)/2-V(N002,0)))*(1-u(V(N001)-V(N004)))*u(V(Q555_1)-0.5))*u(V(N003,0)-0.7)
+R_555q1 Q555_1x Q555_1 1k
+C_555q1 Q555_1 0 1p
+B_555o1 Q555_1o 0 V=V(0)+V(Q555_1)*V(N003,0)
+R_555o1 Q555_1o N005 1
+B_555d1 N001 0 I=(1-V(Q555_1))*V(N001,0)/10
+C1 N001 0 10u IC=1.02901646
+R1 N001 N003 1k
+V1 N003 0 5
+Q1 0 N002 N006 QPNP_100
+R2 N006 N001 100
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-(1-u(V(N007)-2.5))*(1-u(V(N008)-2.5)))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N002 0 V=V(B1y)
+V2 N007 0 PULSE(0 5 0 1.666666667u 1.666666667u 8.333333333m 16.66666667m)
+* logic input L
+V3 N008 0 0
+.model QPNP_100 PNP(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

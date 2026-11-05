@@ -1,0 +1,34 @@
+# eetree-sim 1
+# name sallen-key-hpk
+# param R1 7500
+# param R2 15000
+# param C1 1e-08
+# param C2 1e-08
+# param SCOPE_W 512
+# param Rf 5860
+# param Rg 10000
+# let f0 = 1/(2*PI*sqrt(R1*R2*C1*C2))
+# let fmin = f0/10
+# let fmax = f0*10
+# let dt = 1/(fmax*16)
+# let tsw = 300/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* sallen-key-hpk
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} C2=${C2} R1=${R1} R2=${R2} Rf=${Rf} Rg=${Rg} fmax=${fmax} fmin=${fmin}
+C1 N001 N002 {C1} IC=0
+C2 N002 N003 {C2} IC=0
+R1 OUT N002 {R1}
+R2 N003 0 {R2}
+Rf N004 OUT {Rf}
+Rg N004 0 {Rg}
+V1 N001 0 DC 0 AC 1
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-12, 12]
+G_OA1 0 OA1 N003 N004 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 OUT 0 V=min(max(V(OA1), -12), 12)
+.ac dec 100 {fmin} {fmax}
+.end

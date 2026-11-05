@@ -1,0 +1,12 @@
+* twint
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N003)
+R1 N001 N002 100
+R2 N002 N003 100
+C1 N001 N004 26.525u IC=0
+C2 N004 N003 26.525u IC=0
+C3 N002 0 53.05u IC=0
+R3 N004 0 50
+V1 N001 0 DC 0 AC 5
+.ac dec 100 40 80
+.end

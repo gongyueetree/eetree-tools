@@ -1,0 +1,30 @@
+# eetree-sim 1
+# name tia-model
+# param Rf 240000
+# param Cf 1.8e-12
+# param CIN 2e-11
+# param IP 1e-05
+# param VOH 13.5
+# param VOL -13.5
+# let VR = max(VOH, -VOL, 1)
+# let F = 1/(20*Rf*Cf)
+# let RS = 1000*Rf
+# let dt = 1/(F*1024)
+# let sp = 6.4
+# let VS = max(IP*Rf, 0.001)
+* tia-model
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(VOUT)
+.param CIN=${CIN} Cf=${Cf} RS=${RS} Rf=${Rf} VOH=${VOH} VOL=${VOL}
+Rf N001 VOUT {Rf}
+Cf N001 VOUT {Cf} IC=0
+CIN N001 0 {CIN} IC=0
+RS N001 N002 {RS}
+V1 N002 0 PULSE(${(-IP*RS/2)-(-IP*RS/2)} ${(-IP*RS/2)+(-IP*RS/2)} 0 ${1/(F)*1e-4} ${1/(F)*1e-4} ${(0.5)/(F)} ${1/(F)})
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), {VOL}), {VOH})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

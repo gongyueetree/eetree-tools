@@ -1,0 +1,14 @@
+* currentsrcramp
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N004,N002)
+Q1 N002 N001 N003 QNPN_100
+R1 N003 0 100
+V1 N001 0 2
+V2 N004 0 10
+C1 N004 N002 50u IC=0
+R2 N004 N002 10k
+* switch open
+R3 N004 N002 1e12
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 7.68u 1.536 0 7.68u uic
+.end

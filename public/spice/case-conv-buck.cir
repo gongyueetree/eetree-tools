@@ -1,0 +1,16 @@
+* conv-buck
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N003,N002) V(N004)
+V1 N001 0 5
+M1 N001 N002 N003 N003 MN_1p5_20m
+D1 N003 N001 D_body
+V2 N002 N003 PULSE(0 10 0 100n 100n 720u 1m)
+D2 0 N003 D_default
+C1 0 N004 10u IC=-3.511807071
+L1 N003 N004 1 IC=3.701956891m
+R1 0 N004 1k
+.model D_body D(Is=1.7143528192808883e-7 N=2 Rs=1m Cjo=1p)
+.model D_default D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran 5u 48m 0 5u uic
+.end

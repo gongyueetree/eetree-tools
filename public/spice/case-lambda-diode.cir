@@ -1,0 +1,10 @@
+* lambda-diode
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001)
+V1 N001 0 PULSE(0 10 0 10m 10m 0 20m)
+J1 N001 0 N002 JF_J1
+J2 0 N001 N002 JF_J2
+.model JF_J1 NJF(VTO=-4 BETA=625u)
+.model JF_J2 PJF(VTO=-4 BETA=625u)
+.tran 5u 768m 0 5u uic
+.end

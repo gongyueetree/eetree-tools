@@ -1,0 +1,18 @@
+* phasesplit
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N007) V(N006)
+R1 N001 N002 150k
+R2 N002 0 56k
+Q1 N003 N002 N004 QNPN_100
+R3 N004 0 4.7k
+C1 N005 N002 3u IC=-4.905240823
+V1 N005 0 SIN(0 3 40 0 0 0)
+V2 N001 0 20
+R4 N001 N003 4.7k
+C2 N004 N006 3u IC=4.826735289
+R5 N006 0 10k
+C3 N003 N007 3u IC=15.22144628
+R6 N007 0 10k
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,32 @@
+# eetree-sim 1
+# name summing-inv3
+# param R1 10000
+# param R2 10000
+# param R3 10000
+# param VI1 1
+# param VI2 0.5
+# param VI3 -0.3
+# param Rf 10000
+# param VOH 13.5
+# param VOL -13.5
+# let VR = max(VOH, -VOL, 1)
+# let dt = 1e-5
+# let sp = 1
+* summing-inv3
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(VOUT)
+.param R1=${R1} R2=${R2} R3=${R3} Rf=${Rf} VI1=${VI1} VI2=${VI2} VI3=${VI3} VOH=${VOH} VOL=${VOL}
+R1 vi1 N001 {R1}
+R2 vi2 N001 {R2}
+R3 vi3 N001 {R3}
+Rf N001 VOUT {Rf}
+VI1 vi1 0 {VI1}
+VI2 vi2 0 {VI2}
+VI3 vi3 0 {VI3}
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), {VOL}), {VOH})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

@@ -1,0 +1,13 @@
+* hartley
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002)
+Q1 N002 N001 0 QNPN_100
+R1 N002 N003 1k
+R2 N002 N004 100
+V1 N004 0 5
+L1 N001 0 1.5 IC=-1.126760368m
+L2 0 N003 500m IC=-5.329780747m
+C1 N001 N003 633n IC=-1.022158951
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 384m 0 5u uic
+.end

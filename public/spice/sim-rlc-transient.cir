@@ -1,0 +1,21 @@
+# eetree-sim 1
+# name rlc-transient
+# param R1 10
+# param L1 0.001
+# param C1 1e-06
+# param VS 5
+# param SCOPE_W 512
+# let Th = 6*(2*L1/R1 + R1*C1) + 6*PI*sqrt(L1*C1)
+# let dt = min(2*Th/512, 2*PI*sqrt(L1*C1)/48)
+# let sp = max(0.5, 2*Th/dt/640)
+# let ssp = max(1, round(2*Th/dt/SCOPE_W))
+* rlc-transient
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT) I(L1)
+.param C1=${C1} L1=${L1} R1=${R1}
+R1 N001 N002 {R1}
+L1 N002 OUT {L1} IC=0
+C1 OUT 0 {C1} IC=0
+V1 N001 0 PULSE(${(VS/2)-(VS/2)} ${(VS/2)+(VS/2)} 0 ${1/(1/(2*Th))*1e-4} ${1/(1/(2*Th))*1e-4} ${(0.5)/(1/(2*Th))} ${1/(1/(2*Th))})
+.tran ${max((dt),(dt)*153600/200000)} ${(dt)*153600} 0 ${max((dt),(dt)*153600/200000)} uic
+.end

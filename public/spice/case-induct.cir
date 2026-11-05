@@ -1,0 +1,13 @@
+* induct
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: I(L1)
+V1 N001 0 5
+* SPDT switch throw 0 on
+R1 N002 N001 1m
+* SPDT switch throw 1 off
+R2 N002 N003 1e12
+R3 0 N004 140
+R4 N004 N003 140
+L1 N002 N004 3 IC=0
+.tran 7.68u 1.536 0 7.68u uic
+.end

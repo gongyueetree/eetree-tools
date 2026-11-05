@@ -1,0 +1,35 @@
+# eetree-sim 1
+# name lc-hp-t-7
+# param RS 50
+# param RL 50
+# param fc 1000000
+# param SCOPE_W 512
+# param C1 7.152358219166061e-09
+# param L1 6.381617735263123e-06
+# param C2 1.766486598615002e-09
+# param L2 3.9788735772973834e-06
+# param C3 1.766486598615002e-09
+# param L3 6.381617735263118e-06
+# param C4 7.15235821916607e-09
+# let fmin = fc/4
+# let fmax = fc*10
+# let dt = 1/(fmax*24)
+# let tsw = 200/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* lc-hp-t-7
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} C2=${C2} C3=${C3} C4=${C4} L1=${L1} L2=${L2} L3=${L3} RL=${RL} RS=${RS} fmax=${fmax} fmin=${fmin}
+RS N001 N002 {RS}
+C1 N002 N003 {C1} IC=0
+L1 N003 0 {L1} IC=0
+C2 N003 N004 {C2} IC=0
+L2 N004 0 {L2} IC=0
+C3 N004 N005 {C3} IC=0
+L3 N005 0 {L3} IC=0
+C4 N005 OUT {C4} IC=0
+RL OUT 0 {RL}
+V1 N001 0 DC 0 AC 2
+.ac dec 100 {fmin} {fmax}
+.end

@@ -1,0 +1,18 @@
+* capmultcaps
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N005,N003) V(N008,N006)
+V1 N001 0 SIN(0 5 80 0 0 0)
+R1 N001 N002 200
+C1 N002 0 80u IC=-510.2063629m
+V2 N004 N003 SIN(0 5 80 0 0 0)
+R2 N004 N005 200
+C2 N005 N003 10u IC=-3.485547024
+V3 N007 N006 SIN(0 5 80 0 0 0)
+C3 N008 N006 1u IC=-3.321428082
+R3 N007 N008 200
+* floating sub-circuit: reference to ground as in CircuitJS
+R4 N004 0 100meg
+* floating sub-circuit: reference to ground as in CircuitJS
+R5 N007 0 100meg
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,17 @@
+* filt-vcvs-hipass
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N004) V(N001)
+R1 N001 N002 5.86k
+R2 N002 0 10k
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 N003 N002 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N001 0 V=min(max(V(OA1), -15), 15)
+C1 N004 N005 53n IC=-956.5321933m
+C2 N005 N003 53n IC=2.205531238
+R3 N003 0 10k
+R4 N005 N001 10k
+V1 N004 0 DC 0 AC 5
+.ac dec 100 20 800
+.end

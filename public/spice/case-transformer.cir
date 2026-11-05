@@ -1,0 +1,11 @@
+* transformer
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N003)
+V1 N001 0 SIN(0 10 60 0 0 0)
+L1 N002 0 100
+L2 N003 0 100
+K1 L1 L2 999m
+R1 N002 N001 100m
+R2 N003 0 1k
+.tran 5u 768m 0 5u uic
+.end

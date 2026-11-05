@@ -1,0 +1,12 @@
+* transrectifier
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002)
+Q1 N002 N001 N003 QNPN_1000
+R1 N002 N004 1k
+R2 N003 N005 1k
+V1 N004 0 10
+V2 N005 0 -10
+V3 N001 0 SIN(655m 5 40 0 0 0)
+.model QNPN_1000 NPN(BF=1000 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

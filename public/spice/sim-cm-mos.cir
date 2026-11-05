@@ -1,0 +1,23 @@
+# eetree-sim 1
+# name cm-mos
+# param Rref 3300
+# param RL 2200
+# param VCC 5
+# param VTH 0.7
+# param K1 0.002
+# param K2 0.002
+# let dt = 2e-7
+# let sp = 2
+* cm-mos
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vcc,N001)
+.param RL=${RL} Rref=${Rref} VCC=${VCC}
+Rref vcc N001 {Rref}
+RL vcc VOUT {RL}
+VCC vcc 0 {VCC}
+M1 N001 N001 0 0 MN_0
+M2 VOUT N001 0 0 MN_1
+.model MN_0 NMOS(Level=1 VTO=${1*(VTH)} KP=${K1})
+.model MN_1 NMOS(Level=1 VTO=${1*(VTH)} KP=${K2})
+.tran ${max((dt),(dt)*2400/200000)} ${(dt)*2400} 0 ${max((dt),(dt)*2400/200000)} uic
+.end

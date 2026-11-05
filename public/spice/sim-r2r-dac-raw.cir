@@ -1,0 +1,27 @@
+# eetree-sim 1
+# name r2r-dac-raw
+# param R 10000
+# param VREF 5
+# param fclk 100
+# param RL 1000000000
+# let dt = 1/(fclk*64)
+# let sp = 8
+* r2r-dac-raw
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param R=${R} RL=${RL}
+R1 N001 0 ${2*R}
+R2 N001 N002 ${2*R}
+R N001 N003 {R}
+R3 N003 N004 ${2*R}
+R4 N003 N005 {R}
+R5 N005 N006 ${2*R}
+R6 N005 OUT {R}
+R7 OUT N007 ${2*R}
+RL OUT 0 {RL}
+V1 N002 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/2)*1e-4} ${1/(fclk/2)*1e-4} ${(0.5)/(fclk/2)} ${1/(fclk/2)})
+V2 N004 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/4)*1e-4} ${1/(fclk/4)*1e-4} ${(0.5)/(fclk/4)} ${1/(fclk/4)})
+V3 N006 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/8)*1e-4} ${1/(fclk/8)*1e-4} ${(0.5)/(fclk/8)} ${1/(fclk/8)})
+V4 N007 0 PULSE(${(VREF/2)-(VREF/2)} ${(VREF/2)+(VREF/2)} 0 ${1/(fclk/16)*1e-4} ${1/(fclk/16)*1e-4} ${(0.5)/(fclk/16)} ${1/(fclk/16)})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

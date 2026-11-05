@@ -1,0 +1,30 @@
+# eetree-sim 1
+# name ne555-pwm-cv
+# param R1 1000
+# param R2 10000
+# param C1 1e-07
+# param VCC 9
+# param VCV 6
+# let T = (R1+R2)*C1*log((VCC-VCV/2)/(VCC-VCV))+0.693*R2*C1
+# let dt = T/1024
+# let sp = 6.4
+* ne555-pwm-cv
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} R1=${R1} R2=${R2} VCC=${VCC} VCV=${VCV}
+VCC VCC 0 {VCC}
+R1 VCC DIS {R1}
+R2 DIS TR {R2}
+C1 TR 0 {C1} IC=0
+VCV CV 0 {VCV}
+* 555 timer 1 (CircuitJS TimerElm behaviour)
+R_555a1 VCC CV 5k
+R_555b1 CV 0 10k
+B_555q1 Q555_1x 0 V=(u(V(CV,0)/2-V(TR,0))+(1-u(V(CV,0)/2-V(TR,0)))*(1-u(V(TR)-V(CV)))*u(V(Q555_1)-0.5))*u(V(VCC,0)-0.7)
+R_555q1 Q555_1x Q555_1 1k
+C_555q1 Q555_1 0 1p
+B_555o1 Q555_1o 0 V=V(0)+V(Q555_1)*V(VCC,0)
+R_555o1 Q555_1o OUT 1
+B_555d1 DIS 0 I=(1-V(Q555_1))*V(DIS,0)/10
+.tran ${max((dt),(dt)*19200/200000)} ${(dt)*19200} 0 ${max((dt),(dt)*19200/200000)} uic
+.end

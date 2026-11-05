@@ -1,0 +1,15 @@
+* mosfetamp
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N003) V(N006)
+R1 N001 N002 4k
+V1 N003 0 SIN(0 50m 40 0 0 0)
+V2 N004 0 10
+R2 N004 N005 4k
+C1 N005 N006 1u IC=1.93859865
+R3 N006 0 50k
+C2 N001 N002 100u IC=8.054803336
+M1 N005 N003 N001 N001 MN_1p5_20m
+V3 N002 0 -10
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran 7.68u 1.536 0 7.68u uic
+.end

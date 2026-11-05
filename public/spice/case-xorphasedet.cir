@@ -1,0 +1,12 @@
+* xorphasedet
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002) V(N003)
+V1 N001 0 PULSE(0 5 0 1u 1u 5m 10m)
+V2 N002 0 PULSE(0 5 0 952.3809524n 952.3809524n 4.761904762m 9.523809524m)
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*((u(V(N002)-2.5)+u(V(N001)-2.5)-2*u(V(N002)-2.5)*u(V(N001)-2.5)))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N003 0 V=V(B1y)
+.tran 5u 768m 0 5u uic
+.end

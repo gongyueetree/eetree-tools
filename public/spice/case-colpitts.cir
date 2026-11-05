@@ -1,0 +1,13 @@
+* colpitts
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N003)
+L1 N001 N002 10m IC=-10.13629311m
+C1 N001 0 100u IC=681.3812723m
+Q1 N003 N001 0 QNPN_100
+C2 0 N002 100u IC=-627.8401952m
+R1 N003 N002 1k
+R2 N003 N004 100
+V1 N004 0 5
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 384m 0 5u uic
+.end

@@ -1,0 +1,18 @@
+* conv-cuk
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N005) V(N004)
+V1 N001 0 5
+L1 N001 N002 1 IC=5.743567483m
+C1 N002 N003 10u IC=9.220037545
+L2 N003 N004 1 IC=-5.271279401m
+D1 N003 0 D_default
+M1 N002 N005 0 0 MN_1p5_20m
+D2 0 N002 D_body
+C2 N004 0 10u IC=-4.417056135
+R1 N004 0 1k
+V2 N005 0 PULSE(0 10 0 100n 100n 500u 1m)
+.model D_body D(Is=1.7143528192808883e-7 N=2 Rs=1m Cjo=1p)
+.model D_default D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.tran 5u 48m 0 5u uic
+.end

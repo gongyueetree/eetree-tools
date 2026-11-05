@@ -1,0 +1,19 @@
+* cmosxor
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+M1 N002 N001 N003 N003 MP_1p5_20m
+M2 N002 N001 N004 N004 MN_1p5_20m
+M3 N002 N003 N001 N001 MP_1p5_20m
+M4 N001 N004 N002 N002 MN_1p5_20m
+* logic input L
+V1 N003 0 0
+* logic input L
+V2 N001 0 0
+* logic gate (output 5 V, threshold 2.5 V, ~1 ns delay)
+B1 B1x 0 V=5*(1-u(V(N003)-2.5))
+RB1 B1x B1y 1k
+CB1 B1y 0 1p IC=0
+B1o N004 0 V=V(B1y)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.model MP_1p5_20m PMOS(Level=1 VTO=-1.5 KP=20m)
+.tran 5u 768m 0 5u uic
+.end

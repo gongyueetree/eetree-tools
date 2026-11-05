@@ -1,0 +1,14 @@
+* cmosinverterslow
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N001,N002)
+M1 N002 N001 N003 N003 MP_1p5_20m
+M2 N002 N001 0 0 MN_1p5_20m
+V1 N003 0 5
+C1 N001 0 10p IC=4.819909951
+R1 N001 N004 100
+* logic input H
+V2 N004 0 5
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.model MP_1p5_20m PMOS(Level=1 VTO=-1.5 KP=20m)
+.tran 300f 46.08n 0 300f uic
+.end

@@ -1,0 +1,9 @@
+* pot
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+V1 N001 0 5
+V2 N001 N002 5
+* potentiometer
+R1 0 N001 500
+R2 N001 N002 500
+.tran 5u 768m 0 5u uic
+.end

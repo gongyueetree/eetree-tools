@@ -1,0 +1,23 @@
+# eetree-sim 1
+# name pushpull-b
+# param VCC 15
+# param RL 8
+# param VP 10
+# param F 1000
+# param BETA 100
+# let dt = 1/F/400
+# let sp = 5
+* pushpull-b
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vp) V(VOUT)
+.param F=${F} RL=${RL} VCC=${VCC} VP=${VP}
+VCC vcc 0 {VCC}
+V1 N001 0 ${-VCC}
+RL VOUT 0 {RL}
+V2 vp 0 SIN(${0} {VP} {F} 0 0 0)
+Q1 vcc vp VOUT QNPN_100
+Q2 N001 vp VOUT QPNP_100
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.model QPNP_100 PNP(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran ${max((dt),(dt)*4800/200000)} ${(dt)*4800} 0 ${max((dt),(dt)*4800/200000)} uic
+.end

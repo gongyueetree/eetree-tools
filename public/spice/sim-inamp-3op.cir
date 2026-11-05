@@ -1,0 +1,47 @@
+# eetree-sim 1
+# name inamp-3op
+# param R1a 24900
+# param R1b 24900
+# param Rg 499
+# param R2a 10000
+# param R2b 10000
+# param R3a 10000
+# param R3b 10000
+# param VD 0.05
+# param VCM 2
+# param F 100
+# param VOH 10.5
+# param VOL -10.5
+# let VR = max(VOH, -VOL, 1)
+# let dt = 1/(F*256)
+# let sp = 3.2
+* inamp-3op
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N007) V(VOUT)
+.param F=${F} R1a=${R1a} R1b=${R1b} R2a=${R2a} R2b=${R2b} R3a=${R3a} R3b=${R3b} Rg=${Rg} VCM=${VCM} VOH=${VOH} VOL=${VOL}
+R1a N001 N002 {R1a}
+R1b N003 N004 {R1b}
+Rg N001 N003 {Rg}
+R2a N002 N005 {R2a}
+R2b N004 N006 {R2b}
+R3a N005 VOUT {R3a}
+R3b N006 0 {R3b}
+V1 N007 0 SIN({VCM} ${VD/2} {F} 0 0 0)
+V2 N008 0 SIN({VCM} ${-VD/2} {F} 0 0 0)
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 N007 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N002 0 V=min(max(V(OA1), {VOL}), {VOH})
+* op-amp 2: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA2 0 OA2 N008 N003 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N004 0 V=min(max(V(OA2), {VOL}), {VOH})
+* op-amp 3: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA3 0 OA3 N006 N005 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 VOUT 0 V=min(max(V(OA3), {VOL}), {VOH})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

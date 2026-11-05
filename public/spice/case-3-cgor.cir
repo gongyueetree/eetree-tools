@@ -1,0 +1,22 @@
+* 3-cgor
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+M1 N002 N001 0 0 MN_3p25_20m
+V1 N003 0 2.5
+M2 N005 N004 N006 N006 MP_3p25_20m
+* logic input H
+V2 N004 0 5
+* logic input H
+V3 N001 0 5
+V4 N006 0 5
+M3 N002 N001 N005 N005 MP_3p25_20m
+M4 N002 N004 0 0 MN_3p25_20m
+M5 N007 N004 N002 N002 MN_m1p75_20m
+M6 N007 N001 N002 N002 MN_m1p75_20m
+M7 N008 N004 N003 N003 MP_m1p75_20m
+M8 N007 N001 N008 N008 MP_m1p75_20m
+.model MN_3p25_20m NMOS(Level=1 VTO=3.25 KP=20m)
+.model MN_m1p75_20m NMOS(Level=1 VTO=-1.75 KP=20m)
+.model MP_3p25_20m PMOS(Level=1 VTO=-3.25 KP=20m)
+.model MP_m1p75_20m PMOS(Level=1 VTO=1.75 KP=20m)
+.tran 5u 768m 0 5u uic
+.end

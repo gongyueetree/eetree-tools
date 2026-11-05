@@ -1,0 +1,14 @@
+* jfetamp
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N005)
+R1 N001 0 1.675k
+J1 N003 N002 N001 JF_J1
+V1 N002 0 SIN(0 100m 40 0 0 0)
+V2 N004 0 10
+R2 N004 N003 1.675k
+C1 N003 N005 1u IC=7.557166812
+R3 N005 0 50k
+C2 N001 0 100u IC=2.45918683
+.model JF_J1 NJF(VTO=-4 BETA=625u)
+.tran 7.68u 1.536 0 7.68u uic
+.end

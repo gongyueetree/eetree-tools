@@ -1,0 +1,36 @@
+# eetree-sim 1
+# name sepic-conv
+# param VIN 12
+# param F 500000
+# param DUTY 0.5
+# param L1 1e-05
+# param C2 2.2e-05
+# param RL 12
+# param C1 1e-05
+# param VT 2
+# param KB 20
+# param VO 12
+# param L2 2.2e-05
+# param C3 1e-05
+# param RS 0.3
+# let dt = 1/F/200
+# let sp = 20
+* sepic-conv
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: I(L1) V(VOUT)
+.param C1=${C1} C2=${C2} C3=${C3} L1=${L1} L2=${L2} RL=${RL} RS=${RS} VIN=${VIN}
+C1 N001 0 {C1} IC=0
+L1 N001 N002 {L1} IC=0
+C3 N002 N003 {C3} IC=0
+L2 N003 0 {L2} IC=0
+D1 N003 VOUT D_VF0p35
+C2 VOUT 0 {C2} IC=0
+RL VOUT 0 {RL}
+RS N001 vin {RS}
+VIN vin 0 {VIN}
+V1 N004 0 PULSE(${(((10)+(0))/2)-(((10)-(0))/2)} ${(((10)+(0))/2)+(((10)-(0))/2)} 0 ${1/(F)*1e-4} ${1/(F)*1e-4} ${(DUTY)/(F)} ${1/(F)})
+M1 N002 N004 0 0 MN_1
+.model D_VF0p35 D(Is=0.00115374 N=2 Rs=0.001 Cjo=1p)
+.model MN_1 NMOS(Level=1 VTO=${1*(VT)} KP=${KB})
+.tran ${max((dt),(dt)*153600/200000)} ${(dt)*153600} 0 ${max((dt),(dt)*153600/200000)} uic
+.end

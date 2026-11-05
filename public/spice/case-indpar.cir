@@ -1,0 +1,23 @@
+* indpar
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+V1 N001 0 5
+* SPDT switch throw 0 on
+R1 N002 N001 1m
+* SPDT switch throw 1 off
+R2 N002 N003 1e12
+R3 0 N004 100
+R4 N004 N003 100
+R5 N005 N006 100
+R6 N006 N007 100
+* SPDT switch throw 0 on
+R7 N008 N009 1m
+* SPDT switch throw 1 off
+R8 N008 N007 1e12
+V2 N009 N005 5
+L1 N002 N004 1 IC=0
+L2 N002 N004 5 IC=0
+L3 N008 N006 833.3m IC=0
+* floating sub-circuit: reference to ground as in CircuitJS
+R9 N005 0 100meg
+.tran 5u 768m 0 5u uic
+.end

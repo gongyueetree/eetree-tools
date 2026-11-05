@@ -1,0 +1,32 @@
+# eetree-sim 1
+# name opamp-tri
+# param R1 10000
+# param R2 20000
+# param R3 10000
+# param C1 1e-07
+# param VOH 10.5
+# param VOL -10.5
+# let VR = max(VOH, -VOL, 1)
+# let T = 4*R1*R3*C1/R2
+# let dt = T/1024
+# let sp = 6.4
+* opamp-tri
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(SQ)
+.param C1=${C1} R1=${R1} R2=${R2} R3=${R3} VOH=${VOH} VOL=${VOL}
+R2 N001 SQ {R2}
+R1 TRI N001 {R1}
+R3 SQ N002 {R3}
+C1 N002 TRI {C1} IC=1
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 N001 0 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 SQ 0 V=min(max(V(OA1), {VOL}), {VOH})
+* op-amp 2: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA2 0 OA2 0 N002 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 TRI 0 V=min(max(V(OA2), {VOL}), {VOH})
+.tran ${max((dt),(dt)*19200/200000)} ${(dt)*19200} 0 ${max((dt),(dt)*19200/200000)} uic
+.end

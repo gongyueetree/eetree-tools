@@ -1,0 +1,11 @@
+* voltdivide
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+V1 N001 0 10
+R1 N001 N002 10k
+R2 N002 0 10k
+R3 N001 N003 10k
+R4 N003 N004 10k
+R5 N004 N005 10k
+R6 N005 0 10k
+.tran 5u 768m 0 5u uic
+.end

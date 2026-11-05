@@ -1,0 +1,30 @@
+# eetree-sim 1
+# name opamp-integ
+# param R1 10000
+# param C1 1e-08
+# param R2 1000000
+# param VPK 1
+# param F 1000
+# param VOH 13.5
+# param VOL -13.5
+# let VR = max(VOH, -VOL, 1)
+# let dt = 1/(F*512)
+# let sp = 3.2
+# let VS = min(VR, max(VPK, VPK/(2*F*R1*C1)))
+# let EX = exp(-1/(2*F*R2*C1))
+# let PP = min(2*VR, 2*VPK*(R2/R1)*(1-EX)/(1+EX))
+* opamp-integ
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vpk)
+.param C1=${C1} R1=${R1} R2=${R2} VOH=${VOH} VOL=${VOL}
+R1 vpk N001 {R1}
+C1 N001 VOUT {C1} IC=${-PP/2}
+R2 N001 VOUT {R2}
+V1 vpk 0 PULSE(${(0.0)-(VPK)} ${(0.0)+(VPK)} 0 ${1/(F)*1e-4} ${1/(F)*1e-4} ${(0.5)/(F)} ${1/(F)})
+* op-amp 1: A0=100000, GBW=1000000, output limited to [${VOL}, ${VOH}]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), {VOL}), {VOH})
+.tran ${max((dt),(dt)*9600/200000)} ${(dt)*9600} 0 ${max((dt),(dt)*9600/200000)} uic
+.end

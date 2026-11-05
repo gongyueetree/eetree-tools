@@ -1,0 +1,21 @@
+# eetree-sim 1
+# name diode-clipper-top
+# param VP 5
+# param f 1000
+# param R1 1000
+# param RL 100000
+# param VB1 2
+# let dt = 1/(f*400)
+# let sp = 1.25
+* diode-clipper-top
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(vp)
+.param R1=${R1} RL=${RL} VB1=${VB1} VP=${VP} f=${f}
+R1 vp VOUT {R1}
+D1 VOUT N001 D_VF0p8059
+VB1 N001 0 {VB1}
+RL VOUT 0 {RL}
+V1 vp 0 SIN(0 {VP} {f} 0 0 0)
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran ${max((dt),(dt)*4800/200000)} ${(dt)*4800} 0 ${max((dt),(dt)*4800/200000)} uic
+.end

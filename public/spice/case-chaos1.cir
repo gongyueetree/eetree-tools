@@ -1,0 +1,35 @@
+* chaos1
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N005) V(N006,N001)
+R1 N001 N002 8.333k
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA1 0 OA1 0 N002 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N003 0 V=min(max(V(OA1), -15), 15)
+R2 N001 N003 45k
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA2 0 OA2 0 N004 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N002 0 V=min(max(V(OA2), -15), 15)
+R3 N002 N004 1k
+R4 N004 N005 1k
+* op-amp 3: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA3 0 OA3 0 N001 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 N006 0 V=min(max(V(OA3), -15), 15)
+C1 N006 N001 20n IC=-42.70765519m
+R5 N001 N007 1k
+R6 N006 N007 1k
+C2 N007 0 500n IC=-49.32181629m
+R7 N007 N008 1k
+* op-amp 4: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA4 0 OA4 0 N008 1
+R_OA4 OA4 0 100k
+C_OA4 OA4 0 159.1549431n
+B_OA4 N005 0 V=min(max(V(OA4), -15), 15)
+C3 N008 N005 10n IC=-2.778441933
+.tran 5u 96m 0 5u uic
+.end

@@ -1,0 +1,17 @@
+* impedance
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: I(L1)
+V1 N001 0 SIN(0 5 80 0 0 90)
+R1 N001 N002 100
+V2 N004 N003 SIN(0 5 80 0 0 90)
+R2 N004 N005 100
+L1 N002 0 344.58m IC=397.9221357u
+C1 N005 N003 11.486u IC=2.224479357
+V3 N007 N006 SIN(0 5 80 0 0 90)
+R3 N007 N006 200
+* floating sub-circuit: reference to ground as in CircuitJS
+R4 N004 0 100meg
+* floating sub-circuit: reference to ground as in CircuitJS
+R5 N007 0 100meg
+.tran 5u 384m 0 5u uic
+.end

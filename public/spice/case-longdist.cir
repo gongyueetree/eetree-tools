@@ -1,0 +1,21 @@
+* longdist
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N006) V(N009,N010)
+V1 N001 0 SIN(0 169.7056275 60 0 0 0)
+L1 N002 0 500m
+L2 N003 N004 500k
+K1 L1 L2 999m
+R1 N002 N001 10
+R2 N003 N005 500
+R3 N004 0 500
+L3 N005 0 1meg
+L4 N006 0 1
+K2 L3 L4 999m
+R4 N006 0 200
+V2 N007 0 SIN(0 169.7056275 60 0 0 0)
+R5 N007 N008 10
+R6 N008 N009 500
+R7 0 N010 500
+R8 N009 N010 200
+.tran 5u 768m 0 5u uic
+.end

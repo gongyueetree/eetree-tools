@@ -1,0 +1,12 @@
+* jfetcurrentsrc
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001)
+V1 N001 0 10
+* switch open
+R1 N001 N002 1e12
+R2 N001 N002 1.5k
+J1 N002 0 N003 JF_J1
+R3 N003 0 1k
+.model JF_J1 NJF(VTO=-4 BETA=625u)
+.tran 5u 768m 0 5u uic
+.end

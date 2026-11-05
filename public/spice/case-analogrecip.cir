@@ -1,0 +1,34 @@
+* analogrecip
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N008) V(N002)
+M1 N002 N001 0 0 MN_1p5_20m
+M2 N003 0 0 0 MN_1p5_20m
+M3 N005 N004 N003 N003 MN_1p5_20m
+M4 N004 N004 N002 N002 MN_1p5_20m
+M5 N004 N005 N006 N006 MP_1p5_20m
+M6 N005 N005 N006 N006 MP_1p5_20m
+V1 N006 0 15
+R1 N006 N007 10
+J1 N002 N006 N007 JF_J1
+V2 N008 0 SIN(2 2 40 0 0 0)
+R2 N009 N010 100k
+R3 N008 N009 100k
+R4 N009 N011 100k
+V3 N011 0 2.5
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA1 0 OA1 0 N009 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N010 0 V=min(max(V(OA1), -15), 15)
+R5 N012 N001 100k
+R6 N012 N010 100k
+* op-amp 2: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA2 0 OA2 0 N012 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N001 0 V=min(max(V(OA2), -15), 15)
+.model JF_J1 PJF(VTO=-4 BETA=625u)
+.model MN_1p5_20m NMOS(Level=1 VTO=1.5 KP=20m)
+.model MP_1p5_20m PMOS(Level=1 VTO=-1.5 KP=20m)
+.tran 5u 768m 0 5u uic
+.end

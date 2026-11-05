@@ -1,0 +1,33 @@
+# eetree-sim 1
+# name lc-lp-t-6
+# param RS 50
+# param RL 50
+# param fc 1000000
+# param SCOPE_W 512
+# param L1 4.119233039439039e-06
+# param C1 4.501581580785531e-09
+# param L2 1.5373186991402865e-05
+# param C2 6.149274796561146e-09
+# param L3 1.1253953951963827e-05
+# param C3 1.6476932157756171e-09
+# let fmin = fc/10
+# let fmax = fc*4
+# let dt = 1/(fmax*24)
+# let tsw = 200/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* lc-lp-t-6
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} C2=${C2} C3=${C3} L1=${L1} L2=${L2} L3=${L3} RL=${RL} RS=${RS} fmax=${fmax} fmin=${fmin}
+RS N001 N002 {RS}
+L1 N002 N003 {L1} IC=0
+C1 N003 0 {C1} IC=0
+L2 N003 N004 {L2} IC=0
+C2 N004 0 {C2} IC=0
+L3 N004 OUT {L3} IC=0
+C3 OUT 0 {C3} IC=0
+RL OUT 0 {RL}
+V1 N001 0 DC 0 AC 2
+.ac dec 100 {fmin} {fmax}
+.end

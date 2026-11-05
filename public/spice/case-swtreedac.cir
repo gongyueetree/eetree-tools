@@ -1,0 +1,41 @@
+* swtreedac
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* analog switch (on when CTL < 2.5 V)
+S1 N001 N002 0 N004 SW_20_10gn
+S2 N001 N003 N004 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S3 N005 N006 0 N004 SW_20_10gn
+S4 N005 N007 N004 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S5 N008 0 0 N004 SW_20_10gn
+S6 N008 N009 N004 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S7 N010 N011 0 N004 SW_20_10gn
+S8 N010 N012 N004 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S9 N013 N001 0 N014 SW_20_10gn
+S10 N013 N010 N014 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S11 N015 N008 0 N014 SW_20_10gn
+S12 N015 N005 N014 0 SW_20_10g
+* analog switch (on when CTL < 2.5 V)
+S13 N016 N015 0 N017 SW_20_10gn
+S14 N016 N013 N017 0 SW_20_10g
+R1 N002 N007 100
+R2 N007 N006 100
+R3 N006 N009 100
+R4 N009 0 100
+R5 N002 N003 100
+R6 N003 N011 100
+R7 N011 N012 100
+V1 N012 0 7.001
+* logic input H
+V2 N017 0 5
+* logic input H
+V3 N014 0 5
+* logic input H
+V4 N004 0 5
+.model SW_20_10g SW(Ron=20 Roff=10g Vt=2.5 Vh=0)
+.model SW_20_10gn SW(Ron=20 Roff=10g Vt=-2.5 Vh=0)
+.tran 5u 768m 0 5u uic
+.end

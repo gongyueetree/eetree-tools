@@ -1,0 +1,18 @@
+* pushpull
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N006) V(N003)
+Q1 N002 N001 N003 QNPN_100
+Q2 N005 N004 N003 QPNP_100
+R1 N004 N005 220
+R2 N001 N002 220
+D1 N006 N004 D_VF0p8059
+V1 N006 0 SIN(0 5 40 0 0 0)
+V2 N002 0 10
+V3 N005 0 -10
+D2 N001 N006 D_VF0p8059
+R3 N003 0 10
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.model QNPN_100 NPN(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.model QPNP_100 PNP(BF=100 BR=1 IS=1e-13 Cje=1p Cjc=1p)
+.tran 5u 768m 0 5u uic
+.end

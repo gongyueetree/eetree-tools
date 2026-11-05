@@ -1,0 +1,36 @@
+* jerk
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N002) V(N004) V(N006)
+* op-amp 1: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA1 0 OA1 0 N001 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 N002 0 V=min(max(V(OA1), -15), 15)
+* op-amp 2: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA2 0 OA2 0 N003 1
+R_OA2 OA2 0 100k
+C_OA2 OA2 0 159.1549431n
+B_OA2 N004 0 V=min(max(V(OA2), -15), 15)
+* op-amp 3: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA3 0 OA3 0 N005 1
+R_OA3 OA3 0 100k
+C_OA3 OA3 0 159.1549431n
+B_OA3 N006 0 V=min(max(V(OA3), -15), 15)
+* op-amp 4: A0=100000, GBW=1000000.0, output limited to [-15.0, 15.0]
+G_OA4 0 OA4 0 N007 1
+R_OA4 OA4 0 100k
+C_OA4 OA4 0 159.1549431n
+B_OA4 N008 0 V=min(max(V(OA4), -15), 15)
+R1 N002 N003 100
+R2 N001 N002 100
+C1 N001 N002 10u IC=308.1069039m
+C2 N003 N004 10u IC=-747.1958312m
+R3 N007 N004 100
+R4 N007 N008 100
+D1 N008 N001 D_VF0p8059
+R5 N004 N005 100
+C3 N005 N006 10u IC=61.14904827m
+R6 N001 N006 100
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 5u 768m 0 5u uic
+.end

@@ -1,0 +1,13 @@
+* fullrectf
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(N002,N003)
+V1 N001 0 SIN(0 5 40 0 0 0)
+D1 N001 N002 D_VF0p8059
+D2 0 N002 D_VF0p8059
+D3 N003 N001 D_VF0p8059
+D4 N003 0 D_VF0p8059
+C1 N002 N003 102u IC=3.525626957
+R1 N002 N003 430
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 20u 384m 0 20u uic
+.end

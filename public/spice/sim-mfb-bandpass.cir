@@ -1,0 +1,34 @@
+# eetree-sim 1
+# name mfb-bandpass
+# param R1 40200
+# param R2 1650
+# param R3 158000
+# param C1 1e-08
+# param C2 1e-08
+# param F0 1005.7
+# param Q 4.992
+# param SCOPE_W 512
+# let fmin = F0/5
+# let fmax = 5*F0
+# let dt = 1/(fmax*30)
+# let tsw = max(1000, 40*Q*Q)/F0
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+# let VS = max(1, R3/(2*R1))
+* mfb-bandpass
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(VOUT)
+.param C1=${C1} C2=${C2} R1=${R1} R2=${R2} R3=${R3} fmax=${fmax} fmin=${fmin}
+C1 N001 N002 {C1} IC=0
+R1 N003 N001 {R1}
+R2 N001 0 {R2}
+R3 N002 VOUT {R3}
+C2 N001 VOUT {C2} IC=0
+V1 N003 0 DC 0 AC 1
+* op-amp 1: A0=100000, GBW=1000000, output limited to [-15, 15]
+G_OA1 0 OA1 0 N002 1
+R_OA1 OA1 0 100k
+C_OA1 OA1 0 159.1549431n
+B_OA1 VOUT 0 V=min(max(V(OA1), -15), 15)
+.ac dec 100 {fmin} {fmax}
+.end

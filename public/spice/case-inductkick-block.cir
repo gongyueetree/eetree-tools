@@ -1,0 +1,12 @@
+* inductkick-block
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+V1 N001 0 5
+* switch closed
+R1 0 N002 1m
+C1 0 N002 500p IC=0
+L1 N001 N003 1 IC=0
+R2 N003 N002 100
+D1 N003 N001 D_VF0p8059
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran 5u 768m 0 5u uic
+.end

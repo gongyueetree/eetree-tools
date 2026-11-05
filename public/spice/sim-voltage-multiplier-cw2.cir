@@ -1,0 +1,25 @@
+# eetree-sim 1
+# name voltage-multiplier-cw2
+# param VP 14.14
+# param f 50
+# param C 0.0001
+# param RL 10000
+# let dt = 1/(f*400)
+# let sp = 40
+* voltage-multiplier-cw2
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(N001) V(VOUT)
+.param C=${C} RL=${RL} VP=${VP} f=${f}
+V1 N001 0 SIN(0 {VP} {f} 0 0 0)
+C N001 N002 {C} IC=0
+D1 0 N002 D_VF0p8059
+D2 N002 N003 D_VF0p8059
+D3 N003 N004 D_VF0p8059
+D4 N004 VOUT D_VF0p8059
+C1 0 N003 {C} IC=0
+C2 N002 N004 {C} IC=0
+C3 N003 VOUT {C} IC=0
+RL VOUT 0 {RL}
+.model D_VF0p8059 D(Is=1.71435e-07 N=2 Rs=0.001 Cjo=1p)
+.tran ${max((dt),(dt)*153600/200000)} ${(dt)*153600} 0 ${max((dt),(dt)*153600/200000)} uic
+.end

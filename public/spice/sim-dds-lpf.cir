@@ -1,0 +1,34 @@
+# eetree-sim 1
+# name dds-lpf
+# param fc 50000000
+# param SCOPE_W 512
+# param C1 2.8332245264458096e-11
+# param L1 1.984629678664077e-07
+# param C2 1.1471491911886311e-10
+# param L2 3.183098861837907e-07
+# param C3 1.1471491911886311e-10
+# param L3 1.9846296786640783e-07
+# param C4 2.8332245264458057e-11
+# let fmin = fc/20
+# let fmax = 3*fc
+# let dt = 1/(fmax*12)
+# let tsw = 500/fmin
+# let ssp = max(1, round(tsw/dt/SCOPE_W))
+# let sp = 300
+* dds-lpf
+* Converted from CircuitJS by eetree.cn/tools - open in LTspice (File > Open, then Run)
+* Suggested traces: V(OUT)
+.param C1=${C1} C2=${C2} C3=${C3} C4=${C4} L1=${L1} L2=${L2} L3=${L3} fmax=${fmax} fmin=${fmin}
+R1 N001 0 50
+C1 N001 0 {C1} IC=0
+L1 N001 N002 {L1} IC=0
+C2 N002 0 {C2} IC=0
+L2 N002 N003 {L2} IC=0
+C3 N003 0 {C3} IC=0
+L3 N003 OUT {L3} IC=0
+C4 OUT 0 {C4} IC=0
+R2 OUT 0 50
+R3 N001 N004 5k
+V1 N004 0 DC 0 AC 100
+.ac dec 100 {fmin} {fmax}
+.end
