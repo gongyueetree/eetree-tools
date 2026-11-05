@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 72ebb4d4-cd8b-4c29-afd0-1e19dbe186da)
+  (uuid d8d9b05c-fa63-44ec-888d-2d6d22069444)
   (paper "A4")
   (title_block
     (title "Lambda Diode")
@@ -261,173 +261,157 @@
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 33.02 48.26)
+    (at 60.96 86.36)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 6e306474-42aa-4490-830b-28a3699c568d))
+    (uuid affcc343-40a4-4dc7-b356-114d674c94d5))
   (junction
-    (at 33.02 38.1)
+    (at 60.96 66.04)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 23cce999-e99d-4054-ad65-96ed8fe7d595))
+    (uuid c028b9b3-2962-46d2-8214-47bbfcab65c4))
   (wire
-    (pts (xy 33.02 48.26) (xy 27.94 48.26))
+    (pts (xy 60.96 86.36) (xy 50.8 86.36))
     (stroke (width 0) (type default))
-    (uuid 1c6e662c-0a98-4f02-a369-afb578d6c488))
+    (uuid 5674e56e-0376-424d-a630-b41019efda97))
   (wire
-    (pts (xy 27.94 48.26) (xy 27.94 40.64))
+    (pts (xy 50.8 86.36) (xy 50.8 71.12))
     (stroke (width 0) (type default))
-    (uuid 7d545877-05db-40c5-9c0c-dea98e22e430))
+    (uuid aa90a231-3907-4acf-ac56-35900a41766e))
   (wire
-    (pts (xy 33.02 38.1) (xy 38.1 38.1))
+    (pts (xy 60.96 66.04) (xy 71.12 66.04))
     (stroke (width 0) (type default))
-    (uuid 14b0f3d6-f220-4adb-8fb9-6ddd94d341d9))
+    (uuid 787b02d3-a0e2-4c48-9d09-9f19fe4345b8))
   (wire
-    (pts (xy 38.1 38.1) (xy 38.1 45.72))
+    (pts (xy 71.12 66.04) (xy 71.12 81.28))
     (stroke (width 0) (type default))
-    (uuid 21ce3807-fb2c-4959-b8e4-8b145e6c1bcb))
+    (uuid c332f99e-e091-4cec-85a0-80c900b0e61d))
   (wire
-    (pts (xy 25.4 40.64) (xy 27.94 40.64))
+    (pts (xy 53.34 71.12) (xy 50.8 71.12))
     (stroke (width 0) (type default))
-    (uuid 0e1f4368-3852-40c6-bfb3-c7efbad77f89))
+    (uuid af25f37d-7df1-4423-8cc9-a469f777e8dd))
   (wire
-    (pts (xy 33.02 45.72) (xy 33.02 43.18))
+    (pts (xy 68.58 81.28) (xy 71.12 81.28))
     (stroke (width 0) (type default))
-    (uuid 9af95296-e755-4696-9302-b4ad0ddc4512))
-  (wire
-    (pts (xy 33.02 35.56) (xy 33.02 38.1))
-    (stroke (width 0) (type default))
-    (uuid c85c7d73-24a4-437b-9a27-f3e424f7f5d2))
-  (wire
-    (pts (xy 40.64 48.26) (xy 38.1 48.26))
-    (stroke (width 0) (type default))
-    (uuid ce5151de-221b-435d-b2f9-4e5b69c8fd3f))
-  (wire
-    (pts (xy 38.1 48.26) (xy 38.1 45.72))
-    (stroke (width 0) (type default))
-    (uuid c6b9362f-8b57-45f5-83d0-52bc11e0a8a3))
-  (wire
-    (pts (xy 33.02 53.34) (xy 33.02 48.26))
-    (stroke (width 0) (type default))
-    (uuid 804165d7-1bb0-4ff2-9389-b5a27005e99b))
+    (uuid 617a2d69-2280-46cf-8983-b57be223ca65))
   (symbol
     (lib_id "power:GND")
-    (at 33.02 48.26 0)
+    (at 60.96 86.36 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid ebb80279-43e3-4017-a4d9-faf2221f4492)
+    (uuid 8ed65fdd-fcab-493c-a03b-c936c6c10451)
     (property "Reference" "#PWR001"
-      (at 33.02 48.26 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 60.96 86.36 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 33.02 48.26 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 60.96 86.36 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 33.02 48.26 0)
+      (at 60.96 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 6a181522-184b-4d8c-aff1-cf1496aa329e))
+    (pin "1" (uuid cc00726f-f87b-4b60-ad84-b78056c77ab6))
     (instances
       (project "lambda-diode"
-        (path "/6895fb48-5cf2-4bb7-a8ee-28667c9b4d6a"
+        (path "/e97da267-2a96-41de-9aae-8595866b6e96"
           (reference "#PWR001")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NJFET_DSG")
-    (at 30.48 40.64 0)
+    (at 58.42 71.12 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid bccd7fb5-2e88-40ea-8546-a305b5394e80)
+    (uuid 0fdb45f3-6682-4f02-806b-2b6dcce01307)
     (property "Reference" "Q1"
-      (at 36.83 40.64 0)
-      (effects (font (size 1.27 1.27))))
+      (at 66.3575 71.12 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 30.48 40.64 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 58.42 71.12 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 30.48 40.64 0)
+      (at 58.42 71.12 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid ed83b4a0-7873-47c9-8920-07fda0ae16e6))
-    (pin "2" (uuid 84998136-dd7c-4fd1-86e5-552f6544429d))
-    (pin "3" (uuid 6e7f1c1e-7748-4c19-9d01-327b4974b725))
+    (pin "1" (uuid cd7d55c9-3dda-45d1-ae99-71f78c689fef))
+    (pin "2" (uuid c0066164-cb1d-4c4b-8f8e-a30a74a181c7))
+    (pin "3" (uuid 96c0036f-c6e2-492f-abfc-286ca291fc6c))
     (instances
       (project "lambda-diode"
-        (path "/6895fb48-5cf2-4bb7-a8ee-28667c9b4d6a"
+        (path "/e97da267-2a96-41de-9aae-8595866b6e96"
           (reference "Q1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_PJFET_DSG")
-    (at 35.56 48.26 180)
+    (at 63.5 81.28 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 6a38466a-fae8-4781-8bf2-c31e502ad9c4)
+    (uuid 8aed2647-06d4-430f-8414-9afa16a8b27d)
     (property "Reference" "Q2"
-      (at 29.21 51.27625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 55.5625 81.28 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 35.56 48.26 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 63.5 81.28 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 35.56 48.26 0)
+      (at 63.5 81.28 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 9ffe9747-a6c9-4a5a-85ed-0aa3bdcf5be3))
-    (pin "2" (uuid 0d0fe977-9b51-4939-a9f8-38a15b2abdd2))
-    (pin "3" (uuid f440c96c-18cd-4e80-b72a-546043e62b2a))
+    (pin "1" (uuid 72821975-59ec-4307-9215-7ec653692de3))
+    (pin "2" (uuid c18a38ea-e659-43b3-a146-ad756bda3874))
+    (pin "3" (uuid 6e1624a3-e58d-4c80-b221-fe57577cb611))
     (instances
       (project "lambda-diode"
-        (path "/6895fb48-5cf2-4bb7-a8ee-28667c9b4d6a"
+        (path "/e97da267-2a96-41de-9aae-8595866b6e96"
           (reference "Q2")
           (unit 1)))))
   (symbol
     (lib_id "Simulation_SPICE:VPWL")
-    (at 33.02 33.02 180)
+    (at 60.96 60.96 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 1b266117-91dd-49bd-af37-4e574ee0a134)
+    (uuid 4a98189c-3f8a-4a8c-9ee6-c52c859c824b)
     (property "Reference" "V1"
-      (at 40.48125 32.22625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 71.755 59.69 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "5V 50Hz"
-      (at 40.48125 33.81375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 71.755 62.23 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 33.02 33.02 0)
+      (at 60.96 60.96 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 9efdbda6-70ba-447b-a5e6-b2b54c89d721))
-    (pin "2" (uuid 0615b9c3-7c86-4045-b36f-2a6248a86d11))
+    (pin "1" (uuid cf4054db-489a-4389-95ae-554531d575ee))
+    (pin "2" (uuid 19a038df-be67-4a41-8adb-a1082a118b5b))
     (instances
       (project "lambda-diode"
-        (path "/6895fb48-5cf2-4bb7-a8ee-28667c9b4d6a"
+        (path "/e97da267-2a96-41de-9aae-8595866b6e96"
           (reference "V1")
           (unit 1)))))
   (symbol
     (lib_id "power:GND")
-    (at 33.02 27.94 180)
+    (at 60.96 55.88 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 8ad0071e-b065-4dd3-815f-92b89868d05e)
+    (uuid 55b68c48-4623-4434-879f-58917af90941)
     (property "Reference" "#PWR002"
-      (at 33.02 27.94 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 60.96 55.88 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 33.02 27.94 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 60.96 55.88 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 33.02 27.94 0)
+      (at 60.96 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 7844729b-e54f-4859-92b6-5c7913711475))
+    (pin "1" (uuid 219bee26-3320-45d8-8542-52271af14af9))
     (instances
       (project "lambda-diode"
-        (path "/6895fb48-5cf2-4bb7-a8ee-28667c9b4d6a"
+        (path "/e97da267-2a96-41de-9aae-8595866b6e96"
           (reference "#PWR002")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))

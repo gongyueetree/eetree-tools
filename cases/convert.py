@@ -27,7 +27,17 @@ sys.path.insert(1, os.path.join(ROOT, "schematics"))
 import cjs                                              # noqa: E402
 from kisch import parse, dump, q, uq, find, resolve_symbol, U   # noqa: E402  (read-only reuse)
 
-PXMM = 0.15875
+PXMM = 0.15875          # mm per CircuitJS px; set per circuit by convert_one()
+# 16 px = 2.54 mm keeps the CircuitJS layout 1:1 on the KiCad grid.  Transistors are the one symbol family
+# whose CircuitJS geometry is far more compact than KiCad's (C/E posts 16 px = 2.54 mm off the axis vs.
+# +-5.08 mm pins), so in dense circuits bridge wires would cross the symbol bodies; at 2x (16 px = 5.08 mm)
+# the posts land on the pins.  convert_one() picks 2x only when it removes such crossings.
+PX_BASE, PX_SEMI = 0.15875, 0.3175
+# reference / value / net label text height (mm); larger on 2x sheets so they stay readable when the
+# web page scales the bigger drawing down to the same width
+FONT = 1.27
+FONT_BASE, FONT_SEMI = 1.27, 2.0
+
 CIRC = os.path.join(HERE, "circuits")
 OUT = os.path.join(ROOT, "public", "cases")
 BUILD = os.path.join(HERE, "build")
@@ -1475,8 +1485,9 @@ class Converter:
         rot = {(1, 0): 0, (-1, 0): 180, (0, -1): 90, (0, 1): 270}[d]
         self.labels.append((name, at, rot, shape))
         self.ctx.add_pt(at, self.net(e.p1))
-        w = (len(name) * 1.0 + 2.5) / PXMM
-        h = 2.0 / PXMM
+        k = FONT / 1.27
+        w = (len(name) * 1.0 + 2.5) * k / PXMM
+        h = 2.0 * k / PXMM
         x, y = at
         box = {0: (x, y - h / 2, x + w, y + h / 2), 180: (x - w, y - h / 2, x, y + h / 2),
                90: (x - h / 2, y - w, x + h / 2, y), 270: (x - h / 2, y, x + h / 2, y + w)}[rot]
@@ -1645,8 +1656,8 @@ class Converter:
             h = max(1.0, min(3.0, size * PXMM * 0.62)) / PXMM
             w = h * 0.75 * max(len(l) for l in (txt.split("\n") or [""]))
             occ.append((at[0], at[1] - h * len(txt.split("\n")), at[0] + w, at[1]))
-        CH = 1.27 / PXMM          # text height px
-        CW = 1.1 / PXMM           # char width px (approx.)
+        CH = FONT / PXMM          # text height px
+        CW = FONT * 0.866 / PXMM  # char width px (approx.)
         for p in self.parts:
             lines = []
             if p.show_ref:
@@ -1769,7 +1780,7 @@ class Converter:
             x, y = X(at)
             just = {0: "left", 180: "right", 90: "left", 270: "right"}[rot]
             out.append(["global_label", q(name), ["shape", shape], ["at", x, y, rot], ["fields_autoplaced"],
-                        ["effects", ["font", ["size", 1.27, 1.27]], ["justify", just]], ["uuid", U()],
+                        ["effects", ["font", ["size", FONT, FONT]], ["justify", just]], ["uuid", U()],
                         ["property", q("Intersheetrefs"), q("${INTERSHEET_REFS}"), ["at", x, y, 0],
                          ["effects", ["font", ["size", 1.27, 1.27]], "hide"]]])
         for txt, at, size in self.texts:
@@ -1792,7 +1803,7 @@ class Converter:
                 f = p.fields.get(fname)
                 hide = f is None
                 at = X((int(round(f[0][0])), int(round(f[0][1])))) if f else (x, y)
-                eff = ["effects", ["font", ["size", 1.27, 1.27]]]
+                eff = ["effects", ["font", ["size", FONT, FONT]]]
                 if hide:
                     eff.append("hide")
                 node.append(["property", q(fname), q(val), ["at", at[0], at[1], p.rot % 180], eff])
@@ -1869,6 +1880,58 @@ def read_setuplist():
     return res
 
 
+def body_crossings(cv):
+    """Number of wire / bridge segments that run through the body of a placed symbol: on screen they look like
+    connections that are not there (or hide the ones that are).  A segment that just retraces one of the
+    symbol's own pin lines is harmless (it reads as the pin) and is not counted.  Used to pick the scale."""
+    def pin_lines(p):
+        out = []
+        for num, ent in p.geo.unit_pins(p.unit).items():
+            if num not in p.pins:
+                continue
+            _, _, _, ang, ln, _ = ent
+            dx, dy = {0: (1, 0), 90: (0, 1), 180: (-1, 0), 270: (0, -1)}[ang % 360]
+            ex, ey = tfpx(p.rot, p.mirror, dx * ln, dy * ln)
+            tip = p.pins[num]
+            out.append((tip, (tip[0] + ex, tip[1] + ey)))
+        return out
+
+    def on_pin(seg, box, lines):
+        (ax, ay), (bx, by) = seg
+        # clip the segment to the box, then require the clipped part to lie on one pin line
+        x0, x1 = max(min(ax, bx), box[0]), min(max(ax, bx), box[2])
+        y0, y1 = max(min(ay, by), box[1]), min(max(ay, by), box[3])
+        for (px, py), (qx, qy) in lines:
+            if ax == bx == px == qx and min(py, qy) - 1 <= y0 and y1 <= max(py, qy) + 1:
+                return True
+            if ay == by == py == qy and min(px, qx) - 1 <= x0 and x1 <= max(px, qx) + 1:
+                return True
+        return False
+
+    parts = [(p.box, pin_lines(p)) for p in cv.parts if p.box and not p.power]
+    n = 0
+    for seg in cv.wires + cv.bridges:
+        (ax, ay), (bx, by) = seg
+        x0, x1 = sorted((ax, bx))
+        y0, y1 = sorted((ay, by))
+        for box, lines in parts:
+            bx0, by0, bx1, by1 = box
+            # strict interior (1 px margin): touching a body outline or a pin tip is fine
+            if x1 > bx0 + 1 and x0 < bx1 - 1 and y1 > by0 + 1 and y0 < by1 - 1 and not on_pin(seg, box, lines):
+                n += 1
+    return n
+
+
+def build(name, text, title, scale):
+    global PXMM, FONT
+    PXMM = scale
+    FONT = FONT_BASE if scale == PX_BASE else FONT_SEMI
+    cv = Converter(name, text)
+    cv.title = title
+    cv.convert()
+    return cv
+
+
 def convert_one(args):
     name, title, keep_png = args
     path = os.path.join(CIRC, name + ".txt")
@@ -1878,9 +1941,18 @@ def convert_one(args):
     import time as _t
     t0 = _t.time()
     try:
-        cv = Converter(name, text)
-        cv.title = title
-        cv.convert()
+        # draw at the CircuitJS scale unless wires would run through symbol bodies there and twice the
+        # scale gives fewer (dense transistor circuits: CircuitJS C/E posts sit inside KiCad's BJT circle)
+        cv = build(name, text, title, PX_BASE)
+        cross = body_crossings(cv)
+        if cross:
+            cv2 = build(name, text, title, PX_SEMI)
+            c2 = body_crossings(cv2)
+            if c2 < cross:
+                cv, cross = cv2, c2
+            else:
+                build(name, text, title, PX_BASE)      # restore the module scale for the steps below
+        res.update(scale=PXMM, crossings=cross)
         tmp = os.path.join(BUILD, "sch", name + ".kicad_sch")
         cv.save(tmp)
         exp = cv.expected_nets()

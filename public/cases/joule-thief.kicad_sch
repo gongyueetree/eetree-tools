@@ -1,53 +1,53 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 2d9baa22-2005-483e-b3e2-842e1df52074)
+  (uuid d9364081-28e1-49a5-8003-54a69e470564)
   (paper "A4")
   (title_block
     (title "Joule Thief")
     (company "EETree 电子森林 · CircuitJS 示例转换"))
   (lib_symbols
-    (symbol "Device:R_Small"
+    (symbol "Device:R"
       (pin_numbers hide)
-      (pin_names (offset 0.254) hide)
+      (pin_names (offset 0))
       (in_bom yes)
       (on_board yes)
       (property "Reference" "R"
-        (at 0.762 0.508 0)
-        (effects (font (size 1.27 1.27)) (justify left)))
-      (property "Value" "R_Small"
-        (at 0.762 -1.016 0)
-        (effects (font (size 1.27 1.27)) (justify left)))
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
       (property "Footprint" ""
-        (at 0 0 0)
+        (at -1.778 0 90)
         (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "~"
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide))
-      (property "ki_keywords" "R resistor"
+      (property "ki_keywords" "R res resistor"
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide))
-      (property "ki_description" "Resistor, small symbol"
+      (property "ki_description" "Resistor"
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide))
       (property "ki_fp_filters" "R_*"
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide))
-      (symbol "R_Small_0_1"
+      (symbol "R_0_1"
         (rectangle
-          (start -0.762 1.778)
-          (end 0.762 -1.778)
-          (stroke (width 0.2032) (type default))
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
           (fill (type none))))
-      (symbol "R_Small_1_1"
+      (symbol "R_1_1"
         (pin passive line
-          (at 0 2.54 270)
-          (length 0.762)
+          (at 0 3.81 270)
+          (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at 0 -2.54 90)
-          (length 0.762)
+          (at 0 -3.81 90)
+          (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))))
     (symbol "Device:Battery"
@@ -173,49 +173,6 @@
         (pin passive line
           (at 0 -3.81 90)
           (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27)))))))
-    (symbol "Device:R"
-      (pin_numbers hide)
-      (pin_names (offset 0))
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "R"
-        (at 2.032 0 90)
-        (effects (font (size 1.27 1.27))))
-      (property "Value" "R"
-        (at 0 0 90)
-        (effects (font (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide))
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide))
-      (property "ki_keywords" "R res resistor"
-        (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide))
-      (property "ki_description" "Resistor"
-        (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide))
-      (property "ki_fp_filters" "R_*"
-        (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide))
-      (symbol "R_0_1"
-        (rectangle
-          (start -1.016 -2.54)
-          (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))))
-      (symbol "R_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))))
     (symbol "Device:D"
@@ -369,80 +326,80 @@
         (effects (font (size 1.27 1.27)) hide))
       (symbol "xfmr_e4a87348_0_1"
         (arc
-          (start 1.905 -0.0)
-          (mid 1.27 -0.635)
-          (end 1.905 -1.27)
+          (start 3.81 -0.0)
+          (mid 2.54 -1.27)
+          (end 3.81 -2.54)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 1.905 -1.27)
-          (mid 1.27 -1.905)
-          (end 1.905 -2.54)
+          (start 3.81 -2.54)
+          (mid 2.54 -3.81)
+          (end 3.81 -5.08)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 1.905 -2.54)
-          (mid 1.27 -3.175)
-          (end 1.905 -3.81)
+          (start 3.81 -5.08)
+          (mid 2.54 -6.35)
+          (end 3.81 -7.62)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 1.905 -3.81)
-          (mid 1.27 -4.445)
-          (end 1.905 -5.08)
+          (start 3.81 -7.62)
+          (mid 2.54 -8.89)
+          (end 3.81 -10.16)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 5.715 -0.0)
-          (mid 6.35 -0.635)
-          (end 5.715 -1.27)
+          (start 11.43 -0.0)
+          (mid 12.7 -1.27)
+          (end 11.43 -2.54)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 5.715 -1.27)
-          (mid 6.35 -1.905)
-          (end 5.715 -2.54)
+          (start 11.43 -2.54)
+          (mid 12.7 -3.81)
+          (end 11.43 -5.08)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 5.715 -2.54)
-          (mid 6.35 -3.175)
-          (end 5.715 -3.81)
+          (start 11.43 -5.08)
+          (mid 12.7 -6.35)
+          (end 11.43 -7.62)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (arc
-          (start 5.715 -3.81)
-          (mid 6.35 -4.445)
-          (end 5.715 -5.08)
+          (start 11.43 -7.62)
+          (mid 12.7 -8.89)
+          (end 11.43 -10.16)
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (polyline
-          (pts (xy 3.4925 0.635) (xy 3.4925 -5.715))
+          (pts (xy 6.985 1.27) (xy 6.985 -11.43))
           (stroke (width 0.254) (type default))
           (fill (type none)))
         (polyline
-          (pts (xy 4.1275 0.635) (xy 4.1275 -5.715))
+          (pts (xy 8.255 1.27) (xy 8.255 -11.43))
           (stroke (width 0.254) (type default))
           (fill (type none))))
       (symbol "xfmr_e4a87348_1_1"
         (pin passive line
           (at 0.0 0.0 0)
-          (length 1.905)
+          (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.0 1.0)))))
         (pin passive line
-          (at 7.62 0.0 180)
-          (length 1.905)
+          (at 15.24 0.0 180)
+          (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.0 1.0)))))
         (pin passive line
-          (at 0.0 -5.08 0)
-          (length 1.905)
+          (at 0.0 -10.16 0)
+          (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.0 1.0)))))
         (pin passive line
-          (at 7.62 -5.08 180)
-          (length 1.905)
+          (at 15.24 -10.16 180)
+          (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.0 1.0)))))))
     (symbol "Device:Q_NPN_BCE"
@@ -518,345 +475,369 @@
           (name "E" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 55.88 35.56)
+    (at 111.76 71.12)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 881ad018-da52-46c3-97d9-a5f15238ead0))
+    (uuid e9bd0f1a-57ed-43ef-bf72-359a000f5552))
   (junction
-    (at 55.88 45.72)
+    (at 111.76 91.44)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 3ce1629b-7852-4e81-b411-747e7cc409d3))
+    (uuid a0f7cef9-9660-443c-9e20-944a6ae64ac6))
   (junction
-    (at 33.02 45.72)
+    (at 66.04 91.44)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 7f208ec6-cdd8-4f6e-af7d-69a9968719d0))
+    (uuid c78b97b0-1d2d-444d-b5ad-9b3e43e630f0))
   (junction
-    (at 43.18 25.4)
+    (at 86.36 50.8)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 0e40eeb6-b57c-4852-8751-2bb10f1053f0))
+    (uuid 5f866bde-af9d-4c0d-9025-40e9d2ff751b))
   (junction
-    (at 63.5 45.72)
+    (at 127.0 91.44)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 877e9887-4d06-485d-8b08-d20e8dcd0527))
+    (uuid d564ec19-ad86-4a71-bf36-b4d77e4e9f20))
   (junction
-    (at 43.18 30.48)
+    (at 86.36 60.96)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 583602ed-01c7-45a9-bea9-86d3732f9928))
+    (uuid 716f545c-aa0a-45b5-b71f-7fa3b0a9e4ac))
   (junction
-    (at 63.5 35.56)
+    (at 127.0 71.12)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid 6693ba59-f971-4b49-92c7-5ea6cba240bf))
+    (uuid 509d5de3-0df2-4d34-9f90-3d5cc8f36e54))
   (wire
-    (pts (xy 55.88 35.56) (xy 55.88 38.1))
+    (pts (xy 111.76 71.12) (xy 111.76 76.2))
     (stroke (width 0) (type default))
-    (uuid f3c2db57-d51a-41ad-a3af-8ede4dfccbfd))
+    (uuid 2dea0b32-700f-41b6-a01f-3c0330029452))
   (wire
-    (pts (xy 43.18 35.56) (xy 43.18 40.64))
+    (pts (xy 86.36 71.12) (xy 86.36 81.28))
     (stroke (width 0) (type default))
-    (uuid 7ef6fbbe-1e9a-4883-96b7-4ca3ea90c35c))
+    (uuid f0da71ad-7ab6-4f0e-ba80-d4a340c8d512))
   (wire
-    (pts (xy 55.88 43.18) (xy 55.88 45.72))
+    (pts (xy 111.76 86.36) (xy 111.76 91.44))
     (stroke (width 0) (type default))
-    (uuid 289b7e66-1218-4366-bec7-fe2d164fbe58))
+    (uuid 55f96980-6f1c-4aaa-b659-241cafd76416))
   (wire
-    (pts (xy 55.88 45.72) (xy 33.02 45.72))
+    (pts (xy 111.76 91.44) (xy 66.04 91.44))
     (stroke (width 0) (type default))
-    (uuid 49dcf856-0d14-4423-a75c-fb8a7d6f22fc))
+    (uuid dc862a42-0d37-4e15-82e9-62ea35c41375))
   (wire
-    (pts (xy 43.18 25.4) (xy 27.94 25.4))
+    (pts (xy 86.36 50.8) (xy 55.88 50.8))
     (stroke (width 0) (type default))
-    (uuid 081b895a-5677-4850-b8c4-26fc1db4b48c))
+    (uuid 0fdc5abc-a226-4f9f-bfe2-136172cd2802))
   (wire
-    (pts (xy 63.5 45.72) (xy 55.88 45.72))
+    (pts (xy 127.0 91.44) (xy 111.76 91.44))
     (stroke (width 0) (type default))
-    (uuid 5185707a-e94f-4fd8-9122-eb67abc875f1))
+    (uuid 996ffd2b-5e67-4c5e-80a4-4d1b76ac9014))
   (wire
-    (pts (xy 27.94 45.72) (xy 33.02 45.72))
+    (pts (xy 55.88 91.44) (xy 66.04 91.44))
     (stroke (width 0) (type default))
-    (uuid 8e587209-4394-40d4-9b83-2a23659b3aa0))
+    (uuid a537e1a3-801b-4119-9c67-15bcf5fb9503))
   (wire
-    (pts (xy 33.02 30.48) (xy 43.18 30.48))
+    (pts (xy 66.04 60.96) (xy 86.36 60.96))
     (stroke (width 0) (type default))
-    (uuid c2035c94-3d38-4997-bc22-02b2555caf86))
+    (uuid 4add3208-0ccb-43d5-ae39-111f3066c919))
   (wire
-    (pts (xy 63.5 35.56) (xy 73.66 35.56))
+    (pts (xy 127.0 71.12) (xy 147.32 71.12))
     (stroke (width 0) (type default))
-    (uuid f9c7347a-4e98-4ceb-aa72-ef57ca98a3f2))
+    (uuid bd593bfe-f7cc-42b2-8eaa-5eb0912f2392))
   (wire
-    (pts (xy 73.66 45.72) (xy 63.5 45.72))
+    (pts (xy 147.32 91.44) (xy 127.0 91.44))
     (stroke (width 0) (type default))
-    (uuid 851f1675-9abd-4969-a691-9f15389ea9f0))
+    (uuid 8969cde6-d02c-4a0c-ad95-535cbcbe4ad3))
   (wire
-    (pts (xy 43.18 25.4) (xy 50.8 25.4))
+    (pts (xy 86.36 50.8) (xy 101.6 50.8))
     (stroke (width 0) (type default))
-    (uuid 448a6266-afc5-4609-9a96-79f56543f2bb))
+    (uuid 3bf56ab4-08cd-46db-9e6b-e15b86a6b127))
   (wire
-    (pts (xy 50.8 25.4) (xy 50.8 30.48))
+    (pts (xy 101.6 50.8) (xy 101.6 60.96))
     (stroke (width 0) (type default))
-    (uuid 6e813dd7-2f7d-4ba3-bb06-c7c087037788))
+    (uuid 89762bba-1a7a-4f8f-9878-66fc9e43a220))
   (wire
-    (pts (xy 50.8 35.56) (xy 55.88 35.56))
+    (pts (xy 101.6 71.12) (xy 111.76 71.12))
     (stroke (width 0) (type default))
-    (uuid 12d17509-18ca-4043-abf7-578d3ffa3545))
+    (uuid d2c37260-d832-400f-9ee1-0fcdeaa46d47))
   (wire
-    (pts (xy 27.94 40.64) (xy 27.94 45.72))
+    (pts (xy 86.36 59.69) (xy 86.36 60.96))
     (stroke (width 0) (type default))
-    (uuid cd9f7996-817a-4152-8310-9db56c83aec9))
+    (uuid 8b2b9a3b-0cd9-44d8-874d-fdb9892b381f))
   (wire
-    (pts (xy 27.94 30.48) (xy 27.94 25.4))
+    (pts (xy 86.36 52.07) (xy 86.36 50.8))
     (stroke (width 0) (type default))
-    (uuid 9baefc14-0c2b-4789-9c96-5cae7f100aa4))
+    (uuid 8fe6eccf-a056-4961-aac2-e21f49a53445))
   (wire
-    (pts (xy 33.02 41.91) (xy 33.02 45.72))
+    (pts (xy 55.88 76.2) (xy 55.88 91.44))
     (stroke (width 0) (type default))
-    (uuid 6a8140e7-dfb0-4f35-9358-ff9d39928006))
+    (uuid a0a14e81-e7bf-48c0-b860-a4bfdb05ea63))
   (wire
-    (pts (xy 33.02 34.29) (xy 33.02 30.48))
+    (pts (xy 55.88 66.04) (xy 55.88 50.8))
     (stroke (width 0) (type default))
-    (uuid d7013249-f102-48fe-999e-6d644bd4fe7b))
+    (uuid 288f30fc-ae1c-45b8-9f63-aaa58c76d0d5))
   (wire
-    (pts (xy 63.5 36.83) (xy 63.5 35.56))
+    (pts (xy 66.04 80.01) (xy 66.04 91.44))
     (stroke (width 0) (type default))
-    (uuid fe15535c-def8-4e6e-ab04-f048201de75f))
+    (uuid 5d714f6d-07d9-4145-a17a-91ce060be109))
   (wire
-    (pts (xy 63.5 44.45) (xy 63.5 45.72))
+    (pts (xy 66.04 72.39) (xy 66.04 60.96))
     (stroke (width 0) (type default))
-    (uuid 31add749-f312-4937-a808-c4976ee7d3f3))
+    (uuid 676f051a-bc92-4c63-9d1c-84eaa7168790))
   (wire
-    (pts (xy 73.66 36.83) (xy 73.66 35.56))
+    (pts (xy 90.17 81.28) (xy 86.36 81.28))
     (stroke (width 0) (type default))
-    (uuid 824f7295-b1e3-4a0c-97ed-04ecde9ed2fb))
+    (uuid 8ffa62a9-1459-405e-b528-dd94e58f91f0))
   (wire
-    (pts (xy 73.66 44.45) (xy 73.66 45.72))
+    (pts (xy 97.79 81.28) (xy 101.6 81.28))
     (stroke (width 0) (type default))
-    (uuid d229184e-b05b-4131-ad86-cc96410898b6))
+    (uuid b7613810-babf-49d6-847d-19872a17e4fb))
   (wire
-    (pts (xy 48.26 40.64) (xy 50.8 40.64))
+    (pts (xy 127.0 77.47) (xy 127.0 71.12))
     (stroke (width 0) (type default))
-    (uuid b312812b-5188-4efd-81bf-b9430b312a81))
+    (uuid 2d575d12-a335-43a2-92c8-87c637788a59))
+  (wire
+    (pts (xy 127.0 85.09) (xy 127.0 91.44))
+    (stroke (width 0) (type default))
+    (uuid d8a8cbe2-4b0c-4b98-9b8d-388e3dc32fce))
+  (wire
+    (pts (xy 115.57 71.12) (xy 111.76 71.12))
+    (stroke (width 0) (type default))
+    (uuid 96881596-affe-4e5f-adcc-30dcefb0d8e5))
+  (wire
+    (pts (xy 123.19 71.12) (xy 127.0 71.12))
+    (stroke (width 0) (type default))
+    (uuid b9cd572b-f7b5-42e4-ab7e-d660acc07944))
+  (wire
+    (pts (xy 147.32 77.47) (xy 147.32 71.12))
+    (stroke (width 0) (type default))
+    (uuid 14be0b71-bcd1-4eca-86cf-f8ccb77949d5))
+  (wire
+    (pts (xy 147.32 85.09) (xy 147.32 91.44))
+    (stroke (width 0) (type default))
+    (uuid 5473fd11-e4c8-4635-94cd-a84f5a44bd48))
+  (wire
+    (pts (xy 104.14 81.28) (xy 101.6 81.28))
+    (stroke (width 0) (type default))
+    (uuid 396bf9e5-09e9-4c6a-a96b-8cc54112ba49))
   (symbol
-    (lib_id "Device:R_Small")
-    (at 43.18 27.94 180)
+    (lib_id "Device:R")
+    (at 86.36 55.88 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid ca11abd7-3dbc-4872-aa75-0162a8a7cbd5)
+    (uuid 920b2ca4-42fb-4ff9-859a-a2d73fbe2f0c)
     (property "Reference" "R1"
-      (at 46.6725 27.14625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 92.075 54.61 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "1kΩ"
-      (at 46.6725 28.73375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 92.075 57.15 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 43.18 27.94 0)
+      (at 86.36 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid c286b17f-d552-4d8d-9152-b254d9dc3f90))
-    (pin "2" (uuid 9fcc9fb5-956f-4f61-962e-7d6ee4b36cc2))
+    (pin "1" (uuid ef4853ba-bef6-4ebc-af40-be72098c096c))
+    (pin "2" (uuid 24c040c4-d2d6-4106-8678-0eb0a8709c3c))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "R1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Battery")
-    (at 27.94 35.56 0)
+    (at 55.88 71.12 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 79bcb56f-e7cf-41ce-8800-e875c86b9826)
+    (uuid 916246dc-b689-41c8-aaea-fc17e79b0c68)
     (property "Reference" "BT1"
-      (at 22.38375 34.29 0)
-      (effects (font (size 1.27 1.27))))
+      (at 47.9425 69.5325 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "1.5V"
-      (at 22.38375 35.8775 0)
-      (effects (font (size 1.27 1.27))))
+      (at 47.9425 71.755 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 27.94 35.56 0)
+      (at 55.88 71.12 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 748c925a-d6e4-4413-b9ce-a67e91078a85))
-    (pin "2" (uuid 4cd82fce-54e4-410c-aed1-72a50e7afac1))
+    (pin "1" (uuid 80a8d028-673a-4a44-b425-6d58d60e6e65))
+    (pin "2" (uuid 67fd8861-42f1-46c1-9bb0-fbb9735a8eb3))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "BT1")
           (unit 1)))))
   (symbol
     (lib_id "Device:C")
-    (at 33.02 38.1 180)
+    (at 66.04 76.2 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 2fd5af4b-c31b-4cb4-91e2-aa3d565f20c8)
+    (uuid b196f08d-8b15-4411-afea-ede91f794c26)
     (property "Reference" "C1"
-      (at 38.89375 37.30625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 74.6125 74.93 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "100nF"
-      (at 38.89375 38.89375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 74.6125 77.47 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 33.02 38.1 0)
+      (at 66.04 76.2 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 84138f12-3896-4c9d-bc54-ad1585e51972))
-    (pin "2" (uuid aab92a57-8e13-48ce-9fc6-db307bcdfe50))
+    (pin "1" (uuid 115555ae-61f2-4d5b-a55d-f7bdf01235d7))
+    (pin "2" (uuid 0573e1b9-e67a-4295-8c33-84eec4a4b6fd))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "C1")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 46.99 40.64 90)
+    (at 93.98 81.28 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid f360c4d7-5642-419e-bbd0-ee987542f9bd)
+    (uuid 464dc8b6-a997-4b50-9766-64c45429b3df)
     (property "Reference" "R2"
-      (at 41.75125 41.75125 90)
-      (effects (font (size 1.27 1.27))))
+      (at 93.98 74.93 90)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "10Ω"
-      (at 41.75125 43.33875 90)
-      (effects (font (size 1.27 1.27))))
+      (at 93.98 77.47 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 46.99 40.64 0)
+      (at 93.98 81.28 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2b283c6d-07c6-4277-8266-6d629e32c06b))
-    (pin "2" (uuid 85b1e082-8950-4f7b-8237-05e2391cd5ce))
+    (pin "1" (uuid 4028d98c-ab61-4134-b84f-a73848c2ec4a))
+    (pin "2" (uuid 8f8c23d6-3216-46ca-a07f-f96f70995146))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "R2")
           (unit 1)))))
   (symbol
     (lib_id "Device:C")
-    (at 63.5 40.64 0)
+    (at 127.0 81.28 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 849006e7-68b1-4130-aa2e-57ac105197d3)
+    (uuid 3014cf87-eaa5-4591-af11-d59b9d9f0fe2)
     (property "Reference" "C2"
-      (at 68.8975 39.84625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 134.62 80.01 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "10µF"
-      (at 68.8975 41.43375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 134.62 82.55 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 63.5 40.64 0)
+      (at 127.0 81.28 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid c63124cb-334b-4ae5-a056-24ae860a0b6d))
-    (pin "2" (uuid 4d6aa229-3e25-41c9-92df-484a7a1377a9))
+    (pin "1" (uuid bf1d5c48-82e2-4a8d-81fb-1cf26213aa9d))
+    (pin "2" (uuid 4fa0acae-8d2c-42bd-8c87-153c781cf843))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "C2")
           (unit 1)))))
   (symbol
     (lib_id "Device:D")
-    (at 59.69 35.56 180)
+    (at 119.38 71.12 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid b99bf396-9749-43a1-ab93-2c61d32511e2)
+    (uuid 70ce94aa-221b-40c6-9c1d-12706ad8c528)
     (property "Reference" "D1"
-      (at 59.69 32.7025 0)
-      (effects (font (size 1.27 1.27))))
+      (at 119.38 66.9925 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 59.69 35.56 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 119.38 71.12 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 59.69 35.56 0)
+      (at 119.38 71.12 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 9d7d8fb2-d05f-405f-bdeb-b126e79f7313))
-    (pin "2" (uuid 9f7209ba-38a9-4de5-b8dd-076158e486ad))
+    (pin "1" (uuid a307c3f4-eda9-47ae-b455-bd45094f5738))
+    (pin "2" (uuid 7dc85887-17de-4b61-aae5-7f03ca1a2a7d))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "D1")
           (unit 1)))))
   (symbol
     (lib_id "Device:LED")
-    (at 73.66 40.64 90)
+    (at 147.32 81.28 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 72b0bf08-120f-4ad7-9732-e3fbb75afeb7)
+    (uuid c451b01b-085c-426d-b327-4d00bdfa86fd)
     (property "Reference" "D2"
-      (at 78.105 42.2275 90)
-      (effects (font (size 1.27 1.27))))
+      (at 153.3525 82.8675 90)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 73.66 40.64 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 147.32 81.28 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 73.66 40.64 0)
+      (at 147.32 81.28 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 5e3206ab-17b9-4c2e-933e-be10b673723e))
-    (pin "2" (uuid c05e7f62-5a9c-4877-8cee-60abe7dc1aef))
+    (pin "1" (uuid a20d829b-b0cc-4239-aca4-a17c35b3caf3))
+    (pin "2" (uuid 3b70b060-5af0-4e60-9fee-be0e904682be))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "D2")
           (unit 1)))))
   (symbol
     (lib_id "CircuitJS:xfmr_e4a87348")
-    (at 43.18 30.48 0)
+    (at 86.36 60.96 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid bd1d1e3f-df8b-4f8d-b493-258b688fcc1c)
+    (uuid 37bf7597-f3a6-4cb5-95dc-3fe4b7d96514)
     (property "Reference" "T1"
-      (at 46.99 37.7825 0)
-      (effects (font (size 1.27 1.27))))
+      (at 102.87 66.04 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 43.18 30.48 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 86.36 60.96 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 43.18 30.48 0)
+      (at 86.36 60.96 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2ec077f1-9e1a-4448-9d26-4fc38768f2f1))
-    (pin "2" (uuid b8607804-0f98-491a-a911-ef4074fdd8c7))
-    (pin "3" (uuid 92a94a7a-d0ad-4626-95f4-2ec769e35ba5))
-    (pin "4" (uuid ee753f42-d9e5-48bf-b175-220f58c51923))
+    (pin "1" (uuid 7bb74d88-8197-4bf6-a396-7960c637917c))
+    (pin "2" (uuid 09ede964-e45b-4f27-b3ed-349e2b5bf762))
+    (pin "3" (uuid 27f4a063-03ce-46a1-8d57-41bb13f4d3aa))
+    (pin "4" (uuid 1ed488d7-3cf4-463e-9828-1560cfdcb477))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "T1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NPN_BCE")
-    (at 53.34 40.64 0)
+    (at 109.22 81.28 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid f417bcae-bc74-47bb-bd58-dd12ec28fb5d)
+    (uuid 4442355e-4834-4d83-a6f6-bc8bd656da4b)
     (property "Reference" "Q1"
-      (at 59.69 40.64 0)
-      (effects (font (size 1.27 1.27))))
+      (at 117.1575 81.28 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 53.34 40.64 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 109.22 81.28 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 53.34 40.64 0)
+      (at 109.22 81.28 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 313bd837-9bd7-4212-8825-d7bb971f22a8))
-    (pin "2" (uuid 0c97ae9a-fe19-4367-9e8e-3a0d95b65703))
-    (pin "3" (uuid 070e7b59-4ba5-446b-8599-4eb3ef9217dd))
+    (pin "1" (uuid 2af22ba7-3047-4b73-99e9-75cb730552f2))
+    (pin "2" (uuid f27b9eb1-3b75-475f-bf15-c61de6cd94e8))
+    (pin "3" (uuid d23443d4-5a47-4074-804e-ce80692bace5))
     (instances
       (project "joule-thief"
-        (path "/75ea8a9d-7caf-414e-a9e2-43beba29ab78"
+        (path "/3e2729b3-dccb-45e8-8518-5980326c00b4"
           (reference "Q1")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))

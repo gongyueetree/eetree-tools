@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 828f114d-6ac5-4f07-8203-11f086208a6c)
+  (uuid 7b4f6591-7b36-452f-a36b-3e8475081ebf)
   (paper "A4")
   (title_block
     (title "JFET Follower")
@@ -275,187 +275,183 @@
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 45.72 45.72)
+    (at 81.28 91.44)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid d2d79014-0196-4d9d-98ac-6e32d344d39f))
+    (uuid 644627f0-f7c5-41b5-82a2-83c82db28e85))
   (wire
-    (pts (xy 45.72 27.94) (xy 45.72 40.64))
+    (pts (xy 81.28 55.88) (xy 81.28 81.28))
     (stroke (width 0) (type default))
-    (uuid 662e8f51-64e6-4e79-a4f8-e28ffee7127e))
+    (uuid d2783364-00d1-4e6f-98f0-29757ea80fd1))
   (wire
-    (pts (xy 45.72 45.72) (xy 53.34 45.72))
+    (pts (xy 81.28 91.44) (xy 96.52 91.44))
     (stroke (width 0) (type default))
-    (uuid 1fe723e3-739c-4883-b27e-7b858616c8d1))
+    (uuid 198ea3a4-7367-4dc0-977e-6e2854dd428f))
   (wire
-    (pts (xy 45.72 27.94) (xy 38.1 27.94))
+    (pts (xy 81.28 55.88) (xy 66.04 55.88))
     (stroke (width 0) (type default))
-    (uuid 1b6412ba-cbbc-41b4-b13d-f62468d6ff6f))
+    (uuid 8cf573e2-391b-4380-ae42-a60f8df9b422))
   (wire
-    (pts (xy 45.72 49.53) (xy 45.72 45.72))
+    (pts (xy 81.28 102.87) (xy 81.28 91.44))
     (stroke (width 0) (type default))
-    (uuid 1dacd2cc-3905-4e7a-9bcb-5f76be98ec30))
+    (uuid 8cbf8834-e2c4-4283-80a2-dfab951a5ab5))
   (wire
-    (pts (xy 45.72 57.15) (xy 45.72 60.96))
+    (pts (xy 81.28 110.49) (xy 81.28 121.92))
     (stroke (width 0) (type default))
-    (uuid 21e16a25-4edd-4d3d-a376-002ae63e3b90))
+    (uuid 0b66b8aa-12ad-4d7e-85ba-ddc19d737489))
   (wire
-    (pts (xy 45.72 48.26) (xy 45.72 45.72))
+    (pts (xy 73.66 86.36) (xy 66.04 86.36))
     (stroke (width 0) (type default))
-    (uuid f018a70c-b6ec-4a85-9679-830de7ac27b0))
-  (wire
-    (pts (xy 45.72 38.1) (xy 45.72 40.64))
-    (stroke (width 0) (type default))
-    (uuid fdaa330f-03b3-4cd4-bd47-2be1c950f754))
+    (uuid c7fec02c-015e-4243-b765-9d7a04ca25bb))
   (global_label "VOUT"
     (shape output)
-    (at 53.34 45.72 0)
+    (at 96.52 91.44 0)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 2f4a5f46-6dc3-4ddc-a927-935918166c0e)
+    (effects (font (size 2.0 2.0)) (justify left))
+    (uuid eee7a0da-c58d-4c43-883a-9943fcfd940f)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 53.34 45.72 0)
+      (at 96.52 91.44 0)
       (effects (font (size 1.27 1.27)) hide)))
   (symbol
     (lib_id "power:GND")
-    (at 45.72 60.96 0)
+    (at 81.28 121.92 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 1c757d3b-4c15-4788-b5c3-fc7e2500a1bd)
+    (uuid 8d89cc91-e676-40d9-943f-d1163b8dd4a3)
     (property "Reference" "#PWR001"
-      (at 45.72 60.96 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 81.28 121.92 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 45.72 60.96 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 81.28 121.92 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 45.72 60.96 0)
+      (at 81.28 121.92 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid f0031c6f-f947-41fa-8db9-56e146d74445))
+    (pin "1" (uuid 1ae3cedd-eb1a-458a-b89c-766dd8ae1b0b))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "#PWR001")
           (unit 1)))))
   (symbol
     (lib_id "power:+10V")
-    (at 38.1 27.94 90)
+    (at 66.04 55.88 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid ccf524b1-cb48-44d6-b3a9-b7d861adae85)
+    (uuid f34515e6-78d5-4bd9-8ce2-77aab0183bca)
     (property "Reference" "#PWR002"
-      (at 38.1 27.94 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 66.04 55.88 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "+10V"
-      (at 32.7025 27.94 90)
-      (effects (font (size 1.27 1.27))))
+      (at 58.7375 55.88 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 38.1 27.94 0)
+      (at 66.04 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 270b1135-f104-4c69-95d9-59df782c672c))
+    (pin "1" (uuid b282dfab-120e-4de0-bb1e-326fc07eed7f))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "#PWR002")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 45.72 53.34 0)
+    (at 81.28 106.68 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid bcd818ae-5fdd-4449-b5f8-2879032def11)
+    (uuid ce7c9e44-f07e-4feb-a109-d717e63e0299)
     (property "Reference" "R1"
-      (at 50.00625 52.54625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 87.9475 105.41 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "10kΩ"
-      (at 50.00625 54.13375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 87.9475 107.95 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 45.72 53.34 0)
+      (at 81.28 106.68 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid dc29f735-6b16-4198-90ef-5387a045dce5))
-    (pin "2" (uuid 671dd83d-f343-4a79-90aa-fb5ec3e3132b))
+    (pin "1" (uuid e6912c47-a5a1-4345-82ac-657992729203))
+    (pin "2" (uuid 753c1f78-f1c8-4479-a7fa-84a8f96173ad))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "R1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NJFET_DSG")
-    (at 43.18 43.18 0)
+    (at 78.74 86.36 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 3d8e38b8-cec6-49e6-8acc-fb38a4779ccd)
+    (uuid 6da4f140-5456-4ae6-b0cf-16e622d42894)
     (property "Reference" "Q1"
-      (at 49.53 43.18 0)
-      (effects (font (size 1.27 1.27))))
+      (at 86.6775 86.36 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 43.18 43.18 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 78.74 86.36 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 43.18 43.18 0)
+      (at 78.74 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 81de50fa-5a51-4afd-8ebe-0d4a9e9eadee))
-    (pin "2" (uuid d60050fb-3e03-4ba6-9995-856166585413))
-    (pin "3" (uuid adc36047-4f92-4773-9556-04d6337ea81f))
+    (pin "1" (uuid 575c6204-3ff5-42f5-a8ba-bd18b3edda24))
+    (pin "2" (uuid e6c27565-f4a0-4ce7-a868-f37a1f37d7dc))
+    (pin "3" (uuid d857072a-e698-4dd7-9368-b2f91e229d75))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "Q1")
           (unit 1)))))
   (symbol
     (lib_id "Simulation_SPICE:VSIN")
-    (at 33.02 43.18 270)
+    (at 60.96 86.36 270)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid ca88684d-03d1-424e-9ad5-9ca207dfa271)
+    (uuid 956e7b5f-bdad-44d0-9d6e-664211981c25)
     (property "Reference" "V1"
-      (at 33.02 37.465 90)
-      (effects (font (size 1.27 1.27))))
+      (at 60.96 78.4225 90)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "2V 40Hz"
-      (at 33.02 39.0525 90)
-      (effects (font (size 1.27 1.27))))
+      (at 60.96 80.9625 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 33.02 43.18 0)
+      (at 60.96 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid bcccd0f5-c067-42f2-b8cd-e59f46a35ec9))
-    (pin "2" (uuid 53192155-9df1-43b6-8994-df9f581391db))
+    (pin "1" (uuid a55d9a0e-4ad3-45c6-b84a-10b0b139c6b2))
+    (pin "2" (uuid 13d5bf7a-7db6-4562-871c-f49bdd4db24e))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "V1")
           (unit 1)))))
   (symbol
     (lib_id "power:GND")
-    (at 27.94 43.18 270)
+    (at 55.88 86.36 270)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 04090223-3565-4c07-a48e-291c381ee301)
+    (uuid e807b45f-6cdb-415c-87f9-175b24282eaf)
     (property "Reference" "#PWR003"
-      (at 27.94 43.18 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 55.88 86.36 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 27.94 43.18 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 55.88 86.36 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 27.94 43.18 0)
+      (at 55.88 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 6d29422f-0019-4287-b806-4e5b80fb046e))
+    (pin "1" (uuid 34ad4b5e-4970-4d2f-a8f2-4a5c24ac1a99))
     (instances
       (project "jfetfollower"
-        (path "/86816efb-6305-456d-9728-7a53600a9ad1"
+        (path "/6a8f91c8-83d7-4dcf-8b6e-61464baa3c6c"
           (reference "#PWR003")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))

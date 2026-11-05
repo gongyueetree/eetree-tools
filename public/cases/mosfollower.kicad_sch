@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 8ba34de2-4191-4fb2-a63d-9c6b073f0320)
+  (uuid f3b084b1-c565-4d62-b79c-5bf8014dea93)
   (paper "A4")
   (title_block
     (title "Source Follower")
@@ -433,221 +433,215 @@
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 45.72 45.72)
+    (at 81.28 91.44)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid dbee3892-4dd9-48d1-8d6a-cdd72ee27efd))
-  (junction
-    (at 45.72 38.1)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid 00d2afc7-f105-4409-9ed7-d96faf0a06ef))
-  (junction
-    (at 45.72 48.26)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid a51c7085-0727-4073-8798-7c68b14c2be6))
+    (uuid 72f7a1b5-1acb-4861-9eea-7bde42d2da79))
   (wire
-    (pts (xy 45.72 45.72) (xy 55.88 45.72))
+    (pts (xy 81.28 91.44) (xy 101.6 91.44))
     (stroke (width 0) (type default))
-    (uuid 1395cdb3-c543-4691-b6c6-23da713b7a1f))
+    (uuid b1c5eb29-48fa-4811-9147-3cfb2de30ac9))
   (wire
-    (pts (xy 45.72 27.94) (xy 38.1 27.94))
+    (pts (xy 81.28 55.88) (xy 66.04 55.88))
     (stroke (width 0) (type default))
-    (uuid f678f385-f32d-41c6-bb3d-fbae8aef9757))
+    (uuid 732009d2-c0aa-432d-92a8-a57986f428fa))
   (wire
-    (pts (xy 45.72 60.96) (xy 45.72 66.04))
+    (pts (xy 81.28 121.92) (xy 81.28 132.08))
     (stroke (width 0) (type default))
-    (uuid 33c2ff32-b628-4a3d-a987-47e15155e64f))
+    (uuid ff8568e7-cbb5-4c81-961f-3217d1b64686))
   (wire
-    (pts (xy 45.72 30.48) (xy 45.72 27.94))
+    (pts (xy 81.28 64.77) (xy 81.28 55.88))
     (stroke (width 0) (type default))
-    (uuid ccc9419c-df10-4a5d-abe3-e00d80093dd1))
+    (uuid 37b627f3-c3aa-4328-b20d-17f57f953065))
   (wire
-    (pts (xy 45.72 38.1) (xy 45.72 40.64))
+    (pts (xy 81.28 72.39) (xy 81.28 81.28))
     (stroke (width 0) (type default))
-    (uuid ed9759a8-5101-451b-929c-13bc6efd32c6))
+    (uuid 8fd307a8-73b1-4c00-8051-6669abc7616d))
   (wire
-    (pts (xy 45.72 48.26) (xy 45.72 45.72))
+    (pts (xy 81.28 101.6) (xy 81.28 91.44))
     (stroke (width 0) (type default))
-    (uuid 453eecc0-2bb7-466e-820c-15616ec753ce))
+    (uuid 9ca912d9-690c-40c1-bc76-bbb78bc8eba5))
   (wire
-    (pts (xy 45.72 58.42) (xy 45.72 60.96))
+    (pts (xy 81.28 111.76) (xy 81.28 121.92))
     (stroke (width 0) (type default))
-    (uuid bd868efd-6a75-491c-b11e-5bde6e675d56))
+    (uuid 749ba54a-1204-4996-ac3f-94f7bb161d05))
+  (wire
+    (pts (xy 73.66 86.36) (xy 66.04 86.36))
+    (stroke (width 0) (type default))
+    (uuid 5d95f166-292e-4a47-a499-83f060c26a36))
   (global_label "VOUT"
     (shape output)
-    (at 55.88 45.72 0)
+    (at 101.6 91.44 0)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 50b075de-42e2-471a-ab2a-4e000881afaf)
+    (effects (font (size 2.0 2.0)) (justify left))
+    (uuid 41800748-223e-408c-a5a2-8f5ac4659124)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 55.88 45.72 0)
+      (at 101.6 91.44 0)
       (effects (font (size 1.27 1.27)) hide)))
   (symbol
     (lib_id "power:+15V")
-    (at 38.1 27.94 90)
+    (at 66.04 55.88 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 4dbed785-b266-41c4-833b-93cffdbe7f78)
+    (uuid 524867a5-f72e-4b02-888e-3b7ac19a961b)
     (property "Reference" "#PWR001"
-      (at 38.1 27.94 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 66.04 55.88 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "+15V"
-      (at 32.7025 27.94 90)
-      (effects (font (size 1.27 1.27))))
+      (at 58.7375 55.88 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 38.1 27.94 0)
+      (at 66.04 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 7768b64a-80f1-4287-9081-338e19b7d12b))
+    (pin "1" (uuid 6ccc2c00-da3f-4d7a-a416-6e5d30fa309d))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "#PWR001")
           (unit 1)))))
   (symbol
     (lib_id "power:-15V")
-    (at 45.72 66.04 180)
+    (at 81.28 132.08 180)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid d2919b6a-8f6c-4136-8bdd-3b37b333d08e)
+    (uuid c5e2f0e6-04ef-4a7d-b3c4-2b141352d365)
     (property "Reference" "#PWR002"
-      (at 45.72 66.04 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 81.28 132.08 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "-15V"
-      (at 45.72 69.5325 0)
-      (effects (font (size 1.27 1.27))))
+      (at 81.28 136.2075 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 45.72 66.04 0)
+      (at 81.28 132.08 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 9241900f-1d3c-45ab-92ff-953a8f1ae516))
+    (pin "1" (uuid 0b8aee41-0c99-4b14-a263-7479e73881af))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "#PWR002")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 45.72 34.29 0)
+    (at 81.28 68.58 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 3b7831e3-1322-493f-a217-ab7c854dbc63)
+    (uuid 63301171-3024-404b-8b5a-2c9d1bfd59d9)
     (property "Reference" "R1"
-      (at 50.00625 33.49625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 87.9475 67.31 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "500Ω"
-      (at 50.00625 35.08375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 87.9475 69.85 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 45.72 34.29 0)
+      (at 81.28 68.58 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 43d97028-076d-4aed-acbd-27ea5213fe70))
-    (pin "2" (uuid 6a98d520-da70-435e-8ac2-cd89b3554ee6))
+    (pin "1" (uuid 874e3534-1b53-483b-a316-c4432a6a2626))
+    (pin "2" (uuid b5e0d714-680a-4e86-ba6f-7d8c5c53f02c))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "R1")
           (unit 1)))))
   (symbol
     (lib_id "Simulation_SPICE:IDC")
-    (at 45.72 53.34 0)
+    (at 81.28 106.68 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid a04c12d2-252a-4608-9b73-7475d4ac868e)
+    (uuid f80b8dc2-b2c1-450c-89f3-7d3fc64cd314)
     (property "Reference" "I1"
-      (at 50.95875 52.54625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 88.5825 105.41 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "5mA"
-      (at 50.95875 54.13375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 88.5825 107.95 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 45.72 53.34 0)
+      (at 81.28 106.68 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 01e4f668-1684-4f4e-8f4f-8d1ef0270639))
-    (pin "2" (uuid 799fa183-07d4-4266-af87-c5498530af44))
+    (pin "1" (uuid d8a32648-b4ac-4dca-a349-2d23be0c1b3e))
+    (pin "2" (uuid b9adc99e-4fce-4823-854d-504c677bdb46))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "I1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NMOS_GDS")
-    (at 43.18 43.18 0)
+    (at 78.74 86.36 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 106d4f23-7b0b-4d21-b295-65ccf1070fdf)
+    (uuid 0fe1e381-a374-4891-87a9-644b8cba6df1)
     (property "Reference" "Q1"
-      (at 49.8475 43.18 0)
-      (effects (font (size 1.27 1.27))))
+      (at 86.995 86.36 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 43.18 43.18 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 78.74 86.36 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 43.18 43.18 0)
+      (at 78.74 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 878fa2ba-bfc2-40a4-a069-0a2654ac41b8))
-    (pin "2" (uuid 8b0b162d-9da1-4622-b10b-75decb22639f))
-    (pin "3" (uuid 7a32bd94-4a28-45a3-9a11-dfbd07ead3b4))
+    (pin "1" (uuid f82a611b-a778-402f-aaa1-9f124dd3be35))
+    (pin "2" (uuid c6929db2-252a-4ca6-bbaa-d4b5963b73e4))
+    (pin "3" (uuid e923a823-1959-4e15-89ca-c8b5f000328e))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "Q1")
           (unit 1)))))
   (symbol
     (lib_id "Simulation_SPICE:VSIN")
-    (at 33.02 43.18 270)
+    (at 60.96 86.36 270)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid bfa5e8b9-0a8c-46b8-b94e-233887e715cf)
+    (uuid db3ec5eb-5196-4692-80ce-78ae14f65fcd)
     (property "Reference" "V1"
-      (at 33.02 37.465 90)
-      (effects (font (size 1.27 1.27))))
+      (at 60.96 78.4225 90)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "5V 40Hz"
-      (at 33.02 39.0525 90)
-      (effects (font (size 1.27 1.27))))
+      (at 60.96 80.9625 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 33.02 43.18 0)
+      (at 60.96 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 23ca8598-0951-4b3a-acf8-42553bf5f241))
-    (pin "2" (uuid c4073918-e660-4a3e-907b-e672385a42ac))
+    (pin "1" (uuid 7988364f-18b2-498f-83ac-a56bd9f742af))
+    (pin "2" (uuid 925d5380-ffe2-4fc1-9629-bfee98cbcb98))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "V1")
           (unit 1)))))
   (symbol
     (lib_id "power:GND")
-    (at 27.94 43.18 270)
+    (at 55.88 86.36 270)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid f6f8c3d7-18d3-488c-b61d-aa482f2f9927)
+    (uuid 9ffed8af-a566-4cb5-baf8-8157734cbeb5)
     (property "Reference" "#PWR003"
-      (at 27.94 43.18 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 55.88 86.36 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 27.94 43.18 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 55.88 86.36 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 27.94 43.18 0)
+      (at 55.88 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid b18c7a23-780b-4c62-af52-36ab0630347b))
+    (pin "1" (uuid 3cc2ee99-fa6e-46eb-8f70-3305d0ec8422))
     (instances
       (project "mosfollower"
-        (path "/0b7016b5-663a-475b-956b-2a80d257d0f4"
+        (path "/3dd559e1-9a70-4dff-a678-3fe8c38faf82"
           (reference "#PWR003")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))

@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 26638403-f72d-492c-b985-1e084db37e04)
+  (uuid 28e24157-9e17-4339-b46b-7f782f4298a6)
   (paper "A4")
   (title_block
     (title "NMOS Inverter")
@@ -248,154 +248,149 @@
           (name "S" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))))))
   (junction
-    (at 40.64 40.64)
+    (at 81.28 81.28)
     (diameter 0)
     (color 0 0 0 0)
-    (uuid c3c9db9e-1592-4a64-9673-cd01d9ad0ac9))
-  (junction
-    (at 40.64 38.1)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid 55a222d9-0d6f-43e4-9732-ee45fb400ba4))
+    (uuid 4bcadb4d-4ee9-4cd4-a22b-35baa07df8db))
   (wire
-    (pts (xy 40.64 45.72) (xy 40.64 53.34))
+    (pts (xy 81.28 91.44) (xy 81.28 106.68))
     (stroke (width 0) (type default))
-    (uuid b3b616fd-7a3b-45ca-ab61-e6217d0e8839))
+    (uuid c5fcf1d0-6600-4d66-8cb1-b35f17f9769c))
   (wire
-    (pts (xy 40.64 27.94) (xy 30.48 27.94))
+    (pts (xy 81.28 55.88) (xy 60.96 55.88))
     (stroke (width 0) (type default))
-    (uuid f7788144-d09d-43b6-ada8-c18172275b8f))
+    (uuid c326f6d6-f147-4e9f-a9c7-266c870670a6))
   (wire
-    (pts (xy 33.02 43.18) (xy 25.4 43.18))
+    (pts (xy 66.04 86.36) (xy 50.8 86.36))
     (stroke (width 0) (type default))
-    (uuid c67c2d6b-375c-4595-94d4-388b85dfa2fe))
+    (uuid b7152858-45db-477a-a693-480ce795ffc3))
   (wire
-    (pts (xy 40.64 40.64) (xy 53.34 40.64))
+    (pts (xy 81.28 81.28) (xy 106.68 81.28))
     (stroke (width 0) (type default))
-    (uuid 58d17ba2-5331-4a50-b5cf-9c03401bf45c))
+    (uuid a12a0334-77f8-441c-b3fa-3b2417474cc1))
   (wire
-    (pts (xy 40.64 30.48) (xy 40.64 27.94))
+    (pts (xy 81.28 64.77) (xy 81.28 55.88))
     (stroke (width 0) (type default))
-    (uuid 9f42eabf-d237-48e1-ac6b-8549353fdf66))
+    (uuid 6cbd42dc-f37b-41b9-bd4a-b013a3c13cea))
   (wire
-    (pts (xy 40.64 38.1) (xy 40.64 40.64))
+    (pts (xy 81.28 72.39) (xy 81.28 81.28))
     (stroke (width 0) (type default))
-    (uuid 3829a748-3481-4285-a1f8-f61864157c91))
+    (uuid 8c775501-7ae9-4c1f-bcf3-de6eb7f10a1d))
   (wire
-    (pts (xy 40.64 48.26) (xy 40.64 45.72))
+    (pts (xy 73.66 86.36) (xy 66.04 86.36))
     (stroke (width 0) (type default))
-    (uuid 68ad0691-b8de-41f3-863f-4701d9f07359))
+    (uuid 7c693d26-d1b4-426c-9468-3bfe85ef13f3))
   (global_label "IN"
     (shape input)
-    (at 25.4 43.18 180)
+    (at 50.8 86.36 180)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid b2be4de3-8047-47c6-b892-8c19d97578e9)
+    (effects (font (size 2.0 2.0)) (justify right))
+    (uuid 7386b987-88c2-459f-924b-b195c578b735)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 25.4 43.18 0)
+      (at 50.8 86.36 0)
       (effects (font (size 1.27 1.27)) hide)))
   (global_label "OUT"
     (shape output)
-    (at 53.34 40.64 0)
+    (at 106.68 81.28 0)
     (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid d2ac54bc-6ca4-415d-a69e-4ac000dc97e8)
+    (effects (font (size 2.0 2.0)) (justify left))
+    (uuid 2631d8bf-b999-4208-9376-44b9fe6fb6c5)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 53.34 40.64 0)
+      (at 106.68 81.28 0)
       (effects (font (size 1.27 1.27)) hide)))
   (symbol
     (lib_id "power:+5V")
-    (at 30.48 27.94 90)
+    (at 60.96 55.88 90)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 47f1b3b2-806b-4a8a-b9d4-3935e0a7d2de)
+    (uuid 867e4963-1591-44a0-9374-15a694b5ce3d)
     (property "Reference" "#PWR001"
-      (at 30.48 27.94 90)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 60.96 55.88 90)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "+5V"
-      (at 25.7175 27.94 90)
-      (effects (font (size 1.27 1.27))))
+      (at 54.61 55.88 90)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 30.48 27.94 0)
+      (at 60.96 55.88 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 04c78fd3-e083-4a89-a314-2c084c476d6b))
+    (pin "1" (uuid 4723764e-a906-424c-baba-0c3ace6bb982))
     (instances
       (project "nmosinverter"
-        (path "/cdb5a32c-5e9a-46d8-a5fb-435b4fae7547"
+        (path "/264ee63a-c74d-47bb-a4d5-d66196e3b69a"
           (reference "#PWR001")
           (unit 1)))))
   (symbol
     (lib_id "power:GND")
-    (at 40.64 53.34 0)
+    (at 81.28 106.68 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 745f34c1-0e66-4dce-b97d-7fc529a8e532)
+    (uuid a4b89c76-4374-48ff-ade2-7c0cb711c7bf)
     (property "Reference" "#PWR002"
-      (at 40.64 53.34 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 81.28 106.68 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Value" "GND"
-      (at 40.64 53.34 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 81.28 106.68 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 40.64 53.34 0)
+      (at 81.28 106.68 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid dcb2b2ef-c3a9-4fb3-8d39-6b15f0515fda))
+    (pin "1" (uuid fc7d6417-0fd8-449e-8647-9c4ae03bc7c5))
     (instances
       (project "nmosinverter"
-        (path "/cdb5a32c-5e9a-46d8-a5fb-435b4fae7547"
+        (path "/264ee63a-c74d-47bb-a4d5-d66196e3b69a"
           (reference "#PWR002")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
-    (at 40.64 34.29 0)
+    (at 81.28 68.58 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 677e8c52-18f4-4598-8a0b-c67eaa39a92c)
+    (uuid 1b84dd05-2577-4907-bc79-af98c22f2a07)
     (property "Reference" "R1"
-      (at 44.29125 33.49625 0)
-      (effects (font (size 1.27 1.27))))
+      (at 86.995 67.31 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" "5kΩ"
-      (at 44.29125 35.08375 0)
-      (effects (font (size 1.27 1.27))))
+      (at 86.995 69.85 0)
+      (effects (font (size 2.0 2.0))))
     (property "Footprint" ""
-      (at 40.64 34.29 0)
+      (at 81.28 68.58 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid d4cdba3c-bef5-42ea-b320-71c90ed4993e))
-    (pin "2" (uuid 8c64ad89-d1a5-4021-aad7-918681f05033))
+    (pin "1" (uuid 463486bf-8e1d-43e5-9da9-b16ab2d8a6e7))
+    (pin "2" (uuid 49d4f788-7aa1-47e3-9f1c-45862f4fdc05))
     (instances
       (project "nmosinverter"
-        (path "/cdb5a32c-5e9a-46d8-a5fb-435b4fae7547"
+        (path "/264ee63a-c74d-47bb-a4d5-d66196e3b69a"
           (reference "R1")
           (unit 1)))))
   (symbol
     (lib_id "Device:Q_NMOS_GDS")
-    (at 38.1 43.18 0)
+    (at 78.74 86.36 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid fcd87bd9-a3da-4433-a942-3c23daca20c7)
+    (uuid 549f5be0-69a5-4922-8b9f-9f9e8811b33a)
     (property "Reference" "Q1"
-      (at 44.7675 43.18 0)
-      (effects (font (size 1.27 1.27))))
+      (at 86.995 86.36 0)
+      (effects (font (size 2.0 2.0))))
     (property "Value" ""
-      (at 38.1 43.18 0)
-      (effects (font (size 1.27 1.27)) hide))
+      (at 78.74 86.36 0)
+      (effects (font (size 2.0 2.0)) hide))
     (property "Footprint" ""
-      (at 38.1 43.18 0)
+      (at 78.74 86.36 0)
       (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 807ee7b1-f145-4287-92f1-b50e2ee6b8d7))
-    (pin "2" (uuid edac75ff-f1ff-44bc-8bd7-2149d8ea5380))
-    (pin "3" (uuid 86b2509e-2b0d-4536-a0da-a70832bb8d90))
+    (pin "1" (uuid 93c9d666-4ccd-4874-8dde-b1f63a435a7b))
+    (pin "2" (uuid f1a8d847-493e-4831-8464-d214a61785c0))
+    (pin "3" (uuid ede32253-424e-4358-9c91-9de82e239ae3))
     (instances
       (project "nmosinverter"
-        (path "/cdb5a32c-5e9a-46d8-a5fb-435b4fae7547"
+        (path "/264ee63a-c74d-47bb-a4d5-d66196e3b69a"
           (reference "Q1")
           (unit 1)))))
   (sheet_instances (path "/" (page "1"))))
