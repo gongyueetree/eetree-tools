@@ -1,0 +1,204 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid b8d245b5-70a1-4f3d-b493-cbc421ba6c91)
+  (paper "A4")
+  (title_block (title "三相三角形负载") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 66.04) (xy 106.68 66.04))
+    (stroke (width 0) (type default))
+    (uuid f5433de1-0dab-403e-a184-8c79257d26ee))
+  (wire
+    (pts (xy 106.68 66.04) (xy 137.16 66.04))
+    (stroke (width 0) (type default))
+    (uuid 59bb3c49-a4f4-4a3b-8834-4f471c50c7c0))
+  (wire
+    (pts (xy 137.16 66.04) (xy 137.16 82.55))
+    (stroke (width 0) (type default))
+    (uuid 4cf6249b-ec24-4f93-8460-780e334d0a64))
+  (wire
+    (pts (xy 76.2 86.36) (xy 106.68 86.36))
+    (stroke (width 0) (type default))
+    (uuid 61e0f9c0-2a23-4ef1-be39-382f90e31963))
+  (wire
+    (pts (xy 106.68 86.36) (xy 121.92 86.36))
+    (stroke (width 0) (type default))
+    (uuid 0da7cfd5-d073-49f6-973f-cf9568426ba6))
+  (wire
+    (pts (xy 121.92 86.36) (xy 121.92 92.71))
+    (stroke (width 0) (type default))
+    (uuid bfb06a5a-0596-461e-b4df-494c14517b55))
+  (wire
+    (pts (xy 76.2 106.68) (xy 121.92 106.68))
+    (stroke (width 0) (type default))
+    (uuid 17b1d6cc-4ba3-43d6-9883-504282b0bfa2))
+  (wire
+    (pts (xy 121.92 106.68) (xy 137.16 106.68))
+    (stroke (width 0) (type default))
+    (uuid dae1b77f-9652-42b9-a265-f1777d7af4da))
+  (wire
+    (pts (xy 137.16 106.68) (xy 137.16 90.17))
+    (stroke (width 0) (type default))
+    (uuid cabc0405-8e14-4182-b107-f2002f9c7ddd))
+  (wire
+    (pts (xy 106.68 66.04) (xy 106.68 72.39))
+    (stroke (width 0) (type default))
+    (uuid fed780fd-d2a0-44f0-96cb-ebbe53b43ae9))
+  (wire
+    (pts (xy 106.68 80.01) (xy 106.68 86.36))
+    (stroke (width 0) (type default))
+    (uuid 554583ea-6c7e-4eda-b877-71e63b219af4))
+  (wire
+    (pts (xy 121.92 100.33) (xy 121.92 106.68))
+    (stroke (width 0) (type default))
+    (uuid 3e064db6-c4fc-477d-8bfa-96574166ccdf))
+  (junction
+    (at 106.68 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid d76b4a03-13da-49cf-8e01-097f46fcd550))
+  (junction
+    (at 106.68 86.36)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 86bbaa14-ec11-4b84-b305-3e28a6dd4ad4))
+  (junction
+    (at 121.92 106.68)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 92446e92-3f72-4fff-a69c-8e671483e884))
+  (global_label "L1"
+    (shape input)
+    (at 76.2 66.04 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid a92e5644-b381-45b5-b774-8f1a08688051)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "L2"
+    (shape input)
+    (at 76.2 86.36 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 5b4c6e6c-cb6a-47b7-a76e-d6f6933ecf35)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "L3"
+    (shape input)
+    (at 76.2 106.68 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid fc96571c-83b3-4d6b-b3c6-4b0f5d65ee9e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:R")
+    (at 106.68 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a0abda6a-832d-46d3-aa32-da3d593401bf)
+    (property "Reference" "R1"
+      (at 109.28 75.2 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R"
+      (at 109.28 77.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid d3752696-ec4c-4e04-8a20-2403c2944055))
+    (pin "2" (uuid 6fa8f036-7ac7-41a3-b5f2-0269ba88ff34))
+    (instances
+      (project "three-phase-delta"
+        (path "/b8d245b5-70a1-4f3d-b493-cbc421ba6c91"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 121.92 96.52 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cd0d584d-079d-4a2f-8941-eaf69844dcb3)
+    (property "Reference" "R2"
+      (at 124.52 95.52000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R"
+      (at 124.52 98.12 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid c6f5f35f-aba0-4765-9aa8-80e1a3eabb5f))
+    (pin "2" (uuid b9822b13-f793-444c-91e8-9d16fdb7704a))
+    (instances
+      (project "three-phase-delta"
+        (path "/b8d245b5-70a1-4f3d-b493-cbc421ba6c91"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 137.16 86.36 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 03bbc717-1b6a-4ebd-8b17-66cf9950e548)
+    (property "Reference" "R3"
+      (at 139.76 85.36000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R"
+      (at 139.76 87.96000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid f3f45bf4-86b8-48b3-8a37-15f54ad20cf3))
+    (pin "2" (uuid 25591d48-b4d6-4692-8a80-7c7e41d1e8af))
+    (instances
+      (project "three-phase-delta"
+        (path "/b8d245b5-70a1-4f3d-b493-cbc421ba6c91"
+          (reference "R3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

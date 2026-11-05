@@ -1,0 +1,151 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 80950d16-6999-4900-9d49-7d364a678f3d)
+  (paper "A4")
+  (title_block (title "电容串联") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 76.2) (xy 87.63 76.2))
+    (stroke (width 0) (type default))
+    (uuid 1946aabe-6bda-4fab-a822-2f5bac99a5fe))
+  (wire
+    (pts (xy 95.25 76.2) (xy 107.95 76.2))
+    (stroke (width 0) (type default))
+    (uuid 10daf6c8-721c-4d1d-b4b6-e0924ddc4a53))
+  (wire
+    (pts (xy 115.57 76.2) (xy 128.27 76.2))
+    (stroke (width 0) (type default))
+    (uuid 6d73d88a-bfcf-4e3e-82d8-b17527a24c64))
+  (wire
+    (pts (xy 135.89 76.2) (xy 147.32 76.2))
+    (stroke (width 0) (type default))
+    (uuid 76efc5ef-1515-4932-af8b-da1ac3821c5b))
+  (global_label "A"
+    (shape passive)
+    (at 76.2 76.2 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 4a47a213-3843-4cd4-ac78-60e9751970eb)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "B"
+    (shape passive)
+    (at 147.32 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e3fbab3d-57f3-48bf-81b6-496548f999de)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 147.32 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:C")
+    (at 91.44 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a061d0db-d835-4886-9a29-21ffcaac2906)
+    (property "Reference" "C1"
+      (at 91.44 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C1"
+      (at 91.44 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f8471123-3565-4e1b-921a-208d58fe0004))
+    (pin "2" (uuid 0de77c61-11bd-415f-9275-7fb845b6bd2d))
+    (instances
+      (project "cap-series"
+        (path "/80950d16-6999-4900-9d49-7d364a678f3d"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 111.76 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bba0e9b8-0ca0-463a-95a5-74f2f6591aa5)
+    (property "Reference" "C2"
+      (at 111.76 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C2"
+      (at 111.76 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f1e99128-b5da-4156-822c-e3068aae6556))
+    (pin "2" (uuid 655b7fb8-a1d1-42fa-8e7a-8f4be39ab52f))
+    (instances
+      (project "cap-series"
+        (path "/80950d16-6999-4900-9d49-7d364a678f3d"
+          (reference "C2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 132.08 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1dbf523a-083c-4a87-a7a2-98ff22017e6c)
+    (property "Reference" "C3"
+      (at 132.08 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C3"
+      (at 132.08 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5b5e9396-3d24-4448-a9f8-d49714944527))
+    (pin "2" (uuid 167e3446-d73f-4e2a-82fb-a0ddae3bf987))
+    (instances
+      (project "cap-series"
+        (path "/80950d16-6999-4900-9d49-7d364a678f3d"
+          (reference "C3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

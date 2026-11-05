@@ -1,0 +1,148 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 2ed20bd1-e49b-4ce1-a1c0-d6da4d02b75b)
+  (paper "A4")
+  (title_block (title "电阻串联") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 76.2) (xy 87.63 76.2))
+    (stroke (width 0) (type default))
+    (uuid 79cb82e2-8190-4660-9258-67ac3cc28511))
+  (wire
+    (pts (xy 95.25 76.2) (xy 107.95 76.2))
+    (stroke (width 0) (type default))
+    (uuid ac357f56-011c-4084-b474-c8daa3ad1357))
+  (wire
+    (pts (xy 115.57 76.2) (xy 128.27 76.2))
+    (stroke (width 0) (type default))
+    (uuid fba6da07-ecea-4709-a4d9-09d686ffeac7))
+  (wire
+    (pts (xy 135.89 76.2) (xy 147.32 76.2))
+    (stroke (width 0) (type default))
+    (uuid cecf1922-4174-41b4-b5c2-f031afb1810f))
+  (global_label "A"
+    (shape passive)
+    (at 76.2 76.2 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 78f248e4-462f-45c5-babb-4fbe396c8850)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "B"
+    (shape passive)
+    (at 147.32 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 30ce6517-db93-4bae-98d9-f7567458e209)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 147.32 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (symbol
+    (lib_id "Device:R")
+    (at 91.44 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c5572c68-bec0-48ba-ab3e-b933567b4137)
+    (property "Reference" "R1"
+      (at 91.44 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R1"
+      (at 91.44 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fb05d0b8-2722-4ccd-8365-567dccf53b4a))
+    (pin "2" (uuid a007eefb-f673-4587-bdb4-b797bd9f3052))
+    (instances
+      (project "res-series"
+        (path "/2ed20bd1-e49b-4ce1-a1c0-d6da4d02b75b"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 111.76 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4bf6f886-3167-4391-9ea5-8bf486410b04)
+    (property "Reference" "R2"
+      (at 111.76 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R2"
+      (at 111.76 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 4da296d1-525f-4122-9670-1ad420502a24))
+    (pin "2" (uuid b9c6212d-c403-47a2-9a34-4b074d4df384))
+    (instances
+      (project "res-series"
+        (path "/2ed20bd1-e49b-4ce1-a1c0-d6da4d02b75b"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 132.08 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1a7c4fdd-5bb4-4f93-86b0-3b09183b7802)
+    (property "Reference" "R3"
+      (at 132.08 72.8 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R3"
+      (at 132.08 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0df2f291-05a0-402f-af1a-f3333fa6d1f9))
+    (pin "2" (uuid 3bc7985d-304a-4047-85f8-baab6fd0be60))
+    (instances
+      (project "res-series"
+        (path "/2ed20bd1-e49b-4ce1-a1c0-d6da4d02b75b"
+          (reference "R3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

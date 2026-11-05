@@ -1,0 +1,203 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid ca3a95a2-e296-4def-858c-53764d246832)
+  (paper "A4")
+  (title_block (title "电容并联") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 81.28 66.04) (xy 96.52 66.04))
+    (stroke (width 0) (type default))
+    (uuid 7816319c-d66d-4bf0-b07b-bce8ec81b82f))
+  (wire
+    (pts (xy 96.52 66.04) (xy 116.84 66.04))
+    (stroke (width 0) (type default))
+    (uuid 92626b2d-a621-4306-9297-36c7f26d5ecf))
+  (wire
+    (pts (xy 116.84 66.04) (xy 137.16 66.04))
+    (stroke (width 0) (type default))
+    (uuid b74bc919-ae18-49ad-ab21-4e81621ebe4e))
+  (wire
+    (pts (xy 81.28 91.44) (xy 96.52 91.44))
+    (stroke (width 0) (type default))
+    (uuid 2f02f7d3-7b45-4358-a02f-956e87e1d8d0))
+  (wire
+    (pts (xy 96.52 91.44) (xy 116.84 91.44))
+    (stroke (width 0) (type default))
+    (uuid cf97228b-368c-405c-b103-67b06ed81a4b))
+  (wire
+    (pts (xy 116.84 91.44) (xy 137.16 91.44))
+    (stroke (width 0) (type default))
+    (uuid 89587ef1-2652-4d15-a0c3-0744cc5a34ba))
+  (wire
+    (pts (xy 96.52 66.04) (xy 96.52 74.93))
+    (stroke (width 0) (type default))
+    (uuid da2b8aca-064c-415b-9daa-2b506468ec89))
+  (wire
+    (pts (xy 96.52 82.55) (xy 96.52 91.44))
+    (stroke (width 0) (type default))
+    (uuid 20e63f54-e22c-4db0-a567-d0b3770dfdbe))
+  (wire
+    (pts (xy 116.84 66.04) (xy 116.84 74.93))
+    (stroke (width 0) (type default))
+    (uuid 35b3fdc5-dc16-4524-b5fe-a63c4f7b8094))
+  (wire
+    (pts (xy 116.84 82.55) (xy 116.84 91.44))
+    (stroke (width 0) (type default))
+    (uuid c1f806dc-ebfa-4853-aab1-b1922c64d039))
+  (wire
+    (pts (xy 137.16 66.04) (xy 137.16 74.93))
+    (stroke (width 0) (type default))
+    (uuid 0c653f72-c718-44fa-a829-557a401831fc))
+  (wire
+    (pts (xy 137.16 82.55) (xy 137.16 91.44))
+    (stroke (width 0) (type default))
+    (uuid 4b221bbd-a75d-40ad-b7a2-49307efa6c1a))
+  (global_label "A"
+    (shape passive)
+    (at 81.28 66.04 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 610d4814-7a5d-4699-805d-9d5d9caa631d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 81.28 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "B"
+    (shape passive)
+    (at 81.28 91.44 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 6a923d98-b986-4123-9c2b-2cad0bf1af78)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 81.28 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 96.52 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6ba4d396-7bd0-4f5a-83a8-e0d9e7f5bc45))
+  (junction
+    (at 96.52 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 1a1b53e4-c0e0-43e4-80c8-81e8e79a2a10))
+  (junction
+    (at 116.84 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 57041079-8baf-41a7-b8c8-48c806142d50))
+  (junction
+    (at 116.84 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid b2cf017f-1ac4-47aa-9d79-825d88e99dd9))
+  (symbol
+    (lib_id "Device:C")
+    (at 96.52 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a82024b5-afab-45d7-aad4-bd9f74b6c28e)
+    (property "Reference" "C1"
+      (at 99.11999999999999 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "C1"
+      (at 99.11999999999999 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 5f3dc371-f80f-45f5-a07f-9122d60cc549))
+    (pin "2" (uuid e2eaff69-13ad-4580-95b7-16b9a0abd2b3))
+    (instances
+      (project "cap-parallel"
+        (path "/ca3a95a2-e296-4def-858c-53764d246832"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 116.84 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b7620109-19be-47ad-9875-2570efa8cd00)
+    (property "Reference" "C2"
+      (at 119.44 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "C2"
+      (at 119.44 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid b3013f9c-6dee-4b47-9066-e9e4fae6970b))
+    (pin "2" (uuid aad42abe-c27e-4236-bd82-5fe8435e0417))
+    (instances
+      (project "cap-parallel"
+        (path "/ca3a95a2-e296-4def-858c-53764d246832"
+          (reference "C2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 137.16 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ec53c34f-136a-42da-a8c5-2a363513c2e3)
+    (property "Reference" "C3"
+      (at 139.76 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "C3"
+      (at 139.76 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid a96a78b9-708f-443d-8550-1f707d3114c3))
+    (pin "2" (uuid af393538-c797-40ae-ba72-c146be9999ed))
+    (instances
+      (project "cap-parallel"
+        (path "/ca3a95a2-e296-4def-858c-53764d246832"
+          (reference "C3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

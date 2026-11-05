@@ -1,0 +1,247 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid cc82ead6-48ca-4577-a707-a30882fdfd0b)
+  (paper "A4")
+  (title_block (title "电阻分压") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 101.6 45.72) (xy 101.6 54.61))
+    (stroke (width 0) (type default))
+    (uuid 74a32fe8-e1f2-4b7a-bedd-a0a247f81f4a))
+  (wire
+    (pts (xy 101.6 62.23) (xy 101.6 66.04))
+    (stroke (width 0) (type default))
+    (uuid 82fbd8f7-de16-45fc-99fb-121fd6b7c33c))
+  (wire
+    (pts (xy 101.6 66.04) (xy 101.6 69.85))
+    (stroke (width 0) (type default))
+    (uuid 1c281b46-1101-4a50-a5e2-a82e22fe11bf))
+  (wire
+    (pts (xy 101.6 66.04) (xy 111.76 66.04))
+    (stroke (width 0) (type default))
+    (uuid 7928f056-9f16-4e07-af38-ebaf6c358e28))
+  (wire
+    (pts (xy 111.76 66.04) (xy 116.84 66.04))
+    (stroke (width 0) (type default))
+    (uuid 80489eba-cb0c-4b16-b4da-b0460d646b3a))
+  (wire
+    (pts (xy 111.76 66.04) (xy 111.76 69.85))
+    (stroke (width 0) (type default))
+    (uuid 1e73f9b5-c6ef-4204-8b04-7b68c4fa91a3))
+  (wire
+    (pts (xy 101.6 77.47) (xy 101.6 83.82))
+    (stroke (width 0) (type default))
+    (uuid 277323b2-1be0-49e6-a3ff-f2f8152c34e9))
+  (wire
+    (pts (xy 111.76 77.47) (xy 111.76 83.82))
+    (stroke (width 0) (type default))
+    (uuid 16fd06b0-739f-49c3-a14c-e5728c1fdefe))
+  (wire
+    (pts (xy 111.76 83.82) (xy 101.6 83.82))
+    (stroke (width 0) (type default))
+    (uuid b4ba7fd4-c61a-46ca-92d0-2d7d9c8195cb))
+  (global_label "VIN"
+    (shape input)
+    (at 101.6 45.72 90)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5a9cbbc8-79e4-434a-8e19-e5ff6bf37b97)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 101.6 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 101.6 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid babde0c2-7296-4fd3-8b09-c44739e46b94))
+  (global_label "VOUT"
+    (shape output)
+    (at 116.84 66.04 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 9a25a080-9637-40e1-9df7-7cdbc55dfa20)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 116.84 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "负载(可选)"
+    (at 114.36 76.66 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid 5e4bca2d-077a-43e2-ae3e-de3060c5c837))
+  (junction
+    (at 111.76 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid bdfe9644-5089-4f54-a48a-3098947c546e))
+  (junction
+    (at 101.6 83.82)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 5115c052-2978-4434-8205-3f21b5d2b494))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 58.42 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 937b0128-c6ca-4d2e-bb3a-04184db2959f)
+    (property "Reference" "R1"
+      (at 104.19999999999999 57.42 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R1"
+      (at 104.19999999999999 60.02 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 6b489d0f-5728-40dc-b9a8-6ded4fd51d51))
+    (pin "2" (uuid d521ec88-e6c1-4551-875c-778ea5147107))
+    (instances
+      (project "voltage-divider"
+        (path "/cc82ead6-48ca-4577-a707-a30882fdfd0b"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 73.66 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cd166697-c5d0-405a-8153-8f963386ca83)
+    (property "Reference" "R2"
+      (at 104.19999999999999 72.66 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R2"
+      (at 104.19999999999999 75.25999999999999 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 3dd43e2e-0988-4bdd-8839-4c8cb1fa92f2))
+    (pin "2" (uuid a00d180e-ab66-417c-8d29-651e2eeda910))
+    (instances
+      (project "voltage-divider"
+        (path "/cc82ead6-48ca-4577-a707-a30882fdfd0b"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 111.76 73.66 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 74a8c022-8e7c-4e16-8de0-f7eb439e13ed)
+    (property "Reference" "RL"
+      (at 114.35999999999999 72.66 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RL"
+      (at 114.35999999999999 75.25999999999999 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 9a5c290b-7588-46d1-9a39-1d33d648b2b7))
+    (pin "2" (uuid 19e81544-3cd8-45c7-a58b-25646907a6cf))
+    (instances
+      (project "voltage-divider"
+        (path "/cc82ead6-48ca-4577-a707-a30882fdfd0b"
+          (reference "RL")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 101.6 83.82 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d516d7ab-5764-44de-acef-b3b452387ebf)
+    (property "Reference" "#PWR01"
+      (at 101.6 83.82 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 101.6 88.82 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 767e9091-28e7-4ff4-9bed-08739372bf27))
+    (instances
+      (project "voltage-divider"
+        (path "/cc82ead6-48ca-4577-a707-a30882fdfd0b"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

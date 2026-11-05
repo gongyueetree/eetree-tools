@@ -1,0 +1,410 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid c168596b-44c2-43af-83c3-2180ee3b91f4)
+  (paper "A4")
+  (title_block (title "反相迟滞比较器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Comparator:LM393"
+      (pin_names (offset 0.127))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 3.81 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "LM393"
+        (at 6.35 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27))))
+      (property "ki_keywords" "cmp open collector"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3.0x3.0mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LM393_1_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts
+            (xy 3.302 -0.508)
+            (xy 2.794 -0.508)
+            (xy 3.302 0)
+            (xy 2.794 0.508)
+            (xy 2.286 0)
+            (xy 2.794 -0.508)
+            (xy 2.286 -0.508))
+          (stroke (width 0.127) (type default))
+          (fill (type none)))
+        (pin open_collector line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))))
+      (symbol "LM393_2_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (polyline
+          (pts
+            (xy 3.302 -0.508)
+            (xy 2.794 -0.508)
+            (xy 3.302 0)
+            (xy 2.794 0.508)
+            (xy 2.286 0)
+            (xy 2.794 -0.508)
+            (xy 2.286 -0.508))
+          (stroke (width 0.127) (type default))
+          (fill (type none)))
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin open_collector line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))))
+      (symbol "LM393_3_1"
+        (pin power_in line
+          (at -2.54 -7.62 90)
+          (length 3.81)
+          (name "V-" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin power_in line
+          (at -2.54 7.62 270)
+          (length 3.81)
+          (name "V+" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 105.41 73.66) (xy 111.76 73.66))
+    (stroke (width 0) (type default))
+    (uuid b399c40b-f5e9-44b0-a425-542c89f7ae03))
+  (wire
+    (pts (xy 111.76 73.66) (xy 119.38 73.66))
+    (stroke (width 0) (type default))
+    (uuid c7f8fda7-47d8-47d2-81a0-ed3e10be0d52))
+  (wire
+    (pts (xy 97.79 73.66) (xy 91.44 73.66))
+    (stroke (width 0) (type default))
+    (uuid 48d1375b-ab74-49f6-a54e-62457485310e))
+  (wire
+    (pts (xy 119.38 78.74) (xy 91.44 78.74))
+    (stroke (width 0) (type default))
+    (uuid 9ec1a0c9-e86b-444c-9014-905d01e67af3))
+  (wire
+    (pts (xy 111.76 73.66) (xy 111.76 60.96))
+    (stroke (width 0) (type default))
+    (uuid 66822384-8325-4dd2-9c04-2966f97cc4ac))
+  (wire
+    (pts (xy 111.76 60.96) (xy 123.19 60.96))
+    (stroke (width 0) (type default))
+    (uuid 49bea9bc-a7f7-415d-a013-5913ff0da5e1))
+  (wire
+    (pts (xy 130.81 60.96) (xy 142.24 60.96))
+    (stroke (width 0) (type default))
+    (uuid 6f65834c-1170-45f2-883b-f6a21cbd4766))
+  (wire
+    (pts (xy 142.24 60.96) (xy 142.24 76.2))
+    (stroke (width 0) (type default))
+    (uuid 47512b2e-5030-47ff-b45c-ac806c74ecfe))
+  (wire
+    (pts (xy 134.62 76.2) (xy 142.24 76.2))
+    (stroke (width 0) (type default))
+    (uuid f3dbc684-016f-4c4f-aff4-eb7c65dcc9fa))
+  (wire
+    (pts (xy 142.24 76.2) (xy 152.4 76.2))
+    (stroke (width 0) (type default))
+    (uuid dcb01923-208c-4815-83b2-f371ac4e8a2a))
+  (wire
+    (pts (xy 152.4 76.2) (xy 160.02 76.2))
+    (stroke (width 0) (type default))
+    (uuid aeb7d17d-b18e-45fb-9d2f-ab271676074a))
+  (wire
+    (pts (xy 152.4 76.2) (xy 152.4 67.31))
+    (stroke (width 0) (type default))
+    (uuid 6c04175f-7224-4e96-9729-1601a66f5480))
+  (wire
+    (pts (xy 152.4 59.69) (xy 152.4 53.34))
+    (stroke (width 0) (type default))
+    (uuid 30b7cf24-5421-4448-a28c-a85d9eb31515))
+  (junction
+    (at 111.76 73.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 95c8f922-c192-45d1-a5ce-4208dbcf6d9c))
+  (global_label "VREF"
+    (shape input)
+    (at 91.44 73.66 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid d8b35ef1-b9fa-4c7d-8aaa-b0bf839d4ab8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 91.44 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "VIN"
+    (shape input)
+    (at 91.44 78.74 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid be4dc14a-f255-44d6-947c-ee69dd3f6067)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 91.44 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 142.24 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 09922f69-0eb5-4c1a-b00c-607dba932ead))
+  (junction
+    (at 152.4 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7bff4e84-6d46-4d5d-837c-4fa8929376cb))
+  (global_label "VOUT"
+    (shape output)
+    (at 160.02 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c6180bf1-49da-4398-a2d1-35e795b25abe)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 160.02 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "RP ≪ R2（开漏输出上拉）"
+    (at 149.86 83.82 0)
+    (effects (font (size 1.2 1.2)) (justify left bottom))
+    (uuid d3d45776-6d42-4ab0-990d-3be17a8a322b))
+  (symbol
+    (lib_id "Comparator:LM393")
+    (at 127.0 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8fca479e-86aa-4333-b1ed-69de3ca87272)
+    (property "Reference" "U1"
+      (at 129.54 67.31 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM393"
+      (at 129.54 85.09 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 5e36e2da-f71b-4980-ba6b-f16618ca468b))
+    (pin "2" (uuid 4d5d8e8b-9b5f-4535-8146-4b9d7d752766))
+    (pin "3" (uuid 26308f7b-aae8-4adb-af95-9f6eab08f801))
+    (pin "5" (uuid 5ee41570-3da9-4eef-abc0-272ece919d59))
+    (pin "6" (uuid 637cab64-dca7-4d5b-b873-12fc645afdb5))
+    (pin "7" (uuid 64d0e15c-438b-453c-aca8-85d76377e8fc))
+    (pin "4" (uuid 17e60bce-9ee1-4d25-b81f-dccdb2e727cf))
+    (pin "8" (uuid aafddb64-84d4-4ea2-a65a-0fc9dfcb0fb3))
+    (instances
+      (project "comparator-inv"
+        (path "/c168596b-44c2-43af-83c3-2180ee3b91f4"
+          (reference "U1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 73.66 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c426f75c-8aac-4ed5-b85d-6bc55427004e)
+    (property "Reference" "R1"
+      (at 101.6 70.46 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R1"
+      (at 101.6 76.86 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9a923013-c318-435a-8051-42867547a7c3))
+    (pin "2" (uuid bd7b7426-e6a8-4f59-b390-6085b02e1c8c))
+    (instances
+      (project "comparator-inv"
+        (path "/c168596b-44c2-43af-83c3-2180ee3b91f4"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 127.0 60.96 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a9952138-cf39-4abc-bff0-35d68ddbb446)
+    (property "Reference" "R2"
+      (at 127.0 57.76 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "R2"
+      (at 127.0 64.16 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3d14eeb6-95b8-41e6-adb4-2c82f136df04))
+    (pin "2" (uuid e430ace3-10d0-4548-ab71-cf03135bfbb0))
+    (instances
+      (project "comparator-inv"
+        (path "/c168596b-44c2-43af-83c3-2180ee3b91f4"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 152.4 63.5 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2590b7b8-b167-4468-806e-3bbcfba2ce14)
+    (property "Reference" "RP"
+      (at 155.0 62.5 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RP"
+      (at 155.0 65.1 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 8a93fbad-f6c4-490e-b69c-7104431251c4))
+    (pin "2" (uuid 7bf4c5c5-211d-4c01-9a1e-590f91371a16))
+    (instances
+      (project "comparator-inv"
+        (path "/c168596b-44c2-43af-83c3-2180ee3b91f4"
+          (reference "RP")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VCC")
+    (at 152.4 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2c565b3c-5a3e-4e6c-829e-2231779095dc)
+    (property "Reference" "#PWR01"
+      (at 152.4 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 152.4 49.540000000000006 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 4f7cc895-f5a8-413d-83d6-12e4624a41ce))
+    (instances
+      (project "comparator-inv"
+        (path "/c168596b-44c2-43af-83c3-2180ee3b91f4"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

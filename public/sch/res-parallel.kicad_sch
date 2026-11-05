@@ -1,0 +1,200 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 57aa9027-22e2-4466-a287-41b5e9f5b20a)
+  (paper "A4")
+  (title_block (title "电阻并联") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 81.28 66.04) (xy 96.52 66.04))
+    (stroke (width 0) (type default))
+    (uuid f76cb0da-8c8c-45fc-ad46-6b20ac522657))
+  (wire
+    (pts (xy 96.52 66.04) (xy 116.84 66.04))
+    (stroke (width 0) (type default))
+    (uuid 00d46dd2-0d9d-435d-be0d-65f96a3c1d83))
+  (wire
+    (pts (xy 116.84 66.04) (xy 137.16 66.04))
+    (stroke (width 0) (type default))
+    (uuid 1a624a96-e0ff-4a57-bddd-e04ae37bd978))
+  (wire
+    (pts (xy 81.28 91.44) (xy 96.52 91.44))
+    (stroke (width 0) (type default))
+    (uuid bf2cb9ae-4bda-44f9-909e-bfcb5a39e24f))
+  (wire
+    (pts (xy 96.52 91.44) (xy 116.84 91.44))
+    (stroke (width 0) (type default))
+    (uuid 7d44b925-ddba-469a-9e1a-eb0862c4d17f))
+  (wire
+    (pts (xy 116.84 91.44) (xy 137.16 91.44))
+    (stroke (width 0) (type default))
+    (uuid 47e4eb1c-251f-440a-80a4-14d053c02c40))
+  (wire
+    (pts (xy 96.52 66.04) (xy 96.52 74.93))
+    (stroke (width 0) (type default))
+    (uuid dba8c129-2cf5-463f-a693-7e55e6432665))
+  (wire
+    (pts (xy 96.52 82.55) (xy 96.52 91.44))
+    (stroke (width 0) (type default))
+    (uuid bedff09a-b215-4566-beeb-a7c0b89b5f1f))
+  (wire
+    (pts (xy 116.84 66.04) (xy 116.84 74.93))
+    (stroke (width 0) (type default))
+    (uuid a1798204-8153-4084-aea8-9fddcbb2ec8d))
+  (wire
+    (pts (xy 116.84 82.55) (xy 116.84 91.44))
+    (stroke (width 0) (type default))
+    (uuid 1e5b59ed-0d4f-4b63-bb73-178a97780e0c))
+  (wire
+    (pts (xy 137.16 66.04) (xy 137.16 74.93))
+    (stroke (width 0) (type default))
+    (uuid e4e43bb4-6419-420e-93f8-be972c594cdd))
+  (wire
+    (pts (xy 137.16 82.55) (xy 137.16 91.44))
+    (stroke (width 0) (type default))
+    (uuid 5eb124ef-924c-4f35-a5e5-61bd24065e48))
+  (global_label "A"
+    (shape passive)
+    (at 81.28 66.04 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 02db003c-0f1e-4915-8362-206e1d836931)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 81.28 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (global_label "B"
+    (shape passive)
+    (at 81.28 91.44 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 1eab94da-cc4a-4074-8faa-5c4c7a10ccbc)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 81.28 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 96.52 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 58224bc2-8145-46e4-9226-bddf05702d83))
+  (junction
+    (at 96.52 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid c9ac07b8-ae91-462f-8366-658830a270db))
+  (junction
+    (at 116.84 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 67318b42-1d2f-440a-a9e7-61aac5d6825b))
+  (junction
+    (at 116.84 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid a9768e08-7870-4814-a3ad-ecef882ba551))
+  (symbol
+    (lib_id "Device:R")
+    (at 96.52 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid dc937b38-79af-44e3-ad2d-3428b2b750c9)
+    (property "Reference" "R1"
+      (at 99.11999999999999 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R1"
+      (at 99.11999999999999 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 82e2cb9c-2661-47a9-be2e-70b3621a3283))
+    (pin "2" (uuid 577eaae6-26ea-4f25-9bd7-917284fc6cb5))
+    (instances
+      (project "res-parallel"
+        (path "/57aa9027-22e2-4466-a287-41b5e9f5b20a"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 116.84 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5b3d31b3-6ac3-4c7c-8542-c6ffcf533d19)
+    (property "Reference" "R2"
+      (at 119.44 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R2"
+      (at 119.44 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 78d889f2-7246-4d44-a0cd-14d66d71334c))
+    (pin "2" (uuid 26d29d8b-efed-4aff-b677-17bb17284605))
+    (instances
+      (project "res-parallel"
+        (path "/57aa9027-22e2-4466-a287-41b5e9f5b20a"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 137.16 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f57391dc-ae5f-4d5c-9104-adac6461b862)
+    (property "Reference" "R3"
+      (at 139.76 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R3"
+      (at 139.76 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 42b62fa8-3c52-40bb-a6c3-a72b93abc264))
+    (pin "2" (uuid c5c5c936-702a-490b-894f-ff86c642310b))
+    (instances
+      (project "res-parallel"
+        (path "/57aa9027-22e2-4466-a287-41b5e9f5b20a"
+          (reference "R3")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

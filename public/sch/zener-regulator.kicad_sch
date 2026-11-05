@@ -1,0 +1,303 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 79f129ea-5368-4eb7-bcc6-db3972581cb4)
+  (paper "A4")
+  (title_block (title "稳压管稳压电路") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D_Zener"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D_Zener"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Zener diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_Zener_0_1"
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy -0.762 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_Zener_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 55.88) (xy 85.09 55.88))
+    (stroke (width 0) (type default))
+    (uuid 16f02d10-780a-4ef4-9c34-9796bf089bea))
+  (wire
+    (pts (xy 92.71 55.88) (xy 104.14 55.88))
+    (stroke (width 0) (type default))
+    (uuid 811b1f81-59a6-404c-91b0-96942c97c704))
+  (wire
+    (pts (xy 104.14 55.88) (xy 121.92 55.88))
+    (stroke (width 0) (type default))
+    (uuid 0e85fd03-36b3-4a8e-a7e1-6f1f2175d1bf))
+  (wire
+    (pts (xy 121.92 55.88) (xy 132.08 55.88))
+    (stroke (width 0) (type default))
+    (uuid 44c0840b-1e67-4b56-bdf1-f64d041fd6c1))
+  (wire
+    (pts (xy 104.14 55.88) (xy 104.14 63.5))
+    (stroke (width 0) (type default))
+    (uuid 53c4ec1b-b27e-46ff-8f88-3840715ba089))
+  (wire
+    (pts (xy 104.14 71.12) (xy 104.14 78.74))
+    (stroke (width 0) (type default))
+    (uuid be23ff8e-7554-48cd-acb8-a284f94e342d))
+  (wire
+    (pts (xy 121.92 55.88) (xy 121.92 63.5))
+    (stroke (width 0) (type default))
+    (uuid 7e7edbcc-1ad6-4922-9dd3-c28b6e25da63))
+  (wire
+    (pts (xy 121.92 71.12) (xy 121.92 78.74))
+    (stroke (width 0) (type default))
+    (uuid 1cb8e3c7-e7db-4ae9-967c-f8918163235b))
+  (wire
+    (pts (xy 104.14 78.74) (xy 121.92 78.74))
+    (stroke (width 0) (type default))
+    (uuid d982e134-bdd9-4812-968f-7fd3470b4edf))
+  (global_label "VIN"
+    (shape input)
+    (at 76.2 55.88 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid b9224b94-51e4-4337-95d5-06f64dca3032)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 76.2 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 104.14 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid effac53f-72ee-4dfd-80c8-5d0dedbf1d7a))
+  (junction
+    (at 121.92 55.88)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 84eb2d94-c360-4d00-86dc-31585f3afcf4))
+  (global_label "VOUT"
+    (shape output)
+    (at 132.08 55.88 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid eb08c333-b713-4f88-8a81-8690290fb091)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 132.08 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "I_Z ↓"
+    (at 91.44 62.23 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 615ff321-70c4-43fe-bc62-8cd8c754f68b))
+  (text "I_L ↓"
+    (at 124.46 60.96 0)
+    (effects (font (size 1.3 1.3)) (justify left bottom))
+    (uuid 99195223-3e4e-468e-a87a-dfcd80df4854))
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 55.88 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 763d2094-0517-4398-a593-5e7238e73515)
+    (property "Reference" "RS"
+      (at 88.9 52.68 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "RS"
+      (at 88.9 59.080000000000005 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid addcfa22-cf5b-4582-8815-3ca228215022))
+    (pin "2" (uuid 8c266e4c-e0c3-4f6b-9dba-b121420f7c75))
+    (instances
+      (project "zener-regulator"
+        (path "/79f129ea-5368-4eb7-bcc6-db3972581cb4"
+          (reference "RS")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D_Zener")
+    (at 104.14 67.31 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 25aa1580-4784-4c0c-84fe-7e9e55463f33)
+    (property "Reference" "D1"
+      (at 107.14 66.31 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "Vz"
+      (at 107.14 68.91 90)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid e7a708df-7105-4683-9ba8-f90cf1d1a633))
+    (pin "2" (uuid d55d403c-686b-45d3-97a2-5f2766949854))
+    (instances
+      (project "zener-regulator"
+        (path "/79f129ea-5368-4eb7-bcc6-db3972581cb4"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 121.92 67.31 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 06189902-24fb-4558-a1c0-15b9c19f756e)
+    (property "Reference" "RL"
+      (at 124.52 66.31 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "负载"
+      (at 124.52 68.91 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 8ebbea21-cef5-43aa-9953-56fbc691f1ee))
+    (pin "2" (uuid 97f75260-cdfc-4b2b-9e41-bcb798b219cb))
+    (instances
+      (project "zener-regulator"
+        (path "/79f129ea-5368-4eb7-bcc6-db3972581cb4"
+          (reference "RL")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 104.14 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a2bcf0e5-dead-48c6-b92b-54bc9efa04c8)
+    (property "Reference" "#PWR01"
+      (at 104.14 78.74000000000001 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 104.14 83.74000000000001 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid ddff4b15-96a3-4c10-9f57-55eabd59f2cf))
+    (instances
+      (project "zener-regulator"
+        (path "/79f129ea-5368-4eb7-bcc6-db3972581cb4"
+          (reference "#PWR01")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

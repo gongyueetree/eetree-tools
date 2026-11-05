@@ -1,0 +1,13 @@
+{
+  "name": "eetree-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "电子森林 在线电子工程计算器（KiCad 原理图）",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/run.mjs",
+    "dev": "node scripts/build.mjs && python3 -m http.server 8080 -d dist",
+    "sch": "python3 schematics/gen.py"
+  }
+}

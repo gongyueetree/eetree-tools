@@ -1,0 +1,382 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid b76a0a8a-9b84-45b5-8016-65f7cfc079a0)
+  (paper "A4")
+  (title_block (title "一阶分频器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:Speaker"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "LS"
+        (at 1.27 5.715 0)
+        (effects (font (size 1.27 1.27)) (justify right)))
+      (property "Value" "Speaker"
+        (at 1.27 3.81 0)
+        (effects (font (size 1.27 1.27)) (justify right)))
+      (property "Footprint" ""
+        (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at -0.254 -1.27 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "speaker sound"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Speaker"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Speaker_0_0"
+        (rectangle
+          (start -2.54 1.27)
+          (end 1.016 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.016 1.27)
+            (xy 3.556 3.81)
+            (xy 3.556 -6.35)
+            (xy 1.016 -3.81))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Speaker_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 -2.54 0)
+          (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:L"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L"
+        (at -1.27 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "L"
+        (at 1.905 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Inductor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "L_0_1"
+        (arc
+          (start 0 -2.54)
+          (mid 0.6323 -1.905)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 0.635)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 1.905)
+          (end 0 2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "L_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 86.36 60.96) (xy 91.44 60.96))
+    (stroke (width 0) (type default))
+    (uuid 19472e78-1644-4a31-a81d-543c410972a4))
+  (wire
+    (pts (xy 99.06 60.96) (xy 106.68 60.96))
+    (stroke (width 0) (type default))
+    (uuid bc5add66-4fe4-4c70-866c-3b2b91cbc767))
+  (wire
+    (pts (xy 106.68 63.5) (xy 106.68 76.2))
+    (stroke (width 0) (type default))
+    (uuid 9a7fd3cd-80df-458c-86e1-31414a2eff29))
+  (wire
+    (pts (xy 86.36 96.52) (xy 91.44 96.52))
+    (stroke (width 0) (type default))
+    (uuid 5d2f1b7f-f7b4-4707-a57b-bfe98ad36b98))
+  (wire
+    (pts (xy 99.06 96.52) (xy 106.68 96.52))
+    (stroke (width 0) (type default))
+    (uuid 902c9b41-3d6b-488f-a68b-fc173a920a61))
+  (wire
+    (pts (xy 106.68 99.06) (xy 106.68 111.76))
+    (stroke (width 0) (type default))
+    (uuid 00973da5-102c-4bfd-b690-429f9bf0abdc))
+  (wire
+    (pts (xy 86.36 60.96) (xy 86.36 78.74))
+    (stroke (width 0) (type default))
+    (uuid 8b816708-95e4-4713-b4cd-e891d5be9538))
+  (wire
+    (pts (xy 86.36 78.74) (xy 86.36 96.52))
+    (stroke (width 0) (type default))
+    (uuid 02e5831a-b1e9-4065-9071-2121ddc2fc9f))
+  (wire
+    (pts (xy 71.12 78.74) (xy 86.36 78.74))
+    (stroke (width 0) (type default))
+    (uuid 10358ccb-7d00-4e2b-873e-411c21594d4d))
+  (junction
+    (at 86.36 78.74)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 55c05533-05e9-4a86-ae9e-450e3988b074))
+  (global_label "IN"
+    (shape input)
+    (at 71.12 78.74 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid f98a5d8d-f4fb-4772-9421-d53c7e51a2ea)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 71.12 78.74 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (text "功放输出"
+    (at 55.88 76.54 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid 1d415a83-20e8-4046-825f-f898ac5556d1))
+  (symbol
+    (lib_id "Device:C")
+    (at 95.25 60.96 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ce9693d7-d5a5-4c6b-9c88-d64e4333a8a4)
+    (property "Reference" "C1"
+      (at 95.25 57.56 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C1"
+      (at 95.25 64.16 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 367775c6-f7b0-423f-b8e5-16a315f93990))
+    (pin "2" (uuid e86929eb-0abc-4a2f-94f1-7a227772015b))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Speaker")
+    (at 111.76 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1a5dd8c1-a1be-4920-9b38-5ec2291ac297)
+    (property "Reference" "LS1"
+      (at 117.76 59.96 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "高音"
+      (at 117.76 62.56 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid e06eab3e-a3e7-4495-9619-dbf2c60a10f0))
+    (pin "2" (uuid e601600e-2f54-49d2-9796-7036d06610b8))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "LS1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 106.68 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e4bf83e4-1d03-42b0-9fb2-377d6cdec8cb)
+    (property "Reference" "#PWR01"
+      (at 106.68 76.2 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 106.68 81.2 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 15fd0cca-a8e9-4d31-bd23-1f37f1701b65))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 95.25 96.52 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1e9f9d2d-4934-4cb4-98ad-e57b9d977aa0)
+    (property "Reference" "L1"
+      (at 95.25 93.11999999999999 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "L1"
+      (at 95.25 99.72 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid edec2a12-b5c1-4b14-b84d-215f154055b5))
+    (pin "2" (uuid 1679f120-40a4-457a-a18e-8a064ded866b))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "L1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:Speaker")
+    (at 111.76 96.52 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 89060e46-4aca-4b89-9f1b-ecf617ceed61)
+    (property "Reference" "LS2"
+      (at 117.76 95.52 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "低音"
+      (at 117.76 98.11999999999999 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 9c7c977a-e781-4ae6-bff0-d26e58feebd8))
+    (pin "2" (uuid 4d9d1721-b2bb-4b60-8d65-d3620a5caaf2))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "LS2")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 106.68 111.76 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bdd12c75-7ff2-44b6-8575-89d6e324f514)
+    (property "Reference" "#PWR02"
+      (at 106.68 111.75999999999999 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 106.68 116.75999999999999 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid c6ee8f8b-7568-4432-b467-e6df54c50ea4))
+    (instances
+      (project "crossover-1st"
+        (path "/b76a0a8a-9b84-45b5-8016-65f7cfc079a0"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

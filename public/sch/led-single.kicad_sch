@@ -1,0 +1,303 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 2f9cd4ed-ead0-4991-93a1-d998a5a07c46)
+  (paper "A4")
+  (title_block (title "LED 限流电阻") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:LED"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Light emitting diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LED_0_1"
+        (polyline
+          (pts (xy -1.27 -1.27) (xy -1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 0) (xy 1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "LED_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 101.6 50.8) (xy 101.6 57.15))
+    (stroke (width 0) (type default))
+    (uuid 8ed9beee-cbe3-44ea-8cfa-b708934ec6e4))
+  (wire
+    (pts (xy 101.6 64.77) (xy 101.6 72.39))
+    (stroke (width 0) (type default))
+    (uuid 80e8ff76-f4e0-46c1-9487-28740dea8ba3))
+  (wire
+    (pts (xy 101.6 80.01) (xy 101.6 86.36))
+    (stroke (width 0) (type default))
+    (uuid fdec864c-34d0-4365-b614-4b4c2d2286f7))
+  (text "I_F ↓"
+    (at 91.44 69.85 0)
+    (effects (font (size 1.4 1.4)) (justify left bottom))
+    (uuid 0c4ced4c-2473-4ab7-8087-2ecae928e2c1))
+  (symbol
+    (lib_id "power:VCC")
+    (at 101.6 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0f784354-7a64-4889-b095-f58192bb8c43)
+    (property "Reference" "#PWR01"
+      (at 101.6 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 101.6 47.0 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 2d7a1c6d-f7a2-4f1f-81db-c96f7ad243dd))
+    (instances
+      (project "led-single"
+        (path "/2f9cd4ed-ead0-4991-93a1-d998a5a07c46"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 101.6 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid aa01227b-083a-46cc-84d6-0e1ff856e46e)
+    (property "Reference" "R1"
+      (at 104.19999999999999 59.959999999999994 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "R1"
+      (at 104.19999999999999 62.559999999999995 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 63a8b87f-bff6-46a7-b347-6914c6940294))
+    (pin "2" (uuid 9fe69219-124f-4022-a13a-ac639a89d1f6))
+    (instances
+      (project "led-single"
+        (path "/2f9cd4ed-ead0-4991-93a1-d998a5a07c46"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:LED")
+    (at 101.6 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e3d0ecd2-05d2-46b3-994a-17fc325a1f2b)
+    (property "Reference" "D1"
+      (at 105.1 75.19999999999999 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "LED"
+      (at 105.1 77.79999999999998 90)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 356d6502-80b6-45f8-910b-02a566526cd1))
+    (pin "2" (uuid 8ed487be-646c-455b-b48a-8dc3350248c9))
+    (instances
+      (project "led-single"
+        (path "/2f9cd4ed-ead0-4991-93a1-d998a5a07c46"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 101.6 86.36 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1c3b0ff5-f730-4458-8f39-4edd418a6ffd)
+    (property "Reference" "#PWR02"
+      (at 101.6 86.36 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 101.6 91.36 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 9990e5a7-c282-483d-a06f-3e07fa4e262f))
+    (instances
+      (project "led-single"
+        (path "/2f9cd4ed-ead0-4991-93a1-d998a5a07c46"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

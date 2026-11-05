@@ -1,0 +1,433 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 68ff1b8e-816d-4c5b-bb16-c498fc905070)
+  (paper "A4")
+  (title_block (title "LED 并联（每路独立限流）") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:LED"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Light emitting diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "LED_0_1"
+        (polyline
+          (pts (xy -1.27 -1.27) (xy -1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 0) (xy 1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "LED_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 76.2 50.8) (xy 91.44 50.8))
+    (stroke (width 0) (type default))
+    (uuid 2cd5c81a-55cb-417e-adf2-649b90fc1fd0))
+  (wire
+    (pts (xy 91.44 50.8) (xy 106.68 50.8))
+    (stroke (width 0) (type default))
+    (uuid a0e9d8d5-7038-458d-976e-0a03b0076547))
+  (wire
+    (pts (xy 76.2 91.44) (xy 91.44 91.44))
+    (stroke (width 0) (type default))
+    (uuid 332567a3-dab8-42f6-bff1-0944ff4ca95f))
+  (wire
+    (pts (xy 91.44 91.44) (xy 106.68 91.44))
+    (stroke (width 0) (type default))
+    (uuid c49e986e-96f5-4203-ba5d-b8bfcdcc4a73))
+  (wire
+    (pts (xy 76.2 50.8) (xy 76.2 57.15))
+    (stroke (width 0) (type default))
+    (uuid 8c48c336-ed0e-41cf-9cbe-66dd9df6f93c))
+  (wire
+    (pts (xy 76.2 64.77) (xy 76.2 74.93))
+    (stroke (width 0) (type default))
+    (uuid df94550f-cde1-4c98-824d-44b56dea26dc))
+  (wire
+    (pts (xy 76.2 82.55) (xy 76.2 91.44))
+    (stroke (width 0) (type default))
+    (uuid 9d75482c-4147-4d5c-a479-0f7a18eee3c9))
+  (wire
+    (pts (xy 91.44 50.8) (xy 91.44 57.15))
+    (stroke (width 0) (type default))
+    (uuid 1e55178a-d63e-43f0-85bb-a2a0117dba44))
+  (wire
+    (pts (xy 91.44 64.77) (xy 91.44 74.93))
+    (stroke (width 0) (type default))
+    (uuid 48e43286-6dc4-4a45-9ed2-b8e5b350b3bb))
+  (wire
+    (pts (xy 91.44 82.55) (xy 91.44 91.44))
+    (stroke (width 0) (type default))
+    (uuid b214c489-b49a-4aeb-8db7-84c06c99c2b6))
+  (wire
+    (pts (xy 106.68 50.8) (xy 106.68 57.15))
+    (stroke (width 0) (type default))
+    (uuid d613a8cb-3038-4a26-b017-a429f7c7178e))
+  (wire
+    (pts (xy 106.68 64.77) (xy 106.68 74.93))
+    (stroke (width 0) (type default))
+    (uuid 3a568d5e-79b5-49b8-9445-a4ae4e667928))
+  (wire
+    (pts (xy 106.68 82.55) (xy 106.68 91.44))
+    (stroke (width 0) (type default))
+    (uuid 484ed67e-0fbe-4ab0-a317-3dbebf7d4092))
+  (junction
+    (at 91.44 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 77620046-c7ba-40bb-bca1-9af175aec3bb))
+  (junction
+    (at 91.44 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 0ded1c96-8b52-4d3e-8ac7-279ac31c8b10))
+  (symbol
+    (lib_id "Device:R")
+    (at 76.2 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7ce5b56b-0feb-4d67-be56-286483c2cebf)
+    (property "Reference" "R1"
+      (at 78.8 59.959999999999994 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" ""
+      (at 78.8 62.559999999999995 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 6f5f6c78-4a38-4ec1-9b1d-46e7cb19fe88))
+    (pin "2" (uuid 36f6f3a2-2f6a-4d8a-bb4a-30a3d465d2f7))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "R1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:LED")
+    (at 76.2 78.74 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ac6a907b-116c-48e3-9ba4-89a3053e7639)
+    (property "Reference" "D1"
+      (at 79.7 77.74 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "LED"
+      (at 79.7 80.33999999999999 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 1272ed4d-ee90-47e8-8fed-538147b881e9))
+    (pin "2" (uuid b9553310-5f19-43de-9a8c-274428e625c4))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 91.44 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e9637cb2-08cc-43a5-baa6-74ca812f3000)
+    (property "Reference" "R2"
+      (at 94.03999999999999 59.959999999999994 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" ""
+      (at 94.03999999999999 62.559999999999995 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid d7fa675e-ba1f-4ed4-af9c-63162b8f040d))
+    (pin "2" (uuid 8fb48fbc-6557-4c05-9096-6cd0d61e2edf))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "R2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:LED")
+    (at 91.44 78.74 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b4ca0d42-3369-4fd7-b134-781a8c655c64)
+    (property "Reference" "D2"
+      (at 94.94 77.74 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "LED"
+      (at 94.94 80.33999999999999 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 78b95a63-6926-4720-933d-1b6a290ec127))
+    (pin "2" (uuid ee7d33a0-f354-4a7b-92ba-b8550b499070))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "D2")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 106.68 60.96 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e683ca82-4560-4c58-928a-39a44ee37428)
+    (property "Reference" "R3"
+      (at 109.28 59.959999999999994 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" ""
+      (at 109.28 62.559999999999995 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 3ad1941c-d6e8-4791-a1f4-5182752bb51b))
+    (pin "2" (uuid edeac779-b077-4980-8938-07f2f1dbe67b))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "R3")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:LED")
+    (at 106.68 78.74 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9eeab86c-7fcc-4213-88d8-17dc0f9dacaf)
+    (property "Reference" "D3"
+      (at 110.18 77.74 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "LED"
+      (at 110.18 80.33999999999999 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 08394bad-eb22-491d-b474-c4ad26aa25b9))
+    (pin "2" (uuid 4f661130-4022-4abe-81f0-fe17ea0ccd69))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "D3")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VCC")
+    (at 76.2 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8c052d2d-a698-4279-861c-a1c48eac75dd)
+    (property "Reference" "#PWR01"
+      (at 76.2 50.8 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 76.2 47.0 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 63150a01-e3c7-448c-8e15-092e2b6cd92a))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 76.2 91.44 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7bff7b10-27c7-4714-b3db-4d8ef8d6a1d6)
+    (property "Reference" "#PWR02"
+      (at 76.2 91.44 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 76.2 96.44 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 96874b66-ca06-45b6-b425-1991a4b854c4))
+    (instances
+      (project "led-parallel"
+        (path "/68ff1b8e-816d-4c5b-bb16-c498fc905070"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

@@ -1,0 +1,497 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 27cb9c40-6960-4a87-b55b-97f71b1bfcdd)
+  (paper "A4")
+  (title_block (title "JFET 源极跟随器") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:Q_NJFET_DSG"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NJFET_DSG"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NJFET N-JFET"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "N-JFET transistor, drain/source/gate"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NJFET_DSG_0_1"
+        (polyline
+          (pts
+            (xy 0.254 1.905)
+            (xy 0.254 -1.905)
+            (xy 0.254 -1.905))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 -2.54)
+            (xy 2.54 -1.27)
+            (xy 0.254 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 2.54 2.54)
+            (xy 2.54 1.397)
+            (xy 0.254 1.397))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy -1.016 0.381)
+            (xy -1.016 -0.381)
+            (xy 0 0))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_NJFET_DSG_1_1"
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.334)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VDD"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VDD"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VDD\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VDD_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VDD_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VDD" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:C"
+      (pin_numbers hide)
+      (pin_names (offset 0.254))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 119.38 60.96) (xy 119.38 53.34))
+    (stroke (width 0) (type default))
+    (uuid 0f08cc82-020f-477d-ae9c-b8dd900a183a))
+  (wire
+    (pts (xy 104.14 66.04) (xy 111.76 66.04))
+    (stroke (width 0) (type default))
+    (uuid 4f4bb2d8-977d-471c-9826-f976bfd66797))
+  (wire
+    (pts (xy 96.52 66.04) (xy 104.14 66.04))
+    (stroke (width 0) (type default))
+    (uuid c42bf97d-3e97-4fc2-babf-eeab8bce0a6d))
+  (wire
+    (pts (xy 88.9 66.04) (xy 81.28 66.04))
+    (stroke (width 0) (type default))
+    (uuid 10e93ddc-f73b-4675-810e-513fe4c0baf9))
+  (wire
+    (pts (xy 104.14 66.04) (xy 104.14 74.93))
+    (stroke (width 0) (type default))
+    (uuid f07af89b-9212-4ffc-a562-107230b47c5a))
+  (wire
+    (pts (xy 104.14 82.55) (xy 104.14 91.44))
+    (stroke (width 0) (type default))
+    (uuid ce750e8d-38ac-40c7-b6b7-c39f4ff3bdd9))
+  (wire
+    (pts (xy 119.38 71.12) (xy 119.38 76.2))
+    (stroke (width 0) (type default))
+    (uuid 291b1076-2047-47ea-9f6c-eb6192c34834))
+  (wire
+    (pts (xy 119.38 76.2) (xy 119.38 80.01))
+    (stroke (width 0) (type default))
+    (uuid 34c16c7b-da83-4310-ac8b-91d244fcc375))
+  (wire
+    (pts (xy 119.38 87.63) (xy 119.38 91.44))
+    (stroke (width 0) (type default))
+    (uuid 0f8d7d30-74dc-4872-aded-d1632553144a))
+  (wire
+    (pts (xy 119.38 76.2) (xy 132.08 76.2))
+    (stroke (width 0) (type default))
+    (uuid 00bd0dd5-d90f-49d8-9184-2379261030a5))
+  (wire
+    (pts (xy 132.08 76.2) (xy 142.24 76.2))
+    (stroke (width 0) (type default))
+    (uuid a0eb9ca4-d51d-42c6-b42a-4e91a2669ed5))
+  (wire
+    (pts (xy 132.08 76.2) (xy 132.08 80.01))
+    (stroke (width 0) (type default))
+    (uuid 52c7a878-ec6d-4a40-819b-fdff69c48f12))
+  (wire
+    (pts (xy 132.08 87.63) (xy 132.08 91.44))
+    (stroke (width 0) (type default))
+    (uuid fe96a655-c676-4edc-b3c2-1557afae47bf))
+  (wire
+    (pts (xy 104.14 91.44) (xy 119.38 91.44))
+    (stroke (width 0) (type default))
+    (uuid 3bb8406c-c1cd-42a5-8765-e6da81372d77))
+  (wire
+    (pts (xy 119.38 91.44) (xy 132.08 91.44))
+    (stroke (width 0) (type default))
+    (uuid 707c9ff6-b0ab-4dca-bc90-da90bf034cdb))
+  (junction
+    (at 104.14 66.04)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 4b9626cd-9b9a-4a17-b14a-888bf771dbc7))
+  (global_label "VIN"
+    (shape input)
+    (at 81.28 66.04 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 12a3c978-1e1b-46a1-8af9-0f3f33514148)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 81.28 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 119.38 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid e020f3d2-12bd-42a1-be35-0a542c025b7f))
+  (junction
+    (at 132.08 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 57530d9b-6057-42e2-b38e-adcf033c5c21))
+  (global_label "VOUT"
+    (shape output)
+    (at 142.24 76.2 0)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d8b50c9b-1414-4358-b971-dfd23d82998c)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 142.24 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 119.38 91.44)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 6ebf9dd9-f180-412d-800d-1dc8a71e8932))
+  (symbol
+    (lib_id "Device:Q_NJFET_DSG")
+    (at 116.84 66.04 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a3f08ed9-fff6-4cb1-8169-07866c1446ab)
+    (property "Reference" "Q1"
+      (at 121.92 64.77000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" ""
+      (at 119.44 67.64 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 76904fdf-5c25-4308-b82b-c24867fc3464))
+    (pin "2" (uuid a293f834-e7a2-482d-a80b-862864beb403))
+    (pin "3" (uuid 76aa1d53-b654-430c-8bad-600930b36ec4))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "Q1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VDD")
+    (at 119.38 53.34 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ee046108-c3c4-4c50-b19f-1f24480f7bb6)
+    (property "Reference" "#PWR01"
+      (at 119.38 53.34 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VDD"
+      (at 119.38 49.540000000000006 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 0b900f0b-efbd-439c-a929-2434a8cb50f9))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 92.71 66.04 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 66bdafa2-9b40-4ece-ae07-472ada709aa8)
+    (property "Reference" "C1"
+      (at 92.71000000000001 62.84 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "C1"
+      (at 92.71000000000001 69.24000000000001 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7f65cc73-65d4-4d64-945c-beacc1f9d1c0))
+    (pin "2" (uuid 6f069170-8563-4f7c-b990-a92b7c154fab))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "C1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 104.14 78.74 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 990d363c-75a8-4fb3-a950-7ca1c570237e)
+    (property "Reference" "RG"
+      (at 106.74 77.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RG"
+      (at 106.74 80.34 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid b97ab651-0a20-4ede-882a-b5c7b04544e8))
+    (pin "2" (uuid a8574e06-8cc1-4adb-adb8-e91369088881))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "RG")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 119.38 83.82 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid eb0779ce-8520-416f-a2ed-202b6618c76e)
+    (property "Reference" "RS"
+      (at 121.97999999999999 82.82000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RS"
+      (at 121.97999999999999 85.42 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 90d5a51b-b32d-4e04-95b4-9b50b484f24a))
+    (pin "2" (uuid eea01d40-0696-48ea-9a5c-ab03b901ea07))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "RS")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 132.08 83.82 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 602db7e9-5d35-44a1-92dc-82cb019de27b)
+    (property "Reference" "RL"
+      (at 134.67999999999998 82.82000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "可选"
+      (at 134.67999999999998 85.42 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 4b8d858f-a004-4118-a03e-7aff1eb3c31b))
+    (pin "2" (uuid 5666e2e7-d7ac-40bc-a21a-b37fa15e084a))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "RL")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 119.38 91.44 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5eb95985-bb08-4659-8d6a-4f3a10f2f466)
+    (property "Reference" "#PWR02"
+      (at 119.38 91.44 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 119.38 96.44 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid f17b4fd5-c62c-47dc-abc2-25ee8de5cf2d))
+    (instances
+      (project "jfet-follower"
+        (path "/27cb9c40-6960-4a87-b55b-97f71b1bfcdd"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))

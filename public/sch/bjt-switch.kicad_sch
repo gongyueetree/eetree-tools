@@ -1,0 +1,490 @@
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
+  (uuid 0a9e0965-01a7-4a2b-a94c-cfff590c3b11)
+  (paper "A4")
+  (title_block (title "三极管低边开关") (company "EETree 电子森林"))
+  (lib_symbols
+    (symbol "Device:Q_NPN_BCE"
+      (pin_numbers hide)
+      (pin_names (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "Q_NPN_BCE"
+        (at 5.08 -1.27 0)
+        (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" ""
+        (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "transistor NPN"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "NPN transistor, base/collector/emitter"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "Q_NPN_BCE_0_1"
+        (polyline
+          (pts (xy 0.635 0.635) (xy 2.54 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.778)
+            (xy 1.778 -1.27)
+            (xy 2.286 -2.286)
+            (xy 1.27 -1.778)
+            (xy 1.27 -1.778))
+          (stroke (width 0) (type default))
+          (fill (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "Q_NPN_BCE_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:R"
+      (pin_numbers hide)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line hide
+          (at 0 0 270)
+          (length 0)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))))
+    (symbol "Device:D"
+      (pin_numbers hide)
+      (pin_names (offset 1.016) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "D"
+        (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Device" "D"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Diode"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "D_0_1"
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "D_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))))
+    (symbol "power:VCC"
+      (power)
+      (pin_names (offset 0))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "VCC"
+        (at 0 3.81 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line hide
+          (at 0 0 90)
+          (length 0)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))))
+  (wire
+    (pts (xy 111.76 76.2) (xy 116.84 76.2))
+    (stroke (width 0) (type default))
+    (uuid 92601c29-0e5e-467c-abbc-5dd4a0e0fb16))
+  (wire
+    (pts (xy 104.14 76.2) (xy 111.76 76.2))
+    (stroke (width 0) (type default))
+    (uuid 3a76285a-d9ce-48f7-b4c7-50dc16fff54e))
+  (wire
+    (pts (xy 96.52 76.2) (xy 88.9 76.2))
+    (stroke (width 0) (type default))
+    (uuid 57c2f065-fed7-43c9-8fe7-df95a29e48fb))
+  (wire
+    (pts (xy 111.76 76.2) (xy 111.76 81.28))
+    (stroke (width 0) (type default))
+    (uuid a9911a78-04c4-4392-9eff-7ec264483363))
+  (wire
+    (pts (xy 111.76 88.9) (xy 111.76 93.98))
+    (stroke (width 0) (type default))
+    (uuid d42d967f-4f85-4e04-a8ab-00f4f80c67b0))
+  (wire
+    (pts (xy 124.46 81.28) (xy 124.46 93.98))
+    (stroke (width 0) (type default))
+    (uuid a31e91dc-b225-4952-8d12-9acb35db713e))
+  (wire
+    (pts (xy 124.46 93.98) (xy 111.76 93.98))
+    (stroke (width 0) (type default))
+    (uuid 4cb2990b-1d0b-4107-97bc-0be62534bb7d))
+  (wire
+    (pts (xy 124.46 58.42) (xy 124.46 50.8))
+    (stroke (width 0) (type default))
+    (uuid aa7b1967-dd0c-4300-bcff-6f3f84176e67))
+  (wire
+    (pts (xy 124.46 50.8) (xy 137.16 50.8))
+    (stroke (width 0) (type default))
+    (uuid c6afabd1-e9e9-4f19-b68e-f4d22e80ad26))
+  (wire
+    (pts (xy 137.16 50.8) (xy 137.16 58.42))
+    (stroke (width 0) (type default))
+    (uuid db4ae588-6693-4161-8ffc-8c9429f1920c))
+  (wire
+    (pts (xy 124.46 66.04) (xy 124.46 68.58))
+    (stroke (width 0) (type default))
+    (uuid 49867b74-d9b3-412b-a199-8e5d33f87d3c))
+  (wire
+    (pts (xy 124.46 68.58) (xy 124.46 71.12))
+    (stroke (width 0) (type default))
+    (uuid b2f3d85b-3a63-4ab0-a2f3-b9b3f668693e))
+  (wire
+    (pts (xy 137.16 66.04) (xy 137.16 68.58))
+    (stroke (width 0) (type default))
+    (uuid 44cbd0f3-4f87-4f66-a913-bc8cbfcecc2c))
+  (wire
+    (pts (xy 137.16 68.58) (xy 124.46 68.58))
+    (stroke (width 0) (type default))
+    (uuid bccc2cc1-131a-427e-9ef4-be76048521cc))
+  (junction
+    (at 111.76 76.2)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 62803de2-c0b2-4b84-a9e6-a020df45d872))
+  (global_label "IN"
+    (shape input)
+    (at 88.9 76.2 180)
+    (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 0fb21ffb-096c-4973-88c8-7c470191ba23)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 88.9 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)))
+  (junction
+    (at 124.46 68.58)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 72602d49-eb88-4d99-b330-a1d3e24ede3d))
+  (text "感性负载必加 D1"
+    (at 142.24 71.12 0)
+    (effects (font (size 1.2 1.2)) (justify left bottom))
+    (uuid f41b4c2b-3ca6-48b7-ade1-5490b851787f))
+  (symbol
+    (lib_id "Device:Q_NPN_BCE")
+    (at 121.92 76.2 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3704d6cf-5d89-4fe9-a94c-f59caab3e354)
+    (property "Reference" "Q1"
+      (at 127.0 78.74000000000001 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" ""
+      (at 124.52 77.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid 6fe97291-a3ba-4348-9488-f8450fb10750))
+    (pin "2" (uuid f6a87ca2-28d0-4c4f-8b6a-f94129e9a4c2))
+    (pin "3" (uuid 9a08b6c5-0b15-4bae-9254-20f751ff087d))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "Q1")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 100.33 76.2 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 60ac567c-508c-4e4d-b02d-9f2b41aab3f7)
+    (property "Reference" "RB"
+      (at 100.33000000000001 73.0 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "RB"
+      (at 100.33000000000001 79.4 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid e921ee09-9757-4b7a-8818-3d86cc01456d))
+    (pin "2" (uuid 91152108-e3dd-40f2-8b76-544b63d39133))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "RB")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 111.76 85.09 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8a3e5269-cb6c-4786-bb03-5e34d9c931c8)
+    (property "Reference" "RBE"
+      (at 114.36 84.09 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "RBE"
+      (at 114.36 86.69 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (pin "1" (uuid f24a54ed-ff71-4bb4-81a9-b70c4b7182fd))
+    (pin "2" (uuid 6eb3aef1-4a1f-4b62-8da5-3b09453731f5))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "RBE")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 124.46 93.98 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a29b65cf-c302-4b2a-9c2e-75ff721ebd5d)
+    (property "Reference" "#PWR01"
+      (at 124.46 93.98 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 124.46 98.98 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid c2755851-758a-44ab-ad10-9f3a824047b6))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "#PWR01")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 124.46 62.23 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8e6b3a0b-1899-4ee5-b023-dcd696d709c8)
+    (property "Reference" "RC"
+      (at 116.96 61.230000000000004 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "负载/线圈"
+      (at 111.96 63.830000000000005 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (pin "1" (uuid 76a4ed65-dd8c-43fd-993a-4cc5ebaf9d07))
+    (pin "2" (uuid a10f4748-694b-4152-bb4e-df743a186ef3))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "RC")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:D")
+    (at 137.16 62.23 270)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6c954430-1db4-444b-a53a-1d08b2f77eb5)
+    (property "Reference" "D1"
+      (at 140.97 61.230000000000004 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "续流"
+      (at 140.97 63.830000000000005 90)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 5919c3eb-6236-413c-80ac-1f89c6819f6a))
+    (pin "2" (uuid 6fc88606-e4c8-4492-bc79-7cd67ff9ab53))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "D1")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:VCC")
+    (at 124.46 50.8 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 46bcce6f-a6db-4627-ad10-bee87e1d5620)
+    (property "Reference" "#PWR02"
+      (at 124.46 50.800000000000004 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "VCC"
+      (at 124.46 47.00000000000001 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid 2837c0dd-f2b1-4dbb-9eef-cd9dbba034a6))
+    (instances
+      (project "bjt-switch"
+        (path "/0a9e0965-01a7-4a2b-a94c-cfff590c3b11"
+          (reference "#PWR02")
+          (unit 1)))))
+  (sheet_instances (path "/" (page "1"))))
